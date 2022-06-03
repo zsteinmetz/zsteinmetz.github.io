@@ -99,7 +99,7 @@ blockquote {
   .address {
     margin-bottom: 5px;
     margin-top: 5px;
-    font-family: monospace;
+    font-weight: bolder;
     p {
       display: inline-block;
       margin: 0;
@@ -238,7 +238,7 @@ blockquote {
 .social {
   text-align: center;
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2rem;
     a {
       i::before {
         color: var(--global-text-color);
@@ -419,10 +419,10 @@ footer.sticky-bottom {
   }
   h2.year {
     color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-top: 0.5rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
     text-align: right;
   }
   ol.bibliography {
