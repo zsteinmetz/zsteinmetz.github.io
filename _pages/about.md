@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Excited about R, data analysis, and open science.
+Fascinated with R, data analysis, and open science.
 Currently into microplastics in agricultural soil.
 
 <br>
