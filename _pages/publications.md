@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description:
+description: Peer-reviewed articles.
 start_year: 2015
 nav: true
 ---
@@ -23,16 +23,20 @@ nav: true
 {% endfor %}
 
 </div>
-<br>
 
 <!---
 # talks
 
 <div class="publications">
 
-{%- for y in page.years %}
+{% assign now = 'now' | date: "%Y" %}
+{% for y in (page.start_year..now) reversed %}
+  {% capture bib_count %}{% bibliography_count -f talks -q @*[year={{y}}]* %}{% endcapture %}
+  {% assign bib_count = bib_count | to_integer %}
+  {% if bib_count > 0 %}
   <h2 class="year">{{y}}</h2>
   {% bibliography -f talks -q @*[year={{y}}]* %}
+  {% endif %}
 {% endfor %}
 
 </div>
