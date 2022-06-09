@@ -7,6 +7,6 @@ description: >
 img: /assets/img/transsaps.jpg
 redirect: https://gepris.dfg.de/gepris/projekt/497769016
 importance: -1
-category: science
+category: research
 ---
 

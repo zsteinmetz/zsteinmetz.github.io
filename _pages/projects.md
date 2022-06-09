@@ -5,7 +5,7 @@ permalink: /projects/
 description: Project contributions.
 nav: true
 nav_order: 1
-display_categories: [science, software development]
+display_categories: [research, software development]
 horizontal: false
 ---
 

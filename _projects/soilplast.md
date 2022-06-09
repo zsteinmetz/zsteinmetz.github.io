@@ -7,6 +7,6 @@ description: >
 img: /assets/img/soilplast.jpg
 redirect: https://www.uni-koblenz-landau.de/en/graduate-acadamy/research/learning-society-environment/project-plast/soilplast
 importance: 0
-category: science
+category: research
 ---
 

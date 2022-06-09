@@ -513,10 +513,15 @@ footer.sticky-bottom {
         transition: all 0.15s ease;
       }
       div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
+        border: solid 1px var(--global-bg-color);
+        border-radius: 0.25rem;
+        margin: 0 5px 0;
       }
       div.abstract.hidden.open {
-        border-color: var(--global-text-color);
+        border-color: rgba(0,0,0,.125);
+        background-color: var(--global-card-bg-color);
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
       }
     }
   }
