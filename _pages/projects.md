@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Project contributions.
+description: My project contributions.
 nav: true
 nav_order: 1
 display_categories: [research, software development]

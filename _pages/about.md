@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Soil chemist at <a href='https://www.uni-koblenz-landau.de/'>University of Koblenz–Landau</a>, iES Landau, Institute for Environmental Sciences.
+subtitle: Environmental Scientist at <a href='https://www.uni-koblenz-landau.de/'>University of Koblenz–Landau</a>, iES Landau, Institute for Environmental Sciences.
 
 profile:
   align: right
@@ -18,11 +18,11 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 Fascinated with R, data analysis, and open science.
-Currently into microplastics in agricultural soil.
+Scrutinizing microplastics in agricultural soil.
 
-<br>
+<p style="margin-bottom:2.5em;"></p>
 
-## research interests
+## main research interests
 
 - Investigating the sources, sinks, and pathways of plastics in agroecosystems
 - Developing new tools for the quantitative analysis of plastic debris and other organic compounds in soil, for example, using pyrolysis-gas chromatography/mass spectrometry (Py-GC/MS) and compound-specific stable isotope analysis (CSIA)

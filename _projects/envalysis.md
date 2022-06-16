@@ -2,7 +2,7 @@
 layout: page
 title: envalysis
 description: >
-  Miscellaneous Functions for Environmental Analyses
+  Miscellaneous functions for environmental analyses
   &nbsp;<i class="fas fa-external-link-alt"></i>
 img: /assets/img/envalysis.jpg
 redirect: https://github.com/zsteinmetz/envalysis
