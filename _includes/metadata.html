@@ -75,6 +75,10 @@
         {%- capture link -%}https://publons.com/a/{{ site.publons_id }}/{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
+    {%- if site.scopus_id -%}
+        {%- capture link -%}https://scopus.com/authid/detail.uri?authorId={{ site.scopus_id }}{%- endcapture -%}
+        {%- assign sameaslinks = sameaslinks | push: link -%}
+    {%- endif -%}    
     {%- if site.research_gate_profile -%}
         {%- capture link -%}https://www.researchgate.net/profile/{{site.research_gate_profile}}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
@@ -83,6 +87,10 @@
         {%- capture link -%}https://github.com/{{ site.github_username }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
     {%- endif -%}
+    {%- if site.figshare_id -%}
+        {%- capture link -%}https://figshare.com/authors/profile/{{ site.figshare_id }}{%- endcapture -%}
+        {%- assign sameaslinks = sameaslinks | push: link -%}
+    {%- endif -%}    
     {%- if site.linkedin_username -%}
         {%- capture link -%}https://www.linkedin.com/in/{{ site.linkedin_username }}{%- endcapture -%}
         {%- assign sameaslinks = sameaslinks | push: link -%}
@@ -140,7 +148,9 @@
         "author":
         {
           "@type": "Person",
-          "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}"
+          "familyName": "{{ site.last_name }}",
+          "givenName": "{{ site.first_name }} {{ site.middle_name }}",
+          "honorificPrefix": "{{ site.prefix_name }}"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "WebSite",

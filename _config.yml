@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-title_name: Dr.
+prefix_name: Dr.
 first_name: Zacharias
 middle_name:
 last_name: Steinmetz
@@ -46,7 +46,7 @@ max_width: 800px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
 og_image: # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
@@ -62,10 +62,12 @@ orcid_id: 0000-0001-6675-5033 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: AAC-9025-2020 # your ID on Publons
+scopus_id: 56692933000 # your ID on Scopus
 research_gate_profile: Zacharias-Steinmetz # your profile on ResearchGate
 blogger_url: # your blogger URL
 work_url: https://www.uni-koblenz-landau.de/de/landau/fb7/umweltwissenschaften/uchemie/mitarbeiter/wissenschaftler/zacharias-steinmetz # work page URL
 keybase_username: # your keybase user name
+figshare_id: 1377495 # your figshare ID
 wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id

@@ -5,6 +5,7 @@ title: teaching
 description: Lectures, seminars, lab courses, and thesis supervisions.
 nav: true
 nav_order: 2
+start_year: 2018
 ---
 
 <div class="teaching">
@@ -15,7 +16,7 @@ Responsible for
 
 ##### Advanced Environmental Chemistry
 
-*M.Sc. Environmental Sciences and M.Sc. Ecotoxicology, University of Koblenz–Landau*,
+M.Sc. Environmental Sciences and M.Sc. Ecotoxicology, *University of Koblenz–Landau*,
 since 12/2016
 
 <div class="teaching">
@@ -26,7 +27,7 @@ Co-responsible for
 
 ##### Einführung in die Methoden der Natur- und Umweltwissenschaften
 
-*B.Sc. Mensch & Umwelt, University of Koblenz–Landau*,
+B.Sc. Mensch & Umwelt, *University of Koblenz–Landau*,
 since 10/2017
 
 &nbsp;
@@ -45,12 +46,39 @@ Co-supervising
 
 ##### Laborübungen Umweltanalytik
 
-*B.Sc. Umweltwissenschaften, University of Koblenz–Landau*,
+B.Sc. Umweltwissenschaften, *University of Koblenz–Landau*,
 since 10/2021
 
-<!--
 <div class="teaching">
-  <h2 class="category">thesis supervision</h2>
+  <h2 class="category">thesis supervisions</h2>
 </div>
--->
 
+Examined
+
+<div class="publications">
+
+{% assign now = 'now' | date: "%Y" %}
+{% for y in (page.start_year..now) reversed %}
+  {% capture bib_count %}{% bibliography_count -f examined -q @*[year={{y}}]* %}{% endcapture %}
+  {% assign bib_count = bib_count | to_integer %}
+  {% if bib_count > 0 %}
+  {% bibliography -f examined -q @*[year={{y}}]* %}
+  {% endif %}
+{% endfor %}
+
+</div>
+
+Co-supervised
+
+<div class="publications">
+
+{% assign now = 'now' | date: "%Y" %}
+{% for y in (page.start_year..now) reversed %}
+  {% capture bib_count %}{% bibliography_count -f supervised -q @*[year={{y}}]* %}{% endcapture %}
+  {% assign bib_count = bib_count | to_integer %}
+  {% if bib_count > 0 %}
+  {% bibliography -f supervised -q @*[year={{y}}]* %}
+  {% endif %}
+{% endfor %}
+
+</div>

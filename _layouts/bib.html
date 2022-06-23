@@ -77,6 +77,8 @@
             {%- capture entrytype -%}<em>{{entry.booktitle}}</em> {%- endcapture -%}
           {%- elsif entry.type == "conference" -%}
             {%- capture entrytype -%}<em>{{entry.eventtitle}}</em> {%- endcapture -%}
+          {%- elsif entry.type contains "thesis" -%}
+            {%- capture entrytype -%}{{entry.type}}, <em>{{entry.school}}</em> {%- endcapture -%}  
           {%- else -%}
             {%- capture entrytype -%}{%- endcapture -%}
           {%- endif -%}
