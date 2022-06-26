@@ -75,10 +75,15 @@ stackoverflow_id: #your stackoverflow id
 contact_note: >
   Drop me an email or leave a message on Twitter.
 
+# -----------------------------------------------------------------------------
+# Analytics and search engine verification
+# -----------------------------------------------------------------------------
+
 google_analytics:  # your google-analytics ID (format: UA-XXXXXXXXX)
+panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
+
 google_site_verification:  # your google-site-verification ID (Google Search Console)
 bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
-panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
 # -----------------------------------------------------------------------------
 # Blog
@@ -225,8 +230,10 @@ filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, select
 # Responsive WebP Images
 # -----------------------------------------------------------------------------
 
+enable_responsive_images: true # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
+
 imagemagick:
-  enabled: true
+  enabled: true # make it 'false' if not using responsive images
   widths:
     - 480
     - 800

@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: My current and past project contributions.
 nav: true
-nav_order: 1
+nav_order: 3
 display_categories: [research, software development]
 horizontal: false
 ---

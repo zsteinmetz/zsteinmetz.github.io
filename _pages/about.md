@@ -7,6 +7,7 @@ subtitle: Environmental Scientist at <a href='https://www.uni-koblenz-landau.de/
 profile:
   align: right
   image: prof_pic.jpg
+  image_cicular: false # crops the image to make it circular
   address: # >
     # <p>Group of Environmental and Soil Chemistry</p>
     # <p>Fortstraße 7</p>

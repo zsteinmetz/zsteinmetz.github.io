@@ -4,7 +4,7 @@ permalink: /teaching/
 title: teaching
 description: Lectures, seminars, lab courses, and thesis supervisions.
 nav: true
-nav_order: 2
+nav_order: 4
 start_year: 2018
 ---
 
