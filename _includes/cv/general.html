@@ -1,0 +1,22 @@
+<table class="table table-sm table-borderless table-responsive">
+  <tr>
+    <td class="p-1 pr-2 font-weight-bold"><b>Name</b></td>
+    <td class="p-1 pl-2 font-weight-light text">{{ site.prefix_name }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}</td>
+  </tr>
+  {% for content in entry.contents %}
+    <tr>
+      <td class="p-1 pr-2 font-weight-bold"><b>{{ content.name }}</b></td>
+      <td class="p-1 pl-2 font-weight-light text">{{ content.value }}</td>
+    </tr>
+  {% endfor %}
+  <tr>
+    <td class="p-1 pr-2 font-weight-bold"><b>Contact</b></td>
+    <td class="p-1 pl-2 font-weight-light text">
+      <div class="social">
+        <div class="contact-icons">
+          {% include social.html %}
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
