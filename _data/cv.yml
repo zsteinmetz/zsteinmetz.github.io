@@ -3,7 +3,15 @@
   contents:
     - name: Born
       value: September 23, 1989, in Frankfurt/Main
-    - name: # 
+    - name: #
+    - name: Email # will be populated automatically
+  social:
+    - value: orcid_id
+    - value: scholar_userid
+    - value: publons_id
+    - value: scopus_id
+    - value: research_gate_profile
+    - value: github_username
 
 - title: research and work experience
   type: time_table
@@ -50,11 +58,11 @@
 - title: education
   type: time_table
   contents:
-    - title: Dr. rer. nat.
+    - title: Dr. rer. nat. Environmental Sciences
       institution: University of Koblenz–Landau, Germany
       year: 12/2016–5/2022
       description: 
-        - "Thesis title: “Agricultural Plastic Covers—Source of Plastic Debris in Soil?”"
+        - "Thesis title: <a href='https://nbn-resolving.org/urn:nbn:de:kola-23141'>“Agricultural Plastic Covers—Source of Plastic Debris in Soil?”</a>"
         - "Final grade: 1.1, <em>magna cum laude</em>"
 
     - title: M.Sc. Ecotoxicology

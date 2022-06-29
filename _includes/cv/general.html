@@ -5,16 +5,82 @@
   </tr>
   {% for content in entry.contents %}
     <tr>
-      <td class="p-1 pr-2 font-weight-bold"><b>{{ content.name }}</b></td>
-      <td class="p-1 pl-2 font-weight-light text">{{ content.value }}</td>
+      {% if content.name contains "mail" or content.name contains "Mail" %}
+        <td class="p-1 pr-2 font-weight-bold"><b>{{ content.name }}</b></td>
+        <td class="p-1 pl-2 font-weight-light text"><a href="mailto:{{ site.email | encode_email }}">{{ site.email }}</a></td>
+      {% else %}
+        <td class="p-1 pr-2 font-weight-bold"><b>{{ content.name }}</b></td>
+        <td class="p-1 pl-2 font-weight-light text">{{ content.value }}</td>
+      {% endif %}
     </tr>
   {% endfor %}
   <tr>
-    <td class="p-1 pr-2 font-weight-bold"><b>Contact</b></td>
+    <td class="p-1 pr-2 font-weight-bold"><b>Profiles</b></td>
     <td class="p-1 pl-2 font-weight-light text">
       <div class="social">
         <div class="contact-icons">
-          {% include social.html %}
+          {% for profile in entry.social %}
+            {%- if site.orcid_id and profile.value == "orcid_id" -%}
+            <a href="https://orcid.org/{{ site.orcid_id }}" title="ORCID"><i class="ai ai-orcid"></i></a>
+            {% endif %}
+            {%- if site.scholar_userid and profile.value == "scholar_userid" -%}
+            <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+            {% endif %}
+            {%- if site.publons_id and profile.value == "publons_id" -%}
+            <a href="https://publons.com/a/{{ site.publons_id }}/" title="Publons"><i class="ai ai-publons"></i></a>
+            {% endif %}
+            {%- if site.scopus_id and profile.value == "scopus_id" -%}
+            <a href="https://scopus.com/authid/detail.uri?authorId={{ site.scopus_id }}" title="Scopus"><i class="ai ai-scopus"></i></a>
+            {% endif %}
+            {%- if site.research_gate_profile and profile.value == "research_gate_profile" -%}
+            <a href="https://www.researchgate.net/profile/{{site.research_gate_profile}}/" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+            {% endif %}
+            {%- if site.github_username and profile.value == "github_username" -%}
+            <a href="https://github.com/{{ site.github_username }}" title="GitHub"><i class="fab fa-github"></i></a>
+            {% endif %}
+            {%- if site.figshare_id and profile.value == "figshare_id" -%}
+            <a href="https://figshare.com/authors/profile/{{ site.figshare_id }}" title="figshare"><i class="ai ai-figshare"></i></a>
+            {% endif %}
+            {%- if site.linkedin_username and profile.value == "linkedin_username" -%}
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            {% endif %}
+            {%- if site.twitter_username and profile.value == "twitter_username" -%}
+            <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter"><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            {%- if site.medium_username and profile.value == "medium_username" -%}
+            <a href="https://medium.com/@{{ site.medium_username }}" title="Medium"><i class="fab fa-medium"></i></a>
+            {% endif %}
+            {%- if site.quora_username and profile.value == "quora_username" -%}
+            <a href="https://www.quora.com/profile/{{ site.quora_username }}" title="Quora"><i class="fab fa-quora"></i></a>
+            {% endif %}
+            {%- if site.blogger_url and profile.value == "blogger_url" -%}
+            <a href="{{ site.blogger_url }}" title="Blogger"><i class="fab fa-blogger-b"></i></a>
+            {% endif %}
+            {%- if site.work_url and profile.value == "work_url" -%}
+            <a href="{{ site.work_url }}" title="Work"><i class="fas fa-briefcase"></i></a>
+            {% endif %}
+            {%- if site.wikidata_id and profile.value == "wikidata_id" -%}
+            <a href="https://www.wikidata.org/wiki/{{ site.wikidata_id }}" title="Wikidata"><i class="fas fa-barcode"></i></a>
+            {% endif %}
+            {%- if site.strava_userid and profile.value == "strava_userid" -%}
+            <a href="https://www.strava.com/athletes/{{ site.strava_userid }}" title="Strava"><i class="fab fa-strava"></i></a>
+            {% endif %}
+            {%- if site.keybase_username and profile.value == "keybase_username" -%}
+            <a href="https://keybase.io/{{ site.keybase_username }}" title="Keybase"><i class="fab fa-keybase"></i></a>
+            {% endif %}
+            {%- if site.gitlab_username and profile.value == "gitlab_username" -%}
+            <a href="https://gitlab.com/{{ site.gitlab_username }}" title="GitLab"><i class="fab fa-gitlab"></i></a>
+            {% endif %}
+            {%- if site.dblp_url and profile.value == "dblp_url" -%}
+            <a href="{{ site.dblp_url }}" title="DBLP"><i class="ai ai-dblp"></i></a>
+            {% endif %}
+            {%- if site.stackoverflow_id and profile.value == "stackoverflow_id" -%}
+            <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" title="Stackoverflow"><i class="fab fa-stack-overflow"></i></a>
+            {% endif %}
+            {%- if site.rss_icon  and profile.value == "rss_icon" -%}
+            <a href="{{ site.baseurl | prepend: site.url }}/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
+            {% endif %}
+          {% endfor %}
         </div>
       </div>
     </td>
