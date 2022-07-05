@@ -324,12 +324,30 @@ footer.sticky-bottom {
 
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
-  text-align: center;
+  text-align: left;
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   h1 {
     color: var(--global-theme-color);
     font-size: 5rem;
+  }
+}
+
+.tag-list {
+  border-bottom: 1px solid var(--global-divider-color);
+  text-align: left;
+  font-size: 0.875rem;
+
+  ul {
+    justify-content: left;
+    display: flow-root;
+
+    p, li {
+      list-style: none;
+      display: inline-block;
+      padding: 0rem 0.25rem;
+      color: var(--global-text-color-light);
+    }
   }
 }
 
@@ -469,6 +487,11 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      .preview {
+        width: 100%;
+        min-width: 80px;
+        max-width: 200px;
+      }
       .abbr {
         height: 2rem;
         margin-bottom: 0.5rem;
