@@ -21,9 +21,9 @@ social: true  # includes social icons at the bottom of the page
 Fascinated with R, data analysis, and open science.
 Scrutinizing microplastics in agricultural soil.
 
-<p style="margin-bottom:2.5em;"></p>
+<p style="margin-bottom:1.75em;"></p>
 
 ## main research interests
 
 - Investigating the sources, sinks, and pathways of plastics in agroecosystems
-- Developing new tools for the quantitative analysis of plastic debris and other organic compounds in soil, for example, using pyrolysis-gas chromatography/mass spectrometry (Py-GC/MS) and compound-specific stable isotope analysis (CSIA)
+- Developing novel methods for the quantitative analysis of plastic debris and other organic compounds in soil, for example, using pyrolysis-gas chromatography/mass spectrometry (Py-GC/MS) and Fourier-transform infrared spectroscopy (FTIR) in combination with advanced data science applications.
