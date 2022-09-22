@@ -5,8 +5,9 @@ title: publications
 description: >
   <a href='#peer-reviewed-journal-articles'>Peer-reviewed journal articles</a>,
   <a href='#preprints-and-non-peer-reviewed-papers'>preprints and non peer-reviewed papers</a>,
-  <a href='#selected-conference-contributions'>selected conference contributions</a>, and
-  <a href='#journalistic-articles'>journalistic articles</a>.
+  <a href='#selected-conference-contributions'>selected conference contributions</a>,
+  <a href='#journalistic-articles'>journalistic articles</a>, and
+  my <a href='#referee'>reviewing activity for scientific journals</a>.
 start_year: 2015
 nav: true
 nav_order: 3
@@ -93,3 +94,14 @@ nav_order: 3
 
 </div>
 
+## referee
+
+Reviewer for the
+*Journal of Analytical and Applied Pyrolysis*,
+*Journal of Plant Nutrition and Soil Science*,
+*Science of the Total Environment*,
+*Environmental Pollution*,
+*Polymers*, and
+*Frontiers in Environmental Science*
+
+Advisor for the *F1000Research* Gateway "Agriculture, Food and Nutrition"

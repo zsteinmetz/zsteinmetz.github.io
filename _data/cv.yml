@@ -117,12 +117,11 @@
 - title: skills
   type: map
   contents:
-    - name: German
-      value: native
-    - name: English
-      value: proficient (10 school years, 1 year practice in the Philippines)
-    - name: French
-      value: basic (5 school years)
+    - name: Languages
+      value: >
+        German (native), 
+        English (proficient, 10 school years and 1 year practice in the Philippines),
+        French (basic, 5 school years)
     - name: #  
     - name: Analytical chemistry
       value: >
