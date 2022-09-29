@@ -230,7 +230,7 @@ display_tags: ['writing', 'data science', 'code'] # this tags will be dispalyed 
 
 scholar:
 
-  last_name: Steinmetz
+  last_name: [Steinmetz]
   first_name: [Zacharias, Z.]
 
   style: apa
