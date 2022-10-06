@@ -106,9 +106,10 @@
           </div>
 
           <!-- Journal/Book title and date -->
+          {% assign proceedings = "inproceedings, incollection" | split: ','%}
           {% if entry.type == "article" -%}
             {%- capture entrytype -%}<em>{{entry.journal}}</em>{%- endcapture -%}
-          {%- elsif ["inproceedings", "incollection"] contains entry.type -%}
+          {%- elsif proceedings contains entry.type -%}
             {%- capture entrytype -%}<em>{{entry.booktitle}}</em> {%- endcapture -%}
           {%- elsif entry.type == "conference" -%}
             {%- capture entrytype -%}<em>{{entry.eventtitle}}</em> {%- endcapture -%}
