@@ -68,6 +68,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 github_username: zsteinmetz # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: zsteinmetz_ # your Twitter handle
+mastodon_username: mastodon.social/@zsteinmetz # your Mastodon handle
 linkedin_username: # your LinkedIn user name
 scholar_userid: klQROs4AAAAJ # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
