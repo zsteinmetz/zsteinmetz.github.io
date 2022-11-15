@@ -96,7 +96,7 @@ facebook_id: # your facebook id
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  Drop me an email or leave a message on Twitter.
+  Drop me an email or leave a message on social media.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -272,7 +272,6 @@ external_links:
   rel: external nofollow noopener
   target: _blank
   exclude:
-
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
