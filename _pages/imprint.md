@@ -42,8 +42,8 @@ GitHub stores this information in a log file.
 Please also note the
 [GitHub Privacy Policies](https://docs.github.com/en/site-policy/privacy-policies).
 
-The used Jekyll theme depends on Bootstrap, Font Awesome, and Academicons delivered via jsDelivr.
-Mathematical formulas are rendered with MathJax provided by Polyfill.io.
+The used Jekyll theme depends on Bootstrap delivered via jsDelivr.
+Mathematical formulas are rendered with MathJax provided by jsDelivr and Polyfill.io.
 Their privacy policies can be found here:
 
 - [jsDelivr Privacy Policy](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net)

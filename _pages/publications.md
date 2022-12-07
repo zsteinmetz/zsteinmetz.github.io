@@ -12,7 +12,6 @@ start_year: 2015
 nav: true
 nav_order: 3
 ---
-<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 
 ## peer-reviewed journal articles
 

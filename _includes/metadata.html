@@ -11,8 +11,17 @@
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' cdn.jsdelivr.net badge.dimensions.ai polyfill.io">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none';
+                                                        img-src 'self' https:;
+                                                        connect-src https://*.dimensions.ai;
+                                                        style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://*.dimensions.ai;
+                                                        font-src 'self' https://cdn.jsdelivr.net data:;
+                                                        base-uri 'none';
+                                                        script-src 'self' https://hosting117095.a2f81.netcup.net https://cdn.jsdelivr.net https://*.dimensions.ai https://polyfill.io;
+                                                        form-action 'self'">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
     {%- if site.title == "blank" -%}
