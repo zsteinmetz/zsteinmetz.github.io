@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Environmental Scientist at <a href='https://www.uni-koblenz-landau.de/'>University of Koblenz–Landau</a>, iES Landau, Institute for Environmental Sciences.
+subtitle: Environmental Scientist at <a href='https://www.rptu.de/'>RPTU</a>, iES Landau, Institute for Environmental Sciences.
 
 profile:
   align: right
