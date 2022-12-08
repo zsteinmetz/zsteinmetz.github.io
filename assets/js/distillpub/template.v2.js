@@ -4969,7 +4969,7 @@ p small {
         this.parentElement.removeChild(this);
         if (typeof(Storage) !== 'undefined') {
           console.log('Saved that correct password was entered.');
-          localStorage.setItem(this.localStorageIdentifier(), 'true');
+          sessionStorage.setItem(this.sessionStorageIdentifier(), 'true');
         }
       }
     }
@@ -4982,7 +4982,7 @@ p small {
       }
       // should only have to enter password once
       if (typeof(Storage) !== 'undefined') {
-        if (localStorage.getItem(this.localStorageIdentifier()) === 'true') {
+        if (sessionStorage.getItem(this.sessionStorageIdentifier()) === 'true') {
           console.log('Loaded that correct password was entered before; skipping interstitial.');
           return true;
         }
@@ -4991,7 +4991,7 @@ p small {
       return false;
     }
 
-    localStorageIdentifier() {
+    sessionStorageIdentifier() {
       const prefix = 'distill-drafts';
       const suffix = 'interstitial-password-correct';
       return prefix + (window ? window.location.pathname : '-') + suffix
