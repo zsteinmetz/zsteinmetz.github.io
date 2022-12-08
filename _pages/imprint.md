@@ -33,10 +33,14 @@ with a modified [al-folio](https://github.com/alshedivat/al-folio) theme.
 The source code is available at
 [github.com/zsteinmetz](https://github.com/zsteinmetz/zsteinmetz.github.io).
 
-For technical reasons, the following data is transferred when establishing a connection:
+For technical reasons, the following data are transferred when establishing a connection:
 
 - your IP address
 - the user agent of your web browser
+
+### session cookies
+
+Your theme selection (`theme=light`/`theme=dark`) is saved temporarily while browsing this website. The data are deleted once the browser session ends.
 
 ### github
 
@@ -51,8 +55,6 @@ Their privacy policies can be found here:
 
 - [jsDelivr Privacy Policy](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net)
 - [polyfill.io Privacy Policy](https://polyfill.io/v3/privacy-policy/)
-
-If you change the preselected theme of this website, this information (`theme=light`/`theme=dark`) will be stored in a browser cookie.
 
 ### matomo
 

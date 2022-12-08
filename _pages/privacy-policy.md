@@ -7,7 +7,7 @@ nav: false
 
 ## einleitung
 
-Diese Datenschutzerklärung klärt Sie darüber
+Die folgende Datenschutzerklärung klärt Sie darüber
 auf, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch
 kurz als "Daten" bezeichnet) wir zu welchen Zwecken und in welchem
 Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns
@@ -19,7 +19,7 @@ zusammenfassend bezeichnet als "Onlineangebot").
 
 Die verwendeten Begriffe sind nicht geschlechtsspezifisch.
 
-## verantwortlicher
+## verantwortlich
 
 Zacharias Steinmetz\
 Horststr. 157\
@@ -35,22 +35,24 @@ Personen.
 
 ### arten der verarbeiteten daten
 
--   Bestandsdaten
 -   Standortdaten
 -   Kontaktdaten
 -   Inhaltsdaten
 -   Nutzungsdaten
 -   Meta-/Kommunikationsdaten
 
-### kategorien betroffener Personen
+### kategorien betroffener personen
 
+-   Kommunikationspartner
 -   Nutzer
 
 ### zwecke der verarbeitung
 
 -   Erbringung vertraglicher Leistungen und Kundenservice
+-   Kontaktanfragen und Kommunikation
 -   Sicherheitsmaßnahmen
 -   Reichweitenmessung
+-   Verwaltung und Beantwortung von Anfragen
 -   Feedback
 -   Marketing
 -   Profile mit nutzerbezogenen Informationen
@@ -111,7 +113,7 @@ Entwicklung bzw. Auswahl von Hardware, Software sowie Verfahren
 entsprechend dem Prinzip des Datenschutzes, durch Technikgestaltung und
 durch datenschutzfreundliche Voreinstellungen.
 
-Kürzung der IP-Adresse: Sofern IP-Adressen von uns oder von den
+**Kürzung der IP-Adresse:** Sofern IP-Adressen von uns oder von den
 eingesetzten Dienstleistern und Technologien verarbeitet werden und die
 Verarbeitung einer vollständigen IP-Adresse nicht erforderlich ist, wird
 die IP-Adresse gekürzt (auch als "IP-Masking" bezeichnet). Hierbei
@@ -120,7 +122,7 @@ nach einem Punkt entfernt, bzw. durch Platzhalter ersetzt. Mit der
 Kürzung der IP-Adresse soll die Identifizierung einer Person anhand
 ihrer IP-Adresse verhindert oder wesentlich erschwert werden.
 
-TLS-Verschlüsselung (https): Um Ihre via unserem Online-Angebot
+**TLS-Verschlüsselung (https):** Um Ihre via unserem Online-Angebot
 übermittelten Daten zu schützen, nutzen wir eine TLS-Verschlüsselung.
 Sie erkennen derart verschlüsselte Verbindungen an dem Präfix `https://`
 in der Adresszeile Ihres Browsers.
@@ -136,6 +138,16 @@ Inhalten, die in eine Webseite eingebunden werden, gehören. In solchen
 Fall beachten wir die gesetzlichen Vorgaben und schließen insbesondere
 entsprechende Verträge bzw. Vereinbarungen, die dem Schutz Ihrer Daten
 dienen, mit den Empfängern Ihrer Daten ab.
+
+Datenübermittlung innerhalb der Organisation: Wir können
+personenbezogene Daten an andere Stellen innerhalb unserer Organisation
+übermitteln oder ihnen den Zugriff auf diese Daten gewähren. Sofern
+diese Weitergabe zu administrativen Zwecken erfolgt, beruht die
+Weitergabe der Daten auf unseren berechtigten unternehmerischen und
+betriebswirtschaftlichen Interessen oder erfolgt, sofern sie Erfüllung
+unserer vertragsbezogenen Verpflichtungen erforderlich ist oder wenn
+eine Einwilligung der Betroffenen oder eine gesetzliche Erlaubnis
+vorliegt.
 
 ## datenverarbeitung in drittländern
 
@@ -174,6 +186,75 @@ ist.
 Unsere Datenschutzhinweise können ferner weitere Angaben zu der
 Aufbewahrung und Löschung von Daten beinhalten, die für die jeweiligen
 Verarbeitungen vorrangig gelten.
+
+## einsatz von cookies
+
+Cookies sind kleine Textdateien, bzw. sonstige Speichervermerke, die
+Informationen auf Endgeräten speichern und Informationen aus den
+Endgeräten auslesen. Z.B. um den Login-Status in einem Nutzerkonto,
+einen Warenkorbinhalt in einem E-Shop, die aufgerufenen Inhalte oder
+verwendete Funktionen eines Onlineangebotes speichern. Cookies können
+ferner zu unterschiedlichen Zwecken eingesetzt werden, z.B. zu Zwecken
+der Funktionsfähigkeit, Sicherheit und Komfort von Onlineangeboten sowie
+der Erstellung von Analysen der Besucherströme.
+
+**Hinweise zur Einwilligung:** Wir setzen Cookies im Einklang mit den
+gesetzlichen Vorschriften ein. Daher holen wir von den Nutzern eine
+vorhergehende Einwilligung ein, außer wenn diese gesetzlich nicht
+gefordert ist. Eine Einwilligung ist insbesondere nicht notwendig, wenn
+das Speichern und das Auslesen der Informationen, also auch von Cookies,
+unbedingt erforderlich sind, um dem den Nutzern einen von ihnen
+ausdrücklich gewünschten Telemediendienst (also unser Onlineangebot) zur
+Verfügung zu stellen. Die widerrufliche Einwilligung wird gegenüber den
+Nutzern deutlich kommuniziert und enthält die Informationen zu der
+jeweiligen Cookie-Nutzung.
+
+**Hinweise zu datenschutzrechtlichen Rechtsgrundlagen:** Auf welcher
+datenschutzrechtlichen Rechtsgrundlage wir die personenbezogenen Daten
+der Nutzer mit Hilfe von Cookies verarbeiten, hängt davon ab, ob wir
+Nutzer um eine Einwilligung bitten. Falls die Nutzer einwilligen, ist
+die Rechtsgrundlage der Verarbeitung Ihrer Daten die erklärte
+Einwilligung. Andernfalls werden die mithilfe von Cookies verarbeiteten
+Daten auf Grundlage unserer berechtigten Interessen (z.B. an einem
+betriebswirtschaftlichen Betrieb unseres Onlineangebotes und
+Verbesserung seiner Nutzbarkeit) verarbeitet oder, wenn dies im Rahmen
+der Erfüllung unserer vertraglichen Pflichten erfolgt, wenn der Einsatz
+von Cookies erforderlich ist, um unsere vertraglichen Verpflichtungen zu
+erfüllen. Zu welchen Zwecken die Cookies von uns verarbeitet werden,
+darüber klären wir im Laufe dieser Datenschutzerklärung oder im Rahmen
+von unseren Einwilligungs- und Verarbeitungsprozessen auf.
+
+**Speicherdauer: **Im Hinblick auf die Speicherdauer werden die
+folgenden Arten von Cookies unterschieden:
+
+-   **Temporäre Cookies (auch: Session- oder
+    Sitzungs-Cookies):** Temporäre Cookies werden spätestens gelöscht,
+    nachdem ein Nutzer ein Online-Angebot verlassen und sein Endgerät
+    (z.B. Browser oder mobile Applikation) geschlossen hat.
+-   **Permanente Cookies:** Permanente Cookies bleiben auch nach dem
+    Schließen des Endgerätes gespeichert. So können beispielsweise der
+    Login-Status gespeichert oder bevorzugte Inhalte direkt angezeigt
+    werden, wenn der Nutzer eine Website erneut besucht. Ebenso können
+    die mit Hilfe von Cookies erhobenen Daten der Nutzer zur
+    Reichweitenmessung verwendet werden. Sofern wir Nutzern keine
+    expliziten Angaben zur Art und Speicherdauer von Cookies mitteilen
+    (z. B. im Rahmen der Einholung der Einwilligung), sollten Nutzer
+    davon ausgehen, dass Cookies permanent sind und die Speicherdauer
+    bis zu zwei Jahre betragen kann.
+
+**Allgemeine Hinweise zum Widerruf und Widerspruch (Opt-Out):** Nutzer
+können die von ihnen abgegebenen Einwilligungen jederzeit widerrufen und
+zudem einen Widerspruch gegen die Verarbeitung entsprechend den
+gesetzlichen Vorgaben im Art. 21 DSGVO einlegen. Nutzer können ihren
+Widerspruch auch über die Einstellungen ihres Browsers erklären, z.B.
+durch Deaktivierung der Verwendung von Cookies (wobei dadurch auch die
+Funktionalität unserer Online-Dienste eingeschränkt sein kann). Ein
+Widerspruch gegen die Verwendung von Cookies zu Online-Marketing-Zwecken
+kann auch über die Websites
+[https://optout.aboutads.info](https://optout.aboutads.info)
+und
+[https://www.youronlinechoices.com/](https://www.youronlinechoices.com/)
+erklärt werden.
 
 ## bereitstellung des onlineangebotes und webhosting
 
@@ -254,7 +335,7 @@ unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu
     (Art. 6 Abs. 1 S. 1 lit. f) DSGVO); **Website:**
     [https://github.com/](https://github.com/);
     **Datenschutzerklärung:**
-    [https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement](https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement).
+    [https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement](https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement).    
 -   **netcup:** Leistungen auf dem Gebiet der Bereitstellung von
     informationstechnischer Infrastruktur und verbundenen
     Dienstleistungen (z.B. Speicherplatz und/oder Rechenkapazitäten);
@@ -266,6 +347,27 @@ unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu
     [https://www.netcup.de/kontakt/datenschutzerklaerung.php](https://www.netcup.de/kontakt/datenschutzerklaerung.php);
     **Auftragsverarbeitungsvertrag:**
     [https://www.netcup-wiki.de/wiki/Zusatzvereinbarung_zur_Auftragsverarbeitung](https://www.netcup-wiki.de/wiki/Zusatzvereinbarung_zur_Auftragsverarbeitung).
+
+## kontakt- und anfragenverwaltung
+
+Bei der Kontaktaufnahme mit uns (z.B. per Kontaktformular, E-Mail,
+Telefon oder via soziale Medien) sowie im Rahmen bestehender Nutzer- und
+Geschäftsbeziehungen werden die Angaben der anfragenden Personen
+verarbeitet soweit dies zur Beantwortung der Kontaktanfragen und
+etwaiger angefragter Maßnahmen erforderlich ist.
+
+-   **Verarbeitete Datenarten:** Kontaktdaten (z.B. E-Mail,
+    Telefonnummern); Inhaltsdaten (z.B. Eingaben in Onlineformularen);
+    Nutzungsdaten (z.B. besuchte Webseiten, Interesse an Inhalten,
+    Zugriffszeiten); Meta-/Kommunikationsdaten (z.B.
+    Geräte-Informationen, IP-Adressen).
+-   **Betroffene Personen:** Kommunikationspartner.
+-   **Zwecke der Verarbeitung:** Kontaktanfragen und Kommunikation;
+    Verwaltung und Beantwortung von Anfragen; Feedback (z.B. Sammeln von
+    Feedback via Online-Formular); Bereitstellung unseres
+    Onlineangebotes und Nutzerfreundlichkeit.
+-   **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1
+    lit. f) DSGVO).
 
 ## webanalyse, monitoring und optimierung
 
@@ -327,7 +429,7 @@ Zwecke der jeweiligen Verfahren in deren Profilen gespeicherten Angaben.
     in Kombination mit nutzerseitige Browsereinstellungen so erfasst,
     dass Rückschlüsse auf die Identität einzelner Nutzer nicht möglich
     sind. Die im Rahmen der Nutzung von Matomo erhobenen Daten der
-    Nutzer werden nur von uns verarbeitet und nicht mit Dritten geteilt; 
+    Nutzer werden nur von uns verarbeitet und nicht mit Dritten geteilt;
     **Opt-Out:** Matomo wird automatisch deaktiviert, wenn Ihr Browser
     uns mitgeteilt, dass Sie kein Tracking wünschen (über die sogenannte
     "Do Not Track"-Einstellung in Ihren Browsereinstellungen);
@@ -335,7 +437,7 @@ Zwecke der jeweiligen Verfahren in deren Profilen gespeicherten Angaben.
     lit. f) DSGVO); **Website:**
     [https://matomo.org/](https://matomo.org/).
 
-## plugins und eingebettete funktionen sowie inhalte
+## plugins und eingebettete funktionen und inhalte
 
 Wir binden in unser Onlineangebot Funktions- und Inhaltselemente ein,
 die von den Servern ihrer jeweiligen Anbieter (nachfolgend bezeichnet
@@ -394,12 +496,12 @@ Informationen aus anderen Quellen verbunden werden.
     Nutzer sowie zu Zwecken der Sicherheit, als auch zur Auswertung und
     Optimierung ihres Angebotes verarbeiten; **Rechtsgrundlagen:**
     Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
--   **Google Fonts (Bereitstellung auf eigenem Server):** Bereitstellung von
-    Schriftarten-Dateien zwecks einer nutzerfreundlichen Darstellung unseres
-    Onlineangebotes; **Dienstanbieter:** Die Google Fonts werden auf unserem
-    Server gehostet, es werden keine Daten an Google übermittelt;
-    **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
-    DSGVO).
+-   **Google Fonts (Bereitstellung auf eigenem Server):** Bereitstellung
+    von Schriftarten-Dateien zwecks einer nutzerfreundlichen Darstellung
+    unseres Onlineangebotes; **Dienstanbieter:** Die Google Fonts werden
+    auf unserem Server gehostet, es werden keine Daten an Google
+    übermittelt; **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6
+    Abs. 1 S. 1 lit. f) DSGVO).
 -   **Font Awesome (Bereitstellung auf eigenem Server):** Darstellung
     von Schriftarten und Symbolen; **Dienstanbieter:** Die Font Awesome
     Icons werden auf unserem Server gehostet, es werden keine Daten an
@@ -411,6 +513,21 @@ Informationen aus anderen Quellen verbunden werden.
     Server gehostet, es werden keine Daten an Academicons übermittelt;
     **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
     DSGVO).
+-   **OpenStreetMap:** Wir binden die Landkarten des Dienstes
+    "OpenStreetMap" ein, die auf Grundlage der Open Data Commons Open
+    Database Lizenz (ODbL) durch die OpenStreetMap Foundation (OSMF)
+    angeboten werden. Die Daten der Nutzer werden durch OpenStreetMap
+    ausschließlich zu Zwecken der Darstellung der Kartenfunktionen und
+    zur Zwischenspeicherung der gewählten Einstellungen verwendet. Zu
+    diesen Daten können insbesondere IP-Adressen und Standortdaten der
+    Nutzer gehören, die jedoch nicht ohne deren Einwilligung (im
+    Regelfall im Rahmen der Einstellungen ihrer Mobilgeräte vollzogen)
+    erhoben werden; **Dienstanbieter:** OpenStreetMap Foundation (OSMF);
+    **Rechtsgrundlagen:** Berechtigte Interessen (Art. 6 Abs. 1 S. 1
+    lit. f) DSGVO); **Website:**
+    [https://www.openstreetmap.de](https://www.openstreetmap.de);
+    **Datenschutzerklärung:**
+    [https://wiki.osmfoundation.org/wiki/Privacy_Policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy).
 -   **Twitter-Plugins und -Inhalte:** Twitter Plugins und
     -Schaltflächen - Hierzu können z.B. Inhalte wie Bilder, Videos oder
     Texte und Schaltflächen gehören, mit denen Nutzer Inhalte dieses
