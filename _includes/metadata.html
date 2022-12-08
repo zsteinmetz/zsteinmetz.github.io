@@ -8,47 +8,48 @@
     {%- endif -%}
 {%- endif %}
 
-    <!-- Standard metadata -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="referrer" content="no-referrer">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none';
-                                                        img-src 'self' https:;
-                                                        connect-src https://*.dimensions.ai;
-                                                        style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://*.dimensions.ai;
-                                                        font-src 'self' https://cdn.jsdelivr.net data:;
-                                                        base-uri 'none';
-                                                        script-src 'self' 'unsafe-inline' https://hosting117095.a2f81.netcup.net https://cdn.jsdelivr.net https://*.dimensions.ai https://polyfill.io;
-                                                        form-action 'self'">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none';
+                                                    img-src 'self' https:;
+                                                    connect-src https://hosting117095.a2f81.netcup.net https://*.dimensions.ai;
+                                                    style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://*.dimensions.ai;
+                                                    font-src 'self' https://cdn.jsdelivr.net data:;
+                                                    base-uri 'none';
+                                                    script-src 'self' 'unsafe-inline' https://hosting117095.a2f81.netcup.net https://cdn.jsdelivr.net https://*.dimensions.ai https://polyfill.io;
+                                                    form-action 'self'">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>
-    {%- if site.title == "blank" -%}
-        {%- capture title -%}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{%- endcapture -%}
+<title>
+{%- if site.title == "blank" -%}
+    {%- capture title -%}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{%- endcapture -%}
+{%- else -%}
+    {%- capture title -%}{{ site.title }}{%- endcapture -%}
+{%- endif -%}
+{% if page.url == '/blog/index.html' %}
+    {{ site.blog_nav_title }} | {{ title }}
+{%- elsif page.title != "blank" and page.url != "/" -%}
+    {%- if page.title == nil or page.title == "" -%}
+        {{ page.date | date: "%Y" }} | {{ title }}
     {%- else -%}
-        {%- capture title -%}{{ site.title }}{%- endcapture -%}
+        {{ page.title }} | {{ title }}
     {%- endif -%}
-    {% if page.url == '/blog/index.html' %}
-        {{ site.blog_nav_title }} | {{ title }}
-    {%- elsif page.title != "blank" and page.url != "/" -%}
-        {%- if page.title == nil or page.title == "" -%}
-            {{ page.date | date: "%Y" }} | {{ title }}
-        {%- else -%}
-            {{ page.title }} | {{ title }}
-        {%- endif -%}
-    {%- else -%}
-        {{ title }}
-    {%- endif -%}
-    </title>
-    <meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
-    <meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
+{%- else -%}
+    {{ title }}
+{%- endif -%}
+</title>
+
+<meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
+<meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
+
 {%- if page.keywords or site.keywords %}
     <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{{ site.keywords }}{%- endif -%}" />
 {%- endif %}
 
 {%- if site.serve_og_meta %}
-
     <!-- OpenGraph -->
     <meta property="og:site_name" content="{{ title }}" />
     <meta property="og:type" content="website" />
