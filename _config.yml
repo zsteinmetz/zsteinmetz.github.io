@@ -329,7 +329,7 @@ enable_progressbar:         true   # enables a horizontal progress bar linked to
 
 source-sans-pro:
   version: "21"
-  integrity: "sha256-jb1C+0xbU81Y9Japft4SqyXVm7hNd1vEsmdIVHLOGlo="
+  integrity: "sha256-j1TwMfUbBF3FSCdVKtijQ1gkpznTTJJRSBUeer4RMAA="
 fontawesome:
   version: "6.2.1"
   integrity: "sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU="
