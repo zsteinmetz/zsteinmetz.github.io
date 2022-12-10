@@ -1,12 +1,5 @@
-  {%- if site.enable_math -%}
+{%- if site.enable_math -%}
   <!-- MathJax -->
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        tags: 'ams'
-      }
-    };
-  </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@{{ site.mathjax.version }}/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  {%- endif %}
+  <script defer src="{{ '/assets/js/mathjax.js' | relative_url }}"></script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://hosting117095.a2f81.netcup.net/npm/MathJax-{{ site.mathjax.version }}/es5/tex-mml-chtml.js" integrity="{{ site.mathjax.integrity }}" crossorigin="anonymous"></script>
+{%- endif %}

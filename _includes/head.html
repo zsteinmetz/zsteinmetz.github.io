@@ -2,16 +2,16 @@
 {% include metadata.html %}
 
 <!-- Bootstrap & MDB -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@{{ site.bootstrap.version }}/dist/css/bootstrap.min.css" rel="stylesheet" integrity="{{ site.bootstrap.integrity.css }}" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@{{ site.mdb.version }}/css/mdb.min.css" integrity="{{ site.mdb.integrity.css }}" crossorigin="anonymous">
+<link rel="stylesheet" href="https://hosting117095.a2f81.netcup.net/npm/bootstrap-{{ site.bootstrap.version }}-dist/css/bootstrap.min.css" integrity="{{ site.bootstrap.integrity.css }}" crossorigin="anonymous">
+<link rel="stylesheet" href="https://hosting117095.a2f81.netcup.net/npm/mdb-free-{{ site.mdb.version }}/css/mdb.min.css" integrity="{{ site.mdb.integrity.css }}" crossorigin="anonymous">
 
 <!-- Fonts & Icons -->
-<link rel="stylesheet" href="{{ '/assets/css/source-sans-pro.scss' | relative_url }}">
-<link rel="stylesheet" href="{{ site.fontawesome.version | prepend: '/assets/fonts/fontawesome-' | append: '/css/all.min.css' | relative_url }}" integrity="{{ site.fontawesome.integrity }}" crossorigin="anonymous">
-<link rel="stylesheet" href="{{ site.academicons.version | prepend: '/assets/fonts/academicons-' | append: '/css/academicons.min.css' | relative_url }}" integrity="{{ site.academicons.integrity }}" crossorigin="anonymous">
+<link rel="stylesheet" href="https://hosting117095.a2f81.netcup.net/fonts/source-sans-pro-v{{ site.source-sans-pro.version }}/source-sans-pro.css" integrity="{{ site.source-sans-pro.integrity }}" crossorigin="anonymous">
+<link rel="stylesheet" href="https://hosting117095.a2f81.netcup.net/fonts/fontawesome-free-{{ site.fontawesome.version }}-web/css/all.min.css" integrity="{{ site.fontawesome.integrity }}" crossorigin="anonymous">
+<link rel="stylesheet" href="https://hosting117095.a2f81.netcup.net/fonts/academicons-{{ site.academicons.version }}/css/academicons.min.css" integrity="{{ site.academicons.integrity }}" crossorigin="anonymous">
 
 <!-- Code Syntax Highlighting -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_light | append: '.css' }}" media="" id="highlight_theme_light">
+<link rel="stylesheet" href="https://hosting117095.a2f81.netcup.net/gh/jekyll-pygments-themes/{{ site.highlight_theme_light | append: '.css' }}" media="" id="highlight_theme_light">
 
 <!-- Styles -->
 {% if site.icon.size < 3 %}
@@ -24,17 +24,17 @@
 
 <!-- Dark Mode -->
 {% if site.enable_darkmode %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/{{ site.highlight_theme_dark | append: '.css' }}" media="none" id="highlight_theme_dark">
+    <link rel="stylesheet" href="https://hosting117095.a2f81.netcup.net/gh/jekyll-pygments-themes/{{ site.highlight_theme_dark | append: '.css' }}" media="none" id="highlight_theme_dark">
 
     <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/dark_mode.js' | relative_url }}"></script>
-
-    <!-- Badge -->
-    <script src="https://badge.dimensions.ai/badge.js" integrity="{{ site.dimensions.integrity }}" crossorigin="anonymous"></script>
 {% endif %}
+
+<!-- Badge -->
+<script src="https://badge.dimensions.ai/badge.js" integrity="{{ site.dimensions.integrity }}" crossorigin="anonymous"></script>
 
 <!-- Matomo -->
 <script src="{{ '/assets/js/matomo.js' | relative_url }}"></script>
 <noscript>
-    <img referrerpolicy="no-referrer-when-downgrade" src="https://hosting117095.a2f81.netcup.net/matomo/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="" />
+    <img referrerpolicy="no-referrer-when-downgrade" src="{{ site.matomo.url }}/matomo.php?idsite={{ site.matomo.id }}&amp;rec=1" style="border:0" alt="" />
 </noscript>

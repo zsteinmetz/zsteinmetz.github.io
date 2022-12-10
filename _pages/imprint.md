@@ -33,33 +33,30 @@ with a modified [al-folio](https://github.com/alshedivat/al-folio) theme.
 The source code is available at
 [github.com/zsteinmetz](https://github.com/zsteinmetz/zsteinmetz.github.io).
 
-For technical reasons, the following data are transferred when establishing a connection:
+For technical reasons, the following data are transferred and (temporarily) stored when establishing a connection:
 
 - your IP address
 - the user agent of your web browser
-
-### session cookies
-
-Your theme selection (`theme=light`/`theme=dark`) is saved temporarily while browsing this website. The data are deleted once the browser session ends.
+- session cookies
 
 ### github
 
 GitHub stores your IP address and user agent in a log file.
-Please see the [GitHub Privacy Policies](https://docs.github.com/en/site-policy/privacy-policies).
+Please see the [GitHub Privacy Policies](https://docs.github.com/en/site-policy/privacy-policies) for details.
 
-### jsDelivr and polyfill.io content delivery networks
+### netcup
 
-The used Jekyll theme depends on Bootstrap delivered via jsDelivr.
-Mathematical formulas are rendered with MathJax provided by jsDelivr and polyfill.io.
-Their privacy policies can be found here:
+The used javascript libraries and fonts are hosted by netcup.
+Their privacy policy can be found [here](https://www.netcup.eu/kontakt/datenschutzerklaerung.php).
 
-- [jsDelivr Privacy Policy](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net)
-- [polyfill.io Privacy Policy](https://polyfill.io/v3/privacy-policy/)
+### session cookies
 
-### matomo
+Your theme selection (`theme=light`/`theme=dark`) is saved temporarily while browsing this website. The data are deleted when the browser session ends.
 
-[Matomo](https://matomo.org/) is used for privacy-friendly web analytics. Matomo refrains from using cookies, IP addresses are pseudonymized, and browser fingerprints are regenerated every 24 hours. Matomo will be automatically deactivated if your browser sends a "Do Not Track" request. For more details please see the [Matomo Privacy Policy](https://matomo.org/privacy-policy/).
+### web analytics
+
+A locally hosted [Matomo](https://matomo.org/) instance is used for privacy-friendly web analytics. Matomo refrains from using cookies, IP addresses are pseudonymized, and browser fingerprints are deleted after 24 hours. Matomo will be automatically deactivated if your browser sends a "Do Not Track" request. For more details please see the [Matomo Privacy Policy](https://matomo.org/privacy-policy/).
 
 ### additional information
 
-A detailed GDPR compliant privacy policy is available [here](/privacy-policy) (in German).
+A detailed privacy policy in accordance with the German GDPR is available [here](/privacy-policy) (in German).
