@@ -102,6 +102,6 @@ Reviewer for
 *Journal of Plant Nutrition and Soil Science*,
 *Environmental Pollution*,
 *Polymers*, and
-*Frontiers in Environmental Science*
+*Frontiers in Environmental Science*.
 
-Advisor for the *F1000Research* Gateway "Agriculture, Food and Nutrition"
+Advisor for the *F1000Research* Gateway ["Agriculture, Food and Nutrition"](https://f1000research.com/agriculture-food-nutrition).

@@ -13,15 +13,24 @@
     - value: research_gate_profile
     - value: github_username
 
+- title: permanent position
+  type: time_table
+  contents:
+    - title: Research Associate
+      institution: RPTU, Germany
+      year: 12/2022–present
+      description: >
+        Investigating the fate of synthetic polymers in agroecosystems
+        using Py-GC/MS, FTIR spectroscopy, and data science
+
 - title: research and work experience
   type: time_table
   contents:
     - title: Research Associate
       institution: University of Koblenz–Landau, Germany
-      year: 12/2016–present
+      year: 12/2016–11/2022
       description: >
-        Scrutinizing microplastic fate in agricultural soil using Pyrolysis–GC/MS
-        and FTIR spectroscopy
+        Scrutinizing microplastic fate in plastic-mulched soil using Py-GC/MS
 
     - title: Guest Researcher
       institution: LUT, Finland
@@ -125,7 +134,7 @@
     - name: #  
     - name: Analytical chemistry
       value: >
-        (Pyrolysis–)GC/MS, GC/IRMS, GC/FID, HPLC, and FTIR–ATR using
+        (Py-)GC/MS, GC/IRMS, GC/FID, HPLC, and FTIR-ATR using
         OpenChrom, Xcalibur, LCquan, Isodat, Agilent ChemStation, and Open
         Specy for instrument control and data analysis
     - name: Computer skills
