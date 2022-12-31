@@ -16,7 +16,7 @@ Responsible for
 
 ##### Advanced Environmental Chemistry
 
-M.Sc. Environmental Sciences and M.Sc. Ecotoxicology, *University of Koblenz–Landau*,
+M.Sc. Environmental Sciences and M.Sc. Ecotoxicology, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
 since 12/2016
 
 <div class="teaching">
@@ -27,7 +27,7 @@ Co-responsible for
 
 ##### Einführung in die Methoden der Natur- und Umweltwissenschaften
 
-B.Sc. Mensch & Umwelt, *University of Koblenz–Landau*,
+B.Sc. Mensch & Umwelt, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
 since 10/2017
 
 &nbsp;
@@ -46,8 +46,8 @@ Co-supervising
 
 ##### Laborübungen Umweltanalytik
 
-B.Sc. Umweltwissenschaften, *University of Koblenz–Landau*,
-since 10/2021
+B.Sc. Umweltwissenschaften, *University of Koblenz-Landau*,
+10/2021–4/2022
 
 <div class="teaching">
   <h2 class="category">thesis supervisions</h2>
