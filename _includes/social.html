@@ -19,6 +19,9 @@
             {%- if site.publons_id -%}
             <a href="https://publons.com/a/{{ site.publons_id }}/" title="Publons"><i class="ai ai-publons"></i></a>
             {% endif %}
+            {%- if site.osf_id -%}
+            <a href="https:/osf.io/{{ site.osf_id }}/" title="Open Science Framework"><i class="ai ai-osf"></i></a>
+            {% endif %}
             {%- if site.scopus_id -%}
             <a href="https://scopus.com/authid/detail.uri?authorId={{ site.scopus_id }}" title="Scopus"><i class="ai ai-scopus"></i></a>
             {% endif %}
@@ -90,6 +93,9 @@
             {% endif %}
             {%- if site.facebook_id -%}
             <a href="https://facebook.com/{{ site.facebook_id }}" title="Facebook"><i class="fab fa-facebook"></i></a>
+            {% endif %}
+            {%- if site.youtube_id -%}
+            <a href="https://youtube.com/@{{ site.youtube_id }}" title="YouTube"><i class="fab fa-youtube"></i></a>
             {% endif %}
             {%- if site.discord_id -%}
             <a href="https://discord.com/users/{{ site.discord_id }}" title="Discord"><i class="fab fa-discord"></i></a>

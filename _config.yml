@@ -79,6 +79,7 @@ medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: AAC-9025-2020 # your ID on Publons
 scopus_id: 56692933000 # your ID on Scopus
+osf_id: # your OSF ID
 research_gate_profile: Zacharias-Steinmetz # your profile on ResearchGate
 blogger_url: # your blogger URL
 work_url: https://www.nuw.uni-landau.de/ag-umwelt-und-bodenchemie/gruppe/wissenschaftler/dr-zacharias-steinmetz # work page URL
@@ -94,6 +95,7 @@ pinterest_id: # your pinterest id
 unsplash_id: # your unsplash id
 instagram_id: # your instagram id
 facebook_id: # your facebook id
+youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
@@ -103,7 +105,7 @@ contact_note: >
 # Analytics and search engine verification
 # -----------------------------------------------------------------------------
 
-google_analytics:  # your Goole Analytics measurement ID (format: G-XXXXXXXXXX)
+google_analytics:  # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 
 google_site_verification:  # your google-site-verification ID (Google Search Console)
@@ -121,6 +123,10 @@ permalink: /blog/:year/:title/
 # Pagination
 pagination:
   enabled: true
+
+related_blog_posts:
+  enabled: true
+  max_related: 5
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out
@@ -272,6 +278,10 @@ scholar:
 
   query: "@*"
 
+badges: # Display different badges for your pulications
+  altmetric_badge: false # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+  dimensions_badge: true # Dimensions badge (https://badge.dimensions.ai/)
+
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric]
 
@@ -375,10 +385,10 @@ mdb:
     css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
     js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
 medium_zoom:
-  version: "1.0.7"
-  integrity: "sha256-w/AewdhapgDf1tqgZtNk/jRXf7oj9ga7aDXBFMMoEjM="
+  version: "1.0.8"
+  integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
 dimensions:
-  integrity: "sha256-FDaPtF6rnxiNI800UdO4cevFHXF1HxF/uRX+VhMgPAI="
+  integrity: "sha256-9K/wmwTKLPZhc51db/BUG3DUFGNQqM4zqQsyYhvZPHI="
 matomo:
   url: "https://hosting117095.a2f81.netcup.net/matomo"
   id: 2
