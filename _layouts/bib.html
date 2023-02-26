@@ -156,7 +156,7 @@
         {%- else -%}
         <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
         {%- endif %}
-      {%- else -%}
+      {%- else %}
         <a href="mailto:{{ site.email | encode_email }}?subject=PDF Request for &quot;{{ entry.title }}&quot;" class="btn btn-sm z-depth-0" role="button">Request PDF</a>
       {%- endif %}
       {%- if entry.supp %}
