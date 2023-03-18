@@ -389,7 +389,7 @@ medium_zoom:
   version: "1.0.8"
   integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
 dimensions:
-  integrity: "sha256-9K/wmwTKLPZhc51db/BUG3DUFGNQqM4zqQsyYhvZPHI="
+  integrity: "sha256-y9dVsofH8CeEkjfioirJuUu/tOuNVJqzVr6pDH3y3Hw="
 matomo:
-  url: "https://hosting184615.ae8af.netcup.net/matomo"
+  url: "https://analytics.zsteinmetz.de"
   id: 2
