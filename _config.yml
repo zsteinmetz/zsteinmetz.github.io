@@ -400,7 +400,7 @@ medium_zoom:
   version: "1.0.8"
   integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
 dimensions:
-  integrity: "sha256-y9dVsofH8CeEkjfioirJuUu/tOuNVJqzVr6pDH3y3Hw="
+  integrity: "sha256-cGZu1T2wj89nTBtH1b2Nb18wvMLhw+7V0OyEHtM+Zc4="
 matomo:
   url: "https://analytics.zsteinmetz.de"
   id: 2
