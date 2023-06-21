@@ -8,7 +8,7 @@
   social:
     - value: orcid_id
     - value: scholar_userid
-    - value: publons_id
+    - value: wos_id
     - value: scopus_id
     - value: research_gate_profile
     - value: github_username

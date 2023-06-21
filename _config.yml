@@ -81,7 +81,7 @@ whatsapp_number: # your WhatsApp number (full phone number in international form
 orcid_id: 0000-0001-6675-5033 # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
-publons_id: AAC-9025-2020 # your ID on Publons
+wos_id: AAC-9025-2020 # your Web of Science ResearcherID
 scopus_id: 56692933000 # your ID on Scopus
 osf_id: # your OSF ID
 research_gate_profile: Zacharias-Steinmetz # your profile on ResearchGate
@@ -372,8 +372,8 @@ fontawesome:
   version: "6.2.1"
   integrity: "sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU="
 academicons:
-  version: "1.9.2"
-  integrity: "sha256-CylD++oS3IkJmSs/j4i1w0cv2wpVQRLLQqw/m+Fvxts="
+  version: "1.9.4"
+  integrity: "sha256-1oz1+rx2BF/9OiBUPSh1NEUwyUECNU5O70RoKnClGNs="
 bootstrap:
   version: "4.6.2"
   integrity:
