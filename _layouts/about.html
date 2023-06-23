@@ -41,13 +41,12 @@ layout: default
           </div>
 
           <!-- News -->
-          {% if page.news -%}
-            {%- include news.html %}
+          {% if page.news and site.announcements.enabled -%}
+            {%- include news.html limit=true %}
           {%- endif %}
 
           <!-- Latest posts -->
           {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
             {%- include latest_posts.html %}
           {%- endif %}
 
@@ -70,5 +69,5 @@ layout: default
             </div>
           {%- endif %}
         </article>
-
+        
 </div>
