@@ -8,7 +8,6 @@ description: >
   <a href='#selected-conference-contributions'>selected conference contributions</a>,
   <a href='#journalistic-articles'>journalistic articles</a>, and
   my <a href='#referee'>reviewing activity for scientific journals</a>.
-start_year: 2015
 nav: true
 nav_order: 3
 ---
@@ -16,81 +15,31 @@ nav_order: 3
 ## peer-reviewed journal articles
 
 <div class="publications">
-
-{% assign now = 'now' | date: "%Y" %}
-{% for y in (page.start_year..now) reversed %}
-  {% capture bib_count %}{% bibliography_count -f papers -q @*[year={{y}}]* %}{% endcapture %}
-  {% assign bib_count = bib_count | to_integer %}
-  {% if bib_count > 0 %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
-  {% endif %}
-{% endfor %}
-
+  {% bibliography -f papers %}
 </div>
 
 ## preprints and non peer-reviewed papers
 
 <div class="publications">
-
-{% assign now = 'now' | date: "%Y" %}
-{% for y in (page.start_year..now) reversed %}
-  {% capture bib_count %}{% bibliography_count -f preprints -q @*[year={{y}}]* %}{% endcapture %}
-  {% assign bib_count = bib_count | to_integer %}
-  {% if bib_count > 0 %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f preprints -q @*[year={{y}}]* %}
-  {% endif %}
-{% endfor %}
-
+  {% bibliography -f preprints %}
 </div>
 
 ## selected conference contributions
 
 <div class="publications">
-
-{% assign now = 'now' | date: "%Y" %}
-{% for y in (page.start_year..now) reversed %}
-  {% capture bib_count %}{% bibliography_count -f conferences -q @*[year={{y}}]* %}{% endcapture %}
-  {% assign bib_count = bib_count | to_integer %}
-  {% if bib_count > 0 %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f conferences -q @*[year={{y}}]* %}
-  {% endif %}
-{% endfor %}
-
+  {% bibliography -f conferences %}
 </div>
 
 ## invited speaker
 
 <div class="publications">
-
-{% assign now = 'now' | date: "%Y" %}
-{% for y in (page.start_year..now) reversed %}
-  {% capture bib_count %}{% bibliography_count -f invited -q @*[year={{y}}]* %}{% endcapture %}
-  {% assign bib_count = bib_count | to_integer %}
-  {% if bib_count > 0 %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f invited -q @*[year={{y}}]* %}
-  {% endif %}
-{% endfor %}
-
+  {% bibliography -f invited %}
 </div>
 
 ## journalistic articles
 
 <div class="publications">
-
-{% assign now = 'now' | date: "%Y" %}
-{% for y in (page.start_year..now) reversed %}
-  {% capture bib_count %}{% bibliography_count -f journalistic -q @*[year={{y}}]* %}{% endcapture %}
-  {% assign bib_count = bib_count | to_integer %}
-  {% if bib_count > 0 %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f journalistic -q @*[year={{y}}]* %}
-  {% endif %}
-{% endfor %}
-
+  {% bibliography -f journalistic %}
 </div>
 
 ## referee

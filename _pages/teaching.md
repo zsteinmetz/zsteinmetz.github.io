@@ -5,12 +5,9 @@ title: teaching
 description: Lectures, seminars, lab courses, and thesis supervisions.
 nav: true
 nav_order: 5
-start_year: 2018
 ---
 
-<div class="teaching">
-  <h2 class="category">lectures</h2>
-</div>
+## lectures
 
 Responsible for
 
@@ -19,9 +16,9 @@ Responsible for
 M.Sc. Environmental Sciences and M.Sc. Ecotoxicology, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
 since 12/2016
 
-<div class="teaching">
-  <h2 class="category">seminars</h2>
-</div>
+&nbsp;
+
+## seminars
 
 Co-responsible for
 
@@ -30,55 +27,33 @@ Co-responsible for
 B.Sc. Mensch & Umwelt, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
 since 10/2017
 
-&nbsp;
-
 Assisting with
 
 ##### R for Beginners 
 
 10/2015–2/2016
 
-<div class="teaching">
-  <h2 class="category">lab courses</h2>
-</div>
+&nbsp;
+
+## lab courses
 
 Co-supervising
 
 ##### Laborübungen Umweltanalytik
 
-B.Sc. Umweltwissenschaften, *University of Koblenz-Landau*,
-10/2021–4/2022
+B.Sc. Umweltwissenschaften, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
+since 10/2021
 
-<div class="teaching">
-  <h2 class="category">thesis supervisions</h2>
-</div>
+&nbsp;
 
-Examined
+## examined/supervised theses
 
 <div class="publications">
-
-{% assign now = 'now' | date: "%Y" %}
-{% for y in (page.start_year..now) reversed %}
-  {% capture bib_count %}{% bibliography_count -f examined -q @*[year={{y}}]* %}{% endcapture %}
-  {% assign bib_count = bib_count | to_integer %}
-  {% if bib_count > 0 %}
-  {% bibliography -f examined -q @*[year={{y}}]* %}
-  {% endif %}
-{% endfor %}
-
+  {% bibliography -f examined %}
 </div>
 
-Co-supervised
+## co-supervised theses
 
 <div class="publications">
-
-{% assign now = 'now' | date: "%Y" %}
-{% for y in (page.start_year..now) reversed %}
-  {% capture bib_count %}{% bibliography_count -f supervised -q @*[year={{y}}]* %}{% endcapture %}
-  {% assign bib_count = bib_count | to_integer %}
-  {% if bib_count > 0 %}
-  {% bibliography -f supervised -q @*[year={{y}}]* %}
-  {% endif %}
-{% endfor %}
-
+  {% bibliography -f supervised %}
 </div>
