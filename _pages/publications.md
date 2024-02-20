@@ -45,12 +45,14 @@ nav_order: 3
 ## referee
 
 Reviewer for
+*Journal of Analytical and Applied Pyrolysis*,
+*Frontiers in Environmental Science*,
+*Environmental Pollution*,
+*TrAC Trends in Analytical Chemistry*,
 *Nature Sustainability*,
 *Science of the Total Environment*,
-*Journal of Analytical and Applied Pyrolysis*,
 *Journal of Plant Nutrition and Soil Science*,
-*Environmental Pollution*,
-*Polymers*, and
-*Frontiers in Environmental Science*.
+*European Journal of Soil Science*, and
+*Polymers*.
 
 Advisor for the *F1000Research* Gateway ["Agriculture, Food and Nutrition"](https://f1000research.com/agriculture-food-nutrition).
