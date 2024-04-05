@@ -16,7 +16,7 @@
 - title: permanent position
   type: time_table
   contents:
-    - title: Postdoctoral Researcher
+    - title: Postdoctoral Researcher and Team Lead
       institution: RPTU Kaiserslautern-Landau, Germany
       year: 12/2022–present
       description: >
@@ -139,11 +139,11 @@
     - name: #  
     - name: Analytical chemistry
       value: >
-        (Py-)GC/MS, GC/IRMS, GC/FID, HPLC, FTIR-ATR, TGA-MS, and DSC using
+        (Py-)GC/MS, GC/IRMS, GC/FID, LC/MS, HPLC, FTIR-ATR, TGA-MS, and DSC using
         OpenChrom, Xcalibur, LCquan, Isodat, Agilent ChemStation, and Open
         Specy for instrument control and analysis
     - name: Computer skills
       value: >
         Advanced in R statistics and open office applications<br>
         Competent in GIS (QGIS, GRASS), Python, Linux shell, LaTeX, git<br>
-        Basic knowledge of C++, Docker, SQL, HTML, and PHP
+        Basic knowledge of C++, Docker/Podman, SQL, HTML, and PHP
