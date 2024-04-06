@@ -7,7 +7,7 @@ description: >
   <a href='#preprints-and-non-peer-reviewed-papers'>preprints and non peer-reviewed papers</a>,
   <a href='#selected-conference-contributions'>selected conference contributions</a>,
   <a href='#journalistic-articles'>journalistic articles</a>, and
-  my <a href='#referee'>reviewing activity for scientific journals</a>.
+  my <a href='#reviewing'>reviewing activity for scientific journals</a>.
 nav: true
 nav_order: 3
 ---
@@ -42,17 +42,23 @@ nav_order: 3
   {% bibliography -f journalistic %}
 </div>
 
-## referee
+## reviewing
 
-Reviewer for
-*Journal of Analytical and Applied Pyrolysis*,
-*Frontiers in Environmental Science*,
-*Environmental Pollution*,
-*TrAC Trends in Analytical Chemistry*,
-*Nature Sustainability*,
-*Science of the Total Environment*,
-*Journal of Plant Nutrition and Soil Science*,
-*European Journal of Soil Science*, and
-*Polymers*.
+I review for the following research funding agencies and scientific journals.
 
-Advisor for the *F1000Research* Gateway ["Agriculture, Food and Nutrition"](https://f1000research.com/agriculture-food-nutrition).
+- Deutsche Forschungsgemeinschaft (DFG)
+- *Advances in Water Resources*
+- *Environmental Pollution*
+- *Environmental Science and Pollution Research International*
+- *European Journal of Soil Science*
+- *Frontiers in Environmental Science*
+- *Journal of Analytical and Applied Pyrolysis*
+- *Journal of Plant Nutrition and Soil Science*
+- *Journal of Soil and Water Conservation*
+- *Nature Sustainability*
+- *Pedosphere*
+- *Polymers*
+- *Science of the Total Environment*
+- *TrAC Trends in Analytical Chemistry*
+
+I further serve as advisor for the *F1000Research* Gateway ["Agriculture, Food and Nutrition"](https://f1000research.com/agriculture-food-nutrition).

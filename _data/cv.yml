@@ -16,12 +16,11 @@
 - title: permanent position
   type: time_table
   contents:
-    - title: Postdoctoral Researcher and Team Lead
+    - title: Postdoctoral Researcher and Team Lead “Soil Stressors”
       institution: RPTU Kaiserslautern-Landau, Germany
       year: 12/2022–present
       description: >
-        Investigating the fate of synthetic polymers in agroecosystems
-        using Py-GC/MS, FTIR spectroscopy, and data science
+        Investigating the fate of organic pollutants in agroecosystems
 
 - title: research and work experience
   type: time_table
@@ -30,14 +29,15 @@
       institution: University of Koblenz-Landau, Germany
       year: 12/2016–11/2022
       description: >
-        Scrutinizing microplastic fate in plastic-mulched soil using Py-GC/MS
+        Tracing microplastics in plastic-mulched soil using Py-GC/MS and
+        FTIR spectroscopy
 
     - title: Guest Researcher
       institution: LUT, Finland
       year: 8/2019
       description: >
-        Exchanging knowledge on microplastic extraction from soil and sediment
-        and Raman microspectroscopy
+        Exchanging knowledge on microplastic research in water and sediments using 
+        Raman microspectroscopy
 
     - title: Student Employee
       institution: RIFCON GmbH, Germany
@@ -73,7 +73,6 @@
       description: 
         - "Thesis title: <a href='https://nbn-resolving.org/urn:nbn:de:kola-23141'>“Agricultural Plastic Covers—Source of Plastic Debris in Soil?”</a>"
         - "Final grade: 1.1, <em>magna cum laude</em>"
-        - "Best dissertation award 2022/23 of the Faculty of Environmental and Natural Sciences"
 
     - title: M.Sc. Ecotoxicology
       institution: University of Koblenz-Landau, Germany
@@ -89,27 +88,23 @@
         - "Thesis title: “Persistence of chemical and biological effects of olive mill wastewater seasonally applied to loessial olive orchard soil”"
         - "Final grade: 1.5"        
 
-- title: funding, awards, and honors
+- title: awards and honors
   type: time_table
   contents:
-    - title: TransSAPs — How the Spatio-temporal Transformation of Superabsorbent Polymers (SAPs) Alters Soil Processes (Advisory)
-      institution: "162000 Euro, <a href='https://gepris.dfg.de/gepris/projekt/497769016'>BU 3763/1-1</a>, Deutsche Forschungsgemeinschaft"
-      year: 5/2022
+    - title: Best Dissertation 2022/23
+      institution: Faculty of Natural and Environmental Sciences, RPTU Kaiserslautern-Landau
+      year: 7/2023
 
-    - title: Research Travel Grant, Finland
-      institution: 2000 Euro, Erasmus+ staff mobility
-      year: 8/2019
+    - title: Best Exercise 2017/18
+      institution: Faculty of Natural and Environmental Sciences, RPTU Kaiserslautern-Landau
+      year: 7/2018
 
-    - title: Research Travel Grant, Chile
-      institution: 3000 Euro, Erasmus+ staff mobility
-      year: 1/2018
-
-    - title: “AufLand” Publication Grant for Junior Scientists
-      institution: 3000 Euro, University of Koblenz-Landau, Germany
+    - title: “AufLand” Publication Scholarship for Junior Scientists
+      institution: University of Koblenz-Landau, Germany
       year: 8/2016–12/2016
 
     - title: Scholarship
-      institution: 8000 Euro, Studienstiftung des deutschen Volkes
+      institution: Studienstiftung des deutschen Volkes
       year: 3/2015–9/2016
 
 - title: academic self government
@@ -119,14 +114,15 @@
       institution: University of Koblenz-Landau and RPTU Kaiserslautern-Landau, Germany
       year: 12/2016–present
       description: >
-        In various panels including the committee on educational affairs, the PhD
-        committee, and the examination board of the Faculty Council of Environmental and Natural Sciences
+        In various panels including the PhD committee, the examination committee,
+        the committee on educational affairs, and the structure and development commission
+        of the Faculty Council of Natural and Environmental Sciences
 
     - title: Elected Student Representative
       institution: University of Koblenz-Landau, Germany
       year: 1/2014–12/2015
       description: >
-        Faculty Council of Environmental and Natural Sciences
+        Faculty Council of Natural and Environmental Sciences
 
 - title: skills
   type: map
