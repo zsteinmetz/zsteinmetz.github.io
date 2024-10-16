@@ -1,8 +1,6 @@
 - title: #general information
   type: general
   contents:
-    - name: Born
-      value: September 23, 1989, in Frankfurt/Main
     - name: #
     - name: Email # will be populated automatically
   social:
@@ -16,15 +14,22 @@
 - title: permanent position
   type: time_table
   contents:
-    - title: Postdoctoral Researcher and Team Lead “Soil Stressors”
+    - title: Postdoctoral Researcher
       institution: RPTU Kaiserslautern-Landau, Germany
       year: 12/2022–present
-      description: >
-        Investigating the fate of plastics and organic pollutants in agroecosystems
+      description:
+        - Investigating the fate of plastics and organic pollutants in agroecosystems
+        - Head of the “Soil Stressors” team
 
 - title: research and work experience
   type: time_table
   contents:
+    - title: Guest Researcher
+      institution: SLU, Sweden
+      year: 9/2024
+      description: >
+        Exchanging knowledge on the fate and effects of plastics in soil
+
     - title: Research Associate
       institution: University of Koblenz-Landau, Germany
       year: 12/2016–11/2022
