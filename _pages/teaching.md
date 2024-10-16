@@ -16,6 +16,13 @@ Responsible for
 M.Sc. Environmental Sciences and M.Sc. Ecotoxicology, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
 since 12/2016
 
+Co-responsible for
+
+##### Interdisciplinary Introduction to Scientific Methods
+
+M.Sc. Environmental Challenges and Human Responses, *RPTU Kaiserslautern-Landau*,
+since 10/2024
+
 &nbsp;
 
 ## seminars
