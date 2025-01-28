@@ -8,9 +8,6 @@ nav: false
 ## responsible according to German § 5 TMG
 
 Zacharias Steinmetz\
-Horststr. 157\
-76829 Landau
-
 Email: [{{ site.email }}](mailto:{{ site.email | encode_email }})
 
 ## disclaimer
