@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Since 2015/16, I taught a total of 29 courses (95 SWS), including lectures, seminars, exercises, laboratory courses, and tutorials in environmental chemistry and scientific methods training.
+description: Since 2015/16, I taught a total of 32 courses (102 SWS), including lectures, seminars, exercises, laboratory courses, and tutorials in environmental chemistry and scientific methods training.
 nav: true
 nav_order: 5
 ---
@@ -14,7 +14,7 @@ Responsible for
 ##### Advanced Environmental Chemistry
 
 M.Sc. Environmental Sciences and M.Sc. Ecotoxicology, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
-since 12/2016
+12/2016–4/2025
 
 ##### Interdisciplinary Introduction to Scientific Methods
 
@@ -53,7 +53,7 @@ since 10/2021
 
 ## examined/supervised theses
 
-1 PhD (since 10/2023), 11 B.Sc. and M.Sc. students; 5 of my former M.Sc. students are currently doing their PhD, another has completed his PhD.
+2 PhDs (since 10/2023), 12 B.Sc. and M.Sc. students; 6 of my former M.Sc. students started a PhD, 3 have completed their PhDs.
 
 <div class="publications">
   {% bibliography -f examined %}
