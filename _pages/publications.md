@@ -24,16 +24,16 @@ nav_order: 3
   {% bibliography -f preprints %}
 </div>
 
-## selected conference contributions
-
-<div class="publications">
-  {% bibliography -f conferences %}
-</div>
-
 ## invited speaker
 
 <div class="publications">
   {% bibliography -f invited %}
+</div>
+
+## selected conference contributions
+
+<div class="publications">
+  {% bibliography -f conferences %}
 </div>
 
 ## journalistic articles
@@ -47,6 +47,7 @@ nav_order: 3
 I review for the following research funding agencies and scientific journals.
 
 - Deutsche Forschungsgemeinschaft (DFG)
+- Fachagentur Nachwachsende Rohstoffe (FNR)
 - *Advances in Water Resources*
 - *Environmental Pollution*
 - *Environmental Science and Pollution Research International*
@@ -55,6 +56,7 @@ I review for the following research funding agencies and scientific journals.
 - *Journal of Analytical and Applied Pyrolysis*
 - *Journal of Plant Nutrition and Soil Science*
 - *Journal of Soil and Water Conservation*
+- *Microplastics and Nanoplastics*
 - *Nature Sustainability*
 - *Pedosphere*
 - *Polymers*
