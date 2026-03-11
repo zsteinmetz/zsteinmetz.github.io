@@ -9,7 +9,7 @@ nav_order: 5
 
 ## lectures
 
-Responsible for
+&nbsp;
 
 ##### Advanced Environmental Chemistry
 
@@ -25,14 +25,12 @@ since 10/2024
 
 ## seminars
 
-Co-responsible for
+&nbsp;
 
 ##### Einführung in die Methoden der Natur- und Umweltwissenschaften
 
 B.Sc. Mensch & Umwelt, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
 since 10/2017
-
-Assisting with
 
 ##### R for Beginners 
 
@@ -42,16 +40,23 @@ Assisting with
 
 ## lab courses
 
-Supervising
+&nbsp;
 
 ##### Laborübungen Umweltanalytik
 
 B.Sc. Umweltwissenschaften, *RPTU Kaiserslautern-Landau (formerly University of Koblenz-Landau)*,
 since 10/2021
 
+##### 	Chemisches Praktikum für Umweltwissenschaftler   
+
+B.Sc. Umweltwissenschaften, *RPTU Kaiserslautern-Landau*,
+10/2025–2/2026
+
 &nbsp;
 
 ## examined/supervised theses
+
+&nbsp;
 
 2 PhDs (since 10/2023), 12 B.Sc. and M.Sc. students; 6 of my former M.Sc. students started a PhD, 3 have completed their PhDs.
 
