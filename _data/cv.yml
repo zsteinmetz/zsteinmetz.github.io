@@ -34,7 +34,7 @@
       institution: University of Koblenz-Landau, Germany
       year: 12/2016–11/2022
       description: >
-        Tracing microplastics in plastic-mulched soil using Py-GC/MS and
+        Tracing microplastics in plastic-mulched soil using Pyrolysis-GC/MS and
         FTIR spectroscopy
 
     - title: Guest Researcher
@@ -129,11 +129,11 @@
     - name: #  
     - name: Analytical chemistry
       value: >
-        (Py-)GC/MS, GC/IRMS, GC/FID, LC/MS, HPLC, FTIR-ATR, TGA-MS, and DSC using
-        OpenChrom, Xcalibur, LCquan, Isodat, Agilent ChemStation, and Open
+        (Pyrolysis-)GC/MS, GC/IRMS, GC/FID, LC/MS, HPLC, FTIR-ATR, TGA-MS, and DSC using
+        OpenChrom, Xcalibur, Chromeleon, Isodat, ChemStation, and Open
         Specy for instrument control and analysis
     - name: Computer skills
       value: >
-        Advanced in R statistics and open office applications<br>
+        Advanced in R statistics and office applications<br>
         Competent in GIS (QGIS, GRASS), Python, Linux shell, LaTeX, git<br>
         Basic knowledge of C++, Docker/Podman, SQL, HTML, and PHP

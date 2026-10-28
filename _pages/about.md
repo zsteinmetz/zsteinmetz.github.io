@@ -28,7 +28,7 @@ My research focuses on the impact of agriculture on land and water.
 ## main research interests
 
 - Investigating the sources, sinks, and pathways of plastics and other anthropogenic pollutants in agroecosystems
-- Developing novel methods for characterizing and quantifying synthetic polymers in heterogeneous matrices, for example, using pyrolysis-gas chromatography/mass spectrometry (Py-GC/MS) and Fourier-transform infrared spectroscopy (FTIR) in combination with advanced data science applications
+- Developing novel methods for characterizing and quantifying synthetic polymers in heterogeneous matrices, for example, using pyrolysis-gas chromatography/mass spectrometry (Pyrolysis-GC/MS) and Fourier-transform infrared spectroscopy (FTIR) in combination with advanced data science applications
 - Elucidating the indirect effects of anthropogenic pollutants on ecosystem functions using biomarkers.
 
 <p style="margin-bottom:2.5em;"></p>
