@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Since 2015/16, I taught a total of 32 courses (102 SWS), including lectures, seminars, exercises, laboratory courses, and tutorials in environmental chemistry and scientific methods training.
+description: Since 2015/16, I taught more than 30 courses (100 SWS), including lectures, seminars, exercises, laboratory courses, and tutorials in environmental chemistry and scientific methods training.
 nav: true
 nav_order: 5
 ---
@@ -10,6 +10,11 @@ nav_order: 5
 ## lectures
 
 &nbsp;
+
+##### Grundlagen der Umweltanalytik
+
+B.Sc. Umweltwissenschaften, B.Sc. Mensch & Umwelt, Zweifachbachelor, M.Ed. Chemie, *RPTU Kaiserslautern-Landau*,
+since 10/2026
 
 ##### Advanced Environmental Chemistry
 
