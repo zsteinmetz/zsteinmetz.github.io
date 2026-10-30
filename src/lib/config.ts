@@ -57,7 +57,9 @@ function normalizeLocale(locale: string): string {
 function readConfigFromPath(configPath: string): Partial<SiteConfig> | null {
   try {
     const fileContent = fs.readFileSync(configPath, 'utf-8');
-    return parse(fileContent) as unknown as Partial<SiteConfig>;
+    // smol-toml returns objects with null prototypes, which cannot be serialized
+    // from Server Components to Client Components. Convert to plain objects.
+    return JSON.parse(JSON.stringify(parse(fileContent))) as unknown as Partial<SiteConfig>;
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
       return null;

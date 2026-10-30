@@ -57,7 +57,9 @@ export function getTomlContent<T>(filename: string, locale?: string): T | null {
   }
 
   try {
-    return parse(content) as unknown as T;
+    // smol-toml returns objects with null prototypes, which cannot be serialized
+    // from Server Components to Client Components. Convert to plain objects.
+    return JSON.parse(JSON.stringify(parse(content))) as unknown as T;
   } catch (error) {
     console.error(`Error parsing TOML file ${filename}:`, error);
     return null;
