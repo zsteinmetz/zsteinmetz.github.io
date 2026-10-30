@@ -14,6 +14,8 @@
 /* Default to light theme colors - no system preference detection */
 :root,
 .light {
+  color-scheme: light;
+
   /* Light theme colors */
   --background: #fefffe;
   --foreground: #0f172a;
@@ -25,6 +27,13 @@
   --accent: #d4a562;
   --accent-light: #e4b976;
   --accent-dark: #b8914d;
+  /* Darker gold for text/icon usage on light backgrounds (WCAG AA) */
+  --accent-text: #8a6d33;
+  /* Foreground color to pair with gold backgrounds (navy on gold) */
+  --accent-foreground: #1e293b;
+
+  /* Card surface color */
+  --card: #ffffff;
   
   /* Neutral colors */
   --neutral-50: #f8fafc;
@@ -45,9 +54,17 @@
   --info: #3b82f6;
   
   /* Glass effect */
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.8);
   --glass-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Line heights (plain custom properties - used directly via var()) */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
 }
 
 @theme inline {
@@ -60,6 +77,9 @@
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
   --color-accent-dark: var(--accent-dark);
+  --color-accent-text: var(--accent-text);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
   
   /* Neutral palette */
   --color-neutral-50: var(--neutral-50);
@@ -89,37 +109,6 @@
   --font-serif: 'Georgia CDN', Georgia, serif;
   --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   
-  /* Font sizes */
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 3.75rem;
-  --font-size-7xl: 4.5rem;
-  --font-size-8xl: 6rem;
-  --font-size-9xl: 8rem;
-  
-  /* Letter spacing */
-  --letter-spacing-tighter: -0.05em;
-  --letter-spacing-tight: -0.025em;
-  --letter-spacing-normal: 0em;
-  --letter-spacing-wide: 0.025em;
-  --letter-spacing-wider: 0.05em;
-  --letter-spacing-widest: 0.1em;
-  
-  /* Line heights */
-  --line-height-none: 1;
-  --line-height-tight: 1.25;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
-  --line-height-loose: 2;
-  
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -129,11 +118,6 @@
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
 }
 
 /* Use Source Han Serif for Chinese headings/title text via .font-serif */
@@ -144,6 +128,8 @@ html[data-locale^="zh"] {
 
 /* Dark mode styles */
 .dark {
+  color-scheme: dark;
+
   --background: #0f172a;
   --foreground: #f8fafc;
   
@@ -154,6 +140,19 @@ html[data-locale^="zh"] {
   --accent: #e4b976;
   --accent-light: #f0c674;
   --accent-dark: #d4a562;
+  /* Brighter gold reads well as text on dark navy */
+  --accent-text: #f0c674;
+  /* Navy on gold keeps sufficient contrast in dark mode too */
+  --accent-foreground: #1e293b;
+
+  /* Card surface color */
+  --card: #1e293b;
+  
+  /* Semantic colors - softened for dark backgrounds */
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --info: #60a5fa;
   
   /* Dark mode glass effect */
   --glass-bg: rgba(15, 23, 42, 0.8);
@@ -169,8 +168,8 @@ html[data-locale^="zh"] {
   --neutral-500: #94a3b8;
   --neutral-600: #cbd5e1;
   --neutral-700: #e2e8f0;
-  --neutral-800: #1e293b;
-  --neutral-900: #0f172a;
+  --neutral-800: #f1f5f9;
+  --neutral-900: #f8fafc;
 }
 
 
@@ -217,6 +216,16 @@ body {
   width: 8px;
 }
 
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-300) var(--neutral-100);
+}
+
+html.dark {
+  scrollbar-color: var(--neutral-600) var(--neutral-100);
+}
+
 ::-webkit-scrollbar-track {
   background: var(--neutral-100);
 }
@@ -232,7 +241,7 @@ body {
 
 /* Dark mode scrollbar */
 .dark ::-webkit-scrollbar-track {
-  background: var(--neutral-800);
+  background: var(--neutral-100);
 }
 
 .dark ::-webkit-scrollbar-thumb {
@@ -245,11 +254,16 @@ body {
 
 /* Card background utility */
 .card-bg {
-  background-color: #ffffff;
+  background-color: var(--card);
 }
 
 .dark .card-bg {
-  background-color: #1e293b;
   /* Soften card borders in dark mode only */
   border-color: rgba(148, 163, 184, 0.24);
+}
+
+/* Keyboard focus: brand-gold ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }

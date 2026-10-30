@@ -137,7 +137,6 @@ PRISM/
 │   ├── lib/              # 工具函数 (解析器, 配置加载器)
 │   └── types/            # TypeScript 类型定义
 ├── next.config.ts        # Next.js 配置文件
-└── tailwind.config.ts    # Tailwind CSS 配置文件
 ```
 
 ## 🤝 参与贡献

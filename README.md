@@ -129,7 +129,6 @@ PRISM/
 │   ├── lib/              # Utility functions (parsers, config loaders)
 │   └── types/            # TypeScript definitions
 ├── next.config.ts        # Next.js configuration
-└── tailwind.config.ts    # Tailwind CSS configuration
 ```
 
 ## 🤝 Contributing
