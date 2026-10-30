@@ -83,7 +83,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                             <ChartBarIcon className="h-4 w-4" />
                             {metrics.author.citedByCount} {messages.publications.citationsTotal}
                         </span>
-                        <span>h-index <strong>{metrics.author.hIndex}</strong></span>
+                        <span className="inline-flex items-center gap-1.5 font-medium text-neutral-700 dark:text-neutral-400">h-index {metrics.author.hIndex}</span>
                         <a
                             href={metrics.author.openalexId}
                             target="_blank"
