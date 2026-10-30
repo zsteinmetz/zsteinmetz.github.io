@@ -5,9 +5,8 @@ import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { LocaleProvider } from '@/components/ui/LocaleProvider';
-import { getConfig } from '@/lib/config';
+import { getConfig, type SiteConfig } from '@/lib/config';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
-import type { SiteConfig } from '@/lib/config';
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = getConfig();

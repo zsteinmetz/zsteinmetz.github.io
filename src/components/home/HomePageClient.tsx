@@ -12,7 +12,7 @@ import { Publication } from '@/types/publication';
 import { CardPageConfig, PublicationPageConfig, TextPageConfig } from '@/types/page';
 import { useLocaleStore } from '@/lib/stores/localeStore';
 
-interface SectionConfig {
+export interface SectionConfig {
   id: string;
   type: 'markdown' | 'publications' | 'list';
   title?: string;
@@ -24,7 +24,7 @@ interface SectionConfig {
   items?: NewsItem[];
 }
 
-type PageData =
+export type PageData =
   | { type: 'about'; id: string; sections: SectionConfig[] }
   | { type: 'publication'; id: string; config: PublicationPageConfig; publications: Publication[] }
   | { type: 'text'; id: string; config: TextPageConfig; content: string }
