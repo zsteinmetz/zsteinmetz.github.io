@@ -97,10 +97,10 @@ Supported page types:
 PRISM now supports i18n, i.e., multi-language.
 
 *   Default language lives in `content/`.
-*   Additional languages live in `content_<locale>/` (for example: `content_zh/`, `content_en/`).
+*   Additional languages live in `content_<locale>/` (for example: `content_de/`, `content_en/`).
 *   Keep the same filenames across directories. Example:
     *   `content/cv.md` (default)
-    *   `content_zh/cv.md`
+    *   `content_de/cv.md`
 *   If a localized file is missing, PRISM automatically falls back to the default `content/` version.
 
 Configure language behavior in `content/config.toml`:

@@ -107,8 +107,8 @@ PRISM 支持以下几种页面类型：
 PRISM 现已支持多语言：
 
 *   默认语言内容放在 `content/`
-*   其他语言内容放在 `content_<locale>/`（例如：`content_zh/`、`content_en/`）。
-*   各语言目录保持同名文件。例如：`content/cv.md`（默认）、`content_zh/cv.md`
+*   其他语言内容放在 `content_<locale>/`（例如：`content_de/`、`content_en/`）。
+*   各语言目录保持同名文件。例如：`content/cv.md`（默认）、`content_de/cv.md`
 *   若某个语言文件缺失，PRISM 会自动回退到默认 `content/` 中的同名文件。
 
 在 `content/config.toml` 中配置多语言行为：

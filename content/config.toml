@@ -34,7 +34,7 @@ enable_one_page_mode = false
 
 [i18n]
 enabled = true
-locales = ["zh", "en"]
+locales = ["en", "de"]
 default_locale = "en"
 # "auto" means the locale will be determined by the browser's language setting, "fixed" means the locale will be fixed to the default locale (but can be switched still, if you want to disable, set "enable=false")
 mode = "auto"
@@ -45,8 +45,8 @@ persist = true
 switcher = true
 
 [i18n.labels]
-zh = "中文"
 en = "English"
+de = "Deutsch"
 
 [[navigation]]
 title = "About"

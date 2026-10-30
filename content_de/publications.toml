@@ -1,0 +1,4 @@
+type = "publication"
+title = "Publikationen"
+description = "Liste meiner Forschungsergebnisse."
+source = "publications.bib"

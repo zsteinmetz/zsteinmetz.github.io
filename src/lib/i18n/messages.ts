@@ -98,59 +98,59 @@ const en: LocaleMessages = {
   },
 };
 
-const zh: LocaleMessages = {
+const de: LocaleMessages = {
   common: {
-    all: '全部',
-    copyToClipboard: '复制到剪贴板',
+    all: 'Alle',
+    copyToClipboard: 'In die Zwischenablage kopieren',
   },
   navigation: {
-    openMainMenu: '打开主菜单',
+    openMainMenu: 'Hauptmenü öffnen',
   },
   theme: {
-    system: '跟随系统',
-    light: '浅色',
-    dark: '深色',
-    currentTheme: '当前主题',
-    cycleTheme: '点击切换主题',
+    system: 'System',
+    light: 'Hell',
+    dark: 'Dunkel',
+    currentTheme: 'Aktuelles Design',
+    cycleTheme: 'Klicken, um das Design zu wechseln',
   },
   profile: {
-    email: '邮箱',
-    location: '地址',
-    workAddress: '办公地址',
-    click: '点击',
-    googleMap: '谷歌地图',
-    send: '发送',
-    sendEmail: '发送邮件',
-    researchInterests: '研究兴趣',
-    like: '点赞',
-    liked: '已点赞',
-    thanks: '感谢支持！',
+    email: 'E-Mail',
+    location: 'Standort',
+    workAddress: 'Arbeitsadresse',
+    click: 'Klicken',
+    googleMap: 'Google Maps',
+    send: 'Senden',
+    sendEmail: 'E-Mail senden',
+    researchInterests: 'Forschungsinteressen',
+    like: 'Gefällt mir',
+    liked: 'Gefällt dir',
+    thanks: 'Danke dir!',
   },
   home: {
-    about: '关于我',
-    news: '动态',
-    selectedPublications: '精选论文',
-    viewAll: '查看全部',
+    about: 'Über mich',
+    news: 'Aktuelles',
+    selectedPublications: 'Ausgewählte Publikationen',
+    viewAll: 'Alle anzeigen',
   },
   publications: {
-    searchPlaceholder: '搜索论文...',
-    filters: '筛选',
-    year: '年份',
-    type: '类型',
-    noResults: '没有找到符合条件的论文。',
-    abstract: '摘要',
+    searchPlaceholder: 'Publikationen suchen...',
+    filters: 'Filter',
+    year: 'Jahr',
+    type: 'Typ',
+    noResults: 'Keine Publikationen gefunden, die deinen Kriterien entsprechen.',
+    abstract: 'Zusammenfassung',
     bibtex: 'BibTeX',
-    code: '代码',
+    code: 'Code',
   },
   footer: {
-    lastUpdated: '最近更新',
-    builtWithPrism: '由 PRISM 构建',
+    lastUpdated: 'Zuletzt aktualisiert',
+    builtWithPrism: 'Mit PRISM erstellt',
   },
 };
 
 export const messages: Record<string, LocaleMessages> = {
   en,
-  zh,
+  de,
 };
 
 export function getMessages(locale: string): LocaleMessages {
