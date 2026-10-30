@@ -223,12 +223,6 @@ export default function Profile({ author, social, features, researchInterests }:
                                             <div className="text-center">
                                                 <div className="flex items-center justify-center space-x-2 mb-1">
                                                     <p className="font-semibold">{messages.profile.workAddress}</p>
-                                                    {!isAddressPinned && (
-                                                        <div className="flex items-center space-x-0.5 text-xs text-neutral-400 opacity-60">
-                                                            <MapPinIcon className="h-2.5 w-2.5" />
-                                                            <span className="hidden sm:inline">{messages.profile.click}</span>
-                                                        </div>
-                                                    )}
                                                 </div>
                                                 {social.location_details?.map((line, i) => (
                                                     <p key={i} className="break-words">{line}</p>
@@ -300,12 +294,6 @@ export default function Profile({ author, social, features, researchInterests }:
                                             <div className="text-center">
                                                 <div className="flex items-center justify-center space-x-2 mb-1">
                                                     <p className="font-semibold">{messages.profile.email}</p>
-                                                    {!isEmailPinned && (
-                                                        <div className="flex items-center space-x-0.5 text-xs text-neutral-400 opacity-60">
-                                                            <MapPinIcon className="h-2.5 w-2.5" />
-                                                            <span className="hidden sm:inline">{messages.profile.click}</span>
-                                                        </div>
-                                                    )}
                                                 </div>
                                                 <p className="break-words">{social.email?.replace('@', ' (at) ')}</p>
                                                 <div className="mt-2">

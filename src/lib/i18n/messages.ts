@@ -17,7 +17,6 @@ export interface LocaleMessages {
     email: string;
     location: string;
     workAddress: string;
-    click: string;
     googleMap: string;
     send: string;
     sendEmail: string;
@@ -67,7 +66,6 @@ const en: LocaleMessages = {
     email: 'Email',
     location: 'Location',
     workAddress: 'Work Address',
-    click: 'Click',
     googleMap: 'Google Map',
     send: 'Send',
     sendEmail: 'Send Email',
@@ -117,7 +115,6 @@ const de: LocaleMessages = {
     email: 'E-Mail',
     location: 'Standort',
     workAddress: 'Arbeitsadresse',
-    click: 'Klicken',
     googleMap: 'Google Maps',
     send: 'Senden',
     sendEmail: 'E-Mail senden',
