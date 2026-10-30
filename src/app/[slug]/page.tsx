@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
 import { getConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
+import { getCitationMetrics, getMetricsForPublication, toMetricsSummary } from '@/lib/metrics';
 import DynamicPageClient, { type DynamicPageLocaleData } from '@/components/pages/DynamicPageClient';
 import {
   BasePageConfig,
@@ -23,10 +24,17 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
   if (pageConfig.type === 'publication') {
     const pubConfig = pageConfig as PublicationPageConfig;
     const bibtex = getBibtexContent(pubConfig.source, locale);
+    const metrics = getCitationMetrics();
+    const publications = parseBibTeX(bibtex, locale).map((publication) => {
+      const workMetrics = getMetricsForPublication(publication, metrics);
+      if (!workMetrics) return publication;
+      return { ...publication, citations: workMetrics.citations, openalexId: workMetrics.openalexId };
+    });
     return {
       type: 'publication',
       config: pubConfig,
-      publications: parseBibTeX(bibtex, locale),
+      publications,
+      metrics: toMetricsSummary(metrics),
     };
   }
 

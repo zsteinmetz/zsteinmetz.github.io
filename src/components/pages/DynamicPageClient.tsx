@@ -1,6 +1,7 @@
 'use client';
 
 import PublicationsList from '@/components/publications/PublicationsList';
+import type { PublicationMetricsSummary } from '@/lib/metrics';
 import TextPage from '@/components/pages/TextPage';
 import CardPage from '@/components/pages/CardPage';
 import { Publication } from '@/types/publication';
@@ -12,7 +13,7 @@ import {
 import { useLocaleStore } from '@/lib/stores/localeStore';
 
 export type DynamicPageLocaleData =
-  | { type: 'publication'; config: PublicationPageConfig; publications: Publication[] }
+  | { type: 'publication'; config: PublicationPageConfig; publications: Publication[]; metrics?: PublicationMetricsSummary }
   | { type: 'text'; config: TextPageConfig; content: string }
   | { type: 'card'; config: CardPageConfig };
 
@@ -33,7 +34,7 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale }: Dynam
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {pageData.type === 'publication' && (
-        <PublicationsList config={pageData.config} publications={pageData.publications} />
+        <PublicationsList config={pageData.config} publications={pageData.publications} metrics={pageData.metrics} />
       )}
       {pageData.type === 'text' && (
         <TextPage config={pageData.config} content={pageData.content} />

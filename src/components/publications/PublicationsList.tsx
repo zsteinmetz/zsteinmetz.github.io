@@ -9,21 +9,24 @@ import {
     CalendarIcon,
     BookOpenIcon,
     ClipboardDocumentIcon,
-    DocumentTextIcon
+    DocumentTextIcon,
+    ChartBarIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
 import FormattedBibTeXText from './FormattedBibTeXText';
+import type { PublicationMetricsSummary } from '@/lib/metrics';
 
 interface PublicationsListProps {
     config: PublicationPageConfig;
     publications: Publication[];
+    metrics?: PublicationMetricsSummary;
     embedded?: boolean;
 }
 
-export default function PublicationsList({ config, publications, embedded = false }: PublicationsListProps) {
+export default function PublicationsList({ config, publications, metrics, embedded = false }: PublicationsListProps) {
     const messages = useMessages();
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
@@ -71,6 +74,27 @@ export default function PublicationsList({ config, publications, embedded = fals
                     <p className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 max-w-2xl`}>
                         {config.description}
                     </p>
+                )}
+                {metrics && (
+                    <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-neutral-600 dark:text-neutral-500">
+                        <span className="inline-flex items-center gap-1.5 font-medium text-neutral-700 dark:text-neutral-400">
+                            <ChartBarIcon className="h-4 w-4" />
+                            {metrics.author.citedByCount} {messages.publications.citationsTotal}
+                        </span>
+                        <span>h-index {metrics.author.hIndex}</span>
+                        <span>{metrics.author.worksCount} {messages.publications.worksCount}</span>
+                        <a
+                            href={metrics.author.openalexId}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-accent transition-colors"
+                        >
+                            {messages.publications.metricsSource}
+                        </a>
+                        <span className="text-xs">
+                            {messages.publications.metricsUpdated} {metrics.fetchedAt.slice(0, 10)}
+                        </span>
+                    </div>
                 )}
             </div>
 
@@ -249,6 +273,16 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
                                             >
                                                 DOI
+                                            </a>
+                                        )}
+                                        {typeof pub.citations === 'number' && (
+                                            <a
+                                                href={pub.openalexId || metrics?.author.openalexId || 'https://openalex.org'}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
+                                            >
+                                                {messages.publications.citedBy} {pub.citations}
                                             </a>
                                         )}
                                         {pub.code && (

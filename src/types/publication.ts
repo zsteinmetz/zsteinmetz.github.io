@@ -41,6 +41,7 @@ export interface Publication {
   type: PublicationType;
   status: PublicationStatus;
   citations?: number;
+  openalexId?: string;
   impactFactor?: number;
   quartile?: 'Q1' | 'Q2' | 'Q3' | 'Q4';
   bibtex?: string;

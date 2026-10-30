@@ -37,6 +37,11 @@ export interface LocaleMessages {
     abstract: string;
     bibtex: string;
     code: string;
+    citationsTotal: string;
+    worksCount: string;
+    citedBy: string;
+    metricsSource: string;
+    metricsUpdated: string;
   };
   footer: {
     lastUpdated: string;
@@ -83,6 +88,11 @@ const en: LocaleMessages = {
     abstract: 'Abstract',
     bibtex: 'BibTeX',
     code: 'Code',
+    citationsTotal: 'Citations',
+    worksCount: 'Works',
+    citedBy: 'Cited by',
+    metricsSource: 'Citation data from OpenAlex',
+    metricsUpdated: 'Updated',
   },
   footer: {
     lastUpdated: 'Last updated',
@@ -129,6 +139,11 @@ const de: LocaleMessages = {
     abstract: 'Zusammenfassung',
     bibtex: 'BibTeX',
     code: 'Code',
+    citationsTotal: 'Zitationen',
+    worksCount: 'Werke',
+    citedBy: 'Zitiert von',
+    metricsSource: 'Zitationsdaten von OpenAlex',
+    metricsUpdated: 'Aktualisiert',
   },
   footer: {
     lastUpdated: 'Zuletzt aktualisiert',

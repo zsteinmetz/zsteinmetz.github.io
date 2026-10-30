@@ -7,6 +7,11 @@ on:
   #  branches: 
   #      - main
   #      - ci
+  # Refresh citation metrics weekly (Mondays 06:00 UTC). npm run build triggers
+  # the "prebuild" script, which fetches fresh data from OpenAlex and falls back
+  # to the committed data/openalex-metrics.json when the fetch fails.
+  schedule:
+    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:

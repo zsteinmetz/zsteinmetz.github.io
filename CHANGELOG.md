@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## Unreleased
+- Added citation metrics from OpenAlex on the publications page: an author summary strip (citations, h-index, works count) and per-publication "Cited by" badges. Metrics are fetched at build time via `scripts/fetch-metrics.mjs` using the ORCID from `content/config.toml`, with a committed fallback in `data/openalex-metrics.json` so fresh clones and offline builds always have data. The deploy workflow now refreshes metrics weekly.
+
 ## v1.3.3 on May 13, 2026
 - Fixed disabled i18n mode so browser language and stored locale preferences cannot override the default locale.
 - Added inline formatting for BibTeX publication titles, including `\textit`, `\emph`, `\textbf`, `\textsc`, superscript, and subscript commands.
