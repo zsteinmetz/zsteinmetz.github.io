@@ -24,4 +24,7 @@ export const markdownComponents: Components = {
     ),
     strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
     em: ({ children }) => <em className="italic text-neutral-600 dark:text-neutral-500">{children}</em>,
+    code: ({ children }) => (
+        <code className="px-1.5 py-0.5 rounded bg-neutral-100 text-[0.95em]">{children}</code>
+    ),
 };

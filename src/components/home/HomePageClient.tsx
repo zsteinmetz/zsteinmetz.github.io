@@ -33,7 +33,6 @@ export type PageData =
 export interface HomePageLocaleData {
   author: SiteConfig['author'];
   social: SiteConfig['social'];
-  features: SiteConfig['features'];
   enableOnePageMode?: boolean;
   researchInterests?: string[];
   pagesToShow: PageData[];

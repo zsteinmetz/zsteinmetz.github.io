@@ -37,14 +37,6 @@ export interface SiteConfig {
     target: string;
     href: string;
   }>;
-  sections?: Array<{
-    id: string;
-    type: 'markdown' | 'publications' | 'list' | 'cards';
-    source?: string;
-    title?: string;
-    filter?: string;
-    limit?: number;
-  }>;
   i18n?: I18nConfig;
 }
 
@@ -83,7 +75,6 @@ function mergeConfig(base: SiteConfig, localized?: Partial<SiteConfig> | null): 
     },
     features: base.features,
     navigation: localized.navigation || base.navigation,
-    sections: localized.sections || base.sections,
     // i18n is always sourced from default content/config.toml
     i18n: base.i18n,
   };

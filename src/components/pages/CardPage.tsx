@@ -2,32 +2,8 @@
 
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
+import { markdownComponents } from '@/components/ui/MarkdownComponents';
 import { CardPageConfig } from '@/types/page';
-
-const markdownComponents = {
-    p: ({ children }: React.ComponentProps<'p'>) => <p className="mb-3 last:mb-0">{children}</p>,
-    ul: ({ children }: React.ComponentProps<'ul'>) => <ul className="list-disc list-inside mb-3 space-y-1">{children}</ul>,
-    ol: ({ children }: React.ComponentProps<'ol'>) => <ol className="list-decimal list-inside mb-3 space-y-1">{children}</ol>,
-    li: ({ children }: React.ComponentProps<'li'>) => <li className="mb-1">{children}</li>,
-    a: ({ ...props }) => (
-        <a
-            {...props}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-text font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
-        />
-    ),
-    blockquote: ({ children }: React.ComponentProps<'blockquote'>) => (
-        <blockquote className="border-l-4 border-accent/50 pl-4 italic my-4 text-neutral-600 dark:text-neutral-500">
-            {children}
-        </blockquote>
-    ),
-    strong: ({ children }: React.ComponentProps<'strong'>) => <strong className="font-semibold text-primary">{children}</strong>,
-    em: ({ children }: React.ComponentProps<'em'>) => <em className="italic">{children}</em>,
-    code: ({ children }: React.ComponentProps<'code'>) => (
-        <code className="px-1.5 py-0.5 rounded bg-neutral-100 text-[0.95em]">{children}</code>
-    ),
-};
 
 export default function CardPage({ config, embedded = false }: { config: CardPageConfig; embedded?: boolean }) {
     return (

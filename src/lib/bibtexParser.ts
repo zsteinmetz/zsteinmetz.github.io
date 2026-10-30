@@ -1,10 +1,9 @@
 import { Publication, PublicationType, ResearchArea } from '@/types/publication';
+import type { BibTeXEntry } from 'bibtex-parse-js';
+import * as bibtexParse from 'bibtex-parse-js';
 import { getConfig } from './config';
 import { getRuntimeI18nConfig } from './i18n/config';
 import { parseBibTeXInline } from './bibtexInline';
-
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const bibtexParse = require('bibtex-parse-js');
 
 // Map BibTeX entry types to our publication types
 const typeMapping: Record<string, PublicationType> = {
@@ -40,7 +39,7 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
   const highlightNames = getHighlightNames(locale);
   const entries = bibtexParse.toJSON(bibtexContent);
 
-  return entries.map((entry: { entryType: string; citationKey: string; entryTags: Record<string, string> }, index: number) => {
+  return entries.map((entry: BibTeXEntry, index: number) => {
     const tags = entry.entryTags;
 
     // Parse authors
@@ -261,7 +260,7 @@ function detectResearchArea(title: string, keywords: string[]): ResearchArea {
   return 'machine-learning';
 }
 
-function reconstructBibTeX(entry: { entryType: string; citationKey: string; entryTags: Record<string, string> }, excludeFields: string[] = []): string {
+function reconstructBibTeX(entry: BibTeXEntry, excludeFields: string[] = []): string {
   const { entryType, citationKey, entryTags } = entry;
 
   let bibtex = `@${entryType}{${citationKey},\n`;

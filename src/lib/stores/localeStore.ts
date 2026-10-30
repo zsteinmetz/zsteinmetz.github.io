@@ -8,7 +8,6 @@ const LOCALE_STORAGE_KEY = 'locale-storage';
 
 interface LocaleStore {
   locale: string;
-  isReady: boolean;
   locales: string[];
   defaultLocale: string;
   persistSelection: boolean;
@@ -74,7 +73,6 @@ function resolveInitialLocale(config: I18nRuntimeConfig): string {
 
 export const useLocaleStore = create<LocaleStore>()((set, get) => ({
   locale: 'en',
-  isReady: false,
   locales: ['en'],
   defaultLocale: 'en',
   persistSelection: true,
@@ -84,7 +82,6 @@ export const useLocaleStore = create<LocaleStore>()((set, get) => ({
 
     set({
       locale: initialLocale,
-      isReady: true,
       locales: config.locales,
       defaultLocale: config.defaultLocale,
       persistSelection: config.persist,

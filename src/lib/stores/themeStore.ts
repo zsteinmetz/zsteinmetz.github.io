@@ -6,24 +6,16 @@ export type Theme = 'light' | 'dark' | 'system';
 interface ThemeStore {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  toggleTheme: () => void; // toggles between light/dark (explicit override)
 }
 
 export const useThemeStore = create<ThemeStore>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       // Default to system preference
       theme: 'system',
       setTheme: (theme: Theme) => {
         set({ theme });
         updateTheme(theme);
-      },
-      toggleTheme: () => {
-        const current = get().theme;
-        // When in system mode, first toggle explicitly to light
-        const newTheme = current === 'dark' ? 'light' : 'dark';
-        set({ theme: newTheme });
-        updateTheme(newTheme);
       },
     }),
     {
