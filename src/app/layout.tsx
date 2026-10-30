@@ -12,8 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = getConfig();
   const runtimeI18n = getRuntimeI18nConfig(config.i18n);
   const openGraphLocale =
-    runtimeI18n.defaultLocale === 'zh' ? 'zh_CN'
-    : runtimeI18n.defaultLocale === 'de' ? 'de_DE'
+    runtimeI18n.defaultLocale === 'de' ? 'de_DE'
     : 'en_US';
 
   return {

@@ -4,7 +4,7 @@
 
 # PRISM
 
-**English** · [中文](README_cn.md) · [Demo](https://prism-demo.pages.dev)  · [Changelog](CHANGELOG.md)
+[Demo](https://prism-demo.pages.dev)  · [Changelog](CHANGELOG.md)
 
 **If you like this project, please give it a star ⭐️**
 
@@ -72,9 +72,6 @@ url = "https://your-website.com"
 name = "Your Name"
 title = "PhD Student / Researcher"
 # ...
-
-[features]
-enable_likes = true
 ```
 
 ### 2. Homepage (`content/about.toml`)

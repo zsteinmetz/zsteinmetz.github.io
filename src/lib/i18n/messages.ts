@@ -21,9 +21,6 @@ export interface LocaleMessages {
     send: string;
     sendEmail: string;
     researchInterests: string;
-    like: string;
-    liked: string;
-    thanks: string;
   };
   home: {
     about: string;
@@ -70,9 +67,6 @@ const en: LocaleMessages = {
     send: 'Send',
     sendEmail: 'Send Email',
     researchInterests: 'Research Interests',
-    like: 'Like',
-    liked: 'Liked',
-    thanks: 'Thanks!',
   },
   home: {
     about: 'About',
@@ -119,9 +113,6 @@ const de: LocaleMessages = {
     send: 'Senden',
     sendEmail: 'E-Mail senden',
     researchInterests: 'Forschungsinteressen',
-    like: 'Gefällt mir',
-    liked: 'Gefällt dir',
-    thanks: 'Danke dir!',
   },
   home: {
     about: 'Über mich',

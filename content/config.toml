@@ -26,9 +26,6 @@ github = "https://github.com"
 linkedin = "https://linkedin.com"
 
 [features]
-# Show a like button on the about page
-enable_likes = true
-
 # Display all subpages on a single page
 enable_one_page_mode = false
 
