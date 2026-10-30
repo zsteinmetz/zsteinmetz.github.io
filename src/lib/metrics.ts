@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+// Pure, client-safe helpers for OpenAlex citation metrics. The fs-based
+// loader lives in metricsServer.ts (server side only).
 
 export interface OpenAlexWorkMetrics {
   openalexId: string;
@@ -33,21 +33,21 @@ export interface PublicationMetricsSummary {
   author: OpenAlexAuthorMetrics;
 }
 
-const METRICS_PATH = path.join(process.cwd(), 'data', 'openalex-metrics.json');
+// Deterministic date formatting matching the footer's per-locale style:
+// en -> "October 30, 2026", de -> "30. Oktober 2026"
+const METRICS_MONTH_NAMES: Record<string, string[]> = {
+  en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  de: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+};
 
-/**
- * Load citation metrics fetched by scripts/fetch-metrics.mjs.
- * The data/openalex-metrics.json file is committed as a fallback, so fresh
- * clones and offline builds always have data. Returns null if the file is
- * missing or invalid, in which case citation metrics are simply not shown.
- */
-export function getCitationMetrics(): OpenAlexMetrics | null {
-  try {
-    const raw = fs.readFileSync(METRICS_PATH, 'utf-8');
-    return JSON.parse(raw) as OpenAlexMetrics;
-  } catch {
-    return null;
-  }
+export function formatMetricsDate(isoDate: string, locale = 'en'): string {
+  const date = new Date(isoDate);
+  if (Number.isNaN(date.getTime())) return isoDate;
+  const months = METRICS_MONTH_NAMES[locale] || METRICS_MONTH_NAMES.en;
+  const day = date.getUTCDate();
+  const month = months[date.getUTCMonth()];
+  const year = date.getUTCFullYear();
+  return locale === 'de' ? `${day}. ${month} ${year}` : `${month} ${day}, ${year}`;
 }
 
 export function toMetricsSummary(metrics: OpenAlexMetrics | null): PublicationMetricsSummary | undefined {

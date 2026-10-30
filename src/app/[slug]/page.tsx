@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
 import { getConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
-import { getCitationMetrics, getMetricsForPublication, toMetricsSummary } from '@/lib/metrics';
+import { getMetricsForPublication, toMetricsSummary } from '@/lib/metrics';
+import { getCitationMetrics } from '@/lib/metricsServer';
 import DynamicPageClient, { type DynamicPageLocaleData } from '@/components/pages/DynamicPageClient';
 import {
   BasePageConfig,

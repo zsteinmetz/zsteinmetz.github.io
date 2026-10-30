@@ -17,7 +17,8 @@ import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
 import FormattedBibTeXText from './FormattedBibTeXText';
-import type { PublicationMetricsSummary } from '@/lib/metrics';
+import { useLocaleStore } from '@/lib/stores/localeStore';
+import { formatMetricsDate, type PublicationMetricsSummary } from '@/lib/metrics';
 
 interface PublicationsListProps {
     config: PublicationPageConfig;
@@ -28,6 +29,7 @@ interface PublicationsListProps {
 
 export default function PublicationsList({ config, publications, metrics, embedded = false }: PublicationsListProps) {
     const messages = useMessages();
+    const locale = useLocaleStore((state) => state.locale);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
     const [selectedType, setSelectedType] = useState<string | 'all'>('all');
@@ -81,8 +83,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                             <ChartBarIcon className="h-4 w-4" />
                             {metrics.author.citedByCount} {messages.publications.citationsTotal}
                         </span>
-                        <span>h-index {metrics.author.hIndex}</span>
-                        <span>{metrics.author.worksCount} {messages.publications.worksCount}</span>
+                        <span>h-index <strong>{metrics.author.hIndex}</strong></span>
                         <a
                             href={metrics.author.openalexId}
                             target="_blank"
@@ -92,7 +93,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                             {messages.publications.metricsSource}
                         </a>
                         <span className="text-xs">
-                            {messages.publications.metricsUpdated} {metrics.fetchedAt.slice(0, 10)}
+                            {messages.publications.metricsUpdated} {formatMetricsDate(metrics.fetchedAt, locale)}
                         </span>
                     </div>
                 )}
