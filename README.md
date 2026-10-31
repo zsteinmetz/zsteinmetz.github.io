@@ -82,22 +82,26 @@ Export your publications from Google Scholar, Zotero, or Mendeley to `content/pu
 
 Publication titles support a subset of BibTeX inline formatting commands, including `\textit{}`, `\emph{}`, `\textbf{}`, `\textsc{}`, `\textsuperscript{}` and `\textsubscript{}`.
 
-### 4. Adding New Pages
+### 4. Academic CV (`content/cv.toml`)
+The CV page (`/cv`) is a narrative academic portfolio rather than a plain list. It supports an academic profile with narrative, appointments as an expandable vertical timeline, education, research projects, publications (reusing `publications.bib`), teaching & supervision, grants & awards, academic service, and skills. A sticky section index and a print/PDF action are built in. See **[docs/cv.md](docs/cv.md)** for the full schema and editing guide.
+
+### 5. Adding New Pages
 To add a new page (e.g., "Projects"), create a TOML file in `content/` (e.g., `content/projects.toml`) and add it to the `navigation` list in `content/config.toml`.
 
 Supported page types:
-*   `text`: Renders Markdown content (Great for CVs, Bio).
+*   `text`: Renders Markdown content (Great for short notes).
 *   `card`: Renders a list of cards (Great for Projects, Awards). Content of each card item supports Markdown.
 *   `publication`: Renders the full publications list with filters.
+*   `cv`: Renders the narrative academic CV page (see `docs/cv.md`).
 
-### 5. I18N Support (`content_<locale>/`)
+### 6. I18N Support (`content_<locale>/`)
 PRISM now supports i18n, i.e., multi-language.
 
 *   Default language lives in `content/`.
 *   Additional languages live in `content_<locale>/` (for example: `content_de/`, `content_en/`).
 *   Keep the same filenames across directories. Example:
-    *   `content/cv.md` (default)
-    *   `content_de/cv.md`
+    *   `content/cv.toml` (default)
+    *   `content_de/cv.toml`
 *   If a localized file is missing, PRISM automatically falls back to the default `content/` version.
 
 Configure language behavior in `content/config.toml`:

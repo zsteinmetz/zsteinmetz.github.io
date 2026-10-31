@@ -11,6 +11,9 @@ import {
   TextPageConfig,
   CardPageConfig,
 } from '@/types/page';
+import { CvPageConfig } from '@/types/cv';
+import { mergeCvData } from '@/lib/cv';
+import type { Publication } from '@/types/publication';
 
 import { Metadata } from 'next';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
@@ -36,6 +39,36 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
       config: pubConfig,
       publications,
       metrics: toMetricsSummary(metrics),
+    };
+  }
+
+  if (pageConfig.type === 'cv') {
+    // Merge any localized override (title/description/headings) over the
+    // default CV data; omitted sections fall back to the default file.
+    const defaultCv = getPageConfig<CvPageConfig>(slug) as CvPageConfig;
+    const localizedCv = locale ? (getPageConfig<CvPageConfig>(slug, locale) as CvPageConfig | null) : null;
+    const cvConfig = mergeCvData(defaultCv, localizedCv);
+
+    // Reuse the existing BibTeX pipeline for the publications section.
+    const publications: Publication[] = [];
+    const pubSource = cvConfig.publications?.source;
+    if (pubSource) {
+      const bibtex = getBibtexContent(pubSource, locale);
+      const metrics = getCitationMetrics();
+      for (const publication of parseBibTeX(bibtex, locale)) {
+        const workMetrics = getMetricsForPublication(publication, metrics);
+        if (!workMetrics) {
+          publications.push(publication);
+        } else {
+          publications.push({ ...publication, citations: workMetrics.citations, openalexId: workMetrics.openalexId });
+        }
+      }
+    }
+
+    return {
+      type: 'cv',
+      config: cvConfig,
+      publications,
     };
   }
 

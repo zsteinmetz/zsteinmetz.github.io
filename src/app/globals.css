@@ -205,6 +205,16 @@ body {
   width: 8px;
 }
 
+/* Hidden scrollbar for horizontal pill rails (e.g. the CV section nav).
+   The rail stays draggable/swipeable but shows no visible scrollbar. */
+.scrollbar-none {
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* Firefox scrollbar */
 html {
   scrollbar-width: thin;
@@ -255,4 +265,65 @@ html.dark {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* ============================================================================
+   Print / PDF styles
+   Primarily serves the CV page, but applies globally so any page prints as a
+   clean document: navigation, footer and interactive controls are removed,
+   collapsed CV detail panels are expanded, and light-theme colors are forced
+   regardless of the active dark mode.
+   ============================================================================ */
+@media print {
+  :root,
+  .light,
+  .dark {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --primary: #1e293b;
+    --primary-light: #334155;
+    --card: #ffffff;
+    --accent-text: #8a6d33;
+    --neutral-50: #f8fafc;
+    --neutral-100: #f1f5f9;
+    --neutral-200: #e2e8f0;
+    --neutral-300: #cbd5e1;
+    --neutral-400: #94a3b8;
+    --neutral-500: #64748b;
+    --neutral-600: #475569;
+    --neutral-700: #334155;
+  }
+
+  /* Fixed/sticky positioning repeats elements on every printed page in
+     Chrome, so all navigation chrome (the fixed site nav is a <nav>, the
+     CV section rail has its own print:hidden) is removed on paper. */
+  header,
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* Collapsed CV detail panels are always printed in full */
+  .cv-details {
+    display: block !important;
+  }
+
+  /* Keep entries intact across page breaks */
+  .cv-entry {
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* Softer card treatment on paper */
+  .card-bg {
+    box-shadow: none !important;
+  }
 }

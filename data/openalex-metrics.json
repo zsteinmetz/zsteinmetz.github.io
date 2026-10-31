@@ -1,11 +1,11 @@
 {
   "orcid": "0000-0001-6675-5033",
-  "fetchedAt": "2026-10-30T21:57:49.354Z",
+  "fetchedAt": "2026-10-31T21:11:39.260Z",
   "author": {
     "openalexId": "https://openalex.org/A5071389053",
     "displayName": "Zacharias Steinmetz",
     "worksCount": 68,
-    "citedByCount": 3719,
+    "citedByCount": 3723,
     "hIndex": 23,
     "i10Index": 27,
     "hIndex2yrMean": 9.411764705882353
@@ -16,7 +16,7 @@
       "doi": "https://doi.org/10.1016/j.scitotenv.2016.01.153",
       "title": "Plastic mulching in agriculture. Trading short-term agronomic benefits for long-term soil degradation?",
       "publicationYear": 2016,
-      "citedByCount": 1567
+      "citedByCount": 1569
     },
     {
       "openalexId": "https://openalex.org/W3162696944",
@@ -86,7 +86,7 @@
       "doi": "https://doi.org/10.1016/j.envpol.2022.120298",
       "title": "Historical and current occurrence of microplastics in water and sediment of a Finnish lake affected by WWTP effluents",
       "publicationYear": 2022,
-      "citedByCount": 48
+      "citedByCount": 49
     },
     {
       "openalexId": "https://openalex.org/W2997703599",

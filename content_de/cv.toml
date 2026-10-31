@@ -1,3 +1,21 @@
-type = "text"
+# Deutsche Übersetzungen der CV-Seite.
+# Der Inhalt (Profil, Stationen, Projekte, ...) wird aus content/cv.toml
+# übernommen; hier können Titel, Beschreibung und Abschnittsüberschriften
+# übersetzt oder eigene Daten ergänzt werden. Siehe docs/cv.md.
+
+type = "cv"
 title = "Lebenslauf"
-source = "cv.md"
+description = "Ein narrativer Überblick über meinen akademischen Werdegang — Stationen, Forschungsbeiträge, Lehre, Förderung und Service."
+
+[headings]
+profile = "Akademisches Profil"
+experience = "Stationen & Berufserfahrung"
+education = "Ausbildung"
+research = "Forschungsbeiträge & Projekte"
+publications = "Publikationen"
+teaching = "Lehre & Betreuung"
+grants = "Stipendien, Auszeichnungen & Anerkennung"
+grants_funding = "Stipendien & Förderungen"
+grants_awards = "Auszeichnungen & Ehrungen"
+service = "Akademischer Service & Community"
+skills = "Kompetenzen & Fachwissen"
