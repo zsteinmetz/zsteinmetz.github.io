@@ -31,6 +31,11 @@ export interface SiteConfig {
   features: {
     enable_one_page_mode?: boolean;
   };
+  analytics?: {
+    enabled?: boolean;
+    matomo_url?: string;
+    matomo_site_id?: string | number;
+  };
   navigation: Array<{
     title: string;
     type: 'section' | 'page' | 'link';
@@ -74,6 +79,8 @@ function mergeConfig(base: SiteConfig, localized?: Partial<SiteConfig> | null): 
       ...(localized.social || {}),
     },
     features: base.features,
+    // analytics is always sourced from default content/config.toml
+    analytics: base.analytics,
     navigation: localized.navigation || base.navigation,
     // i18n is always sourced from default content/config.toml
     i18n: base.i18n,

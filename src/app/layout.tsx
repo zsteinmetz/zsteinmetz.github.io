@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { LocaleProvider } from '@/components/ui/LocaleProvider';
 import { getConfig, type SiteConfig } from '@/lib/config';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
+import { MatomoScript, MatomoNoscript } from '@/components/analytics/Matomo';
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = getConfig();
@@ -163,6 +164,7 @@ export default function RootLayout({
             __html: buildLocaleBootstrapScript(runtimeI18n),
           }}
         />
+        <MatomoScript analytics={config.analytics} />
       </head>
       <body className="font-sans antialiased">
         <ThemeProvider>
@@ -185,6 +187,7 @@ export default function RootLayout({
             />
           </LocaleProvider>
         </ThemeProvider>
+        <MatomoNoscript analytics={config.analytics} />
       </body>
     </html>
   );

@@ -106,6 +106,23 @@ PRISM now supports i18n, i.e., multi-language.
 
 Configure language behavior in `content/config.toml`:
 
+### 7. Analytics (Matomo)
+PRISM supports privacy-friendly, self-hosted Matomo analytics. Enable it in the `[analytics]` section of `content/config.toml`:
+
+```toml
+[analytics]
+# Set enabled = true to turn on Matomo analytics
+enabled = true
+# URL of your Matomo instance, e.g. "https://matomo.example.com/"
+matomo_url = "https://matomo.example.com/"
+# The Site ID from your Matomo instance, e.g. "1"
+matomo_site_id = "1"
+```
+
+*   Tracking is only active when `enabled = true` and both `matomo_url` and `matomo_site_id` are set; otherwise the tracker is not rendered at all.
+*   The standard Matomo JavaScript tracker is embedded in `<head>` of every page.
+*   A `<noscript>` tracking-pixel fallback (`matomo.php?idsite=...&rec=1`) is rendered at the end of `<body>`, so visits from browsers with JavaScript disabled are still counted.
+
 ## 📦 Deployment
 
 PRISM is optimized for static deployment.
