@@ -1,25 +1,39 @@
 import localFont from 'next/font/local';
 
 /**
- * Inter (variable font, weights 100-900) - self-hosted sans-serif.
+ * Lora (variable font, weights 400-700) - self-hosted serif.
+ * Used via .font-serif for headings and title text.
  * Covers font-normal (400), font-medium (500), font-semibold (600), font-bold (700).
  */
-export const inter = localFont({
-  src: './fonts/InterVariable.woff2',
-  weight: '100 900',
-  variable: '--font-inter',
+export const lora = localFont({
+  src: [
+    { path: './fonts/lora-variable.woff2', weight: '400 700', style: 'normal' },
+    { path: './fonts/lora-italic-variable.woff2', weight: '400 700', style: 'italic' },
+  ],
+  variable: '--font-lora',
   display: 'swap',
 });
 
 /**
- * Georgia - self-hosted serif (regular 400 + bold 700).
- * Used via .font-serif for headings and title text.
+ * IBM Plex Sans (variable font, weights 400-700) - self-hosted sans-serif.
+ * Covers font-normal (400), font-medium (500), font-semibold (600), font-bold (700).
  */
-export const georgia = localFont({
+export const plexSans = localFont({
   src: [
-    { path: './fonts/georgia-regular.woff2', weight: '400' },
-    { path: './fonts/georgia-bold.woff2', weight: '700' },
+    { path: './fonts/plex-sans-variable.woff2', weight: '400 700', style: 'normal' },
+    { path: './fonts/plex-sans-italic-variable.woff2', weight: '400 700', style: 'italic' },
   ],
-  variable: '--font-georgia',
+  variable: '--font-plex-sans',
+  display: 'swap',
+});
+
+/**
+ * IBM Plex Mono - self-hosted monospace.
+ * Used via .font-mono for code and BibTeX snippets.
+ */
+export const plexMono = localFont({
+  src: './fonts/plex-mono-regular.woff2',
+  weight: '400',
+  variable: '--font-plex-mono',
   display: 'swap',
 });

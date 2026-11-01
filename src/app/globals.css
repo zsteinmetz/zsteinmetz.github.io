@@ -9,46 +9,46 @@
   color-scheme: light;
 
   /* Light theme colors */
-  --background: #fefffe;
-  --foreground: #0f172a;
+  --background: #fbfcfa;
+  --foreground: #263229;
   
-  /* Brand colors - Deep Navy & Gold */
-  --primary: #1e293b;
-  --primary-light: #334155;
-  --primary-dark: #0f172a;
-  --accent: #d4a562;
-  --accent-light: #e4b976;
-  --accent-dark: #b8914d;
-  /* Darker gold for text/icon usage on light backgrounds (WCAG AA) */
-  --accent-text: #8a6d33;
-  /* Foreground color to pair with gold backgrounds (navy on gold) */
-  --accent-foreground: #1e293b;
+  /* Brand colors - Forest & Copper */
+  --primary: #1e2f25;
+  --primary-light: #2f463a;
+  --primary-dark: #122019;
+  --accent: #a45f2a;
+  --accent-light: #b9783e;
+  --accent-dark: #85491d;
+  /* Darker copper for text/icon usage on light backgrounds (WCAG AA) */
+  --accent-text: #8a4d1d;
+  /* Foreground color to pair with copper backgrounds (cream on copper) */
+  --accent-foreground: #fdf8f2;
 
   /* Card surface color */
   --card: #ffffff;
   
   /* Neutral colors */
-  --neutral-50: #f8fafc;
-  --neutral-100: #f1f5f9;
-  --neutral-200: #e2e8f0;
-  --neutral-300: #cbd5e1;
-  --neutral-400: #94a3b8;
-  --neutral-500: #64748b;
-  --neutral-600: #475569;
-  --neutral-700: #334155;
-  --neutral-800: #1e293b;
-  --neutral-900: #0f172a;
+  --neutral-50: #f6f8f5;
+  --neutral-100: #ecf0ea;
+  --neutral-200: #dbe2d8;
+  --neutral-300: #c2ccbe;
+  --neutral-400: #9fa99b;
+  --neutral-500: #78826f;
+  --neutral-600: #5a6455;
+  --neutral-700: #464e42;
+  --neutral-800: #313830;
+  --neutral-900: #1d241e;
   
   /* Semantic colors */
-  --success: #10b981;
-  --warning: #f59e0b;
-  --error: #ef4444;
-  --info: #3b82f6;
+  --success: #15803d;
+  --warning: #b45309;
+  --error: #b91c1c;
+  --info: #0e7490;
   
   /* Glass effect */
-  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-bg: rgba(251, 252, 250, 0.65);
   --glass-border: rgba(255, 255, 255, 0.8);
-  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --glass-shadow: rgba(23, 34, 28, 0.12);
   
   /* Line heights (plain custom properties - used directly via var()) */
   --line-height-none: 1;
@@ -59,7 +59,7 @@
   --line-height-loose: 2;
 
   /* Serif stack (resolved via var() so locale overrides below take effect) */
-  --font-serif-stack: var(--font-georgia), Georgia, serif;
+  --font-serif-stack: var(--font-lora), Lora, Georgia, serif;
 }
 
 @theme inline {
@@ -100,9 +100,9 @@
   --color-glass-shadow: var(--glass-shadow);
   
   /* Typography - resolved through next/font CSS variables (set on <html> in layout.tsx) */
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: var(--font-plex-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif: var(--font-serif-stack);
-  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --font-mono: var(--font-plex-mono), 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -119,23 +119,23 @@
 .dark {
   color-scheme: dark;
 
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #12201a;
+  --foreground: #e9efe8;
   
   /* Adjust colors for dark mode */
-  --primary: #f8fafc;
-  --primary-light: #e2e8f0;
-  --primary-dark: #cbd5e1;
-  --accent: #e4b976;
-  --accent-light: #f0c674;
-  --accent-dark: #d4a562;
-  /* Brighter gold reads well as text on dark navy */
-  --accent-text: #f0c674;
-  /* Navy on gold keeps sufficient contrast in dark mode too */
-  --accent-foreground: #1e293b;
+  --primary: #e9efe8;
+  --primary-light: #d3dfd0;
+  --primary-dark: #b4c6b1;
+  --accent: #c9854e;
+  --accent-light: #dda06b;
+  --accent-dark: #b56d3a;
+  /* Brighter copper reads well as text on dark forest green */
+  --accent-text: #e6b47f;
+  /* Forest on copper keeps sufficient contrast in dark mode too */
+  --accent-foreground: #12201a;
 
   /* Card surface color */
-  --card: #1e293b;
+  --card: #1c2c23;
   
   /* Semantic colors - softened for dark backgrounds */
   --success: #34d399;
@@ -144,21 +144,21 @@
   --info: #60a5fa;
   
   /* Dark mode glass effect */
-  --glass-bg: rgba(15, 23, 42, 0.8);
+  --glass-bg: rgba(18, 32, 26, 0.8);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-shadow: rgba(0, 0, 0, 0.5);
   
   /* Neutral colors for dark mode - properly inverted */
-  --neutral-50: #0f172a;
-  --neutral-100: #1e293b;
-  --neutral-200: #334155;
-  --neutral-300: #475569;
-  --neutral-400: #64748b;
-  --neutral-500: #94a3b8;
-  --neutral-600: #cbd5e1;
-  --neutral-700: #e2e8f0;
-  --neutral-800: #f1f5f9;
-  --neutral-900: #f8fafc;
+  --neutral-50: #12201a;
+  --neutral-100: #1c2c23;
+  --neutral-200: #2a3f33;
+  --neutral-300: #3b5646;
+  --neutral-400: #547260;
+  --neutral-500: #7a927f;
+  --neutral-600: #a3b8a0;
+  --neutral-700: #c8d6c4;
+  --neutral-800: #e0e8da;
+  --neutral-900: #edf2ea;
 }
 
 
@@ -279,19 +279,19 @@ html.dark {
   .light,
   .dark {
     --background: #ffffff;
-    --foreground: #0f172a;
-    --primary: #1e293b;
-    --primary-light: #334155;
+    --foreground: #263229;
+    --primary: #1e2f25;
+    --primary-light: #2f463a;
     --card: #ffffff;
-    --accent-text: #8a6d33;
-    --neutral-50: #f8fafc;
-    --neutral-100: #f1f5f9;
-    --neutral-200: #e2e8f0;
-    --neutral-300: #cbd5e1;
-    --neutral-400: #94a3b8;
-    --neutral-500: #64748b;
-    --neutral-600: #475569;
-    --neutral-700: #334155;
+    --accent-text: #8a4d1d;
+    --neutral-50: #f6f8f5;
+    --neutral-100: #ecf0ea;
+    --neutral-200: #dbe2d8;
+    --neutral-300: #c2ccbe;
+    --neutral-400: #9fa99b;
+    --neutral-500: #78826f;
+    --neutral-600: #5a6455;
+    --neutral-700: #464e42;
   }
 
   /* Fixed/sticky positioning repeats elements on every printed page in

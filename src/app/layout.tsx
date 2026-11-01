@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { inter, georgia } from './fonts';
+import { lora, plexSans, plexMono } from './fonts';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
@@ -133,7 +133,7 @@ export default function RootLayout({
   return (
     <html
       lang={runtimeI18n.defaultLocale}
-      className={`scroll-smooth ${inter.variable} ${georgia.variable}`}
+      className={`scroll-smooth ${lora.variable} ${plexSans.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
       <head>

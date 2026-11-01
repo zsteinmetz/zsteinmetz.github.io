@@ -1,6 +1,8 @@
 # CHANGELOG
 
 ## Unreleased
+- Redesigned the theme from Deep Navy & Gold to Forest & Copper: a warm forest-green primary with copper accents in light and dark modes, a gray-green neutral ramp, muted semantic colors, and an updated print palette.
+- Switched the site fonts to self-hosted Lora for headings and IBM Plex Sans for body text (both variable, 400–700, with italics), plus IBM Plex Mono for code and BibTeX snippets. Inter and Georgia were removed.
 - Rebuilt the CV page as a narrative academic portfolio: a new `cv` page type driven by a structured `content/cv.toml` with an academic profile, expandable appointments timeline, education, research project cards, publications (reusing `publications.bib`), teaching & supervision, grants & awards, academic service, and skills. Includes a sticky section index with scroll-spy, a print/PDF action, print-friendly styles, and i18n support via localized section headings. See `docs/cv.md` for the schema. The old `content/cv.md` text page was replaced by this content model.
 - Added citation metrics from OpenAlex on the publications page: an author summary strip (citations, h-index, works count) and per-publication "Cited by" badges. Metrics are fetched at build time via `scripts/fetch-metrics.mjs` using the ORCID from `content/config.toml`, with a committed fallback in `data/openalex-metrics.json` so fresh clones and offline builds always have data. The deploy workflow now refreshes metrics weekly.
 
