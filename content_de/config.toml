@@ -34,12 +34,6 @@ target = "teaching"
 href = "/teaching"
 
 [[navigation]]
-title = "Auszeichnungen"
-type = "page"
-target = "awards"
-href = "/awards"
-
-[[navigation]]
 title = "Services"
 type = "page"
 target = "services"
