@@ -6,6 +6,9 @@ export interface LocaleMessages {
   navigation: {
     openMainMenu: string;
   };
+  language: {
+    switchTo: string;
+  };
   theme: {
     system: string;
     light: string;
@@ -56,6 +59,9 @@ const en: LocaleMessages = {
   navigation: {
     openMainMenu: 'Open main menu',
   },
+  language: {
+    switchTo: 'Click to switch to {locale}',
+  },
   theme: {
     system: 'System',
     light: 'Light',
@@ -105,6 +111,9 @@ const de: LocaleMessages = {
   },
   navigation: {
     openMainMenu: 'Hauptmenü öffnen',
+  },
+  language: {
+    switchTo: 'Klicken, um zu {locale} zu wechseln',
   },
   theme: {
     system: 'System',
