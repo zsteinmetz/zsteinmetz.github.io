@@ -3,16 +3,15 @@ title = "Über mich"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematische Prinzipien",
-  "Theorembeweise"
+  "Umweltchemie",
+  "Analytische Methoden",
+  "Reproduzierbare Datenwissenschaft"
 ]
 
 [[sections]]
 id = "about"
 type = "markdown"
 source = "bio.md"
-title = "Über mich"
 
 [[sections]]
 id = "featured_publications"

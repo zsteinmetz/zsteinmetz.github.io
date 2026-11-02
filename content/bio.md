@@ -1,5 +1,3 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+### Environmental scientist working at the interface of environmental chemistry, analytical methods, and reproducible data science
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
-
-My current research focuses on investigating the mathematical principles of natural philosophy.
+I investigate anthropogenic pollutants in soils and agroecosystems by combining environmental chemistry, analytical methods, and quantitative data analysis. My work ranges from method development and quality assurance to reproducible workflows, scientific communication, and applied environmental assessment.

@@ -2,6 +2,7 @@
 
 import Profile from '@/components/home/Profile';
 import About from '@/components/home/About';
+import Hero from '@/components/home/Hero';
 import SelectedPublications from '@/components/home/SelectedPublications';
 import News, { NewsItem } from '@/components/home/News';
 import PublicationsList from '@/components/publications/PublicationsList';
@@ -16,6 +17,7 @@ export interface SectionConfig {
   id: string;
   type: 'markdown' | 'publications' | 'list';
   title?: string;
+  hero?: string;
   source?: string;
   filter?: string;
   limit?: number;
@@ -69,7 +71,13 @@ export default function HomePageClient({ dataByLocale, defaultLocale }: HomePage
               {page.type === 'about' && page.sections.map((section: SectionConfig) => {
                 switch (section.type) {
                   case 'markdown':
-                    return (
+                    return section.hero ? (
+                      <Hero
+                        key={section.id}
+                        hero={section.hero}
+                        content={section.content || ''}
+                      />
+                    ) : (
                       <About
                         key={section.id}
                         content={section.content || ''}

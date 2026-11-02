@@ -1,5 +1,4 @@
-Zurzeit bin ich Doktorand an der Fakultät für Naturwissenschaften der University of Example, betreut von [Prof. Dr. Betreuer A](https://example.com) und [Dr. Betreuerin B](https://example.com).
+### Umweltwissenschaftler an der Schnittstelle von Umweltchemie, analytischen Methoden und reproduzierbarer Datenwissenschaft
 
-Zuvor habe ich meinen Bachelor of Natural Sciences (First Class Honours) an der University of Example erworben.
+Ich untersuche anthropogene Schadstoffe in Böden und Agrarökosystemen durch die Kombination von Umweltchemie, analytischen Methoden und quantitativer Datenanalyse. Meine Arbeit reicht von der Methodenentwicklung und Qualitätssicherung bis hin zu reproduzierbaren Workflows, Wissenschaftskommunikation und angewandter Umweltbewertung.
 
-Meine Forschung konzentriert sich hauptsächlich auf die mathematischen Prinzipien der Naturphilosophie.

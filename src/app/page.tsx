@@ -6,14 +6,28 @@ import { NewsItem } from '@/components/home/News';
 import { BasePageConfig, PublicationPageConfig, TextPageConfig, CardPageConfig } from '@/types/page';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
 
+// Split a leading markdown heading off the content as the hero statement.
+// Returns the body unchanged when the content does not start with a heading.
+function extractHero(content: string): { hero?: string; body: string } {
+  const match = content.match(/^\s*#{1,6}\s+(.+?)\s*(?:\r?\n|$)/);
+  if (!match) {
+    return { body: content };
+  }
+  return { hero: match[1].trim(), body: content.slice(match[0].length).trim() };
+}
+
 function processSections(sections: SectionConfig[], locale?: string): SectionConfig[] {
   return sections.map((section: SectionConfig) => {
     switch (section.type) {
-      case 'markdown':
+      case 'markdown': {
+        const content = section.source ? getMarkdownContent(section.source, locale) : '';
+        const { hero, body } = extractHero(content);
         return {
           ...section,
-          content: section.source ? getMarkdownContent(section.source, locale) : '',
+          content: body,
+          hero,
         };
+      }
       case 'publications': {
         const bibtex = getBibtexContent('publications.bib', locale);
         const allPubs = parseBibTeX(bibtex, locale);
