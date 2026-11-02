@@ -5,9 +5,10 @@ export const markdownComponents: Components = {
     h1: ({ children }) => <h1 className="text-3xl font-serif font-bold text-primary mt-8 mb-4">{children}</h1>,
     h2: ({ children }) => <h2 className="text-2xl font-serif font-bold text-primary mt-8 mb-4 border-b border-neutral-200 pb-2">{children}</h2>,
     h3: ({ children }) => <h3 className="text-xl font-semibold text-primary mt-6 mb-3">{children}</h3>,
+    h4: ({ children }) => <h4 className="text-lg font-semibold text-primary mt-6 mb-3">{children}</h4>,
     p: ({ children }) => <p className="mb-4 last:mb-0">{children}</p>,
-    ul: ({ children }) => <ul className="list-disc list-inside mb-4 space-y-1 ml-4">{children}</ul>,
-    ol: ({ children }) => <ol className="list-decimal list-inside mb-4 space-y-1 ml-4">{children}</ol>,
+    ul: ({ children }) => <ul className="list-disc list-outside mb-4 space-y-1 pl-5">{children}</ul>,
+    ol: ({ children }) => <ol className="list-decimal list-outside mb-4 space-y-1 pl-5">{children}</ol>,
     li: ({ children }) => <li className="mb-1">{children}</li>,
     a: ({ ...props }) => (
         <a
