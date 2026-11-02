@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
 import { getConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
-import { getMetricsForPublication, toMetricsSummary } from '@/lib/metrics';
+import { getMetricsForPublication, toMetricsSummary, type OpenAlexMetrics } from '@/lib/metrics';
 import { getCitationMetrics } from '@/lib/metricsServer';
 import DynamicPageClient, { type DynamicPageLocaleData } from '@/components/pages/DynamicPageClient';
 import {
@@ -18,6 +18,30 @@ import type { Publication } from '@/types/publication';
 import { Metadata } from 'next';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
 
+/**
+ * Load a BibTeX source and enrich its publications with OpenAlex citation
+ * metrics (matched by DOI first, then title). Missing or empty sources yield
+ * no publications and no metrics.
+ */
+function loadPublicationsWithMetrics(
+  source: string | undefined,
+  locale?: string
+): { publications: Publication[]; metrics: OpenAlexMetrics | null } {
+  if (!source) {
+    return { publications: [], metrics: null };
+  }
+
+  const bibtex = getBibtexContent(source, locale);
+  const metrics = getCitationMetrics();
+  const publications = parseBibTeX(bibtex, locale).map((publication) => {
+    const workMetrics = getMetricsForPublication(publication, metrics);
+    if (!workMetrics) return publication;
+    return { ...publication, citations: workMetrics.citations, openalexId: workMetrics.openalexId };
+  });
+
+  return { publications, metrics };
+}
+
 function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleData | null {
   const pageConfig = getPageConfig(slug, locale) as BasePageConfig | null;
 
@@ -27,13 +51,7 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
 
   if (pageConfig.type === 'publication') {
     const pubConfig = pageConfig as PublicationPageConfig;
-    const bibtex = getBibtexContent(pubConfig.source, locale);
-    const metrics = getCitationMetrics();
-    const publications = parseBibTeX(bibtex, locale).map((publication) => {
-      const workMetrics = getMetricsForPublication(publication, metrics);
-      if (!workMetrics) return publication;
-      return { ...publication, citations: workMetrics.citations, openalexId: workMetrics.openalexId };
-    });
+    const { publications, metrics } = loadPublicationsWithMetrics(pubConfig.source, locale);
     return {
       type: 'publication',
       config: pubConfig,
@@ -50,20 +68,7 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
     const cvConfig = mergeCvData(defaultCv, localizedCv);
 
     // Reuse the existing BibTeX pipeline for the publications section.
-    const publications: Publication[] = [];
-    const pubSource = cvConfig.publications?.source;
-    if (pubSource) {
-      const bibtex = getBibtexContent(pubSource, locale);
-      const metrics = getCitationMetrics();
-      for (const publication of parseBibTeX(bibtex, locale)) {
-        const workMetrics = getMetricsForPublication(publication, metrics);
-        if (!workMetrics) {
-          publications.push(publication);
-        } else {
-          publications.push({ ...publication, citations: workMetrics.citations, openalexId: workMetrics.openalexId });
-        }
-      }
-    }
+    const { publications } = loadPublicationsWithMetrics(cvConfig.publications?.source, locale);
 
     return {
       type: 'cv',

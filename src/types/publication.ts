@@ -1,9 +1,5 @@
 export interface Author {
   name: string;
-  isMainAuthor?: boolean;
-  affiliation?: string;
-  email?: string;
-  orcid?: string;
   isHighlighted?: boolean;
   isCorresponding?: boolean;
   isCoAuthor?: boolean;
@@ -29,25 +25,18 @@ export interface Publication {
   pages?: string;
   year: number;
   month?: string;
-  publishedDate?: string;
   doi?: string;
-  arxivId?: string;
-  pmid?: string;
   url?: string;
   code?: string;
   pdfUrl?: string;
-  tags: string[];
-  keywords?: string[];
+  keywords: string[];
   type: PublicationType;
   status: PublicationStatus;
   citations?: number;
   openalexId?: string;
-  impactFactor?: number;
-  quartile?: 'Q1' | 'Q2' | 'Q3' | 'Q4';
   bibtex?: string;
   venue?: string;
   location?: string;
-  awards?: string[];
   featured?: boolean;
   selected?: boolean;
   preview?: string;

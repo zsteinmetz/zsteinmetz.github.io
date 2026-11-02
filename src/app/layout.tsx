@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     creator: config.author.name,
     publisher: config.author.name,
     icons: {
-      icon: config.site.favicon,
+      icon: { url: config.site.favicon, type: 'image/svg+xml' },
     },
     openGraph: {
       type: 'website',
@@ -138,7 +138,6 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="icon" href={config.site.favicon} type="image/svg+xml" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

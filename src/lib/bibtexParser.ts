@@ -47,8 +47,8 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
 
     // Parse year and month
     const year = parseInt(tags.year) || new Date().getFullYear();
-    const monthStr = tags.month?.toLowerCase() || '';
-    const month = monthMapping[monthStr] || (parseInt(monthStr) || undefined);
+    const rawMonth = tags.month?.trim() || '';
+    const mappedMonth = rawMonth ? monthMapping[rawMonth.toLowerCase()] : undefined;
 
     // Determine type
     const type = typeMapping[entry.entryType.toLowerCase()] || 'journal';
@@ -70,10 +70,9 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       titleNodes: title.nodes,
       authors,
       year,
-      month: monthMapping[tags.month?.toLowerCase()] ? String(month) : tags.month,
+      month: mappedMonth ? String(mappedMonth) : tags.month,
       type,
       status: 'published',
-      tags: keywords,
       keywords,
 
       // Optional fields

@@ -1,11 +1,11 @@
 {
   "orcid": "0000-0001-6675-5033",
-  "fetchedAt": "2026-11-02T12:39:05.910Z",
+  "fetchedAt": "2026-11-02T14:38:36.530Z",
   "author": {
     "openalexId": "https://openalex.org/A5071389053",
     "displayName": "Zacharias Steinmetz",
     "worksCount": 68,
-    "citedByCount": 3724,
+    "citedByCount": 3723,
     "hIndex": 23,
     "i10Index": 27,
     "hIndex2yrMean": 9.411764705882353
