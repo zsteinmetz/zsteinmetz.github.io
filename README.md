@@ -90,7 +90,7 @@ To add a new page (e.g., "Projects"), create a TOML file in `content/` (e.g., `c
 
 Supported page types:
 *   `text`: Renders Markdown content (Great for short notes).
-*   `card`: Renders a list of cards (Great for Projects, Awards). Content of each card item supports Markdown.
+*   `card`: Renders a list of cards (Great for Projects, Awards). Content of each card item supports Markdown. Each item optionally supports a teaser image: set `image = "/my-image.png"` (a path inside `public/`) and optionally `imageAlt = "..."` for alt text.
 *   `publication`: Renders the full publications list with filters.
 *   `cv`: Renders the narrative academic CV page (see `docs/cv.md`).
 

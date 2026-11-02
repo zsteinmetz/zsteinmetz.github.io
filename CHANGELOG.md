@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Unreleased
+- Added optional teaser images for card items: each `card` page item can now set `image = "/my-image.png"` (a path inside `public/`) and optionally `imageAlt = "..."` for alt text. The image is rendered as a responsive thumbnail beside the card content (stacking above it on mobile), following the same layout pattern as publication preview images. Cards without an image are rendered exactly as before. Documented in `README.md`.
 - Redesigned the navigation language and theme toggles to blend in with the menu links: both are now borderless, transparent buttons instead of boxed controls. The language toggle shows a globe icon plus a compact locale code (EN/DE) with click-to-cycle switching (replacing the dropdown menu), and the theme toggle resolves the system preference to a sun/moon icon and toggles between light and dark with a single click (replacing the system/light/dark three-state cycle). Added a localized "Click to switch to {locale}" tooltip message.
 - Redesigned the theme from Deep Navy & Gold to Forest & Copper: a warm forest-green primary with copper accents in light and dark modes, a gray-green neutral ramp, muted semantic colors, and an updated print palette.
 - Switched the site fonts to self-hosted Lora for headings and IBM Plex Sans for body text (both variable, 400–700, with italics), plus IBM Plex Mono for code and BibTeX snippets. Inter and Georgia were removed.
