@@ -1,4 +1,4 @@
-import { Publication, PublicationType, ResearchArea } from '@/types/publication';
+import { Publication, PublicationType } from '@/types/publication';
 import type { BibTeXEntry } from 'bibtex-parse-js';
 import * as bibtexParse from 'bibtex-parse-js';
 import { getConfig } from './config';
@@ -75,7 +75,6 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       status: 'published',
       tags: keywords,
       keywords,
-      researchArea: detectResearchArea(tags.title, keywords),
 
       // Optional fields
       journal: cleanBibTeXString(tags.journal),
@@ -233,31 +232,6 @@ function cleanBibTeXString(str?: string): string {
   if (!str) return '';
 
   return parseBibTeXInline(str).plainText;
-}
-
-function detectResearchArea(title: string, keywords: string[]): ResearchArea {
-  const text = (title + ' ' + keywords.join(' ')).toLowerCase();
-
-  if (text.includes('healthcare') || text.includes('medical') || text.includes('health')) {
-    return 'ai-healthcare';
-  }
-  if (text.includes('signal') || text.includes('processing')) {
-    return 'signal-processing';
-  }
-  if (text.includes('reliability') || text.includes('fault') || text.includes('diagnosis')) {
-    return 'reliability-engineering';
-  }
-  if (text.includes('quantum')) {
-    return 'quantum-computing';
-  }
-  if (text.includes('neural') || text.includes('spiking')) {
-    return 'neural-networks';
-  }
-  if (text.includes('transformer') || text.includes('attention')) {
-    return 'transformer-architectures';
-  }
-
-  return 'machine-learning';
 }
 
 function reconstructBibTeX(entry: BibTeXEntry, excludeFields: string[] = []): string {
