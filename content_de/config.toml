@@ -6,18 +6,18 @@ last_updated = "2. November 2026"
 [author]
 name = "Dr. Zacharias Steinmetz"
 title = "Umweltwissenschaftler"
-institution = "RPTU University Kaiserslautern-Landau"
+institution = "RPTU Kaiserslautern-Landau"
 avatar = "/bio.jpg"
 
 [social]
 # Contact information (leave blank or delete to hide)
 
 email = "hi@zsteinmetz.de"
-location = "Landau, Deutschland"
+location = "Landau"
 location_url = "https://osm.org/go/0DP1Tu03?m="
 location_details = [
   "Raum 147, Gebäude CIII,",
-  "Fortstr. 7, 76829 Landau, Germany"
+  "Fortstr. 7, 76829 Landau"
 ]
 google_scholar = "https://scholar.google.com/citations?user=klQROs4AAAAJ"
 orcid = "https://orcid.org/0000-0001-6675-5033"
@@ -53,3 +53,5 @@ title = "Lebenslauf"
 type = "page"
 target = "cv"
 href = "/cv"
+
+# [legal] and [[subpages]] are always sourced from the default content/config.toml

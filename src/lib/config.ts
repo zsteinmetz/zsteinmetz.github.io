@@ -31,6 +31,15 @@ export interface SiteConfig {
   features: {
     enable_one_page_mode?: boolean;
   };
+  // Slugs of legal pages shown in the footer; leave blank or delete keys to hide
+  legal?: {
+    imprint?: string;
+    privacy?: string;
+  };
+  // Additional pages rendered at /{target} but not shown in the main nav menu
+  subpages?: Array<{
+    target: string;
+  }>;
   analytics?: {
     enabled?: boolean;
     matomo_url?: string;
@@ -79,6 +88,9 @@ function mergeConfig(base: SiteConfig, localized?: Partial<SiteConfig> | null): 
       ...(localized.social || {}),
     },
     features: base.features,
+    // legal and subpages are always sourced from default content/config.toml
+    legal: base.legal,
+    subpages: base.subpages,
     // analytics is always sourced from default content/config.toml
     analytics: base.analytics,
     navigation: localized.navigation || base.navigation,

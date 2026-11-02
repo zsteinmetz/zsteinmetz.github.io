@@ -6,7 +6,7 @@ last_updated = "November 2, 2026"
 
 [author]
 name = "Dr. Zacharias Steinmetz"
-title = "Environmental scientist"
+title = "Environmental Scientist"
 institution = "RPTU University Kaiserlautern-Landau"
 avatar = "/bio.jpg"
 
@@ -82,3 +82,14 @@ title = "CV"
 type = "page"
 target = "cv"
 href = "/cv"
+
+[legal]
+# Slugs of legal pages shown in the footer; leave blank or delete a key to hide
+imprint = "imprint"
+privacy = "privacy"
+
+# Additional pages rendered at /{target} but not shown in the main nav menu.
+# Content comes from content/<target>.toml; they can be linked from any page.
+# Example:
+# [[subpages]]
+# target = "colophon"

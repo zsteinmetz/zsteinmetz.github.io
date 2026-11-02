@@ -94,6 +94,17 @@ Supported page types:
 *   `publication`: Renders the full publications list with filters.
 *   `cv`: Renders the narrative academic CV page (see `docs/cv.md`).
 
+#### Pages outside the navigation menu
+To add a page that should be reachable at its own URL but **not** appear in the main nav menu (e.g., a colophon or legal page), add it to the `[[subpages]]` list in `content/config.toml` instead:
+
+```toml
+[[subpages]]
+# The page is rendered at /{target}; content comes from content/<target>.toml
+target = "colophon"
+```
+
+Such pages can be linked from any other page (e.g., `[Colophon](/colophon)` in Markdown) or from the footer (see section 8).
+
 ### 6. I18N Support (`content_<locale>/`)
 PRISM now supports i18n, i.e., multi-language.
 
@@ -122,6 +133,21 @@ matomo_site_id = "1"
 *   Tracking is only active when `enabled = true` and both `matomo_url` and `matomo_site_id` are set; otherwise the tracker is not rendered at all.
 *   The standard Matomo JavaScript tracker is embedded in `<head>` of every page.
 *   A `<noscript>` tracking-pixel fallback (`matomo.php?idsite=...&rec=1`) is rendered at the end of `<body>`, so visits from browsers with JavaScript disabled are still counted.
+
+### 8. Legal pages (Imprint / Privacy Policy)
+PRISM ships with imprint and privacy policy templates (`content/imprint.toml` + `content/imprint.md`, `content/privacy.toml` + `content/privacy.md`, plus German versions in `content_de/`). Configure which pages appear as footer links in the `[legal]` section of `content/config.toml`:
+
+```toml
+[legal]
+# Slugs of legal pages shown in the footer; leave blank or delete a key to hide
+imprint = "imprint"
+privacy = "privacy"
+```
+
+*   Values are page slugs, so the footer links point to `/{slug}`; the footer labels are localized (Imprint / Impressum, Privacy Policy / Datenschenschutzerklärung).
+*   Fill in the placeholder legal details (responsible party, address, contact) in the Markdown files. The templates do not constitute legal advice.
+*   The "Built with PRISM" reference now lives in the imprint template.
+*   The `[legal]` section is always sourced from the default `content/config.toml` and cannot be overridden per locale.
 
 ## 📦 Deployment
 

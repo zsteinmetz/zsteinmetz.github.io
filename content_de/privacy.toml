@@ -1,0 +1,4 @@
+type = "text"
+title = "Datenschutzerklärung"
+description = "Wie diese Website mit Ihren Daten umgeht."
+source = "privacy.md"

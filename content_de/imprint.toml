@@ -1,0 +1,4 @@
+type = "text"
+title = "Impressum"
+description = "Rechtliche Angaben zu dieser Website."
+source = "imprint.md"

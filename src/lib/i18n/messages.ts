@@ -47,7 +47,8 @@ export interface LocaleMessages {
   };
   footer: {
     lastUpdated: string;
-    builtWithPrism: string;
+    imprint: string;
+    privacy: string;
   };
 }
 
@@ -100,7 +101,8 @@ const en: LocaleMessages = {
   },
   footer: {
     lastUpdated: 'Last updated',
-    builtWithPrism: 'Built with PRISM',
+    imprint: 'Imprint',
+    privacy: 'Privacy Policy',
   },
 };
 
@@ -153,7 +155,8 @@ const de: LocaleMessages = {
   },
   footer: {
     lastUpdated: 'Zuletzt aktualisiert',
-    builtWithPrism: 'Mit PRISM erstellt',
+    imprint: 'Impressum',
+    privacy: 'Datenschutzerklärung',
   },
 };
 

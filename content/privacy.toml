@@ -1,0 +1,4 @@
+type = "text"
+title = "Privacy Policy"
+description = "How this website handles your data."
+source = "privacy.md"

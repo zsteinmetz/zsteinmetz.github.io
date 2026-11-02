@@ -183,6 +183,7 @@ export default function RootLayout({
               lastUpdated={config.site.last_updated}
               lastUpdatedByLocale={lastUpdatedByLocale}
               defaultLocale={runtimeI18n.defaultLocale}
+              legal={config.legal}
             />
           </LocaleProvider>
         </ThemeProvider>

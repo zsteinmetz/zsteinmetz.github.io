@@ -1,0 +1,4 @@
+type = "text"
+title = "Imprint"
+description = "Legal information about this website."
+source = "imprint.md"
