@@ -1,19 +1,18 @@
-# Impressum
+## Angaben gemäß § 5 DDG
 
-## Angaben gemäß § 5 TMG / inhaltlich verantwortlich
+**Zacharias Steinmetz**
 
-**Ihr Name**
-Institution / Unternehmen
-Straße und Hausnummer
-Postleitzahl, Ort
-Land
+Fachbereich Natur- und Umweltwissenschaften\
+RPTU Kaiserslautern-Landau\
+Fortstr. 7\
+76829 Landau
 
-E-Mail: [email@example.com](mailto:email@example.com)
+E-Mail: [hi@zsteinmetz.de](mailto:hi@zsteinmetz.de)
 
-## Haftungshinweis
+## Haftungsausschluss
 
 Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen.
 
----
+## Code
 
-Diese Website wurde mit [PRISM](https://github.com/xyjoey/PRISM) erstellt 🚀
+Diese Website basiert auf [PRISM](https://github.com/xyjoey/PRISM). Der Quellcode ist auf [GitHub](https://github.com/zsteinmetz) verfügbar.

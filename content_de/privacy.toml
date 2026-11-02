@@ -1,4 +1,4 @@
 type = "text"
 title = "Datenschutzerklärung"
-description = "Wie diese Website mit Ihren Daten umgeht."
+description = "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
 source = "privacy.md"
