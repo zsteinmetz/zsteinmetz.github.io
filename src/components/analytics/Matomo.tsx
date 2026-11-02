@@ -26,6 +26,7 @@ export function MatomoScript({ analytics }: MatomoProps) {
           var _paq = window._paq = window._paq || [];
           _paq.push(['setTrackerUrl', '${url}matomo.php']);
           _paq.push(['setSiteId', '${siteId}']);
+          _paq.push(['disableCookies']);
           var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
           g.async = true; g.src = '${url}matomo.js'; s.parentNode.insertBefore(g, s);
         `,
