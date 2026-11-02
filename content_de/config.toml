@@ -1,19 +1,28 @@
 [site]
-title = "Jiale Liu"
-description = "Doktorand an der University of Example."
-last_updated = "18. November 2025"
+title = "Zacharias Steinmetz"
+description = "Umweltwissenschaftler an der Schnittstelle von Umweltchemie, analytischen Methoden und reproduzierbarer Datenwissenschaft."
+last_updated = "2. November 2026"
 
 [author]
-name = "Jiale Liu"
-title = "Doktorand"
-institution = "University of Example"
+name = "Dr. Zacharias Steinmetz"
+title = "Umweltwissenschaftler"
+institution = "RPTU University Kaiserslautern-Landau"
+avatar = "/bio.jpg"
 
 [social]
-location = "Stadt, Land"
+# Contact information (leave blank or delete to hide)
+
+email = "hi@zsteinmetz.de"
+location = "Landau, Deutschland"
+location_url = "https://osm.org/go/0DP1Tu03?m="
 location_details = [
-  "Raum 123, Wissenschaftsgebäude,",
-  "Universitätsallee, Stadt, Land"
+  "Raum 147, Gebäude CIII,",
+  "Fortstr. 7, 76829 Landau, Germany"
 ]
+google_scholar = "https://scholar.google.com/citations?user=klQROs4AAAAJ"
+orcid = "https://orcid.org/0000-0001-6675-5033"
+github = "https://github.com/zsteinmetz"
+linkedin = "https://www.linkedin.com/in/zsteinmetz"
 
 [[navigation]]
 title = "Über mich"
