@@ -77,7 +77,7 @@ const en: LocaleMessages = {
     googleMap: 'Map',
     send: 'Send',
     sendEmail: 'Send Email',
-    researchInterests: 'Research Interests',
+    researchInterests: 'Areas of Expertise',
   },
   home: {
     about: 'About',
@@ -131,7 +131,7 @@ const de: LocaleMessages = {
     googleMap: 'Karte',
     send: 'Senden',
     sendEmail: 'E-Mail senden',
-    researchInterests: 'Forschungsinteressen',
+    researchInterests: 'Fachliche Schwerpunkte',
   },
   home: {
     about: 'Über mich',

@@ -16,7 +16,8 @@ email = "hi@zsteinmetz.de"
 location = "Landau"
 location_url = "https://osm.org/go/0DP1Tu03?m="
 location_details = [
-  "Raum 147, Gebäude CIII,",
+  "Fachbereich Natur- und Umweltwissenschaften",
+  "Gebäude CIII, Raum 147",
   "Fortstr. 7, 76829 Landau"
 ]
 google_scholar = "https://scholar.google.com/citations?user=klQROs4AAAAJ"

@@ -7,7 +7,7 @@ last_updated = "November 2, 2026"
 [author]
 name = "Dr. Zacharias Steinmetz"
 title = "Environmental Scientist"
-institution = "RPTU University Kaiserlautern-Landau"
+institution = "RPTU University Kaiserslautern-Landau"
 avatar = "/bio.jpg"
 
 [social]
@@ -17,7 +17,8 @@ email = "hi@zsteinmetz.de"
 location = "Landau, Germany"
 location_url = "https://osm.org/go/0DP1Tu03?m="
 location_details = [
-  "Room 147, Building CIII,",
+  "Department of Natural and Environmental Sciences",
+  "Building CIII, Room 147",
   "Fortstr. 7, 76829 Landau, Germany"
 ]
 google_scholar = "https://scholar.google.com/citations?user=klQROs4AAAAJ"
