@@ -1,6 +1,6 @@
 ## Information in accordance with § 5 DDG
 
-**Zacharias Steinmetz**
+**{{ author.name }}**
 
 Department of Natural and Environmental Sciences\
 RPTU University Kaiserslautern-Landau\
@@ -8,7 +8,7 @@ Fortstr. 7\
 76829 Landau\
 Germany
 
-Email: [hi@zsteinmetz.de](mailto:hi@zsteinmetz.de)
+Email: [{{ social.email }}](mailto:{{ social.email }})
 
 ## Disclaimer
 

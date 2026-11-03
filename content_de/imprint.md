@@ -1,13 +1,13 @@
 ## Angaben gemäß § 5 DDG
 
-**Zacharias Steinmetz**
+**{{ author.name }}**
 
 Fachbereich Natur- und Umweltwissenschaften\
 RPTU Kaiserslautern-Landau\
 Fortstr. 7\
 76829 Landau
 
-E-Mail: [hi@zsteinmetz.de](mailto:hi@zsteinmetz.de)
+E-Mail: [{{ social.email }}](mailto:{{ social.email }})
 
 ## Haftungsausschluss
 

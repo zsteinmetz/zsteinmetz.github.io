@@ -76,6 +76,16 @@ title = "PhD Student / Researcher"
 
 Setting `url` enables automatic `sitemap.xml` and `robots.txt` generation (emitted at build time): the sitemap lists the homepage, all navigation pages, `[[subpages]]` targets, and `[legal]` slugs, while `robots.txt` allows all crawlers and links the sitemap. The URL is also used as the `metadataBase` so OpenGraph metadata resolves to absolute URLs. Leave `url` unset to skip both files.
 
+#### Variables in Markdown
+
+Markdown files (e.g., `content/imprint.md`) and string values in page TOML files (e.g., card item content) can reference values from `content/config.toml` with `{{ section.key }}` placeholders, so details like your email only need to be defined once:
+
+```markdown
+Contact: [{{ social.email }}](mailto:{{ social.email }}) — {{ author.name }}, {{ author.institution }}
+```
+
+Dotted paths mirror the TOML structure (`site.title`, `author.name`, `social.email`, …), array items are addressable by index (`social.location_details.0`), and localized pages resolve variables against the merged config of `content_<locale>/config.toml` and `content/config.toml`. Substitution happens at build time; unknown variables are left unchanged and reported as a build-time warning. BibTeX files are not substituted.
+
 ### 2. Homepage (`content/about.toml`)
 Customize the "About" section, "News", and "Selected Publications" on the homepage.
 
