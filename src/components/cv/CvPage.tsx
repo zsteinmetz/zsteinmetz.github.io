@@ -5,6 +5,8 @@ import { PrinterIcon } from '@heroicons/react/24/outline';
 import type { CvHeadings, CvPageConfig } from '@/types/cv';
 import type { Publication } from '@/types/publication';
 import CvProfile from './CvProfile';
+import HighlightCards from '@/components/highlights/HighlightCards';
+import CvSection from './CvSection';
 import CvTimeline from './CvTimeline';
 import CvEducation from './CvEducation';
 import CvProjects from './CvProjects';
@@ -17,6 +19,7 @@ import CvSectionNav, { type CvSectionNavItem } from './CvSectionNav';
 
 const DEFAULT_HEADINGS: Required<CvHeadings> = {
   profile: 'Academic Profile',
+  highlights: 'Research Areas',
   experience: 'Appointments & Experience',
   education: 'Education',
   research: 'Research Contributions & Projects',
@@ -44,6 +47,9 @@ export default function CvPage({ config, publications }: CvPageProps) {
 
   const navItems: CvSectionNavItem[] = [];
   if (config.profile) navItems.push({ id: 'cv-profile', label: headings.profile });
+  if (config.highlights && config.highlights.items.length > 0) {
+    navItems.push({ id: 'cv-highlights', label: headings.highlights });
+  }
   if (config.appointments && config.appointments.length > 0) {
     navItems.push({ id: 'cv-experience', label: headings.experience });
   }
@@ -75,7 +81,10 @@ export default function CvPage({ config, publications }: CvPageProps) {
     >
       <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-4">
         <div>
-          <h1 className="text-4xl font-serif font-bold text-primary">{config.title}</h1>
+          {/* An empty title ("") hides the page heading */}
+          {config.title && (
+            <h1 className="text-4xl font-serif font-bold text-primary">{config.title}</h1>
+          )}
           {config.description && (
             <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-500">
               {config.description}
@@ -97,6 +106,15 @@ export default function CvPage({ config, publications }: CvPageProps) {
 
         <div className="mt-10">
           {config.profile && <CvProfile title={headings.profile} profile={config.profile} />}
+          {config.highlights && config.highlights.items.length > 0 && (
+            <CvSection id="cv-highlights" title={headings.highlights}>
+              <HighlightCards
+                items={config.highlights.items}
+                color={config.highlights.color}
+                columns={config.highlights.columns}
+              />
+            </CvSection>
+          )}
           {config.appointments && config.appointments.length > 0 && (
             <CvTimeline title={headings.experience} appointments={config.appointments} />
           )}

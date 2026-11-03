@@ -87,7 +87,45 @@ Contact: [{{ social.email }}](mailto:{{ social.email }}) — {{ author.name }}, 
 Dotted paths mirror the TOML structure (`site.title`, `author.name`, `social.email`, …), array items are addressable by index (`social.location_details.0`), and localized pages resolve variables against the merged config of `content_<locale>/config.toml` and `content/config.toml`. Substitution happens at build time; unknown variables are left unchanged and reported as a build-time warning. BibTeX files are not substituted.
 
 ### 2. Homepage (`content/about.toml`)
-Customize the "About" section, "News", and "Selected Publications" on the homepage.
+Customize the "About" section, "News", "Selected Publications", and highlight cards on the homepage. The homepage is built from `[[sections]]` blocks:
+
+```toml
+[[sections]]
+id = "about"
+type = "markdown"
+source = "bio.md"
+
+# Highlight cards: a row of tinted overview cards (e.g., research areas)
+[[sections]]
+id = "highlights"
+type = "highlight"
+title = "Research Areas"   # optional; localized default when omitted
+columns = 3               # optional; cards per row, 1–4 (default 3)
+color = "accent"          # optional; see below (default "accent")
+
+[[sections.items]]
+title = "Environmental systems"
+content = "Pollutants, soils, agroecosystems, plastics, and chemical effects."
+
+[[sections.items]]
+title = "Analytical methods"
+content = "Method development, validation, quality assurance, and instrumental analysis."
+```
+
+Supported section types:
+*   `markdown`: Renders a Markdown file (`source`); if the file starts with a heading, it becomes the hero statement.
+*   `highlight`: Renders a grid of tinted highlight cards. `content` of each item supports Markdown. `columns` (1–4, default 3) controls how many cards appear per row; the grid wraps if there are more items than columns.
+*   `publications`: Renders selected publications (`filter = "selected"`, `limit`).
+*   `list`: Renders news entries from a TOML file (`source`).
+
+#### Highlight card colors
+The `color` key (set per section, or per item to override) accepts:
+*   A theme token — `accent` (default), `primary`, `success`, `warning`, `info`, `error` — which stays light/dark-mode aware.
+*   Any raw CSS color (e.g., `#2563eb` or `rgb(37 99 235)`), applied as a soft tinted box with a matching top bar; pick a color that reads well on both light and dark backgrounds.
+
+#### Hiding headings
+Setting `title = ""` (an explicitly empty string) hides the heading of any homepage section (`markdown`, `highlight`, `publications`, `list`) or page (`text`, `card`, `publication`, `cv`) while the rest renders unchanged. Omitting the key keeps the previous behavior: homepage sections fall back to their localized default, pages show their configured title. When the heading of the Selected Publications section is hidden, the "View All" link remains (right-aligned). If a page's heading is hidden, the browser tab title falls back to the site title from `content/config.toml`.
+
 
 ### 3. Publications (`content/publications.bib`)
 Export your publications from Google Scholar, Zotero, or Mendeley to `content/publications.bib`. PRISM automatically parses this file to generate your Publications page. Customize the display of publications by changing `selected`, `preview` and `description` keys in the bib file. 
@@ -105,6 +143,8 @@ Supported page types:
 *   `card`: Renders a list of cards (Great for Projects, Awards). Content of each card item supports Markdown. Each item optionally supports a teaser image: set `image = "/my-image.png"` (a path inside `public/`) and optionally `imageAlt = "..."` for alt text.
 *   `publication`: Renders the full publications list with filters.
 *   `cv`: Renders the narrative academic CV page (see `docs/cv.md`).
+
+On any page, set `title = ""` to hide the page heading (the browser tab title then falls back to the site title).
 
 #### Pages outside the navigation menu
 To add a page that should be reachable at its own URL but **not** appear in the main nav menu (e.g., a colophon or legal page), add it to the `[[subpages]]` list in `content/config.toml` instead:

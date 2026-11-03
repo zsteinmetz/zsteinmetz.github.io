@@ -14,6 +14,23 @@ type = "markdown"
 source = "bio.md"
 
 [[sections]]
+id = "highlights"
+type = "highlight"
+title = ""
+
+[[sections.items]]
+title = "Umweltsysteme"
+content = "Schadstoffe, Böden, Agrarökosysteme, Kunststoffe und chemische Wirkungen."
+
+[[sections.items]]
+title = "Analytische Methoden"
+content = "Methodenentwicklung, Validierung, Qualitätssicherung und Instrumentalanalytik."
+
+[[sections.items]]
+title = "Daten & Reproduzierbarkeit"
+content = "R, Statistik, Automatisierung, Open-Source-Werkzeuge und transparente Workflows."
+
+[[sections]]
 id = "featured_publications"
 type = "publications"
 title = "Ausgewählte Publikationen"

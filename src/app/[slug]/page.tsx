@@ -130,7 +130,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: pageConfig.title,
+    // An empty title ("") hides the on-page heading; fall back to the bare site
+    // title for the tab (absolute bypasses the "%s | ..." template).
+    title: pageConfig.title || { absolute: getConfig().site.title },
     description: pageConfig.description,
   };
 }

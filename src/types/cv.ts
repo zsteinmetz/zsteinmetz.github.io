@@ -1,4 +1,4 @@
-import type { BasePageConfig } from './page';
+import type { BasePageConfig, HighlightItem } from './page';
 
 export interface CvLink {
   label: string;
@@ -104,8 +104,15 @@ export interface CvSkillCategory {
   items: CvSkill[];
 }
 
+export interface CvHighlights {
+  color?: string;
+  columns?: number;
+  items: HighlightItem[];
+}
+
 export interface CvHeadings {
   profile?: string;
+  highlights?: string;
   experience?: string;
   education?: string;
   research?: string;
@@ -122,6 +129,7 @@ export interface CvPageConfig extends BasePageConfig {
   type: 'cv';
   headings?: CvHeadings;
   profile?: CvProfile;
+  highlights?: CvHighlights;
   appointments?: CvAppointment[];
   education?: CvEducation[];
   projects?: CvProject[];

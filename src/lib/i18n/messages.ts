@@ -28,6 +28,7 @@ export interface LocaleMessages {
   home: {
     about: string;
     news: string;
+    highlights: string;
     selectedPublications: string;
     viewAll: string;
   };
@@ -82,6 +83,7 @@ const en: LocaleMessages = {
   home: {
     about: 'About',
     news: 'News',
+    highlights: 'Research Areas',
     selectedPublications: 'Selected Publications',
     viewAll: 'View All',
   },
@@ -136,6 +138,7 @@ const de: LocaleMessages = {
   home: {
     about: 'Über mich',
     news: 'Aktuelles',
+    highlights: 'Forschungsschwerpunkte',
     selectedPublications: 'Ausgewählte Publikationen',
     viewAll: 'Alle anzeigen',
   },

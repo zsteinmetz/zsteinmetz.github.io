@@ -14,7 +14,8 @@ interface SelectedPublicationsProps {
 
 export default function SelectedPublications({ publications, title, enableOnePageMode = false }: SelectedPublicationsProps) {
     const messages = useMessages();
-    const resolvedTitle = title || messages.home.selectedPublications;
+    // An explicitly empty title ("") hides the heading; omitting it falls back to the localized default.
+    const resolvedTitle = title === undefined ? messages.home.selectedPublications : title;
 
     return (
         <motion.section
@@ -22,8 +23,10 @@ export default function SelectedPublications({ publications, title, enableOnePag
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
         >
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-serif font-bold text-primary">{resolvedTitle}</h2>
+            <div className={`flex items-center ${resolvedTitle ? 'justify-between' : 'justify-end'} mb-4`}>
+                {resolvedTitle && (
+                    <h2 className="text-2xl font-serif font-bold text-primary">{resolvedTitle}</h2>
+                )}
                 <Link
                     href={enableOnePageMode ? "/#publications" : "/publications"}
                     prefetch={true}

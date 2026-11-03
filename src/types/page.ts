@@ -29,3 +29,9 @@ export interface CardPageConfig extends BasePageConfig {
     type: 'card';
     items: CardItem[];
 }
+
+export interface HighlightItem {
+    title: string;
+    content?: string;
+    color?: string;
+}

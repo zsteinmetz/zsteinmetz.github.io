@@ -25,14 +25,15 @@ Rendering and the content schema are defined in:
 Sections are rendered in a fixed order and only when their data exists:
 
 1. **Academic profile** (`[profile]`) — narrative introduction, research interests, links
-2. **Appointments & experience** (`[[appointments]]`) — expandable vertical timeline
-3. **Education** (`[[education]]`) — degrees, theses, supervisors, distinctions
-4. **Research contributions & projects** (`[[projects]]`) — portfolio cards with narrative detail
-5. **Publications** (`[publications]`) — featured subset + complete bibliography, reusing `content/publications.bib`
-6. **Teaching & supervision** (`[[teaching]]` + optional `teaching_overview`)
-7. **Grants, awards & recognition** (`[[grants]]`)
-8. **Academic service & community** (`[[service]]`)
-9. **Skills & expertise** (`[[skills]]`) — described, never rated
+2. **Research areas** (`[highlights]`) — optional row of tinted highlight cards for at-a-glance topics
+3. **Appointments & experience** (`[[appointments]]`) — expandable vertical timeline
+4. **Education** (`[[education]]`) — degrees, theses, supervisors, distinctions
+5. **Research contributions & projects** (`[[projects]]`) — portfolio cards with narrative detail
+6. **Publications** (`[publications]`) — featured subset + complete bibliography, reusing `content/publications.bib`
+7. **Teaching & supervision** (`[[teaching]]` + optional `teaching_overview`)
+8. **Grants, awards & recognition** (`[[grants]]`)
+9. **Academic service & community** (`[[service]]`)
+10. **Skills & expertise** (`[[skills]]`) — described, never rated
 
 Section headings are configured in the `[headings]` table and can be translated
 per locale (see below).
@@ -50,7 +51,7 @@ for repeated entries (`[[appointments]]`, `[[education]]`, ...).
 | `title` | string (**required**) | Page title (and h1). |
 | `description` | string | Short description under the title. |
 | `teaching_overview` | string (markdown) | Optional teaching philosophy statement shown above the teaching entries. |
-| `[headings]` | table | Overrides for any section heading: `profile`, `experience`, `education`, `research`, `publications`, `teaching`, `grants`, `grants_funding`, `grants_awards`, `service`, `skills`. |
+| `[headings]` | table | Overrides for any section heading: `profile`, `highlights`, `experience`, `education`, `research`, `publications`, `teaching`, `grants`, `grants_funding`, `grants_awards`, `service`, `skills`. |
 
 ### `[profile]`
 
@@ -59,6 +60,20 @@ for repeated entries (`[[appointments]]`, `[[education]]`, ...).
 | `narrative` | string (markdown) | Multi-paragraph academic narrative. Use `"""..."""` for multiline strings. |
 | `interests` | string[] | Rendered as restrained pills. |
 | `[[profile.links]]` | `{ label, url }` | Institutional profile, ORCID, Google Scholar, GitHub, LinkedIn, ... |
+
+### `[highlights]`
+
+A row of tinted highlight cards for at-a-glance research topics, rendered after
+the academic profile. Item `content` supports Markdown. `color` accepts a theme
+token (`accent`, `primary`, `success`, `warning`, `info`, `error`) or any raw CSS
+color; `columns` (1–4) controls how many cards appear per row (default 3).
+
+| Key | Type | Description |
+| --- | --- | --- |
+| `color` | string | Card color for all cards: theme token or raw CSS color. Defaults to `accent`. |
+| `columns` | number | Cards per row, 1–4. Defaults to 3. |
+| `[[highlights.items]]` | table | A card: `title` (**required**), `content` (markdown), and an optional per-item `color` override. |
+
 
 ### `[[appointments]]`
 

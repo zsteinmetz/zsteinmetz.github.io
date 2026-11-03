@@ -15,7 +15,8 @@ interface NewsProps {
 
 export default function News({ items, title }: NewsProps) {
     const messages = useMessages();
-    const resolvedTitle = title || messages.home.news;
+    // An explicitly empty title ("") hides the heading; omitting it falls back to the localized default.
+    const resolvedTitle = title === undefined ? messages.home.news : title;
 
     return (
         <motion.section
@@ -23,7 +24,9 @@ export default function News({ items, title }: NewsProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
         >
-            <h2 className="text-2xl font-serif font-bold text-primary mb-4">{resolvedTitle}</h2>
+            {resolvedTitle && (
+                <h2 className="text-2xl font-serif font-bold text-primary mb-4">{resolvedTitle}</h2>
+            )}
             <div className="space-y-3">
                 {items.map((item, index) => (
                     <div key={index} className="flex items-start space-x-3">
