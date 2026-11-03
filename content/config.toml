@@ -2,6 +2,8 @@
 title = "Zacharias Steinmetz"
 description = "Environmental scientist working at the interface of environmental chemistry, analytical methods, and reproducible data science."
 favicon = "/favicon.svg"
+# Absolute base URL of the deployed site; enables sitemap.xml and robots.txt
+url = "https://prism-demo.pages.dev"
 last_updated = "November 2, 2026"
 
 [author]

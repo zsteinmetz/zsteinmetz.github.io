@@ -9,6 +9,8 @@ export interface SiteConfig {
     title: string;
     description: string;
     favicon: string;
+    // Absolute base URL of the deployed site; enables sitemap.xml and robots.txt
+    url?: string;
     last_updated?: string;
   };
   author: {

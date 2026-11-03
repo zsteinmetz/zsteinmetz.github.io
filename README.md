@@ -20,7 +20,7 @@ Feel free to customize your own version of PRISM with coding agents.
 *   **📚 BibTeX Support**: Directly render your publications from a `.bib` file. Includes search, filtering (Year, Type), and automatic citation generation.
 *   **🎨 Modern Design**: Clean, responsive UI with a beautiful serif/sans-serif typography pairing, smooth animations (Framer Motion), and Dark Mode support.
 *   **⚡️ High Performance**: Built on Next.js 15 with Turbopack. Static export ensures blazing fast load times and easy deployment.
-*   **🔍 SEO Optimized**: Dynamic metadata generation for every page.
+*   **🔍 SEO Optimized**: Dynamic metadata generation for every page, plus automatic `sitemap.xml` and `robots.txt` when `site.url` is set.
 *   **🧩 Dynamic Routing**: Easily add new pages by simply creating a config file.
 
 ## 🚀 Getting Started
@@ -73,6 +73,8 @@ name = "Your Name"
 title = "PhD Student / Researcher"
 # ...
 ```
+
+Setting `url` enables automatic `sitemap.xml` and `robots.txt` generation (emitted at build time): the sitemap lists the homepage, all navigation pages, `[[subpages]]` targets, and `[legal]` slugs, while `robots.txt` allows all crawlers and links the sitemap. The URL is also used as the `metadataBase` so OpenGraph metadata resolves to absolute URLs. Leave `url` unset to skip both files.
 
 ### 2. Homepage (`content/about.toml`)
 Customize the "About" section, "News", and "Selected Publications" on the homepage.

@@ -17,6 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
     : 'en_US';
 
   return {
+    // Makes relative metadata URLs (e.g. OpenGraph) absolute; requires site.url
+    metadataBase: config.site.url ? new URL(config.site.url) : undefined,
     title: {
       default: config.site.title,
       template: `%s | ${config.site.title}`,
