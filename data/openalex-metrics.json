@@ -1,6 +1,6 @@
 {
   "orcid": "0000-0001-6675-5033",
-  "fetchedAt": "2026-11-03T09:11:19.818Z",
+  "fetchedAt": "2026-11-03T12:35:38.983Z",
   "author": {
     "openalexId": "https://openalex.org/A5071389053",
     "displayName": "Zacharias Steinmetz",
@@ -16,14 +16,14 @@
       "doi": "https://doi.org/10.1016/j.scitotenv.2016.01.153",
       "title": "Plastic mulching in agriculture. Trading short-term agronomic benefits for long-term soil degradation?",
       "publicationYear": 2016,
-      "citedByCount": 1569
+      "citedByCount": 1571
     },
     {
       "openalexId": "https://openalex.org/W3162696944",
       "doi": "https://doi.org/10.1021/acs.analchem.1c00123",
       "title": "Microplastic Spectral Classification Needs an Open Source Community: Open Specy to the Rescue!",
       "publicationYear": 2021,
-      "citedByCount": 572
+      "citedByCount": 573
     },
     {
       "openalexId": "https://openalex.org/W3096849431",
@@ -72,7 +72,7 @@
       "doi": "https://doi.org/10.5194/soil-8-31-2022",
       "title": "Are agricultural plastic covers a source of plastic debris in soil? A first screening study",
       "publicationYear": 2022,
-      "citedByCount": 53
+      "citedByCount": 52
     },
     {
       "openalexId": "https://openalex.org/W4285795264",
@@ -100,7 +100,7 @@
       "doi": "https://doi.org/10.1017/plc.2024.2",
       "title": "Superabsorbent polymers in soil: The new microplastics?",
       "publicationYear": 2024,
-      "citedByCount": 42
+      "citedByCount": 44
     },
     {
       "openalexId": "https://openalex.org/W4319972842",
@@ -121,7 +121,7 @@
       "doi": "https://doi.org/10.1021/acs.analchem.5c00962",
       "title": "Open Specy 1.0: Automated (Hyper)spectroscopy for Microplastics",
       "publicationYear": 2025,
-      "citedByCount": 31
+      "citedByCount": 32
     },
     {
       "openalexId": "https://openalex.org/W4410975385",
@@ -247,7 +247,7 @@
       "doi": "https://doi.org/10.7287/peerj.preprints.27989v2",
       "title": "A simple method for the selective quantification of polyethylene, polypropylene, and polystyrene plastic debris in soil by pyrolysis-gas chromatography/mass spectrometry",
       "publicationYear": 2019,
-      "citedByCount": 4
+      "citedByCount": 5
     },
     {
       "openalexId": "https://openalex.org/W4394267727",
