@@ -33,22 +33,9 @@ export interface PublicationMetricsSummary {
   author: OpenAlexAuthorMetrics;
 }
 
-// Deterministic date formatting matching the footer's per-locale style:
-// en -> "October 30, 2026", de -> "30. Oktober 2026"
-const METRICS_MONTH_NAMES: Record<string, string[]> = {
-  en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-  de: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-};
-
-export function formatMetricsDate(isoDate: string, locale = 'en'): string {
-  const date = new Date(isoDate);
-  if (Number.isNaN(date.getTime())) return isoDate;
-  const months = METRICS_MONTH_NAMES[locale] || METRICS_MONTH_NAMES.en;
-  const day = date.getUTCDate();
-  const month = months[date.getUTCMonth()];
-  const year = date.getUTCFullYear();
-  return locale === 'de' ? `${day}. ${month} ${year}` : `${month} ${day}, ${year}`;
-}
+// Deterministic date formatting matching the footer's per-locale style;
+// the shared implementation lives in dateFormat.ts.
+export { formatDate as formatMetricsDate } from './dateFormat';
 
 export function toMetricsSummary(metrics: OpenAlexMetrics | null): PublicationMetricsSummary | undefined {
   if (!metrics) return undefined;

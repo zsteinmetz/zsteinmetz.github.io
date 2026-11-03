@@ -28,8 +28,8 @@ Replace the manually maintained `site.last_updated` string in `content/config.to
 
 Implementation:
 
-- [ ] Add a build-time helper (e.g., in `scripts/fetch-metrics.mjs` or a new `scripts/compute-last-updated.mjs`) that determines the latest modification across `content/`, `content_<locale>/`, `publications.bib`, and `public/` — prefer the latest git commit timestamp (`git log -1 --format=%cI -- content content_de`) when git is available, and fall back to file mtimes (or `new Date()`) otherwise, matching the "always works offline / fresh clones" pattern used for the OpenAlex metrics fallback.
-- [ ] Expose the computed date through the site config pipeline in `src/lib/config.ts`, overriding the manual `last_updated` value when it is newer (or make the TOML key optional and document it as deprecated).
-- [ ] Localize the rendered date (the site already has `formatMetricsDate` in `src/lib/metrics.ts` and locale state via `src/lib/stores/localeStore.ts` — reuse the same date-formatting approach).
-- [ ] Update `README.md` (Configuration section) to document the new behavior.
-- [ ] Verify the static export (`npm run build`) bakes the correct date into `out/`.
+- [x] Add a build-time helper (e.g., in `scripts/fetch-metrics.mjs` or a new `scripts/compute-last-updated.mjs`) that determines the latest modification across `content/`, `content_<locale>/`, `publications.bib`, and `public/` — prefer the latest git commit timestamp (`git log -1 --format=%cI -- content content_de`) when git is available, and fall back to file mtimes (or `new Date()`) otherwise, matching the "always works offline / fresh clones" pattern used for the OpenAlex metrics fallback.
+- [x] Expose the computed date through the site config pipeline in `src/lib/config.ts`, overriding the manual `last_updated` value when it is newer (or make the TOML key optional and document it as deprecated).
+- [x] Localize the rendered date (the site already has `formatMetricsDate` in `src/lib/metrics.ts` and locale state via `src/lib/stores/localeStore.ts` — reuse the same date-formatting approach).
+- [x] Update `README.md` (Configuration section) to document the new behavior.
+- [x] Verify the static export (`npm run build`) bakes the correct date into `out/`.

@@ -4,7 +4,6 @@ description = "Environmental scientist working at the interface of environmental
 favicon = "/favicon.svg"
 # Absolute base URL of the deployed site; enables sitemap.xml and robots.txt
 url = "https://prism-demo.pages.dev"
-last_updated = "November 2, 2026"
 
 [author]
 name = "Dr. Zacharias Steinmetz"

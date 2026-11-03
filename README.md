@@ -76,6 +76,8 @@ title = "PhD Student / Researcher"
 
 Setting `url` enables automatic `sitemap.xml` and `robots.txt` generation (emitted at build time): the sitemap lists the homepage, all navigation pages, `[[subpages]]` targets, and `[legal]` slugs, while `robots.txt` allows all crawlers and links the sitemap. The URL is also used as the `metadataBase` so OpenGraph metadata resolves to absolute URLs. Leave `url` unset to skip both files.
 
+The footer's "Last updated" date is derived automatically at build time from the latest git commit that touched `content/`, `content_<locale>/`, or `public/` — so it never goes stale and rebuilds of unchanged content (e.g. metrics-only redeploys) keep the same date. When those trees contain uncommitted changes, the latest file modification time wins so edits show up immediately in `npm run dev`; when git is not available at all (e.g. an exported source tree), file mtimes are used. The date is localized per site language. The former `last_updated` key in `[site]` is deprecated and ignored.
+
 #### Variables in Markdown
 
 Markdown files (e.g., `content/imprint.md`) and string values in page TOML files (e.g., card item content) can reference values from `content/config.toml` with `{{ section.key }}` placeholders, so details like your email only need to be defined once:

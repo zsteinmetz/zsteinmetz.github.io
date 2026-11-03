@@ -3,6 +3,7 @@ import path from 'path';
 import { parse } from 'smol-toml';
 import type { I18nConfig } from '@/types/i18n';
 import { normalizeLocale } from './locales';
+import { getLastUpdatedIso } from './lastUpdatedServer';
 
 export interface SiteConfig {
   site: {
@@ -11,6 +12,8 @@ export interface SiteConfig {
     favicon: string;
     // Absolute base URL of the deployed site; enables sitemap.xml and robots.txt
     url?: string;
+    // Deprecated: the footer date is computed at build time from the content's
+    // git history (see lib/lastUpdatedServer.ts); this key is always overridden.
     last_updated?: string;
   };
   author: {
@@ -116,15 +119,17 @@ export function getConfig(locale?: string): SiteConfig {
   try {
     const baseConfig = getDefaultConfig();
 
-    if (!locale) {
-      return baseConfig;
-    }
+    const config = locale
+      ? mergeConfig(baseConfig, readConfigFromPath(
+          path.join(process.cwd(), `${DEFAULT_CONTENT_DIR}_${normalizeLocale(locale)}`, 'config.toml')
+        ))
+      : baseConfig;
 
-    const normalizedLocale = normalizeLocale(locale);
-    const localizedPath = path.join(process.cwd(), `${DEFAULT_CONTENT_DIR}_${normalizedLocale}`, 'config.toml');
-    const localizedConfig = readConfigFromPath(localizedPath);
+    // "Last updated" is derived from the content's git history (with an
+    // mtime fallback) at build time; the manual key is deprecated.
+    config.site.last_updated = getLastUpdatedIso();
 
-    return mergeConfig(baseConfig, localizedConfig);
+    return config;
   } catch (error) {
     console.error('Error loading config:', error);
     throw new Error('Failed to load configuration');
