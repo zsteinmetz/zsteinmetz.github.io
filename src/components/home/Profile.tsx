@@ -267,7 +267,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                                 <div className="flex items-center justify-center space-x-2 mb-1">
                                                     <p className="font-semibold">{messages.profile.email}</p>
                                                 </div>
-                                                <p className="break-words">{social.email?.replace('@', ' (at) ')}</p>
+                                                <p className="break-words">{social.email}</p>
                                                 <div className="mt-2">
                                                     <a
                                                         href={link.href}
