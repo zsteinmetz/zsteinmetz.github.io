@@ -25,33 +25,27 @@ github = "https://github.com/zsteinmetz"
 linkedin = "https://www.linkedin.com/in/zsteinmetz"
 
 [[navigation]]
-title = "Über mich"
+title = "Startseite"
 type = "page"
 target = "about"
 href = "/"
 
 [[navigation]]
-title = "Publikationen"
+title = "Profil"
 type = "page"
-target = "publications"
-href = "/publications"
+target = "profile"
+href = "/profile"
+
+[[navigation]]
+title = "Forschung"
+type = "page"
+target = "research"
+href = "/research"
 
 [[navigation]]
 title = "Lehre"
 type = "page"
 target = "teaching"
 href = "/teaching"
-
-[[navigation]]
-title = "Services"
-type = "page"
-target = "services"
-href = "/services"
-
-[[navigation]]
-title = "Lebenslauf"
-type = "page"
-target = "cv"
-href = "/cv"
 
 # [legal] and [[subpages]] are always sourced from the default content/config.toml

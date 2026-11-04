@@ -31,11 +31,17 @@ title = "Daten & Reproduzierbarkeit"
 content = "R, Statistik, Automatisierung, Open-Source-Werkzeuge und transparente Workflows."
 
 [[sections]]
+id = "teaching"
+type = "markdown"
+source = "teaching-hint.md"
+title = ""
+
+[[sections]]
 id = "featured_publications"
 type = "publications"
 title = "Ausgewählte Publikationen"
 filter = "selected"
-limit = 5
+limit = 3
 
 [[sections]]
 id = "news"

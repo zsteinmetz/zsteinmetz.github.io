@@ -1,10 +1,28 @@
-type = "card"
+type = "sections"
 title = "Teaching"
-description = "Courses I have taught or assisted with."
+description = "I teach environmental science as a combination of conceptual understanding, practical measurement, quantitative analysis, and scientific communication. Students should understand how data are generated, evaluated, and interpreted, not treat instruments and methods as black boxes."
 
-[[items]]
-title = "Example Course"
-subtitle = "Teaching Assistant"
-date = "2024"
-content = "Description of the course and responsibilities. Content of this course can be found [here](https://example.com)."
-tags = ["Undergraduate", "CS"]
+[[sections]]
+id = "principles"
+type = "highlight"
+title = ""
+columns = 1
+
+[[sections.items]]
+title = "Research-informed teaching"
+content = "Teaching connected to current research questions and real environmental problems. Journal-club elements and recent scientific papers link course content to ongoing research."
+
+[[sections.items]]
+title = "Practical and quantitative learning"
+content = "Students connect laboratory observations, analytical data, statistics, and environmental interpretation — understanding how measurements are generated and assessed."
+
+[[sections.items]]
+title = "Independent and critical learning"
+content = "Self-directed work, evaluation of scientific evidence, and critical reflection, fostered by the inverted-classroom and journal-club formats I developed for *Advanced Environmental Chemistry*."
+
+[[sections]]
+id = "courses"
+type = "markdown"
+title = ""
+source = "teaching.md"
+

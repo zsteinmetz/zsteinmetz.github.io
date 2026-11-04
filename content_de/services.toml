@@ -1,9 +1,0 @@
-type = "card"
-title = "Akademischer Service"
-description = "Fachliches Engagement und Mitwirkung in der Community."
-
-[[items]]
-title = "Gutachter"
-subtitle = "Fachzeitschrift"
-date = "2024"
-content = "Begutachtung eingereichter Paper."

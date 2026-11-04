@@ -3,7 +3,7 @@ title = "Zacharias Steinmetz"
 description = "Environmental scientist working at the interface of environmental chemistry, analytical methods, and reproducible data science."
 favicon = "/favicon.svg"
 # Absolute base URL of the deployed site; enables sitemap.xml and robots.txt
-url = "https://prism-demo.pages.dev"
+url = "https://zsteinmetz.de"
 
 [author]
 name = "Dr. Zacharias Steinmetz"
@@ -56,34 +56,28 @@ en = "English"
 de = "Deutsch"
 
 [[navigation]]
-title = "About"
+title = "Home"
 type = "page"
 target = "about"
 href = "/"
 
 [[navigation]]
-title = "Publications"
+title = "Profile"
 type = "page"
-target = "publications"
-href = "/publications"
+target = "profile"
+href = "/profile"
+
+[[navigation]]
+title = "Research"
+type = "page"
+target = "research"
+href = "/research"
 
 [[navigation]]
 title = "Teaching"
 type = "page"
 target = "teaching"
 href = "/teaching"
-
-[[navigation]]
-title = "Services"
-type = "page"
-target = "services"
-href = "/services"
-
-[[navigation]]
-title = "CV"
-type = "page"
-target = "cv"
-href = "/cv"
 
 [legal]
 # Slugs of legal pages shown in the footer; leave blank or delete a key to hide
@@ -92,6 +86,5 @@ privacy = "privacy"
 
 # Additional pages rendered at /{target} but not shown in the main nav menu.
 # Content comes from content/<target>.toml; they can be linked from any page.
-# Example:
-# [[subpages]]
-# target = "colophon"
+[[subpages]]
+target = "publications"

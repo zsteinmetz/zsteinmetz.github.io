@@ -31,11 +31,17 @@ title = "Data and reproducibility"
 content = "R, statistics, automation, open-source tools, and transparent workflows."
 
 [[sections]]
+id = "teaching"
+type = "markdown"
+source = "teaching-hint.md"
+title = ""
+
+[[sections]]
 id = "featured_publications"
 type = "publications"
 title = "Selected Publications"
 filter = "selected"
-limit = 5
+limit = 3
 
 [[sections]]
 id = "news"

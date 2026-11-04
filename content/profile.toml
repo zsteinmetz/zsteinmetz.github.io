@@ -1,0 +1,316 @@
+# ==============================================================================
+# PRISM — Profile page (`/profile`)
+#
+# Narrative academic CV: short profile, career timeline, education, grants,
+# service, teaching selection, and languages. The built-in Print/PDF button
+# provides the "full academic CV" for download.
+# ==============================================================================
+
+type = "cv"
+title = "Profile"
+description = "Environmental scientist with a background in environmental chemistry, soil science, ecotoxicology, and analytical chemistry, focusing on anthropogenic pollutants in environmental systems — particularly soils and agroecosystems."
+
+[headings]
+profile = "Introduction"
+highlights = "Core Competencies"
+experience = "Career"
+education = "Education"
+research = "Research Contributions & Projects"
+publications = "Publications"
+teaching = "Teaching"
+grants = "Grants, Awards & Recognition"
+grants_funding = "Grants & Funding"
+grants_awards = "Awards & Distinctions"
+service = "Committees & Service"
+skills = "Languages"
+
+# ------------------------------------------------------------------
+# Introduction
+# ------------------------------------------------------------------
+[profile]
+narrative = """I combine laboratory-based analysis with statistical evaluation, reproducible computational workflows, and scientific communication. Trained as an ecotoxicologist, I look at pollutants from source to sink — from their release and transport to their transformation and indirect effects on ecosystem functions.
+
+In addition to research, I have experience in project management, team leadership, teaching, supervision, and collaboration with public-sector and applied research partners. As head of the "Soil Stressors" team at RPTU Kaiserslautern-Landau, I coordinate analytical services for federal and state authorities alongside third-party-funded research projects."""
+
+interests = [
+  "Environmental chemistry",
+  "Soil science",
+  "Ecotoxicology",
+  "Analytical chemistry",
+  "Reproducible data analysis"
+]
+
+[[profile.links]]
+label = "ORCID"
+url = "https://orcid.org/0000-0001-6675-5033"
+
+[[profile.links]]
+label = "Google Scholar"
+url = "https://scholar.google.com/citations?user=klQROs4AAAAJ"
+
+[[profile.links]]
+label = "GitHub"
+url = "https://github.com/zsteinmetz"
+
+[[profile.links]]
+label = "LinkedIn"
+url = "https://www.linkedin.com/in/zsteinmetz"
+
+# ------------------------------------------------------------------
+# What I bring (profile building blocks)
+# ------------------------------------------------------------------
+[highlights]
+columns = 2
+
+[[highlights.items]]
+title = "Environmental science"
+content = "Environmental chemistry, soil science, ecotoxicology, agroecosystems, and anthropogenic pollutants."
+
+[[highlights.items]]
+title = "Analytical chemistry"
+content = "Pyrolysis-GC/MS, GC/IRMS, LC-MS, HPLC, FTIR-ATR — method development, validation, and quality assurance."
+
+[[highlights.items]]
+title = "Data and software"
+content = "R, Python, statistics, reproducible workflows, automation, Git, Linux, QGIS, and open-source tools."
+
+[[highlights.items]]
+title = "Leadership and communication"
+content = "Project management, team coordination, third-party funding, supervision, teaching, scientific writing, and committee work."
+
+# ------------------------------------------------------------------
+# Career (appointments timeline)
+# ------------------------------------------------------------------
+[[appointments]]
+title = "Scientific Project and Team Leader"
+institution = "RPTU Kaiserslautern-Landau"
+department = "Environmental and Soil Chemistry"
+location = "Landau, Germany"
+start = "Dec 2022"
+end = ""
+sort_date = "2022-12"
+summary = "Head of the \"Soil Stressors\" team; research, teaching, and leadership at the interface of environmental chemistry, analytics, and data science."
+responsibilities = [
+  "Scientific leadership and coordination of a four-person team (three doctoral researchers and a technical assistant); formal supervisory authority for two staff members.",
+  "Responsibility for routine microplastics analytics, including contract analyses and reporting for public authorities.",
+  "Quality assurance through positive and negative controls, recovery and repeatability tests; internal SOPs; coordination of instrument maintenance and procurement.",
+  "Teaching in environmental analytics, data analysis, statistics, and scientific research methods."
+]
+contributions = [
+  "Development of transparent, reproducible, and parallelizable R workflows for the evaluation of analytical data.",
+  "Maintenance of the working group's software infrastructure."
+]
+achievements = [
+  "30+ peer-reviewed publications with more than 3,000 citations.",
+  "€1.1 million in acquired and managed third-party funding."
+]
+
+[[appointments]]
+title = "Researcher and Doctoral Candidate"
+institution = "University of Koblenz-Landau"
+department = "Environmental and Soil Chemistry"
+location = "Landau, Germany"
+start = "Dec 2016"
+end = "Nov 2022"
+sort_date = "2016-12"
+summary = "Doctoral research on agricultural plastics as a source of plastic debris in soil, alongside method development, quality assurance, and teaching."
+responsibilities = [
+  "Development and validation of a pyrolysis-GC/MS method for quantifying microplastics in agricultural soils.",
+  "Quality assurance and statistical evaluation for the validation of analytical methods for aflatoxins in soil and food matrices (following Eurachem guidelines).",
+  "Teaching in environmental chemistry, environmental analytics, and scientific methods (about 95 credit hours in total).",
+  "Staff representative in faculty committees."
+]
+contributions = [
+  "First-author publications on microplastic quantification in soil, screening studies of agricultural systems, and the fate of phenolic compounds traced by compound-specific stable isotope analysis.",
+  "Contributions to the interdisciplinary PLAST project on environmental risks of plastics, together with communication scientists and psychologists."
+]
+achievements = [
+  "Doctoral degree (Dr. rer. nat.) awarded 2022 with grade 1.1 (magna cum laude).",
+  "Best dissertation of the faculty 2022/23."
+]
+
+[[appointments]]
+title = "Working Student"
+institution = "RIFCON GmbH"
+location = "Hirschberg, Germany"
+start = "Apr 2015"
+end = "Oct 2015"
+sort_date = "2015-04"
+employment_type = "Part-time"
+summary = "Ecological and crop yield modeling (Python, PCSE/WOFOST) in a collaborative modeling project — connecting my later scientific work with environmental modeling and applied environmental assessment."
+
+[[appointments]]
+title = "Intern"
+institution = "MITOX Consultants / Eurofins"
+location = "Fourcès, France"
+start = "Jun 2014"
+end = "Aug 2014"
+sort_date = "2014-06"
+employment_type = "Internship"
+summary = "GLP-compliant ecotoxicological testing of plant protection products on non-target arthropods, including (semi-)field trials and chronic toxicity testing."
+
+# ------------------------------------------------------------------
+# Education
+# ------------------------------------------------------------------
+[[education]]
+degree = "Dr. rer. nat. Environmental Sciences"
+university = "University of Koblenz-Landau"
+start = "Dec 2016"
+end = "May 2022"
+sort_date = "2022-05"
+thesis = "Agricultural Plastic Covers — Source of Plastic Debris in Soil?"
+supervisors = ["Prof. Dr. Gabriele E. Schaumann"]
+distinctions = ["Grade 1.1 (magna cum laude)", "Best dissertation of the faculty 2022/23"]
+description = "Tracing agricultural plastics from source to sink: analytical method development for polymer quantification in soil, field screening studies, and effects on soil microbial communities."
+
+[[education]]
+degree = "M.Sc. Ecotoxicology"
+university = "University of Koblenz-Landau"
+start = "Oct 2013"
+end = "Nov 2016"
+sort_date = "2016-11"
+thesis = "Tracking the transformation of phenolic compounds in soil with compound-specific stable carbon isotope analysis"
+supervisors = ["Prof. Dr. Gabriele E. Schaumann"]
+distinctions = ["Grade 1.2"]
+
+[[education]]
+degree = "B.Sc. Environmental Sciences"
+university = "University of Koblenz-Landau"
+start = "Oct 2010"
+end = "Nov 2013"
+sort_date = "2013-11"
+
+# ------------------------------------------------------------------
+# Grants, awards and recognition
+# ------------------------------------------------------------------
+[[grants]]
+kind = "funding"
+title = "MIBAS — Microplastic background levels in German agricultural soils"
+institution = "German Environment Agency (UBA), RefoPlan"
+period = "Oct 2024 – Sep 2026"
+role = "Principal investigator"
+description = "Contract analyses and reporting for the derivation of microplastic background levels for arable and grassland soils in Germany."
+
+[[grants]]
+kind = "funding"
+title = "Sustainable research equipment"
+institution = "Research fund of the state of Rhineland-Palatinate"
+period = "Dec 2024"
+role = "Principal investigator"
+description = "Funding for sustainable research equipment for environmental analysis."
+
+[[grants]]
+kind = "funding"
+title = "TransSAPs — Transformation of superabsorbent polymers in soil"
+institution = "German Research Foundation (DFG)"
+period = "May 2022 – Apr 2025"
+role = "Advisory"
+description = "Advisory contribution to the project \"How the spatio-temporal transformation of superabsorbent polymers (SAPs) alters soil processes\"."
+
+# ------------------------------------------------------------------
+# Committees and service
+# ------------------------------------------------------------------
+[[service]]
+category = "Committees"
+title = "Chair of the expert committee \"Microplastics in Soil\""
+organization = "Bundesverband Boden (German Soil Association)"
+period = "Since 2022"
+description = "Leading the federal expert committee on microplastics in soils, including position papers and exchange with authorities."
+
+[[service]]
+category = "Peer Review"
+title = "Reviewer"
+organization = "DFG, FNR, and peer-reviewed journals"
+description = "Grant reviewing for the German Research Foundation (DFG) and the Agency for Renewable Resources (FNR), and manuscript reviewing for environmental chemistry and analytical chemistry journals."
+
+[[service]]
+category = "Committees"
+title = "Staff representative"
+organization = "Faculty committees, University of Koblenz-Landau / RPTU Kaiserslautern-Landau"
+period = "Since Dec 2016"
+description = "Representing scientific staff in faculty committees, including during the merger of the two universities."
+
+# ------------------------------------------------------------------
+# Teaching (compact selection; details on the Teaching page)
+# ------------------------------------------------------------------
+teaching_overview = """I have taught about 30 courses (roughly 95 credit hours) since 2015 — in English and German — and have supervised eleven final theses. A selection of my recurring courses is listed below; my teaching concept is described on the [Teaching](/teaching) page."""
+
+[[teaching]]
+category = "Teaching"
+course = "Advanced Environmental Chemistry"
+institution = "RPTU Kaiserslautern-Landau / University of Koblenz-Landau"
+level = "Master (M.Sc. Environmental Sciences, M.Sc. Ecotoxicology, M.Ed. Chemistry)"
+period = "2016 – present"
+role = "Lecturer and tutorial instructor"
+methods = ["Lecture", "Inverted classroom", "Journal club", "Tutorial"]
+
+[[teaching]]
+category = "Teaching"
+course = "Laboratory Exercises in Environmental Analysis"
+institution = "RPTU Kaiserslautern-Landau / University of Koblenz-Landau"
+level = "Bachelor (B.Sc. Umweltwissenschaften, 2FB Umweltchemie)"
+period = "2021 – present"
+role = "Course instructor"
+methods = ["Laboratory exercises", "Data analysis"]
+
+[[teaching]]
+category = "Teaching"
+course = "Introduction to Methods in Natural and Environmental Sciences"
+institution = "RPTU Kaiserslautern-Landau"
+level = "Bachelor (B.Sc. Mensch und Umwelt)"
+period = "2017 – present"
+role = "Course instructor"
+methods = ["Exercises", "Laboratory exercises"]
+
+[[teaching]]
+category = "Teaching"
+course = "Interdisciplinary Introduction to Scientific Methods / Scientific Research Methods"
+institution = "RPTU Kaiserslautern-Landau"
+level = "Master (M.Sc. Environmental Challenges and Human Responses)"
+role = "Lecturer"
+methods = ["Lecture", "Research-based assignments"]
+
+[[teaching]]
+category = "Teaching"
+course = "R for Beginners"
+institution = "University of Koblenz-Landau"
+level = "Master (M.Sc. Environmental Sciences, M.Sc. Ecotoxicology)"
+period = "2015 – 2016"
+role = "Tutor"
+methods = ["Tutorial", "Data analysis"]
+
+[[teaching]]
+category = "Supervision"
+course = "Doctoral, Master's, and Bachelor's theses"
+institution = "RPTU Kaiserslautern-Landau"
+period = "2017 – present"
+role = "Supervisor, second assessor, and external advisor"
+description = "Two ongoing PhD projects (hydrophilic polymers in soil; microplastic background levels), nine completed Master's theses, and two Bachelor's theses; several former students are now pursuing PhDs in Sweden, France, and Austria."
+
+# ------------------------------------------------------------------
+# Languages
+# ------------------------------------------------------------------
+[[skills]]
+category = "Languages"
+
+[[skills.items]]
+name = "German"
+description = "Native speaker."
+
+[[skills.items]]
+name = "English"
+description = "Fluent in speech and writing; publication, teaching, and conference language."
+
+[[skills.items]]
+name = "French"
+description = "Basic knowledge."
+
+# ------------------------------------------------------------------
+# Publications (reuses the BibTeX pipeline)
+# ------------------------------------------------------------------
+[publications]
+source = "publications.bib"
+featured_limit = 5
+show_abstracts = true
+show_complete = false
+note = "A curated selection is shown here; the complete searchable list is maintained on the [Publications](/publications) page."
