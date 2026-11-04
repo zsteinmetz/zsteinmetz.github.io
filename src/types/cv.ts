@@ -62,6 +62,7 @@ export interface CvPublicationsSection {
   source?: string;
   featured_limit?: number;
   show_abstracts?: boolean;
+  show_complete?: boolean;
   note?: string;
 }
 

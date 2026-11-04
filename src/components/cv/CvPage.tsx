@@ -130,6 +130,7 @@ export default function CvPage({ config, publications }: CvPageProps) {
               publications={publications}
               featuredLimit={config.publications?.featured_limit}
               showAbstracts={config.publications?.show_abstracts}
+              showComplete={config.publications?.show_complete}
               note={config.publications?.note}
             />
           )}

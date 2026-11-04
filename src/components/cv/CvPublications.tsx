@@ -107,11 +107,12 @@ interface CvPublicationsProps {
   publications: Publication[];
   featuredLimit?: number;
   showAbstracts?: boolean;
+  showComplete?: boolean;
   note?: string;
 }
 
-/** Featured publications followed by a complete bibliography grouped by type. */
-export default function CvPublications({ title, publications, featuredLimit = 3, showAbstracts = true, note }: CvPublicationsProps) {
+/** Featured publications, optionally followed by a complete bibliography grouped by type. */
+export default function CvPublications({ title, publications, featuredLimit = 3, showAbstracts = true, showComplete = true, note }: CvPublicationsProps) {
   const sorted = [...publications].sort((a, b) => cvDateKey({ period: String(b.year) }) - cvDateKey({ period: String(a.year) }));
   const featured = sorted.filter((pub) => pub.selected || pub.featured).slice(0, featuredLimit);
 
@@ -152,29 +153,31 @@ export default function CvPublications({ title, publications, featuredLimit = 3,
         </div>
       )}
 
-      <div>
-        <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Complete Bibliography</h3>
-        {groups.map((group) => (
-          <div key={group.type} className="mb-6 last:mb-0">
-            <h4 className="mb-3 border-b border-neutral-200 pb-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-              {group.label}
-            </h4>
-            <ol className="space-y-4">
-              {group.items.map((publication) => {
-                counter += 1;
-                return (
-                  <PublicationItem
-                    key={publication.id}
-                    publication={publication}
-                    number={counter}
-                    showAbstracts={showAbstracts}
-                  />
-                );
-              })}
-            </ol>
-          </div>
-        ))}
-      </div>
+      {showComplete && (
+        <div>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Complete Bibliography</h3>
+          {groups.map((group) => (
+            <div key={group.type} className="mb-6 last:mb-0">
+              <h4 className="mb-3 border-b border-neutral-200 pb-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                {group.label}
+              </h4>
+              <ol className="space-y-4">
+                {group.items.map((publication) => {
+                  counter += 1;
+                  return (
+                    <PublicationItem
+                      key={publication.id}
+                      publication={publication}
+                      number={counter}
+                      showAbstracts={showAbstracts}
+                    />
+                  );
+                })}
+              </ol>
+            </div>
+          ))}
+        </div>
+      )}
     </CvSection>
   );
 }

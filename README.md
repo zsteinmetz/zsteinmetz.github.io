@@ -143,8 +143,38 @@ To add a new page (e.g., "Projects"), create a TOML file in `content/` (e.g., `c
 Supported page types:
 *   `text`: Renders Markdown content (Great for short notes).
 *   `card`: Renders a list of cards (Great for Projects, Awards). Content of each card item supports Markdown. Each item optionally supports a teaser image: set `image = "/my-image.png"` (a path inside `public/`) and optionally `imageAlt = "..."` for alt text.
+*   `sections`: Renders a sequence of `[[sections]]` blocks — the same composition model as the homepage, on its own route. Supported section types:
+    *   `markdown`: Renders a Markdown file (`source`); a leading heading becomes the hero statement.
+    *   `highlight`: Renders tinted highlight cards from inline `[[sections.items]]` (`title`, Markdown `content`); `columns` (1–4) and `color` as on the homepage.
+    *   `publications`: Renders selected publications (`filter = "selected"`, `limit`).
+    *   `list`: Renders news entries from a TOML file (`source`).
+    *   `card`: Renders card items exactly like `card` pages from inline `[[sections.items]]` (`title`, `subtitle`, `date`, Markdown `content`, `tags`, optional `image`), with an optional section `title`.
 *   `publication`: Renders the full publications list with filters.
 *   `cv`: Renders the narrative academic CV page (see `docs/cv.md`).
+
+Example:
+
+```toml
+type = "sections"
+title = "Teaching"
+description = "One-line positioning shown under the page title (also used for SEO)."
+
+[[sections]]
+id = "principles"
+type = "highlight"
+title = ""
+columns = 1
+
+[[sections.items]]
+title = "First principle"
+content = "Short card text."
+
+[[sections]]
+id = "courses"
+type = "markdown"
+title = ""
+source = "teaching.md"
+```
 
 On any page, set `title = ""` to hide the page heading (the browser tab title then falls back to the site title).
 

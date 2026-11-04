@@ -1,56 +1,10 @@
 import { getConfig } from '@/lib/config';
-import { getMarkdownContent, getBibtexContent, getTomlContent, getPageConfig } from '@/lib/content';
+import { getMarkdownContent, getBibtexContent, getPageConfig } from '@/lib/content';
 import { parseBibTeX } from '@/lib/bibtexParser';
+import { processSections } from '@/lib/sections';
 import HomePageClient, { type HomePageLocaleData, type PageData, type SectionConfig } from '@/components/home/HomePageClient';
-import { NewsItem } from '@/components/home/News';
 import { BasePageConfig, PublicationPageConfig, TextPageConfig, CardPageConfig } from '@/types/page';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
-
-// Split a leading markdown heading off the content as the hero statement.
-// Returns the body unchanged when the content does not start with a heading.
-function extractHero(content: string): { hero?: string; body: string } {
-  const match = content.match(/^\s*#{1,6}\s+(.+?)\s*(?:\r?\n|$)/);
-  if (!match) {
-    return { body: content };
-  }
-  return { hero: match[1].trim(), body: content.slice(match[0].length).trim() };
-}
-
-function processSections(sections: SectionConfig[], locale?: string): SectionConfig[] {
-  return sections.map((section: SectionConfig) => {
-    switch (section.type) {
-      case 'markdown': {
-        const content = section.source ? getMarkdownContent(section.source, locale) : '';
-        const { hero, body } = extractHero(content);
-        return {
-          ...section,
-          content: body,
-          hero,
-        };
-      }
-      case 'publications': {
-        const bibtex = getBibtexContent('publications.bib', locale);
-        const allPubs = parseBibTeX(bibtex, locale);
-        const filteredPubs = section.filter === 'selected'
-          ? allPubs.filter((p) => p.selected)
-          : allPubs;
-        return {
-          ...section,
-          publications: filteredPubs.slice(0, section.limit || 5),
-        };
-      }
-      case 'list': {
-        const newsData = section.source ? getTomlContent<{ news: NewsItem[] }>(section.source, locale) : null;
-        return {
-          ...section,
-          items: newsData?.news || [],
-        };
-      }
-      default:
-        return section;
-    }
-  });
-}
 
 function loadPageDataForLocale(locale: string | undefined): HomePageLocaleData {
   const localeConfig = getConfig(locale);

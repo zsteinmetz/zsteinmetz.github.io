@@ -2,11 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { useMessages } from '@/lib/i18n/useMessages';
+import type { NewsItem } from '@/types/page';
 
-export interface NewsItem {
-    date: string;
-    content: string;
-}
+export type { NewsItem };
 
 interface NewsProps {
     items: NewsItem[];

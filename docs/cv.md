@@ -135,6 +135,7 @@ duplicate publication data here.
 | `source` | string | BibTeX file in `content/`, e.g. `"publications.bib"`. |
 | `featured_limit` | number | Max number of featured publications (entries with `selected = true` in the .bib file). Default `3`. |
 | `show_abstracts` | boolean | Allow per-publication abstract toggles. Default `true`. |
+| `show_complete` | boolean | Also render the complete bibliography below the featured list. Default `true`; set `false` to show only the featured publications (e.g. when the full list lives on the `/publications` page). |
 | `note` | string (markdown) | e.g. a link to the full `/publications` page. |
 
 The complete bibliography is grouped by publication type (journal articles,

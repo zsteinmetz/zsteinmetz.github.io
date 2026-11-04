@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { getPageConfig, getMarkdownContent, getBibtexContent } from '@/lib/content';
 import { getConfig } from '@/lib/config';
 import { parseBibTeX } from '@/lib/bibtexParser';
+import { processSections } from '@/lib/sections';
 import { getMetricsForPublication, toMetricsSummary, type OpenAlexMetrics } from '@/lib/metrics';
 import { getCitationMetrics } from '@/lib/metricsServer';
 import DynamicPageClient, { type DynamicPageLocaleData } from '@/components/pages/DynamicPageClient';
@@ -10,6 +11,7 @@ import {
   PublicationPageConfig,
   TextPageConfig,
   CardPageConfig,
+  SectionsPageConfig,
 } from '@/types/page';
 import { CvPageConfig } from '@/types/cv';
 import { mergeCvData } from '@/lib/cv';
@@ -84,6 +86,18 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
       type: 'text',
       config: textConfig,
       content,
+    };
+  }
+
+  if (pageConfig.type === 'sections') {
+    // Same composition model as the homepage: resolve markdown sources,
+    // filter publications, and load list/news sources per locale.
+    const sectionsConfig = pageConfig as SectionsPageConfig;
+    const sections = processSections(sectionsConfig.sections || [], locale);
+    return {
+      type: 'sections',
+      config: sectionsConfig,
+      sections,
     };
   }
 
