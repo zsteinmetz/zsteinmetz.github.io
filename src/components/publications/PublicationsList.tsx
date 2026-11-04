@@ -275,6 +275,8 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                                 href={`https://doi.org/${pub.doi}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
+                                                title={messages.publications.doiLink}
+                                                aria-label={messages.publications.doiLink}
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
                                             >
                                                 DOI

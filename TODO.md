@@ -12,13 +12,12 @@ Show a DOI link and citation badge for every publication on the Publications pag
 
 Implementation:
 
-- [ ] Add `doi` (and optionally `url`) parsing to `src/lib/bibtexParser.ts` so DOIs present in `publications.bib` flow into the `Publication` type (`src/types/publication.ts`).
-- [ ] Extend `src/lib/metrics.ts` so each publication's OpenAlex record (DOI, `citedByCount`, OpenAlex work URL) can be looked up by DOI *or* title, and falls back to BibTeX `doi` when no metrics are available.
-- [ ] In `src/components/publications/PublicationsList.tsx`, render a small "DOI" link button (e.g., `https://doi.org/<doi>`) next to the existing copy-BibTeX and abstract actions, using the existing button styling.
-- [ ] Turn the "Cited by N" text into a badge linking to the publication's OpenAlex work page (`metrics.publication.openalexId`) instead of plain text.
-- [ ] Decide badge placement for the homepage's `SelectedPublications` component (`src/components/home/SelectedPublications.tsx`) — likely a compact variant (DOI link only).
-- [ ] Add i18n strings for the DOI link tooltip / aria-label in `src/lib/i18n/messages.ts` (EN + DE).
-- [ ] Test with publications that (a) have a DOI in BibTeX and metrics, (b) have a DOI but no metrics, (c) have neither.
+- [x] Add `doi` parsing to `src/lib/bibtexParser.ts` so DOIs present in `publications.bib` flow into the `Publication` type (`src/types/publication.ts`).
+- [x] Extend `src/lib/metrics.ts` so each publication's OpenAlex record (DOI, `citedByCount`, OpenAlex work URL) can be looked up by DOI *or* title, and falls back to BibTeX `doi` when no metrics are available.
+- [x] In `src/components/publications/PublicationsList.tsx`, render a small "DOI" link button (e.g., `https://doi.org/<doi>`) next to the existing copy-BibTeX and abstract actions, using the existing button styling.
+- [x] Turn the "Cited by N" text into a badge linking to the publication's OpenAlex work page (`metrics.publication.openalexId`) instead of plain text.
+- [x] Add i18n strings for the DOI link tooltip / aria-label in `src/lib/i18n/messages.ts` (EN + DE).
+- [x] Test with publications that (a) have a DOI in BibTeX and metrics, (b) have a DOI but no metrics, (c) have neither.
 
 ### 2. Auto "last updated" 🕒
 

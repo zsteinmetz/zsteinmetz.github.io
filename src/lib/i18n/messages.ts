@@ -41,6 +41,7 @@ export interface LocaleMessages {
     abstract: string;
     bibtex: string;
     code: string;
+    doiLink: string;
     citationsTotal: string;
     citedBy: string;
     metricsSource: string;
@@ -96,6 +97,7 @@ const en: LocaleMessages = {
     abstract: 'Abstract',
     bibtex: 'BibTeX',
     code: 'Code',
+    doiLink: 'Open publication via DOI',
     citationsTotal: 'Citations',
     citedBy: 'Cited by',
     metricsSource: 'Data from OpenAlex',
@@ -151,6 +153,7 @@ const de: LocaleMessages = {
     abstract: 'Zusammenfassung',
     bibtex: 'BibTeX',
     code: 'Code',
+    doiLink: 'Publikation über DOI öffnen',
     citationsTotal: 'Zitationen',
     citedBy: 'Zitiert von',
     metricsSource: 'Daten von OpenAlex',
