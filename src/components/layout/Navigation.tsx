@@ -36,6 +36,7 @@ export default function Navigation({
   const [scrolled, setScrolled] = useState(false);
   const [activeHash, setActiveHash] = useState('');
   const [hoveredHref, setHoveredHref] = useState<string | null>(null);
+  const [profileNameVisible, setProfileNameVisible] = useState(true);
   const messages = useMessages();
   const navContainerRef = useRef<HTMLDivElement>(null);
   const [indicatorStyle, setIndicatorStyle] = useState<{
@@ -45,6 +46,13 @@ export default function Navigation({
     height: number;
   } | null>(null);
   const resolvedLocale = i18n.enabled ? locale : i18n.defaultLocale;
+
+  // The homepage shows the name under the profile picture, so a header title
+  // would duplicate it. There, the header name stays hidden while the profile
+  // name is on screen and fades in once the visitor scrolls past it; all other
+  // pages always keep the header title.
+  const isHomePage = pathname === '/';
+  const showHeaderTitle = !isHomePage || !profileNameVisible;
 
   const effectiveItems = useMemo(() => {
     return itemsByLocale?.[resolvedLocale] || itemsByLocale?.[i18n.defaultLocale] || items;
@@ -63,6 +71,30 @@ export default function Navigation({
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // On the homepage, watch the profile name (<h1> under the profile picture)
+  // and reveal the header title only once it has scrolled out of view, so the
+  // name is never shown twice. The profile card is sticky, so a simple
+  // scroll-position threshold would not work. If the homepage has no profile
+  // name to observe, the header title is shown unconditionally.
+  useEffect(() => {
+    setProfileNameVisible(true);
+
+    if (!isHomePage) return;
+
+    const profileName = document.getElementById('profile-name');
+    if (!profileName) {
+      setProfileNameVisible(false);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => setProfileNameVisible(entries[0].isIntersecting),
+      { rootMargin: '0px 0px -10% 0px' }
+    );
+    observer.observe(profileName);
+    return () => observer.disconnect();
+  }, [isHomePage]);
 
   const visibleSections = useRef(new Set<string>());
 
@@ -174,10 +206,16 @@ export default function Navigation({
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between items-center h-16 lg:h-20">
+                {/* Always mounted (only faded out) so the flex justify-between
+                    layout keeps the menu right-aligned on the homepage. */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex-shrink-0"
+                  aria-hidden={!showHeaderTitle}
+                  className={cn(
+                    'flex-shrink-0 transition-opacity duration-300',
+                    !showHeaderTitle && 'opacity-0 pointer-events-none'
+                  )}
                 >
                   <Link
                     href="/"

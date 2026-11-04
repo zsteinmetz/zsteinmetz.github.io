@@ -135,7 +135,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
 
             {/* Name and Title */}
             <div className="text-center mb-6">
-                <h1 className="text-3xl font-serif font-bold text-primary mb-2">
+                <h1 id="profile-name" className="text-3xl font-serif font-bold text-primary mb-2">
                     {author.name}
                 </h1>
                 <p className="text-lg text-accent-text font-medium mb-1">
