@@ -64,8 +64,8 @@ href = "/"
 [[navigation]]
 title = "Profile"
 type = "page"
-target = "profile"
-href = "/profile"
+target = "cv"
+href = "/cv"
 
 [[navigation]]
 title = "Research"
