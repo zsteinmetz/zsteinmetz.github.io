@@ -153,7 +153,16 @@ function normalizePersonNameForMatch(name: string): string {
 
 function buildNameVariants(name: string): Set<string> {
   const variants = new Set<string>();
-  const cleaned = cleanBibTeXString(name).toLowerCase().trim();
+  let cleaned = cleanBibTeXString(name).toLowerCase().trim();
+
+  if (!cleaned) {
+    return variants;
+  }
+
+  // Strip common academic title prefixes (e.g. "Dr.", "Prof. Dr.") so that a
+  // config `author.name` with titles still matches plain author names in the
+  // .bib file ("Dr. Zacharias Steinmetz" -> "zacharias steinmetz").
+  cleaned = cleaned.replace(/(?:prof\.?\s+|dr\.?\s+|pd\s+)+/g, '').trim();
 
   if (!cleaned) {
     return variants;

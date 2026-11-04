@@ -10,14 +10,26 @@ export const markdownComponents: Components = {
     ul: ({ children }) => <ul className="list-disc list-outside mb-4 space-y-1 pl-5">{children}</ul>,
     ol: ({ children }) => <ol className="list-decimal list-outside mb-4 space-y-1 pl-5">{children}</ol>,
     li: ({ children }) => <li className="mb-1">{children}</li>,
-    a: ({ ...props }) => (
-        <a
-            {...props}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent-text font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
-        />
-    ),
+    a: ({ href, children, ...props }) => {
+        // react-markdown passes its AST `node` prop through to the element;
+        // strip it so it does not leak into the DOM as node="[object Object]".
+        const anchorProps = { ...props } as Record<string, unknown>;
+        delete anchorProps.node;
+        // Open external links in a new tab, but keep internal site links
+        // (e.g. /research) in the same tab.
+        const isExternal = typeof href === 'string' && /^https?:\/\//.test(href);
+        return (
+            <a
+                href={href}
+                {...anchorProps}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                className="text-accent-text font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+            >
+                {children}
+            </a>
+        );
+    },
     blockquote: ({ children }) => (
         <blockquote className="border-l-4 border-accent/50 pl-4 italic my-4 text-neutral-600 dark:text-neutral-500">
             {children}
