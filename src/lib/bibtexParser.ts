@@ -175,6 +175,17 @@ function buildNameVariants(name: string): Set<string> {
     variants.add(`${parts[1]} ${parts[0]}`);
   }
 
+  // Initial-based variants so a full config name ("zacharias steinmetz") also
+  // matches abbreviated author names in the .bib file ("Z. Steinmetz" from
+  // "Steinmetz, Z."). Middle names are abbreviated too, so "kilian g. j.
+  // kenngott" matches "K. G. J. Kenngott".
+  if (parts.length >= 2) {
+    const surname = parts[parts.length - 1];
+    const initials = parts.slice(0, -1).map(part => `${part[0]}.`).join(' ');
+    variants.add(`${initials} ${surname}`);
+    variants.add(`${surname} ${initials}`);
+  }
+
   return variants;
 }
 
