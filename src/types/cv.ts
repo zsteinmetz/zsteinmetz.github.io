@@ -63,6 +63,8 @@ export interface CvPublicationsSection {
   featured_limit?: number;
   show_abstracts?: boolean;
   show_complete?: boolean;
+  // Hide the OpenAlex citation metrics strip on this page. Default: shown.
+  show_metrics?: boolean;
   note?: string;
 }
 

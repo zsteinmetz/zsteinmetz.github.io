@@ -22,7 +22,7 @@ export type DynamicPageLocaleData =
   | { type: 'text'; config: TextPageConfig; content: string }
   | { type: 'card'; config: CardPageConfig }
   | { type: 'sections'; config: SectionsPageConfig; sections: SectionConfig[] }
-  | { type: 'cv'; config: CvPageConfig; publications: Publication[] };
+  | { type: 'cv'; config: CvPageConfig; publications: Publication[]; metrics?: PublicationMetricsSummary; enableOnePageMode?: boolean };
 
 interface DynamicPageClientProps {
   dataByLocale: Record<string, DynamicPageLocaleData>;
@@ -53,7 +53,7 @@ export default function DynamicPageClient({ dataByLocale, defaultLocale }: Dynam
         <SectionsPage config={pageData.config} sections={pageData.sections} />
       )}
       {pageData.type === 'cv' && (
-        <CvPage config={pageData.config} publications={pageData.publications} />
+        <CvPage config={pageData.config} publications={pageData.publications} metrics={pageData.metrics} enableOnePageMode={pageData.enableOnePageMode} />
       )}
     </div>
   );

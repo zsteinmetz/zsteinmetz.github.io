@@ -9,16 +9,15 @@ import {
     CalendarIcon,
     BookOpenIcon,
     ClipboardDocumentIcon,
-    DocumentTextIcon,
-    ChartBarIcon
+    DocumentTextIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
 import FormattedBibTeXText from './FormattedBibTeXText';
-import { useLocaleStore } from '@/lib/stores/localeStore';
-import { formatMetricsDate, type PublicationMetricsSummary } from '@/lib/metrics';
+import MetricsSummaryRow from './MetricsSummaryRow';
+import type { PublicationMetricsSummary } from '@/lib/metrics';
 
 interface PublicationsListProps {
     config: PublicationPageConfig;
@@ -29,7 +28,6 @@ interface PublicationsListProps {
 
 export default function PublicationsList({ config, publications, metrics, embedded = false }: PublicationsListProps) {
     const messages = useMessages();
-    const locale = useLocaleStore((state) => state.locale);
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
     const [selectedType, setSelectedType] = useState<string | 'all'>('all');
@@ -82,24 +80,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                         </p>
                     )}
                 {metrics && (
-                    <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-neutral-600 dark:text-neutral-500">
-                        <span className="inline-flex items-center gap-1.5 font-medium text-neutral-700 dark:text-neutral-400">
-                            <ChartBarIcon className="h-4 w-4" />
-                            {metrics.author.citedByCount} {messages.publications.citationsTotal}
-                        </span>
-                        <span className="inline-flex items-center gap-1.5 font-medium text-neutral-700 dark:text-neutral-400">h-index {metrics.author.hIndex}</span>
-                        <a
-                            href={metrics.author.openalexId}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="hover:text-accent transition-colors"
-                        >
-                            {messages.publications.metricsSource}
-                        </a>
-                        <span className="text-xs">
-                            {messages.publications.metricsUpdated} {formatMetricsDate(metrics.fetchedAt, locale)}
-                        </span>
-                    </div>
+                    <MetricsSummaryRow metrics={metrics} />
                 )}
             </div>
             )}

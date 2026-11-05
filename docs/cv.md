@@ -143,11 +143,20 @@ duplicate publication data here.
 | `featured_limit` | number | Max number of featured publications (entries with `selected = true` in the .bib file). Default `3`. |
 | `show_abstracts` | boolean | Allow per-publication abstract toggles. Default `true`. |
 | `show_complete` | boolean | Also render the complete bibliography below the featured list. Default `true`; set `false` to show only the featured publications (e.g. when the full list lives on the `/publications` page). |
+| `show_metrics` | boolean | Show the OpenAlex citation metrics strip (total citations, h-index, source link, updated date) above the publication list. Default `true`. |
 | `note` | string (markdown) | e.g. a link to the full `/publications` page. |
 
 The complete bibliography is grouped by publication type (journal articles,
 conference papers, books, book chapters, preprints, reports, ...) and sorted by
 year. Citation counts come from the OpenAlex metrics pipeline when available.
+
+The metrics strip and a "View all →" link on the section heading render
+automatically whenever OpenAlex data is available (see `README.md` on the
+metrics pipeline). The "View all →" link points to the `/publications` page,
+or to `/#publications` on the homepage when one-page mode is enabled, and both
+the strip (citation counts are useful on a printed CV) and the link's target
+page degrade gracefully when the metrics data file is absent. Set
+`show_metrics = false` to suppress the strip on a per-page basis.
 
 ### `[[teaching]]`
 

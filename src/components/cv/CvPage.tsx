@@ -16,6 +16,7 @@ import CvGrants from './CvGrants';
 import CvService from './CvService';
 import CvSkills from './CvSkills';
 import CvSectionNav, { type CvSectionNavItem } from './CvSectionNav';
+import type { PublicationMetricsSummary } from '@/lib/metrics';
 
 const DEFAULT_HEADINGS: Required<CvHeadings> = {
   profile: 'Academic Profile',
@@ -35,13 +36,15 @@ const DEFAULT_HEADINGS: Required<CvHeadings> = {
 interface CvPageProps {
   config: CvPageConfig;
   publications: Publication[];
+  metrics?: PublicationMetricsSummary;
+  enableOnePageMode?: boolean;
 }
 
 /**
  * Narrative academic CV: profile, expandable appointments timeline, education,
  * research portfolio, publications, teaching, grants/awards, service and skills.
  */
-export default function CvPage({ config, publications }: CvPageProps) {
+export default function CvPage({ config, publications, metrics, enableOnePageMode }: CvPageProps) {
   const headings: Required<CvHeadings> = { ...DEFAULT_HEADINGS, ...(config.headings || {}) };
   const hasPublications = publications.length > 0;
 
@@ -128,9 +131,12 @@ export default function CvPage({ config, publications }: CvPageProps) {
             <CvPublications
               title={headings.publications}
               publications={publications}
+              metrics={metrics}
+              enableOnePageMode={enableOnePageMode}
               featuredLimit={config.publications?.featured_limit}
               showAbstracts={config.publications?.show_abstracts}
               showComplete={config.publications?.show_complete}
+              showMetrics={config.publications?.show_metrics}
               note={config.publications?.note}
             />
           )}

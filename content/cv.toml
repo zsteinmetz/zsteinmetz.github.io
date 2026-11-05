@@ -304,7 +304,7 @@ description = "Basic knowledge."
 # ------------------------------------------------------------------
 [publications]
 source = "publications.bib"
-featured_limit = 0
+featured_limit = 3
 show_abstracts = true
 show_complete = false
 note = "Author or co-author of 30 peer-reviewed publications with more than 3,000 citations. My work includes highly cited contributions on agricultural plastics, microplastic analysis in soil, and open-source spectral classification."

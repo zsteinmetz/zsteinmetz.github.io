@@ -1,7 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import FormattedBibTeXText from '@/components/publications/FormattedBibTeXText';
+import MetricsSummaryRow from '@/components/publications/MetricsSummaryRow';
+import type { PublicationMetricsSummary } from '@/lib/metrics';
+import { useMessages } from '@/lib/i18n/useMessages';
 import { cvDateKey } from '@/lib/cv';
 import type { Publication } from '@/types/publication';
 import ReactMarkdown from 'react-markdown';
@@ -105,14 +109,18 @@ function PublicationItem({ publication, number, showAbstracts }: { publication: 
 interface CvPublicationsProps {
   title: string;
   publications: Publication[];
+  metrics?: PublicationMetricsSummary;
+  enableOnePageMode?: boolean;
   featuredLimit?: number;
   showAbstracts?: boolean;
   showComplete?: boolean;
+  showMetrics?: boolean;
   note?: string;
 }
 
 /** Featured publications, optionally followed by a complete bibliography grouped by type. */
-export default function CvPublications({ title, publications, featuredLimit = 3, showAbstracts = true, showComplete = true, note }: CvPublicationsProps) {
+export default function CvPublications({ title, publications, metrics, enableOnePageMode = false, featuredLimit = 3, showAbstracts = true, showComplete = true, showMetrics = true, note }: CvPublicationsProps) {
+  const messages = useMessages();
   const sorted = [...publications].sort((a, b) => cvDateKey({ period: String(b.year) }) - cvDateKey({ period: String(a.year) }));
   const featured = sorted.filter((pub) => pub.selected || pub.featured).slice(0, featuredLimit);
 
@@ -127,7 +135,23 @@ export default function CvPublications({ title, publications, featuredLimit = 3,
   let counter = 0;
 
   return (
-    <CvSection id="cv-publications" title={title}>
+    <CvSection
+      id="cv-publications"
+      title={title}
+      action={
+        <Link
+          href={enableOnePageMode ? "/#publications" : "/publications"}
+          prefetch={true}
+          className="print:hidden rounded text-sm font-medium text-accent-text transition-all duration-200 hover:bg-accent/10 hover:text-accent-dark hover:shadow-sm"
+        >
+          {messages.home.viewAll} →
+        </Link>
+      }
+    >
+      {metrics && showMetrics && (
+        <MetricsSummaryRow metrics={metrics} className="mb-5" />
+      )}
+
       {note && (
         <div className="mb-8 max-w-3xl leading-relaxed text-neutral-700 dark:text-neutral-600">
           <ReactMarkdown components={markdownComponents}>{note}</ReactMarkdown>

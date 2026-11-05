@@ -69,13 +69,19 @@ function loadDynamicPageData(slug: string, locale?: string): DynamicPageLocaleDa
     const localizedCv = locale ? (getPageConfig<CvPageConfig>(slug, locale) as CvPageConfig | null) : null;
     const cvConfig = mergeCvData(defaultCv, localizedCv);
 
-    // Reuse the existing BibTeX pipeline for the publications section.
-    const { publications } = loadPublicationsWithMetrics(cvConfig.publications?.source, locale);
+    // Reuse the existing BibTeX pipeline for the publications section; the
+    // OpenAlex metrics power the citation metrics strip and the per-entry
+    // "Cited by" counts.
+    const { publications, metrics } = loadPublicationsWithMetrics(cvConfig.publications?.source, locale);
 
     return {
       type: 'cv',
       config: cvConfig,
       publications,
+      metrics: toMetricsSummary(metrics),
+      // Determines whether the "View all" link targets /#publications (one
+      // single-page homepage) or the dedicated /publications page.
+      enableOnePageMode: getConfig(locale).features.enable_one_page_mode ?? false,
     };
   }
 

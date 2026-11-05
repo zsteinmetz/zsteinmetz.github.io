@@ -8,11 +8,13 @@ interface CvSectionProps {
   id: string;
   title: string;
   description?: string;
+  /** Optional right-aligned content (e.g. a small link) on the heading row. */
+  action?: ReactNode;
   children: ReactNode;
 }
 
 /** Shared CV section wrapper: anchor target, serif heading and a subtle gold rule. */
-export default function CvSection({ id, title, description, children }: CvSectionProps) {
+export default function CvSection({ id, title, description, action, children }: CvSectionProps) {
   return (
     <section
       id={id}
@@ -20,7 +22,10 @@ export default function CvSection({ id, title, description, children }: CvSectio
       className="cv-section mt-12 border-t border-neutral-200 pt-10 first:mt-8 first:border-t-0 first:pt-0"
     >
       <div className="mb-6">
-        <h2 id={`${id}-heading`} className="text-2xl font-serif font-bold text-primary">{title}</h2>
+        <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+          <h2 id={`${id}-heading`} className="text-2xl font-serif font-bold text-primary">{title}</h2>
+          {action}
+        </div>
         <span className="mt-2 block h-px w-12 bg-accent" aria-hidden="true" />
         {description && (
           <p className="mt-3 max-w-2xl text-sm text-neutral-600 dark:text-neutral-500">{description}</p>
