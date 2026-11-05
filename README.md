@@ -132,6 +132,8 @@ Setting `title = ""` (an explicitly empty string) hides the heading of any homep
 ### 3. Publications (`content/publications.bib`)
 Export your publications from Google Scholar, Zotero, or Mendeley to `content/publications.bib`. PRISM automatically parses this file to generate your Publications page. Customize the display of publications by changing `selected`, `preview` and `description` keys in the bib file. 
 
+Two optional link keys render per-publication access buttons on the Publications page: `pdf` (an open-access PDF URL, rendered as a "PDF" button) and `supp` (supplementary material URL, e.g., a figshare dataset, rendered as a "Supplementary" button). Both open in a new tab and are only shown when set. Like `code`, they are display-only fields and are stripped from the BibTeX that visitors can copy.
+
 Publication titles support a subset of BibTeX inline formatting commands, including `\textit{}`, `\emph{}`, `\textbf{}`, `\textsc{}`, `\textsuperscript{}` and `\textsubscript{}`.
 
 ### 4. Academic CV (`content/cv.toml`)

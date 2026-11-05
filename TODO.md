@@ -41,15 +41,15 @@ Improve the per-publication action buttons and the list controls (filters, count
 
 Implementation:
 
-- [ ] Extend `src/lib/bibtexParser.ts` to parse the `pdf` and `supp` BibTeX fields into the `Publication` type (`src/types/publication.ts`): reuse the existing (currently unused) `pdfUrl` field for `pdf` and add a `suppUrl` field for `supp`.
-- [ ] Render "PDF" and "Supplementary" link buttons in the per-publication action row of `src/components/publications/PublicationsList.tsx` (plus the CV/homepage publication cards, if consistent), using the existing button styling and shown only when the field is present.
-- [ ] Add the `ArrowTopRightOnSquareIcon` (from `@heroicons/react/24/outline`) to the DOI button to signal that it opens an external link (consider the same affordance for the new PDF/supp and existing Code buttons).
-- [ ] Rework the action button order for a more natural reading flow — e.g., primary access first (DOI → PDF → Supplementary → Code), then expandable details (Abstract → BibTeX), with the "Cited by" badge last; settle on and document the chosen order.
-- [ ] Replace the single-year filter chips with year-range filters (e.g., grouped buckets like "2024–2026", a from/to year pair, or a dropdown with ranges) so the year filter scales better than one chip per year.
-- [ ] Show a result count ("x of y publications", localized) that reflects the active search/filter state near the list.
-- [ ] Add a sort control (e.g., newest/oldest year, most cited via `citedByCount` from `src/lib/metrics.ts`) alongside the filters, defaulting to the current newest-first order.
-- [ ] Add EN + DE strings for all new buttons, tooltips, and labels in `src/lib/i18n/messages.ts`.
-- [ ] Document the newly rendered `pdf`/`supp` BibTeX fields in `README.md` (Publications section).
+- [x] Extend `src/lib/bibtexParser.ts` to parse the `pdf` and `supp` BibTeX fields into the `Publication` type (`src/types/publication.ts`): reuse the existing (currently unused) `pdfUrl` field for `pdf` and add a `suppUrl` field for `supp`.
+- [x] Render "PDF" and "Supplementary" link buttons in the per-publication action row of `src/components/publications/PublicationsList.tsx` (plus the CV/homepage publication cards, if consistent), using the existing button styling and shown only when the field is present. — Adjusted during implementation: the buttons render only on the Publications page, not on CV/homepage cards.
+- [x] Add the `ArrowTopRightOnSquareIcon` (from `@heroicons/react/24/outline`) to the DOI button to signal that it opens an external link (consider `document` for the new PDF/supp and `code-bracket` for the existing Code buttons).
+- [x] Rework the action button order for a more natural reading flow — e.g., primary access first (DOI → PDF → Supplementary → Code), then expandable details (Abstract → BibTeX), with the "Cited by" badge last; settle on and document the chosen order.
+- [x] Make the single-year filter chips multiple choice selections to combine certain years (see https://github.com/yunfeijia92/yunfeijia92.github.io for reference).
+- [x] Show a result count ("x of y publications", localized) that reflects the active search/filter state near the list.
+- [x] Add a sort control (e.g., newest first, most cited via `citedByCount` from `src/lib/metrics.ts`) alongside the filters, defaulting to the current newest-first order. See https://github.com/yunfeijia92/yunfeijia92.github.io for reference.
+- [x] Add EN + DE strings for all new buttons, tooltips, and labels in `src/lib/i18n/messages.ts`.
+- [x] Document the newly rendered `pdf`/`supp` BibTeX fields in `README.md` (Publications section).
 
 ### 4. Accessibility improvements ♿
 

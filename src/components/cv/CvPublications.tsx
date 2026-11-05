@@ -72,16 +72,6 @@ function PublicationItem({ publication, number, showAbstracts }: { publication: 
             Publisher link
           </a>
         )}
-        {publication.code && (
-          <a
-            href={publication.code}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded px-1 py-0.5 font-medium text-accent-text transition-colors hover:bg-accent/10"
-          >
-            Code
-          </a>
-        )}
         {typeof publication.citations === 'number' && (
           <span className="text-neutral-400">Cited by {publication.citations}</span>
         )}

@@ -42,6 +42,12 @@ export interface LocaleMessages {
     bibtex: string;
     code: string;
     doiLink: string;
+    pdf: string;
+    supplementary: string;
+    resultCount: string;
+    sort: string;
+    sortNewest: string;
+    sortCited: string;
     citationsTotal: string;
     citedBy: string;
     metricsSource: string;
@@ -98,6 +104,12 @@ const en: LocaleMessages = {
     bibtex: 'BibTeX',
     code: 'Code',
     doiLink: 'Open publication via DOI',
+    pdf: 'PDF',
+    supplementary: 'Supplementary',
+    resultCount: '{count} of {total} publications',
+    sort: 'Sort by',
+    sortNewest: 'Newest first',
+    sortCited: 'Most cited',
     citationsTotal: 'Citations',
     citedBy: 'Cited by',
     metricsSource: 'Data from OpenAlex',
@@ -154,6 +166,12 @@ const de: LocaleMessages = {
     bibtex: 'BibTeX',
     code: 'Code',
     doiLink: 'Publikation über DOI öffnen',
+    pdf: 'PDF',
+    supplementary: 'Zusatzmaterial',
+    resultCount: '{count} von {total} Publikationen',
+    sort: 'Sortieren',
+    sortNewest: 'Neueste zuerst',
+    sortCited: 'Meistzitiert',
     citationsTotal: 'Zitationen',
     citedBy: 'Zitiert von',
     metricsSource: 'Daten von OpenAlex',

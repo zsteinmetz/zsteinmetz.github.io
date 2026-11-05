@@ -29,6 +29,7 @@ export interface Publication {
   url?: string;
   code?: string;
   pdfUrl?: string;
+  suppUrl?: string;
   keywords: string[];
   type: PublicationType;
   status: PublicationStatus;

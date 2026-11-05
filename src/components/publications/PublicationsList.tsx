@@ -9,7 +9,12 @@ import {
     CalendarIcon,
     BookOpenIcon,
     ClipboardDocumentIcon,
-    DocumentTextIcon
+    DocumentTextIcon,
+    ArrowTopRightOnSquareIcon,
+    ChartBarIcon,
+    CodeBracketIcon,
+    DocumentArrowDownIcon,
+    PaperClipIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
@@ -26,11 +31,17 @@ interface PublicationsListProps {
     embedded?: boolean;
 }
 
+// Sort modes for the publications list: "newest" keeps the parser's
+// newest-first order; "cited" sorts by OpenAlex citation count.
+type SortMode = 'newest' | 'cited';
+
 export default function PublicationsList({ config, publications, metrics, embedded = false }: PublicationsListProps) {
     const messages = useMessages();
     const [searchQuery, setSearchQuery] = useState('');
-    const [selectedYear, setSelectedYear] = useState<number | 'all'>('all');
+    // Multiple years can be selected at once; an empty set means "all years".
+    const [selectedYears, setSelectedYears] = useState<Set<number>>(new Set());
     const [selectedType, setSelectedType] = useState<string | 'all'>('all');
+    const [sortMode, setSortMode] = useState<SortMode>('newest');
     const [showFilters, setShowFilters] = useState(false);
     const [expandedBibtexId, setExpandedBibtexId] = useState<string | null>(null);
     const [expandedAbstractId, setExpandedAbstractId] = useState<string | null>(null);
@@ -46,21 +57,52 @@ export default function PublicationsList({ config, publications, metrics, embedd
         return uniqueTypes.sort();
     }, [publications]);
 
-    // Filter publications
+    // Filter publications, then apply the active sort order
     const filteredPublications = useMemo(() => {
-        return publications.filter(pub => {
+        const filtered = publications.filter(pub => {
             const matchesSearch =
                 pub.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 pub.authors.some(author => author.name.toLowerCase().includes(searchQuery.toLowerCase())) ||
                 pub.journal?.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 pub.conference?.toLowerCase().includes(searchQuery.toLowerCase());
 
-            const matchesYear = selectedYear === 'all' || pub.year === selectedYear;
+            const matchesYear = selectedYears.size === 0 || selectedYears.has(pub.year);
             const matchesType = selectedType === 'all' || pub.type === selectedType;
 
             return matchesSearch && matchesYear && matchesType;
         });
-    }, [publications, searchQuery, selectedYear, selectedType]);
+
+        if (sortMode === 'cited') {
+            // Most cited first (publications without metrics count as 0);
+            // ties are broken deterministically by year, then title.
+            return [...filtered].sort((a, b) =>
+                (b.citations ?? 0) - (a.citations ?? 0) ||
+                b.year - a.year ||
+                a.title.localeCompare(b.title)
+            );
+        }
+
+        // Default: newest first (the parser's order)
+        return filtered;
+    }, [publications, searchQuery, selectedYears, selectedType, sortMode]);
+
+    // Toggle a year chip on/off (multi-select)
+    const toggleYear = (year: number) => {
+        setSelectedYears(current => {
+            const next = new Set(current);
+            if (next.has(year)) {
+                next.delete(year);
+            } else {
+                next.add(year);
+            }
+            return next;
+        });
+    };
+
+    // Result count line: split the localized string around the {count} and
+    // {total} placeholders so the numbers can be rendered bold.
+    const [resultCountPrefix, resultCountRest] = messages.publications.resultCount.split('{count}');
+    const [resultCountMiddle, resultCountSuffix] = (resultCountRest ?? '').split('{total}');
 
     return (
         <motion.div
@@ -110,6 +152,40 @@ export default function PublicationsList({ config, publications, metrics, embedd
                         <FunnelIcon className="h-5 w-5 mr-2" />
                         {messages.publications.filters}
                     </button>
+
+                    {/* Sort control */}
+                    <div
+                        role="group"
+                        aria-label={messages.publications.sort}
+                        className="flex rounded-lg border border-neutral-200 overflow-hidden"
+                    >
+                        <button
+                            onClick={() => setSortMode('newest')}
+                            aria-pressed={sortMode === 'newest'}
+                            className={cn(
+                                "flex-1 sm:flex-none inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors",
+                                sortMode === 'newest'
+                                    ? "bg-accent text-accent-foreground"
+                                    : "bg-card text-neutral-600 hover:text-accent-text"
+                            )}
+                        >
+                            <CalendarIcon className="h-4 w-4 mr-1.5" />
+                            {messages.publications.sortNewest}
+                        </button>
+                        <button
+                            onClick={() => setSortMode('cited')}
+                            aria-pressed={sortMode === 'cited'}
+                            className={cn(
+                                "flex-1 sm:flex-none inline-flex items-center justify-center px-4 py-2 text-sm font-medium border-l border-neutral-200 transition-colors",
+                                sortMode === 'cited'
+                                    ? "bg-accent text-accent-foreground"
+                                    : "bg-card text-neutral-600 hover:text-accent-text"
+                            )}
+                        >
+                            <ChartBarIcon className="h-4 w-4 mr-1.5" />
+                            {messages.publications.sortCited}
+                        </button>
+                    </div>
                 </div>
 
                 <AnimatePresence>
@@ -128,10 +204,12 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                     </label>
                                     <div className="flex flex-wrap gap-2">
                                         <button
-                                            onClick={() => setSelectedYear('all')}
+                                            onClick={() => setSelectedYears(new Set())}
+                                            aria-label={`${messages.publications.year}: ${messages.common.all}`}
+                                            aria-pressed={selectedYears.size === 0}
                                             className={cn(
                                                 "px-3 py-1 text-xs rounded-full transition-colors",
-                                                selectedYear === 'all'
+                                                selectedYears.size === 0
                                                     ? "bg-accent text-accent-foreground"
                                                     : "bg-card text-neutral-600 hover:bg-neutral-200"
                                             )}
@@ -141,10 +219,11 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                         {years.map(year => (
                                             <button
                                                 key={year}
-                                                onClick={() => setSelectedYear(year)}
+                                                onClick={() => toggleYear(year)}
+                                                aria-pressed={selectedYears.has(year)}
                                                 className={cn(
                                                     "px-3 py-1 text-xs rounded-full transition-colors",
-                                                    selectedYear === year
+                                                    selectedYears.has(year)
                                                         ? "bg-accent text-accent-foreground"
                                                         : "bg-card text-neutral-600 hover:bg-neutral-200"
                                                 )}
@@ -163,6 +242,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                     <div className="flex flex-wrap gap-2">
                                         <button
                                             onClick={() => setSelectedType('all')}
+                                            aria-pressed={selectedType === 'all'}
                                             className={cn(
                                                 "px-3 py-1 text-xs rounded-full transition-colors",
                                                 selectedType === 'all'
@@ -176,6 +256,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                             <button
                                                 key={type}
                                                 onClick={() => setSelectedType(type)}
+                                                aria-pressed={selectedType === type}
                                                 className={cn(
                                                     "px-3 py-1 text-xs rounded-full capitalize transition-colors",
                                                     selectedType === type
@@ -193,6 +274,15 @@ export default function PublicationsList({ config, publications, metrics, embedd
                     )}
                 </AnimatePresence>
             </div>
+
+            {/* Result count */}
+            <p className="mb-6 text-sm text-right text-neutral-500 dark:text-neutral-400">
+                {resultCountPrefix}
+                <span className="font-semibold tabular-nums">{filteredPublications.length}</span>
+                {resultCountMiddle}
+                <span className="font-semibold tabular-nums">{publications.length}</span>
+                {resultCountSuffix}
+            </p>
 
             {/* Publications Grid */}
             <div className="space-y-6">
@@ -250,39 +340,10 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                         </p>
                                     )}
 
+                                    {/* Action row: Abstract toggle first, then the primary access
+                                        links (DOI, PDF, Supplementary, Code), then the BibTeX
+                                        details, citation badge last. */}
                                     <div className="flex flex-wrap gap-2 mt-auto">
-                                        {pub.doi && (
-                                            <a
-                                                href={`https://doi.org/${pub.doi}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                title={messages.publications.doiLink}
-                                                aria-label={messages.publications.doiLink}
-                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
-                                            >
-                                                DOI
-                                            </a>
-                                        )}
-                                        {typeof pub.citations === 'number' && (
-                                            <a
-                                                href={pub.openalexId || metrics?.author.openalexId || 'https://openalex.org'}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
-                                            >
-                                                {messages.publications.citedBy} {pub.citations}
-                                            </a>
-                                        )}
-                                        {pub.code && (
-                                            <a
-                                                href={pub.code}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
-                                            >
-                                                {messages.publications.code}
-                                            </a>
-                                        )}
                                         {pub.abstract && (
                                             <button
                                                 onClick={() => setExpandedAbstractId(expandedAbstractId === pub.id ? null : pub.id)}
@@ -297,6 +358,52 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                                 {messages.publications.abstract}
                                             </button>
                                         )}
+                                        {pub.doi && (
+                                            <a
+                                                href={`https://doi.org/${pub.doi}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                title={messages.publications.doiLink}
+                                                aria-label={messages.publications.doiLink}
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
+                                            >
+                                                <ArrowTopRightOnSquareIcon className="h-3 w-3 mr-1.5" />
+                                                DOI
+                                            </a>
+                                        )}
+                                        {pub.pdfUrl && (
+                                            <a
+                                                href={pub.pdfUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
+                                            >
+                                                <DocumentArrowDownIcon className="h-3 w-3 mr-1.5" />
+                                                {messages.publications.pdf}
+                                            </a>
+                                        )}
+                                        {pub.suppUrl && (
+                                            <a
+                                                href={pub.suppUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
+                                            >
+                                                <PaperClipIcon className="h-3 w-3 mr-1.5" />
+                                                {messages.publications.supplementary}
+                                            </a>
+                                        )}
+                                        {pub.code && (
+                                            <a
+                                                href={pub.code}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
+                                            >
+                                                <CodeBracketIcon className="h-3 w-3 mr-1.5" />
+                                                {messages.publications.code}
+                                            </a>
+                                        )}
                                         {pub.bibtex && (
                                             <button
                                                 onClick={() => setExpandedBibtexId(expandedBibtexId === pub.id ? null : pub.id)}
@@ -310,6 +417,16 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                                 <BookOpenIcon className="h-3 w-3 mr-1.5" />
                                                 {messages.publications.bibtex}
                                             </button>
+                                        )}
+                                        {typeof pub.citations === 'number' && (
+                                            <a
+                                                href={pub.openalexId || metrics?.author.openalexId || 'https://openalex.org'}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
+                                            >
+                                                {messages.publications.citedBy} {pub.citations}
+                                            </a>
                                         )}
                                     </div>
 
