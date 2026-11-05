@@ -20,15 +20,15 @@ title = ""
 
 [[sections.items]]
 title = "Environmental systems"
-content = "Pollutants, soils, agroecosystems, plastics, and chemical effects."
+content = "I study plastics and other anthropogenic pollutants—from their sources and pathways to their fate and effects."
 
 [[sections.items]]
 title = "Analytical methods"
-content = "Method development, validation, quality assurance, and instrumental analysis."
+content = "I develop and validate analytical methods for complex environmental matrices, with a focus on quality assurance and instrumental analysis."
 
 [[sections.items]]
 title = "Data and reproducibility"
-content = "R, statistics, automation, open-source tools, and transparent workflows."
+content = "I use statistics, automation, and open-source software to make environmental data analysis transparent, efficient, and reproducible."
 
 [[sections]]
 id = "teaching"

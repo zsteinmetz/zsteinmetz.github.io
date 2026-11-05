@@ -1,5 +1,5 @@
-### Environmental scientist working at the interface of environmental chemistry, analytical methods, and reproducible data science
+### Unraveling pollutant pathways in agroecosystems through robust measurement and reproducible data analysis
 
-I investigate anthropogenic pollutants in soils and agroecosystems by combining environmental chemistry, analytical methods, and quantitative data analysis. My work ranges from method development and quality assurance to reproducible workflows, scientific communication, and applied environmental assessment.
+I investigate the fate and effects of anthropogenic pollutants across soils, agriculture, and connected land–water systems. Combining environmental chemistry, instrumental analysis, and reproducible data workflows, I study the processes that govern pollutant transport, transformation, persistence, and ecological effects.
 
-More about my [research](/research), my [profile](/cv), and my work in [teaching](/teaching).
+My [work](/research) spans analytical method development and quality assurance, environmental monitoring, data interpretation, and transparent scientific communication.

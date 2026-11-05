@@ -1,1 +1,1 @@
-I teach environmental chemistry, analytical methods, statistics, and scientific research methods. My teaching combines conceptual understanding, practical work, data interpretation, and critical reflection — see [Teaching](/teaching) for details.
+My [teaching](/teaching) connects environmental chemistry and analytical methods with practical laboratory work, data interpretation, scientific reasoning, and critical reflection.
