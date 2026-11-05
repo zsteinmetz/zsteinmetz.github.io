@@ -54,7 +54,7 @@ export default function SelectedPublications({ publications, title, enableOnePag
                                         {author.name}
                                     </span>
                                     {author.isCorresponding && (
-                                        <sup className={`ml-0 ${author.isHighlighted ? 'text-accent-text' : 'text-neutral-600 dark:text-neutral-500'}`}>†</sup>
+                                        <span className={`ml-0 ${author.isHighlighted ? 'text-accent-text' : 'text-neutral-600 dark:text-neutral-500'}`}>*</span>
                                     )}
                                     {idx < pub.authors.length - 1 && ', '}
                                 </span>

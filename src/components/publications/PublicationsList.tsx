@@ -253,7 +253,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                                     {author.name}
                                                 </span>
                                                 {author.isCorresponding && (
-                                                    <sup className={`ml-0 ${author.isHighlighted ? 'text-accent-text' : 'text-neutral-600 dark:text-neutral-400'}`}>†</sup>
+                                                    <span className={`ml-0 ${author.isHighlighted ? 'text-accent-text' : 'text-neutral-600 dark:text-neutral-400'}`}>*</span>
                                                 )}
                                                 {idx < pub.authors.length - 1 && ', '}
                                             </span>
