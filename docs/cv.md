@@ -28,10 +28,10 @@ Sections are rendered in a fixed order and only when their data exists:
 2. **Research areas** (`[highlights]`) — optional row of tinted highlight cards for at-a-glance topics
 3. **Appointments & experience** (`[[appointments]]`) — expandable vertical timeline
 4. **Education** (`[[education]]`) — degrees, theses, supervisors, distinctions
-5. **Research contributions & projects** (`[[projects]]`) — portfolio cards with narrative detail
+5. **Research contributions & projects** (`[[projects]]` + optional `research_overview`) — portfolio cards with narrative detail
 6. **Publications** (`[publications]`) — featured subset + complete bibliography, reusing `content/publications.bib`
 7. **Teaching & supervision** (`[[teaching]]` + optional `teaching_overview`)
-8. **Grants, awards & recognition** (`[[grants]]`)
+8. **Grants, awards & recognition** (`[[grants]]` + optional `grants_overview`)
 9. **Academic service & community** (`[[service]]`)
 10. **Skills & expertise** (`[[skills]]`) — described, never rated
 
@@ -51,7 +51,14 @@ for repeated entries (`[[appointments]]`, `[[education]]`, ...).
 | `title` | string (**required**) | Page title (and h1). |
 | `description` | string | Short description under the title. |
 | `teaching_overview` | string (markdown) | Optional teaching philosophy statement shown above the teaching entries. |
+| `research_overview` | string (markdown) | Optional research statement shown above the project cards. |
+| `grants_overview` | string (markdown) | Optional funding statement shown above the grants and awards lists. |
 | `[headings]` | table | Overrides for any section heading: `profile`, `highlights`, `experience`, `education`, `research`, `publications`, `teaching`, `grants`, `grants_funding`, `grants_awards`, `service`, `skills`. |
+
+The `_overview` keys are root-level keys: they must be defined **before the
+first table header** in the TOML file (e.g. right after `description`). A bare
+key placed after an `[[array]]` or `[table]` header belongs to that last
+table, not the document root, and the overview will silently not render.
 
 ### `[profile]`
 

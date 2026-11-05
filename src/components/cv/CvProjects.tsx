@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import ReactMarkdown from 'react-markdown';
+import { markdownComponents } from '@/components/ui/MarkdownComponents';
 import { cn } from '@/lib/utils';
 import type { CvProject } from '@/types/cv';
 import CvSection, { CvBulletList, CvDetailGroup, CvLinkList, CvPeriodPill, CvReferenceList } from './CvSection';
@@ -136,13 +138,19 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
 
 interface CvProjectsProps {
   title: string;
+  overview?: string;
   projects: CvProject[];
 }
 
 /** Selected research contributions as portfolio entries. */
-export default function CvProjects({ title, projects }: CvProjectsProps) {
+export default function CvProjects({ title, overview, projects }: CvProjectsProps) {
   return (
     <CvSection id="cv-research" title={title}>
+      {overview && (
+        <div className="mb-8 max-w-3xl leading-relaxed text-neutral-700 dark:text-neutral-600">
+          <ReactMarkdown components={markdownComponents}>{overview}</ReactMarkdown>
+        </div>
+      )}
       <div className="grid gap-6">
         {projects.map((project, index) => (
           <ProjectCard key={`${project.title}-${index}`} project={project} index={index} />

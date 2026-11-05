@@ -10,6 +10,13 @@ type = "cv"
 title = "Profile"
 description = "Environmental scientist working on the fate, measurement, and effects of anthropogenic pollutants in soils and agroecosystems."
 
+# Overview keys are root-level: they MUST stay above the first table header
+# ([headings]) — in TOML, a bare key after an [[array]] or [table] header
+# belongs to that last table instead of the document root.
+teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning formats—including inverted classrooms, journal clubs, laboratory exercises, and research-based assignments—to help students develop both disciplinary knowledge and independent scientific judgement."""
+
+grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds — from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to advisory roles in collaborative projects funded by the German Research Foundation (DFG). The selection below shows current and completed funding lines together with academic recognition."""
+
 [headings]
 profile = "Introduction"
 highlights = "Competencies"
@@ -243,8 +250,6 @@ description = "Representing scientific staff in faculty committees, including du
 # ------------------------------------------------------------------
 # Teaching (compact selection; details on the Teaching page)
 # ------------------------------------------------------------------
-teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning formats—including inverted classrooms, journal clubs, laboratory exercises, and research-based assignments—to help students develop both disciplinary knowledge and independent scientific judgement."""
-
 [[teaching]]
 category = "Teaching"
 course = "Advanced Environmental Chemistry"

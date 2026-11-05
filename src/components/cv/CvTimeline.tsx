@@ -42,8 +42,8 @@ function AppointmentItem({ item, index, isLast }: { item: CvAppointment; index: 
         {period && <CvPeriodPill>{period}</CvPeriodPill>}
       </div>
 
-      {affiliation && <p className="mt-1 text-sm font-medium text-accent-text">{affiliation}</p>}
-      {context && <p className="mt-0.5 text-xs text-neutral-500">{context}</p>}
+      {affiliation && <p className="mt-1 max-w-3xl text-sm font-medium text-accent-text">{affiliation}</p>}
+      {context && <p className="mt-0.5 max-w-3xl text-xs text-neutral-500">{context}</p>}
 
       {item.summary && (
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{item.summary}</p>
@@ -63,7 +63,7 @@ function AppointmentItem({ item, index, isLast }: { item: CvAppointment; index: 
           </button>
 
           <div id={detailsId} className={cn('cv-details', !expanded && 'hidden')}>
-            <div className="mt-3 space-y-4 border-l-2 border-neutral-200 pl-4">
+            <div className="mt-3 max-w-3xl space-y-4 border-l-2 border-neutral-200 pl-4">
               {item.responsibilities && item.responsibilities.length > 0 && (
                 <CvDetailGroup label="Responsibilities & activities">
                   <CvBulletList items={item.responsibilities} />
@@ -104,7 +104,7 @@ export default function CvTimeline({ title, appointments }: CvTimelineProps) {
 
   return (
     <CvSection id="cv-experience" title={title}>
-      <ol className="max-w-3xl">
+      <ol>
         {sorted.map((item, index) => (
           <AppointmentItem key={`${item.title}-${index}`} item={item} index={index} isLast={index === sorted.length - 1} />
         ))}

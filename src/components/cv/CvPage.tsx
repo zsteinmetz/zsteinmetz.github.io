@@ -122,7 +122,7 @@ export default function CvPage({ config, publications }: CvPageProps) {
             <CvEducation title={headings.education} education={config.education} />
           )}
           {config.projects && config.projects.length > 0 && (
-            <CvProjects title={headings.research} projects={config.projects} />
+            <CvProjects title={headings.research} overview={config.research_overview} projects={config.projects} />
           )}
           {hasPublications && (
             <CvPublications
@@ -140,6 +140,7 @@ export default function CvPage({ config, publications }: CvPageProps) {
           {config.grants && config.grants.length > 0 && (
             <CvGrants
               title={headings.grants}
+              overview={config.grants_overview}
               fundingHeading={headings.grants_funding}
               awardsHeading={headings.grants_awards}
               grants={config.grants}

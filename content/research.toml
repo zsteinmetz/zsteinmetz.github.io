@@ -10,6 +10,10 @@ type = "cv"
 title = "Research"
 description = "My work connects environmental questions with reliable measurement, quantitative analysis, and practical interpretation — developing analytical and computational approaches that make environmental evidence more reliable, transparent, and useful."
 
+# Root-level overview key shown above the project cards (must stay above the
+# first table header, like teaching_overview in cv.toml).
+research_overview = """My research addresses anthropogenic pollutants in soils and agroecosystems — from plastics and other synthetic polymers to agricultural inputs. I combine environmental analytical chemistry with soil science and ecotoxicology to understand how these pollutants enter, move through, and transform in terrestrial environments, and what that means for ecosystem functions. The projects below span this range: method development and quality assurance for measuring synthetic polymers in soil, monitoring of background levels in agricultural systems, and open-source tools for spectral classification and reproducible data analysis."""
+
 [headings]
 profile = "Profile"
 highlights = "Research themes"

@@ -23,18 +23,18 @@ function EducationItem({ item, isLast }: { item: CvEducationData; isLast: boolea
         {period && <CvPeriodPill>{period}</CvPeriodPill>}
       </div>
 
-      {affiliation && <p className="mt-1 text-sm font-medium text-accent-text">{affiliation}</p>}
+      {affiliation && <p className="mt-1 max-w-3xl text-sm font-medium text-accent-text">{affiliation}</p>}
 
       {item.thesis && (
         <div className="mt-3">
           <CvDetailGroup label="Thesis">
-            <p className="text-sm italic leading-relaxed text-neutral-600 dark:text-neutral-500">{item.thesis}</p>
+            <p className="max-w-3xl text-sm italic leading-relaxed text-neutral-600 dark:text-neutral-500">{item.thesis}</p>
           </CvDetailGroup>
         </div>
       )}
 
       {item.supervisors && item.supervisors.length > 0 && (
-        <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-500">
+        <p className="mt-2 max-w-3xl text-sm text-neutral-600 dark:text-neutral-500">
           <span className="font-medium text-primary">Supervised by </span>
           {item.supervisors.join(', ')}
         </p>
@@ -71,7 +71,7 @@ export default function CvEducation({ title, education }: CvEducationProps) {
 
   return (
     <CvSection id="cv-education" title={title}>
-      <ol className="max-w-3xl">
+      <ol>
         {sorted.map((item, index) => (
           <EducationItem key={`${item.degree}-${index}`} item={item} isLast={index === sorted.length - 1} />
         ))}

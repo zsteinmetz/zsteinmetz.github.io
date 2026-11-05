@@ -129,7 +129,7 @@ export default function CvPublications({ title, publications, featuredLimit = 3,
   return (
     <CvSection id="cv-publications" title={title}>
       {note && (
-        <div className="mb-6 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">
+        <div className="mb-8 max-w-3xl leading-relaxed text-neutral-700 dark:text-neutral-600">
           <ReactMarkdown components={markdownComponents}>{note}</ReactMarkdown>
         </div>
       )}

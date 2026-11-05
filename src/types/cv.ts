@@ -140,4 +140,6 @@ export interface CvPageConfig extends BasePageConfig {
   service?: CvService[];
   skills?: CvSkillCategory[];
   teaching_overview?: string;
+  research_overview?: string;
+  grants_overview?: string;
 }

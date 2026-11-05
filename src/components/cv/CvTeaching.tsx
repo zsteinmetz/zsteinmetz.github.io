@@ -16,8 +16,8 @@ function TeachingItem({ item }: { item: CvTeachingData }) {
         <h4 className="text-base font-semibold text-primary">{item.course}</h4>
         {item.period && <CvPeriodPill>{item.period}</CvPeriodPill>}
       </div>
-      {affiliation && <p className="mt-0.5 text-sm font-medium text-accent-text">{affiliation}</p>}
-      {item.role && <p className="mt-0.5 text-xs text-neutral-500">{item.role}</p>}
+      {affiliation && <p className="mt-0.5 max-w-3xl text-sm font-medium text-accent-text">{affiliation}</p>}
+      {item.role && <p className="mt-0.5 max-w-3xl text-xs text-neutral-500">{item.role}</p>}
       {item.description && (
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{item.description}</p>
       )}
@@ -71,7 +71,7 @@ export default function CvTeaching({ title, overview, teaching }: CvTeachingProp
       {categories.map((category) => (
         <div key={category} className="mb-8 last:mb-0">
           <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">{category}</h3>
-          <ul className="max-w-3xl space-y-6">
+          <ul className="space-y-6">
             {teaching
               .filter((item) => (item.category || 'Teaching') === category)
               .map((item, index) => (
