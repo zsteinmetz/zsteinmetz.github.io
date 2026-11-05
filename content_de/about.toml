@@ -48,3 +48,4 @@ id = "news"
 type = "list"
 title = "Aktuelles"
 source = "news.toml"
+limit = 5

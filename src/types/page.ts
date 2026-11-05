@@ -58,7 +58,7 @@ export interface SectionConfig {
     source?: string;
     /** Publications section: 'selected' filters for `selected = true` entries. */
     filter?: string;
-    /** Publications section: maximum number of entries to show. */
+    /** Publications/list sections: maximum number of entries to show; omit to show all. */
     limit?: number;
     /** Markdown section: resolved content (set by processSections). */
     content?: string;

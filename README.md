@@ -118,7 +118,7 @@ Supported section types:
 *   `markdown`: Renders a Markdown file (`source`); if the file starts with a heading, it becomes the hero statement.
 *   `highlight`: Renders a grid of tinted highlight cards. `content` of each item supports Markdown. `columns` (1–4, default 3) controls how many cards appear per row; the grid wraps if there are more items than columns.
 *   `publications`: Renders selected publications (`filter = "selected"`, `limit`).
-*   `list`: Renders news entries from a TOML file (`source`).
+*   `list`: Renders news entries from a TOML file (`source`); an optional `limit` caps the number of entries shown, independent of how many the source file contains (default: all).
 
 #### Highlight card colors
 The `color` key (set per section, or per item to override) accepts:

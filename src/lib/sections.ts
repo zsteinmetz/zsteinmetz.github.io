@@ -45,7 +45,7 @@ export function processSections(sections: SectionConfig[], locale?: string): Sec
         const newsData = section.source ? getTomlContent<{ news: NewsItem[] }>(section.source, locale) : null;
         return {
           ...section,
-          items: newsData?.news || [],
+          items: (newsData?.news || []).slice(0, section.limit),
         };
       }
       default:
