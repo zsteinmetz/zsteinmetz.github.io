@@ -22,7 +22,7 @@ export default function CvProfile({ title, profile }: CvProfileProps) {
 
       {profile.interests && profile.interests.length > 0 && (
         <div className="mt-6">
-          <CvDetailGroup label="Research Interests">
+          <CvDetailGroup label="Research interests">
             <ul className="flex flex-wrap gap-2">
               {profile.interests.map((interest) => (
                 <li
@@ -39,7 +39,7 @@ export default function CvProfile({ title, profile }: CvProfileProps) {
 
       {profile.links && profile.links.length > 0 && (
         <div className="mt-6">
-          <CvDetailGroup label="Profiles & Links">
+          <CvDetailGroup label="Profiles & links">
             <CvLinkList links={profile.links} />
           </CvDetailGroup>
         </div>

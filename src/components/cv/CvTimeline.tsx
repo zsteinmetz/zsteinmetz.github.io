@@ -65,22 +65,22 @@ function AppointmentItem({ item, index, isLast }: { item: CvAppointment; index: 
           <div id={detailsId} className={cn('cv-details', !expanded && 'hidden')}>
             <div className="mt-3 space-y-4 border-l-2 border-neutral-200 pl-4">
               {item.responsibilities && item.responsibilities.length > 0 && (
-                <CvDetailGroup label="Responsibilities & Activities">
+                <CvDetailGroup label="Responsibilities & activities">
                   <CvBulletList items={item.responsibilities} />
                 </CvDetailGroup>
               )}
               {item.contributions && item.contributions.length > 0 && (
-                <CvDetailGroup label="Personal Contributions">
+                <CvDetailGroup label="Personal contributions">
                   <CvBulletList items={item.contributions} />
                 </CvDetailGroup>
               )}
               {item.achievements && item.achievements.length > 0 && (
-                <CvDetailGroup label="Selected Achievements">
+                <CvDetailGroup label="Selected achievements">
                   <CvBulletList items={item.achievements} />
                 </CvDetailGroup>
               )}
               {item.publications && item.publications.length > 0 && (
-                <CvDetailGroup label="Related Publications">
+                <CvDetailGroup label="Related publications">
                   <CvReferenceList items={item.publications} />
                 </CvDetailGroup>
               )}

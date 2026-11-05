@@ -3,9 +3,9 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Environmental Chemistry",
-  "Analytical Methods",
-  "Reproducible Data Science"
+  "Environmental chemistry",
+  "Analytical methods",
+  "Reproducible data science"
 ]
 
 [[sections]]
@@ -39,7 +39,7 @@ title = ""
 [[sections]]
 id = "featured_publications"
 type = "publications"
-title = "Selected Publications"
+title = "Selected publications"
 filter = "selected"
 limit = 3
 

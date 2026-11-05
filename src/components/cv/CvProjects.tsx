@@ -64,7 +64,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
 
       {project.outcomes && (
         <div className="mt-3 max-w-3xl">
-          <CvDetailGroup label="Outcomes & Impact">
+          <CvDetailGroup label="Outcomes & impact">
             <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.outcomes}</p>
           </CvDetailGroup>
         </div>
@@ -99,12 +99,12 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
           <div id={detailsId} className={cn('cv-details', !expanded && 'hidden')}>
             <div className="mt-3 space-y-4 border-l-2 border-neutral-200 pl-4">
               {project.background && (
-                <CvDetailGroup label="Background & Context">
+                <CvDetailGroup label="Background & context">
                   <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.background}</p>
                 </CvDetailGroup>
               )}
               {project.contributions && project.contributions.length > 0 && (
-                <CvDetailGroup label="Main Contributions">
+                <CvDetailGroup label="Main contributions">
                   <CvBulletList items={project.contributions} />
                 </CvDetailGroup>
               )}
@@ -121,7 +121,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
                 </CvDetailGroup>
               )}
               {project.publications && project.publications.length > 0 && (
-                <CvDetailGroup label="Related Publications">
+                <CvDetailGroup label="Related publications">
                   <CvReferenceList items={project.publications} />
                 </CvDetailGroup>
               )}

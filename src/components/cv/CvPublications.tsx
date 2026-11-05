@@ -9,14 +9,14 @@ import { markdownComponents } from '@/components/ui/MarkdownComponents';
 import CvSection from './CvSection';
 
 const TYPE_LABELS: Record<string, string> = {
-  journal: 'Journal Articles',
-  conference: 'Conference Papers',
-  workshop: 'Workshop Papers',
+  journal: 'Journal articles',
+  conference: 'Conference papers',
+  workshop: 'Workshop papers',
   book: 'Books',
-  'book-chapter': 'Book Chapters',
+  'book-chapter': 'Book chapters',
   thesis: 'Theses',
-  preprint: 'Preprints & Working Papers',
-  'technical-report': 'Reports & Technical Outputs',
+  preprint: 'Preprints & working papers',
+  'technical-report': 'Reports & technical outputs',
   patent: 'Patents',
 };
 
@@ -120,7 +120,7 @@ export default function CvPublications({ title, publications, featuredLimit = 3,
   const groups = types
     .map((type) => ({
       type,
-      label: TYPE_LABELS[type] || 'Other Outputs',
+      label: TYPE_LABELS[type] || 'Other outputs',
       items: sorted.filter((pub) => pub.type === type),
     }));
 
@@ -136,7 +136,7 @@ export default function CvPublications({ title, publications, featuredLimit = 3,
 
       {featured.length > 0 && (
         <div className="mb-10">
-          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Featured Publications</h3>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Featured publications</h3>
           <ol className="space-y-5">
             {featured.map((publication) => {
               counter += 1;
@@ -155,7 +155,7 @@ export default function CvPublications({ title, publications, featuredLimit = 3,
 
       {showComplete && (
         <div>
-          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Complete Bibliography</h3>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Complete bibliography</h3>
           {groups.map((group) => (
             <div key={group.type} className="mb-6 last:mb-0">
               <h4 className="mb-3 border-b border-neutral-200 pb-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-500">

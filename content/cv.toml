@@ -12,16 +12,16 @@ description = "Environmental scientist with a background in environmental chemis
 
 [headings]
 profile = "Introduction"
-highlights = "Core Competencies"
+highlights = "Core competencies"
 experience = "Career"
 education = "Education"
-research = "Research Contributions & Projects"
+research = "Research contributions & projects"
 publications = "Publications"
 teaching = "Teaching"
-grants = "Grants, Awards & Recognition"
-grants_funding = "Grants & Funding"
-grants_awards = "Awards & Distinctions"
-service = "Committees & Service"
+grants = "Grants, awards & recognition"
+grants_funding = "Grants & funding"
+grants_awards = "Awards & distinctions"
+service = "Committees & service"
 skills = "Languages"
 
 # ------------------------------------------------------------------
@@ -218,7 +218,7 @@ period = "Since 2022"
 description = "Leading the federal expert committee on microplastics in soils, including position papers and exchange with authorities."
 
 [[service]]
-category = "Peer Review"
+category = "Peer review"
 title = "Reviewer"
 organization = "DFG, FNR, and peer-reviewed journals"
 description = "Grant reviewing for the German Research Foundation (DFG) and the Agency for Renewable Resources (FNR), and manuscript reviewing for environmental chemistry and analytical chemistry journals."

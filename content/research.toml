@@ -12,10 +12,10 @@ description = "My work connects environmental questions with reliable measuremen
 
 [headings]
 profile = "Profile"
-highlights = "Research Themes"
+highlights = "Research themes"
 research = "Projects"
 publications = "Publications"
-skills = "Data & Software"
+skills = "Data & software"
 
 # ------------------------------------------------------------------
 # Research profile
@@ -214,7 +214,7 @@ note = "A curated selection is shown here; the complete searchable list with fil
 # Data & software
 # ------------------------------------------------------------------
 [[skills]]
-category = "R and Statistics"
+category = "R and statistics"
 
 [[skills.items]]
 name = "R"
@@ -225,14 +225,14 @@ name = "Statistics and chemometrics"
 description = "Calibration following DIN 32645, regression, multivariate statistics, and quality-control charts for analytical data."
 
 [[skills]]
-category = "Python and Automation"
+category = "Python and automation"
 
 [[skills.items]]
 name = "Python"
 description = "Modeling, automation, data processing, and computational workflows — from ecological and crop modeling to batch processing of analytical data."
 
 [[skills]]
-category = "Tools and Technologies"
+category = "Tools and technologies"
 
 [[skills.items]]
 name = "R · Python · Git · Linux · LaTeX · QGIS · OpenChrom · SQL · Docker"
