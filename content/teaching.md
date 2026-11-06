@@ -6,7 +6,7 @@ For instance, I completely redesigned my lecture *Advanced Environmental Chemist
 
 My teaching covers environmental chemistry, environmental analytical chemistry, and quantitative methods.
 
-### Environmental (analytical) chemistry
+### Environmental and analytical chemistry
 
 - **Advanced Environmental Chemistry** (M.Sc. Environmental Sciences, M.Sc. Ecotoxicology, M.Ed. Chemistry) — lecture and tutorial on partitioning, transport, and transformation processes of organic and inorganic pollutant classes in soil, water, and air, including QSAR approaches and the discussion of current research articles.
 - **Laboratory Exercises in Environmental Analysis** (B.Sc. Umweltwissenschaften, 2FB Umweltchemie, in German) — sampling in soils and waters, basic parameters (pH, conductivity, redox potential, turbidity), BOD/COD, soil water content and texture, PAH analysis by HPLC with UV/fluorescence detection, BTEX by GC/MS, copper and zinc by AAS, and microplastic identification by ATR-FTIR spectroscopy; accompanying seminars cover theoretical foundations, computer-assisted data entry, evaluation, and statistics.

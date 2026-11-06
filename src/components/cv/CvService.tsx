@@ -1,5 +1,7 @@
 'use client';
 
+import ReactMarkdown from 'react-markdown';
+import { markdownComponents } from '@/components/ui/MarkdownComponents';
 import type { CvService as CvServiceData } from '@/types/cv';
 import CvSection, { CvPeriodPill } from './CvSection';
 
@@ -20,11 +22,12 @@ function ServiceItem({ item }: { item: CvServiceData }) {
 
 interface CvServiceProps {
   title: string;
+  overview?: string;
   service: CvServiceData[];
 }
 
 /** Academic service and community contributions, grouped by category. */
-export default function CvService({ title, service }: CvServiceProps) {
+export default function CvService({ title, overview, service }: CvServiceProps) {
   const categories: string[] = [];
   for (const item of service) {
     const category = item.category || 'Community';
@@ -33,6 +36,11 @@ export default function CvService({ title, service }: CvServiceProps) {
 
   return (
     <CvSection id="cv-service" title={title}>
+      {overview && (
+        <div className="mb-8 max-w-3xl leading-relaxed text-neutral-700 dark:text-neutral-600">
+          <ReactMarkdown components={markdownComponents}>{overview}</ReactMarkdown>
+        </div>
+      )}
       {categories.map((category) => (
         <div key={category} className="mb-8 last:mb-0">
           <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">{category}</h3>

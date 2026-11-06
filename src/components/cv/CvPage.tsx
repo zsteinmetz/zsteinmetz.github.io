@@ -153,7 +153,7 @@ export default function CvPage({ config, publications, metrics, enableOnePageMod
             />
           )}
           {config.service && config.service.length > 0 && (
-            <CvService title={headings.service} service={config.service} />
+            <CvService title={headings.service} overview={config.service_overview} service={config.service} />
           )}
           {config.skills && config.skills.length > 0 && (
             <CvSkills title={headings.skills} skills={config.skills} />

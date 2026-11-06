@@ -19,20 +19,13 @@ profile = "Profile"
 highlights = "Research themes"
 research = "Projects"
 publications = "Publications"
-skills = "Data & software"
+skills = "Data and software"
 
 # ------------------------------------------------------------------
 # Research profile
 # ------------------------------------------------------------------
 [profile]
 narrative = """With a background in environmental chemistry, ecotoxicology, and soil science, I study pollutants from source to sink: how they enter agricultural systems, how they move and transform between land and water, and what that means for ecosystem functions. Because such questions can only be answered with trustworthy data, method development, quality assurance, and reproducible data workflows are integral parts of my research rather than add-ons."""
-
-interests = [
-  "Microplastics and synthetic polymers",
-  "Environmental analytical chemistry",
-  "Soil and agroecosystems",
-  "Reproducible data workflows"
-]
 
 # ------------------------------------------------------------------
 # Research themes

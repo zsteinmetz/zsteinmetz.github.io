@@ -17,6 +17,8 @@ teaching_overview = """I teach environmental science as an evidence-based and pr
 
 grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds — from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to advisory roles in collaborative projects funded by the German Research Foundation (DFG). The selection below shows current and completed funding lines together with academic recognition."""
 
+service_overview = """I contribute to faculty governance as a staff representative and review grant proposals and manuscripts for funding organizations (DFG, FNR) and peer-reviewed journals."""
+
 [headings]
 profile = "Introduction"
 highlights = "Competencies"
@@ -133,8 +135,7 @@ end = "Nov 2022"
 sort_date = "2016-12"
 summary = "Doctoral research on agricultural plastics as a source of plastic debris in soil, alongside method development, quality assurance, and teaching."
 responsibilities = [
-  "Developed and validated a pyrolysis-GC/MS method for quantifying microplastics in agricultural soils.",
-  "Quality assurance and statistical evaluation for the validation of analytical methods for aflatoxins in soil and food matrices (following Eurachem guidelines).",
+  "Developed and validated analytical methods through quality-control procedures and statistical evaluation, following Eurachem guidance.",
   "Staff representative in faculty committees."
 ]
 contributions = [
@@ -143,7 +144,7 @@ contributions = [
 ]
 achievements = [
   "Doctoral degree (Dr. rer. nat.) awarded 2022 with grade 1.1 (magna cum laude).",
-  "Best dissertation of the faculty 2022/23."
+  "Awarded the faculty price for the best dissertation 2022/23."
 ]
 
 [[appointments]]
@@ -154,7 +155,7 @@ start = "Apr 2015"
 end = "Oct 2015"
 sort_date = "2015-04"
 # employment_type = "Part-time"
-summary = "Ecological and crop yield modeling (Python, PCSE/WOFOST) in a collaborative modeling project — connecting my later scientific work with environmental modeling and applied environmental assessment."
+summary = "Ecological and crop modeling (Python, PCSE/WOFOST) in a collaborative modeling project — connecting my later scientific work with environmental modeling and applied environmental assessment."
 
 [[appointments]]
 title = "Intern"
@@ -210,14 +211,6 @@ description = "Contract analyses and reporting for the derivation of microplasti
 
 [[grants]]
 kind = "funding"
-title = "Sustainable research equipment"
-institution = "Research fund of the state of Rhineland-Palatinate"
-period = "Dec 2024"
-role = "Principal investigator"
-description = "Funding for sustainable research equipment for environmental analysis."
-
-[[grants]]
-kind = "funding"
 title = "TransSAPs — Transformation of superabsorbent polymers in soil"
 institution = "German Research Foundation (DFG)"
 period = "May 2022 – Apr 2025"
@@ -232,20 +225,7 @@ category = "Committees"
 title = "Chair of the expert committee \"Microplastics in Soil\""
 organization = "Bundesverband Boden (German Soil Association)"
 period = "Since 2022"
-description = "Leading the federal expert committee on microplastics in soils, including position papers and exchange with authorities."
-
-[[service]]
-category = "Peer review"
-title = "Reviewer"
-organization = "DFG, FNR, and peer-reviewed journals"
-description = "Grant reviewing for the German Research Foundation (DFG) and the Agency for Renewable Resources (FNR), and manuscript reviewing for environmental chemistry and analytical chemistry journals."
-
-[[service]]
-category = "Committees"
-title = "Staff representative"
-organization = "Faculty committees, University of Koblenz-Landau / RPTU Kaiserslautern-Landau"
-period = "Since Dec 2016"
-description = "Representing scientific staff in faculty committees, including during the merger of the two universities."
+description = "The committee supports professional exchange and the development of positions on microplastics in soils."
 
 # ------------------------------------------------------------------
 # Teaching (compact selection; details on the Teaching page)
@@ -279,7 +259,7 @@ course = "Doctoral, Master's, and Bachelor's theses"
 institution = "RPTU Kaiserslautern-Landau"
 period = "2017 – present"
 role = "Supervisor, second assessor, and external advisor"
-description = "Two ongoing PhD projects (hydrophilic polymers in soil; microplastic background levels), nine completed Master's theses, and two Bachelor's theses; several former students are now pursuing PhDs in Sweden, France, and Austria."
+description = "Two ongoing PhD projects (hydrophilic polymers in soil; microplastic background levels), nine completed Master's theses, and two Bachelor's theses. Former supervisees have continued to doctoral training in Sweden, France, and Austria."
 
 # ------------------------------------------------------------------
 # Languages

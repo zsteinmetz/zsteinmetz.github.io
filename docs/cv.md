@@ -32,7 +32,7 @@ Sections are rendered in a fixed order and only when their data exists:
 6. **Publications** (`[publications]`) — featured subset + complete bibliography, reusing `content/publications.bib`
 7. **Teaching & supervision** (`[[teaching]]` + optional `teaching_overview`)
 8. **Grants, awards & recognition** (`[[grants]]` + optional `grants_overview`)
-9. **Academic service & community** (`[[service]]`)
+9. **Academic service & community** (`[[service]]` + optional `service_overview`)
 10. **Skills & expertise** (`[[skills]]`) — described, never rated
 
 Section headings are configured in the `[headings]` table and can be translated
@@ -53,6 +53,7 @@ for repeated entries (`[[appointments]]`, `[[education]]`, ...).
 | `teaching_overview` | string (markdown) | Optional teaching philosophy statement shown above the teaching entries. |
 | `research_overview` | string (markdown) | Optional research statement shown above the project cards. |
 | `grants_overview` | string (markdown) | Optional funding statement shown above the grants and awards lists. |
+| `service_overview` | string (markdown) | Optional service statement shown above the service entries. |
 | `[headings]` | table | Overrides for any section heading: `profile`, `highlights`, `experience`, `education`, `research`, `publications`, `teaching`, `grants`, `grants_funding`, `grants_awards`, `service`, `skills`. |
 
 The `_overview` keys are root-level keys: they must be defined **before the

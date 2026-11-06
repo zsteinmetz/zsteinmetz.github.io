@@ -144,4 +144,5 @@ export interface CvPageConfig extends BasePageConfig {
   teaching_overview?: string;
   research_overview?: string;
   grants_overview?: string;
+  service_overview?: string;
 }
