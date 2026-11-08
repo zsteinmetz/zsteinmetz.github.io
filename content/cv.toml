@@ -13,9 +13,9 @@ description = "Environmental scientist analyzing the fate and effects of anthrop
 # Overview keys are root-level: they MUST stay above the first table header
 # ([headings]) — in TOML, a bare key after an [[array]] or [table] header
 # belongs to that last table instead of the document root.
-teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning and research-based formats to develop disciplinary knowledge and independent scientific judgement. [Explore teaching, courses, supervision, and curriculum development.](/teaching)"""
+teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning and research-based formats to develop disciplinary knowledge and independent scientific judgment. [Explore teaching, courses, supervision, and curriculum development.](/teaching)"""
 
-grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds, from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to collaborative projects practice-oriented research on the use, reuse, and recycling of plastics in agriculture funded by EU Interreg Upper Rhine. [Explore current research and funding lines.](/research)"""
+grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds, from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to practice-oriented collaborative projects on the use, reuse, and recycling of plastics in agriculture funded by EU Interreg Upper Rhine. [Explore current research and funding lines.](/research)"""
 
 service_overview = """I contribute to faculty governance as a staff representative and review grant proposals and manuscripts for funding organizations (DFG, FNR) and peer-reviewed journals."""
 
@@ -110,7 +110,7 @@ location = "Landau, Germany"
 start = "Dec 2022"
 end = ""
 sort_date = "2022-12"
-summary = "Research, teaching, and leadership at the interface of environmental chemistry, analytics, and data science."
+summary = "Research, teaching, and leadership at the interface of environmental chemistry, analytical methods, and data science."
 responsibilities = [
   "Lead a four-person research and analytical team, supervise doctoral researchers and technical staff.",
   "Coordinate microplastics analyses, quality assurance, reporting, and instrument-related workflows for research and commissioned projects.",
@@ -155,7 +155,7 @@ start = "Apr 2015"
 end = "Oct 2015"
 sort_date = "2015-04"
 # employment_type = "Part-time"
-summary = "Ecological and crop modeling (Python, PCSE/WOFOST) in a collaborative modeling project — connecting my later scientific work with environmental modeling and applied environmental assessment."
+summary = "Ecological and crop modeling (Python, PCSE/WOFOST) in a collaborative project — an early link between my later scientific work and applied environmental assessment."
 
 [[appointments]]
 title = "Intern"
@@ -203,19 +203,19 @@ sort_date = "2013-11"
 # ------------------------------------------------------------------
 [[grants]]
 kind = "funding"
+title = "AgriRePlas — Reducing the Plastic Footprint in Agriculture"
+institution = "EU Interreg Upper Rhine"
+period = "2025 – 2029"
+role = "Work-package lead, RPTU"
+description = "A cross-border project for Alsace, Baden, the Southern Palatinate, and northern Switzerland."
+
+[[grants]]
+kind = "funding"
 title = "MIBAS — Microplastic background levels in German agricultural soils"
 institution = "German Environment Agency (UBA), RefoPlan"
 period = "2024 – 2027"
 role = "Principal investigator"
-description = "Contract analyses and reporting for the derivation of microplastic background levels for arable and grassland soils in Germany."
-
-[[grants]]
-kind = "funding"
-title = "AgriRePlas — Reducing the Plastic Footprint in Agriculture"
-institution = "EU Interreg Upper Rhine"
-period = "2025 – 2029"
-role = "Principal investigator"
-description = "A cross-border project for Alsace, Baden, the Southern Palatinate and northern Switzerland."
+description = "Deriving microplastic background levels for arable and grassland soils in Germany."
 
 # ------------------------------------------------------------------
 # Committees and service
@@ -234,7 +234,7 @@ description = "The committee supports professional exchange and the development 
 category = "Selected courses"
 course = "Advanced Environmental Chemistry"
 institution = "RPTU University Kaiserslautern-Landau"
-level = "Master"
+level = "M.Sc."
 period = "2016 – 2024"
 role = "Lecturer and tutorial instructor"
 
@@ -242,7 +242,7 @@ role = "Lecturer and tutorial instructor"
 category = "Selected courses"
 course = "Environmental Analysis"
 institution = "RPTU University Kaiserslautern-Landau"
-level = "Bachelor"
+level = "B.Sc."
 period = "2021 – present"
 role = "Lecturer and course instructor"
 
@@ -295,4 +295,4 @@ source = "publications.bib"
 featured_limit = 3
 show_abstracts = true
 show_complete = false
-note = "Author or co-author of 30+ peer-reviewed publications on agricultural plastics, microplastic analysis in soil, and open-source spectral classification."
+note = "Author or co-author of 30+ peer-reviewed publications on agricultural plastics, microplastic analysis in soil, and open-source spectral classification. [Browse the complete, searchable publication record.](/publications)"

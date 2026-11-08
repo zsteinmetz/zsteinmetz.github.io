@@ -100,12 +100,13 @@ Proofread and harmonize all English site content.
 
 Implementation:
 
-- [ ] Proofread every file in `content/` (TOML + Markdown) for typos and grammar mistakes.
-- [ ] Enforce consistent **American English (AE)** spelling and conventions throughout (e.g., "color" not "colour", "behavior" not "behaviour", AE date and punctuation conventions).
-- [ ] Harmonize style and tone across sections/pages (consistent phrasing, capitalization of headings/labels, oxford-comma usage, consistent formatting of roles, institutions, and dates).
-- [ ] Check content consistency *across* sections and pages: facts (names, dates, affiliations, project descriptions, link targets) must not contradict each other between, e.g., the homepage, About, CV, research, and teaching pages.
-- [ ] Also review the English UI strings in `src/lib/i18n/messages.ts` for the same criteria, keeping them in sync with any terminology decisions made for the content.
-- [ ] Validate: `npm run lint` + `npm run build`; click through every page in the default locale and confirm nothing renders broken after the edits.
+- [x] Proofread every file in `content/` (TOML + Markdown) for typos and grammar mistakes.
+- [x] Enforce consistent **American English (AE)** spelling and conventions throughout (e.g., "color" not "colour", "behavior" not "behaviour", AE date and punctuation conventions).
+- [x] Harmonize style and tone across sections/pages (consistent phrasing, capitalization of headings/labels, oxford-comma usage, consistent formatting of roles, institutions, and dates).
+- [x] Check content consistency *across* sections and pages: facts (names, dates, affiliations, project descriptions, link targets) must not contradict each other between, e.g., the homepage, About, CV, research, and teaching pages.
+- [x] Check for repetitions in the content and whether it's helpful repetitions or rather redundant.
+- [x] Also review the English UI strings in `src/lib/i18n/messages.ts` for the same criteria, keeping them in sync with any terminology decisions made for the content.
+- [x] Validate: `npm run lint` + `npm run build`; click through every page in the default locale and confirm nothing renders broken after the edits.
 
 ### 7. German translation 🇩🇪
 

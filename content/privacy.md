@@ -10,7 +10,7 @@ The data processing on this website is carried out by the website operator. You 
 
 On the one hand, you provide us with data yourself, e.g., when you contact us by email.
 
-Other data are collected automatically or with your consent by our IT systems when you visit the website – mainly technical data (e.g., internet browser, operating system, or time of the page view).
+Other data are collected automatically or with your consent by our IT systems when you visit the website — mainly technical data (e.g., internet browser, operating system, or time of the page view).
 
 #### What do we use your data for?
 
@@ -105,7 +105,7 @@ You have the right to request the restriction of the processing of your personal
 - If we no longer need your personal data, but you need it for the exercise, defense, or assertion of legal claims, you have the right to request the restriction of the processing of your personal data instead of erasure.
 - If you have lodged an objection pursuant to Art. 21 (1) GDPR, a balancing of your and our interests must be carried out. As long as it is not yet clear whose interests prevail, you have the right to request the restriction of the processing of your personal data.
 
-If you have restricted the processing of your personal data, these data – apart from their storage – may only be processed with your consent or for the assertion, exercise, or defense of legal claims or for the protection of the rights of another natural or legal person or for reasons of an important public interest of the European Union or a member state.
+If you have restricted the processing of your personal data, these data — apart from their storage — may only be processed with your consent or for the assertion, exercise, or defense of legal claims or for the protection of the rights of another natural or legal person or for reasons of an important public interest of the European Union or a member state.
 
 ### SSL or TLS encryption
 
@@ -134,7 +134,7 @@ The hosting provider collects and stores information in so-called server log fil
 
 These data are not merged with other data sources.
 
-The collection of these data is based on Art. 6 (1) (f) GDPR. The website operator has a legitimate interest in the technically error-free presentation and optimization of its website – for this purpose, the server log files must be collected.
+The collection of these data is based on Art. 6 (1) (f) GDPR. The website operator has a legitimate interest in the technically error-free presentation and optimization of its website — for this purpose, the server log files must be collected.
 
 ## 5. External links
 

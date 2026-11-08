@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## Unreleased
+- English content review: proofread all default-locale content (`content/` TOML + Markdown) and the English UI strings in `src/lib/i18n/messages.ts`. Enforced American English spelling ("judgment"), harmonized dash usage (spaced em dashes, including the privacy policy and homepage highlights) and label capitalization ("Privacy policy" footer label now matches the page title), and smoothed phrasing (e.g., "100 weekly contact hours per semester", "practice-oriented collaborative projects", "free-text classification", "degree theses") without changing any facts or link targets.
 - Added the AgriRePlas project to the `/research` page: a new featured project card for the cross-border EU Interreg Upper Rhine project AgriRePlas (Aug 2025 – Jun 2029) on reducing the plastic footprint in agriculture, covering the development of a new pyrolysis-GC/MS method for biodegradable plastics in agricultural soils, field screening of plastic losses, and the trilingual farmer survey on the use, reuse, and recycling of plastics with 254 completed responses from five countries — analyzed with reproducible R workflows and AI-assisted freetext classification. The `research_overview` sentence on the research page now also mentions this practice-oriented research line.
 
 - Added a service overview to CV pages: a new optional root-level `service_overview` key (markdown) renders above the academic service lists, mirroring `teaching_overview`, `research_overview`, and `grants_overview` (set in `content/cv.toml`, documented in `docs/cv.md`).

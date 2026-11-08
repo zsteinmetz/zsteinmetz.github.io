@@ -1,6 +1,6 @@
 type = "sections"
 title = "Teaching"
-description = "I teach environmental science as a combination of conceptual understanding, practical measurement, quantitative analysis, and scientific communication. Students should understand how data are generated, evaluated, and interpreted, not treat instruments and methods as black boxes."
+description = "I help students connect environmental processes with the methods used to observe them: from sampling and laboratory analysis to statistics, critical evaluation, and scientific communication. My teaching combines research-informed learning, hands-on analytical practice, and independent and critical thinking."
 
 [[sections]]
 id = "principles"
@@ -9,16 +9,16 @@ title = ""
 columns = 1
 
 [[sections.items]]
-title = "Research-informed teaching"
-content = "Teaching connected to current research questions and real environmental problems. Journal-club elements and recent scientific papers link course content to ongoing research."
+title = "Research-informed learning"
+content = "Current environmental questions and scientific literature connect core concepts with ongoing research. Journal-club discussions help students evaluate evidence, methods, and uncertainty."
 
 [[sections.items]]
-title = "Practical and quantitative learning"
-content = "Students connect laboratory observations, analytical data, statistics, and environmental interpretation, understanding how measurements are generated and assessed."
+title = "Measurement, data, and interpretation"
+content = "Students link laboratory observations and analytical measurements with statistics and environmental interpretation. Rather than treating instruments as black boxes, they learn how data are generated, assessed, and communicated."
 
 [[sections.items]]
-title = "Independent and critical learning"
-content = "Self-directed work, evaluation of scientific evidence, and critical reflection, fostered by inverted-classroom formats."
+title = "Independent and critical scientific practice"
+content = "Flipped-classroom formats, research-based assignments, and guided discussion support self-directed learning, critical reflection, and collaborative problem-solving."
 
 [[sections]]
 id = "courses"

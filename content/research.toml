@@ -19,13 +19,12 @@ profile = "Profile"
 highlights = "Research themes"
 research = "Projects"
 publications = "Publications"
-skills = "Data and software"
 
 # ------------------------------------------------------------------
 # Research profile
 # ------------------------------------------------------------------
 [profile]
-narrative = """With a background in environmental chemistry, ecotoxicology, and soil science, I study pollutants from source to sink: how they enter agricultural systems, how they move and transform between land and water, and what that means for ecosystem functions. Because such questions can only be answered with trustworthy data, method development, quality assurance, and reproducible data workflows are integral parts of my research rather than add-ons."""
+narrative = """With a background in environmental chemistry, ecotoxicology, and soil science, I study pollutants from source to sink: how they enter agricultural systems, how they move and transform between land and water, and how this affects ecosystem functions. Answering these questions requires trustworthy evidence. I therefore integrate method development, validation, quality assurance, and reproducible data workflows throughout the research process."""
 
 # ------------------------------------------------------------------
 # Research themes
@@ -60,17 +59,17 @@ content = "Linking chemical measurements with exposure, transformation, ecologic
 title = "AgriRePlas — Reducing the Plastic Footprint in Agriculture"
 featured = true
 period = "2025 – 2029"
-question = "How is plastic used, reused, and recycled in the agriculture of the Upper Rhine region — and how can its plastic footprint be reduced without compromising productivity?"
+question = "How is plastic used, reused, and recycled in agriculture in the Upper Rhine region — and how can its plastic footprint be reduced without compromising productivity?"
 background = "Plastic materials such as mulch films, tunnels, and tree guards are indispensable in modern fruit and vegetable cultivation, yet their growing environmental impact — especially through microplastics — raises concerns for soil health. AgriRePlas, a cross-border EU Interreg project with 19 partners from Alsace, Baden, the Southern Palatinate, and northern Switzerland, assesses the status quo of plastic use, evaluates the plastic footprint, and develops targeted solutions: reusable systems, improved recycling strategies, and safe biodegradable alternatives."
-role = "Principal investigator of the RPTU work package: development of a pyrolysis-GC/MS method for biodegradable plastics, field screening of plastic losses, and design, conduct, and evaluation of a cross-border farmer survey."
+role = "Work-package lead, RPTU."
 methods = ["Pyrolysis-GC/MS", "FTIR-ATR", "Quality assurance", "Survey research", "AI-assisted classification", "R"]
 contributions = [
   "Developing a new pyrolysis-GC/MS method to identify and quantify biodegradable plastics in agricultural soils.",
   "Screening field plastic losses by pyrolysis-GC/MS and FTIR-ATR.",
   "Designing and implementing a trilingual questionnaire on the use, reuse, and recycling of plastics in agricultural practice.",
-  "Evaluating 250 completed questionnaires from farms in five countries with transparent, reproducible R workflows, including AI-assisted freetext classification with expert validation."
+  "Evaluating 250 completed questionnaires from farms in five countries with transparent, reproducible R workflows, including AI-assisted free-text classification with expert validation."
 ]
-outcomes = "The project will provide the empirical basis for reusable systems, improved recycling strategies, and safe biodegradable alternatives in the Upper Rhine region — a model for reducing the plastic footprint of agriculture beyond the region."
+outcomes = "Designed to inform the development of reusable systems, improved recycling strategies, and safe biodegradable alternatives in the Upper Rhine region — a model for reducing the plastic footprint of agriculture beyond the region."
 collaborators = ["HYDRA Marine Sciences", "DLR Rhineland-Palatinate", "Chambre d'Agriculture Alsace", "FiBL", "Empa"]
 funding = "EU Interreg Upper Rhine"
 links = [
@@ -83,7 +82,7 @@ featured = true
 period = "2024 – 2027"
 question = "What are representative background levels of microplastics in German arable and grassland soils — and which site characteristics and land uses drive their spatial distribution?"
 background = "Reliable assessment and future regulation of microplastics in soils require a representative database and harmonized analytics. In the MIBAS project, we systematically quantify microplastics in 600 arable and grassland soils across Germany for the German Environment Agency (UBA)."
-role = "Principal investigator: project coordination, quality-assured routine analytics, data evaluation, and reporting."
+role = "Principal investigator."
 methods = ["Pyrolysis-GC/MS", "Quality assurance", "Geostatistics", "Reporting for authorities"]
 contributions = [
   "Contract analyses and reporting for the derivation of microplastic background levels for Germany.",
@@ -100,15 +99,15 @@ publications = [
 title = "Synthetic Hydrophilic Polymers in the Environment"
 period = "2022 – present"
 question = "Beyond particulate plastics: what is the fate and effect of water-soluble synthetic polymers such as polyacrylates and polyethylene glycols?"
-background = "Hydrophilic polymers are an emerging yet overlooked class of anthropogenic substances used in agriculture, personal care, construction, and wastewater treatment. Their ability to interact with water complicates studying their fate and effects in the environment."
-role = "Method development, advisory, supervision of a doctoral project, and grant acquisition."
+background = "Hydrophilic polymers are an emerging yet overlooked class of anthropogenic substances used in agriculture, personal care, construction, and wastewater treatment. Their ability to interact with water complicates the study of their fate and effects in the environment."
+role = "Scientific advisor and doctoral co-supervisor."
 methods = ["Pyrolysis-GC/MS", "Size-exclusion chromatography", "Soil incubation", "Ecotoxicological endpoints"]
 contributions = [
   "Extension of pyrolysis-GC/MS analytics to hydrophilic polymers such as polyacrylic acid, polyquaterniums, polyethylene glycol, and polyvinyl alcohol.",
   "Theoretical concepts on superabsorbent polymers in soil and on synthetic hydrophilic polymers across ecosystem boundaries.",
   "Advisory role in the DFG project TransSAPs on the transformation of superabsorbent polymers in soil."
 ]
-outcomes = "The work is opening up analytical access to this substance class and raising its visibility as an environmental risk factor."
+outcomes = "This work develops the analytical basis for studying hydrophilic synthetic polymers and evaluating their environmental relevance."
 collaborators = [
   "RPTU University Kaiserslautern-Landau",
   "Leibniz University Hannover"
@@ -142,13 +141,13 @@ title = "Open Specy — Open-Source Spectral Analysis"
 period = "2020 – present"
 question = "How can the identification of microplastics by infrared and Raman spectroscopy become open, reproducible, and community-driven?"
 background = "Spectral classification tools for microplastics are often cost-prohibitive and inaccurate for weathered environmental particles. Open Specy provides free processing, identification, and sharing of spectra with a growing community reference library."
-role = "Co-developer of the R package and the web application."
+role = "Co-developer."
 methods = ["R", "Shiny", "FTIR", "Raman", "Machine learning", "Open science"]
 contributions = [
   "Co-development of the Open Specy R package and web tool for processing and identifying microplastic spectra.",
   "Contributions to the 2025 release (Open Specy 1.0) with automated (hyper)spectral processing and machine-learning classifiers."
 ]
-outcomes = "Open Specy is a widely used open-source tool in microplastics research with more than 40,000 open-source reference spectra."
+outcomes = "Open Specy is an open-source platform for processing, identifying, and sharing infrared and Raman spectra, supported by a community reference library of more than 40,000 spectra."
 links = [
   { label = "Website", url = "https://openspecy.org" },
   { label = "GitHub", url = "https://github.com/wincowgerDEV/OpenSpecy-package" }
@@ -166,25 +165,4 @@ source = "publications.bib"
 featured_limit = 5
 show_abstracts = true
 show_complete = false
-note = "A curated selection is shown here; the complete searchable list with filters is maintained on the [Publications](/publications) page."
-
-# ------------------------------------------------------------------
-# Data and software
-# ------------------------------------------------------------------
-[[skills]]
-category = "R and statistics"
-
-[[skills.items]]
-name = "R"
-description = "My main environment for statistical analysis, data processing, visualization, calibration, and reproducible reporting."
-
-[[skills.items]]
-name = "Statistics and chemometrics"
-description = "Calibration following DIN 32645, regression, multivariate statistics, and quality-control charts for analytical data."
-
-[[skills]]
-category = "Tools and technologies"
-
-[[skills.items]]
-name = "R · Python · Git · LaTeX · OpenChrom · QGIS · SQL · Docker"
-description = "Everyday toolbox for research, teaching, and the operation of the working group's software infrastructure."
+note = "Selected publications illustrating my contributions to environmental polymer research, analytical method development, and open-source data tools. [Browse the complete, searchable publication record.](/publications)"
