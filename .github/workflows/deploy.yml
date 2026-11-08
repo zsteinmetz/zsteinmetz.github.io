@@ -3,10 +3,10 @@ name: Deploy PRISM to GitHub Pages
 on:
   # Push triggers are disabled by default for template users.
   # Uncomment the lines below to enable automatic deployment on push.
-  # push:
-  #  branches: 
-  #      - main
-  #      - ci
+  push:
+   branches: 
+       - main
+       - ci
   # Refresh citation metrics weekly (Mondays 06:00 UTC). npm run build triggers
   # the "prebuild" script, which fetches fresh data from OpenAlex and falls back
   # to the committed data/openalex-metrics.json when the fetch fails.
