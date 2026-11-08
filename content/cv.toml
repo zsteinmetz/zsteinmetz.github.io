@@ -8,14 +8,14 @@
 
 type = "cv"
 title = "Profile"
-description = "Environmental scientist working on the fate, measurement, and effects of anthropogenic pollutants in soils and agroecosystems."
+description = "Environmental scientist analyzing the fate and effects of anthropogenic pollutants in soils and agroecosystems."
 
 # Overview keys are root-level: they MUST stay above the first table header
 # ([headings]) — in TOML, a bare key after an [[array]] or [table] header
 # belongs to that last table instead of the document root.
-teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning formats—including inverted classrooms, journal clubs, laboratory exercises, and research-based assignments—to help students develop both disciplinary knowledge and independent scientific judgement."""
+teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning and research-based formats to develop disciplinary knowledge and independent scientific judgement. [Explore teaching, courses, supervision, and curriculum development.](/teaching)"""
 
-grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds — from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to advisory roles in collaborative projects funded by the German Research Foundation (DFG). The selection below shows current and completed funding lines together with academic recognition."""
+grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds, from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to collaborative projects practice-oriented research on the use, reuse, and recycling of plastics in agriculture funded by EU Interreg Upper Rhine. [Explore current research and funding lines.](/research)"""
 
 service_overview = """I contribute to faculty governance as a staff representative and review grant proposals and manuscripts for funding organizations (DFG, FNR) and peer-reviewed journals."""
 
@@ -37,9 +37,9 @@ skills = "Skills"
 # Introduction
 # ------------------------------------------------------------------
 [profile]
-narrative = """My work combines environmental chemistry, soil science, ecotoxicology, and analytical chemistry to investigate pollutants from source to sink—from release and transport to transformation, exposure, and effects on ecosystem functions. A particular focus is on plastics and other synthetic polymers in terrestrial environments.
+narrative = """I combine environmental chemistry, soil science, ecotoxicology, and analytical chemistry to study pollutants from their sources to their environmental fate and effects. My research focuses particularly on plastics and other synthetic polymers in terrestrial systems, including agricultural soils.
 
-I combine laboratory-based environmental analysis with robust quality assurance, statistical evaluation, and reproducible computational workflows. Alongside research, I lead projects and teams, teach and supervise students, and work with public-sector and applied research partners on environmental monitoring and analytical challenges."""
+My work links laboratory-based environmental analysis with method development, quality assurance, statistical evaluation, and reproducible data workflows. I lead research and analytical projects, teach and supervise students, and collaborate with public-sector and applied research partners on environmental monitoring, measurement, and data-interpretation challenges."""
 
 interests = [
   "Environmental chemistry",
@@ -89,22 +89,22 @@ content = "Fate, transport, transformation, and effects of anthropogenic polluta
 
 [[highlights.items]]
 title = "Environmental analytical chemistry"
-content = "Method development, validation, and quality assurance for complex environmental matrices; expertise in pyrolysis-GC/MS, GC-IRMS, LC-MS, HPLC, FTIR-ATR, and TGA-MS."
+content = "Method development, validation, and quality assurance for complex environmental matrices; expertise in pyrolysis-GC/MS, GC-IRMS, LC-MS, and FTIR-ATR."
 
 [[highlights.items]]
-title = "Data, statistics, and software"
-content = "Reproducible workflows for analytical and environmental data using R, including calibration, validation, visualisation, and automated reporting."
+title = "Data analysis and scientific software"
+content = "Reproducible R-based workflows for calibration, validation, visualization, reporting, and transparent analytical decision-making."
 
 [[highlights.items]]
-title = "Leadership and communication"
-content = "Project development and management, team coordination, supervision, teaching, scientific writing, peer review, and committee work."
+title = "Leadership and collaboration"
+content = "Project and team leadership, student supervision, scientific communication, peer review, and collaboration across academic and applied settings."
 
 # ------------------------------------------------------------------
 # Career (appointments timeline)
 # ------------------------------------------------------------------
 [[appointments]]
 title = "Scientific Project and Team Leader"
-institution = "RPTU Kaiserslautern-Landau"
+institution = "RPTU University Kaiserslautern-Landau"
 department = "Environmental and Soil Chemistry"
 location = "Landau, Germany"
 start = "Dec 2022"
@@ -112,13 +112,13 @@ end = ""
 sort_date = "2022-12"
 summary = "Research, teaching, and leadership at the interface of environmental chemistry, analytics, and data science."
 responsibilities = [
-  "Lead a four-person research and analytical team and supervise doctoral researchers and technical staff.",
+  "Lead a four-person research and analytical team, supervise doctoral researchers and technical staff.",
   "Coordinate microplastics analyses, quality assurance, reporting, and instrument-related workflows for research and commissioned projects.",
   "Teach environmental analysis, data analysis, statistics, and scientific methods."
 ]
 contributions = [
   "Developed reproducible and parallelizable R workflows for analytical data evaluation.",
-  "Maintained and further developed the group's software infrastructure."
+  "Maintained and expanded the group's software infrastructure."
 ]
 achievements = [
   "30+ peer-reviewed publications with more than 3,000 citations.",
@@ -140,11 +140,11 @@ responsibilities = [
 ]
 contributions = [
   "First-author publications on microplastic quantification in soil, screening studies of agricultural systems, and the fate of phenolic compounds traced by compound-specific stable isotope analysis.",
-  "Contributions to the interdisciplinary PLAST project on environmental risks of plastics, together with communication scientists and psychologists."
+  "Contributed environmental-chemistry expertise to the interdisciplinary PLAST project on environmental risks of plastics, together with communication scientists and psychologists."
 ]
 achievements = [
   "Doctoral degree (Dr. rer. nat.) awarded 2022 with grade 1.1 (magna cum laude).",
-  "Awarded the faculty price for the best dissertation 2022/23."
+  "Faculty award for the best dissertation, 2022/23."
 ]
 
 [[appointments]]
@@ -177,8 +177,8 @@ start = "Dec 2016"
 end = "May 2022"
 sort_date = "2022-05"
 thesis = "Agricultural Plastic Covers — Source of Plastic Debris in Soil?"
-supervisors = ["Prof. Dr. Gabriele E. Schaumann"]
-distinctions = ["Grade 1.1 (magna cum laude)", "Best dissertation of the faculty 2022/23"]
+supervisors = ["Prof. Dr. Gabriele E. Schaumann", "Prof. Dr. Geert Cornelis", "Prof. Dr. Denise M. Mitrano"]
+distinctions = ["Grade 1.1 (magna cum laude)", "Faculty award for the best dissertation, 2022/23"]
 description = "Tracing agricultural plastics from source to sink: analytical method development for polymer quantification in soil, field screening studies, and effects on soil microbial communities."
 
 [[education]]
@@ -188,7 +188,7 @@ start = "Oct 2013"
 end = "Nov 2016"
 sort_date = "2016-11"
 thesis = "Tracking the transformation of phenolic compounds in soil with compound-specific stable carbon isotope analysis"
-supervisors = ["Prof. Dr. Gabriele E. Schaumann"]
+supervisors = ["Prof. Dr. Gabriele E. Schaumann", "PD Dr. Martin Elsner"]
 distinctions = ["Grade 1.2"]
 
 [[education]]
@@ -205,17 +205,17 @@ sort_date = "2013-11"
 kind = "funding"
 title = "MIBAS — Microplastic background levels in German agricultural soils"
 institution = "German Environment Agency (UBA), RefoPlan"
-period = "Oct 2024 – Sep 2026"
+period = "2024 – 2027"
 role = "Principal investigator"
 description = "Contract analyses and reporting for the derivation of microplastic background levels for arable and grassland soils in Germany."
 
 [[grants]]
 kind = "funding"
-title = "TransSAPs — Transformation of superabsorbent polymers in soil"
-institution = "German Research Foundation (DFG)"
-period = "May 2022 – Apr 2025"
-role = "Advisory"
-description = "Advisory contribution to the project \"How the spatio-temporal transformation of superabsorbent polymers (SAPs) alters soil processes\"."
+title = "AgriRePlas — Reducing the Plastic Footprint in Agriculture"
+institution = "EU Interreg Upper Rhine"
+period = "2025 – 2029"
+role = "Principal investigator"
+description = "A cross-border project for Alsace, Baden, the Southern Palatinate and northern Switzerland."
 
 # ------------------------------------------------------------------
 # Committees and service
@@ -224,46 +224,54 @@ description = "Advisory contribution to the project \"How the spatio-temporal tr
 category = "Committees"
 title = "Chair of the expert committee \"Microplastics in Soil\""
 organization = "Bundesverband Boden (German Soil Association)"
-period = "Since 2022"
+period = "2022 – present"
 description = "The committee supports professional exchange and the development of positions on microplastics in soils."
 
 # ------------------------------------------------------------------
 # Teaching (compact selection; details on the Teaching page)
 # ------------------------------------------------------------------
 [[teaching]]
-category = "Teaching"
+category = "Selected courses"
 course = "Advanced Environmental Chemistry"
-institution = "RPTU Kaiserslautern-Landau / University of Koblenz-Landau"
-level = "Master (M.Sc. Environmental Sciences, M.Sc. Ecotoxicology, M.Ed. Chemistry)"
-period = "2016 – present"
+institution = "RPTU University Kaiserslautern-Landau"
+level = "Master"
+period = "2016 – 2024"
 role = "Lecturer and tutorial instructor"
 
 [[teaching]]
-category = "Teaching"
-course = "Laboratory Exercises in Environmental Analysis"
-institution = "RPTU Kaiserslautern-Landau / University of Koblenz-Landau"
-level = "Bachelor (B.Sc. Umweltwissenschaften, 2FB Umweltchemie)"
+category = "Selected courses"
+course = "Environmental Analysis"
+institution = "RPTU University Kaiserslautern-Landau"
+level = "Bachelor"
 period = "2021 – present"
-role = "Course instructor"
-
-[[teaching]]
-category = "Teaching"
-course = "Interdisciplinary Introduction to Scientific Methods / Scientific Research Methods"
-institution = "RPTU Kaiserslautern-Landau"
-level = "Master (M.Sc. Environmental Challenges and Human Responses)"
-role = "Lecturer"
+role = "Lecturer and course instructor"
 
 [[teaching]]
 category = "Supervision"
 course = "Doctoral, Master's, and Bachelor's theses"
-institution = "RPTU Kaiserslautern-Landau"
+institution = "RPTU University Kaiserslautern-Landau"
 period = "2017 – present"
 role = "Supervisor, second assessor, and external advisor"
 description = "Two ongoing PhD projects (hydrophilic polymers in soil; microplastic background levels), nine completed Master's theses, and two Bachelor's theses. Former supervisees have continued to doctoral training in Sweden, France, and Austria."
 
 # ------------------------------------------------------------------
-# Languages
+# Skills
 # ------------------------------------------------------------------
+[[skills]]
+category = "Technical skills"
+
+[[skills.items]]
+name = "Programming and reproducibility"
+description = "R, Python, Git, Quarto/R Markdown, LaTeX, automated reporting."
+
+[[skills.items]]
+name = "Data and statistics"
+description = "Calibration and validation, multivariate analysis, experimental design, quality assurance."
+
+[[skills.items]]
+name = "Analytical methods"
+description = "Pyrolysis-GC/MS, GC-IRMS, LC-MS, HPLC, FTIR-ATR, TGA-MS."
+
 [[skills]]
 category = "Languages"
 
@@ -287,4 +295,4 @@ source = "publications.bib"
 featured_limit = 3
 show_abstracts = true
 show_complete = false
-note = "Author or co-author of 30 peer-reviewed publications with more than 3,000 citations. My work includes highly cited contributions on agricultural plastics, microplastic analysis in soil, and open-source spectral classification."
+note = "Author or co-author of 30+ peer-reviewed publications on agricultural plastics, microplastic analysis in soil, and open-source spectral classification."

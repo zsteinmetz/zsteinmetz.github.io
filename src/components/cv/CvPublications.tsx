@@ -19,8 +19,8 @@ const TYPE_LABELS: Record<string, string> = {
   book: 'Books',
   'book-chapter': 'Book chapters',
   thesis: 'Theses',
-  preprint: 'Preprints & working papers',
-  'technical-report': 'Reports & technical outputs',
+  preprint: 'Preprints and working papers',
+  'technical-report': 'Reports and technical outputs',
   patent: 'Patents',
 };
 

@@ -26,14 +26,14 @@ Sections are rendered in a fixed order and only when their data exists:
 
 1. **Academic profile** (`[profile]`) — narrative introduction, research interests, links
 2. **Research areas** (`[highlights]`) — optional row of tinted highlight cards for at-a-glance topics
-3. **Appointments & experience** (`[[appointments]]`) — expandable vertical timeline
+3. **Appointments and experience** (`[[appointments]]`) — expandable vertical timeline
 4. **Education** (`[[education]]`) — degrees, theses, supervisors, distinctions
-5. **Research contributions & projects** (`[[projects]]` + optional `research_overview`) — portfolio cards with narrative detail
+5. **Research contributions and projects** (`[[projects]]` + optional `research_overview`) — portfolio cards with narrative detail
 6. **Publications** (`[publications]`) — featured subset + complete bibliography, reusing `content/publications.bib`
-7. **Teaching & supervision** (`[[teaching]]` + optional `teaching_overview`)
-8. **Grants, awards & recognition** (`[[grants]]` + optional `grants_overview`)
-9. **Academic service & community** (`[[service]]` + optional `service_overview`)
-10. **Skills & expertise** (`[[skills]]`) — described, never rated
+7. **Teaching and supervision** (`[[teaching]]` + optional `teaching_overview`)
+8. **Grants, awards and recognition** (`[[grants]]` + optional `grants_overview`)
+9. **Academic service and community** (`[[service]]` + optional `service_overview`)
+10. **Skills and expertise** (`[[skills]]`) — described, never rated
 
 Section headings are configured in the `[headings]` table and can be translated
 per locale (see below).
@@ -94,7 +94,7 @@ color; `columns` (1–4) controls how many cards appear per row (default 3).
 | `sort_date` | string | `YYYY` or `YYYY-MM`; controls chronological sorting (newest first). Falls back to `start`/`end`. |
 | `summary` | string | Short introductory description (always visible). |
 | `responsibilities` | string[] | Responsibilities and activities. |
-| `contributions` | string[] | Personal contributions. |
+| `contributions` | string[] | Selected contributions. |
 | `achievements` | string[] | Selected achievements and outcomes. |
 | `publications` | string[] | Related publications / projects (free text). |
 | `[[appointments.links]]` | `{ label, url }` | Institutional or project links. |

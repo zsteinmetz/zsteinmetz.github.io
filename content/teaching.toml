@@ -14,11 +14,11 @@ content = "Teaching connected to current research questions and real environment
 
 [[sections.items]]
 title = "Practical and quantitative learning"
-content = "Students connect laboratory observations, analytical data, statistics, and environmental interpretation — understanding how measurements are generated and assessed."
+content = "Students connect laboratory observations, analytical data, statistics, and environmental interpretation, understanding how measurements are generated and assessed."
 
 [[sections.items]]
 title = "Independent and critical learning"
-content = "Self-directed work, evaluation of scientific evidence, and critical reflection, fostered by the inverted-classroom and journal-club formats I developed for *Advanced Environmental Chemistry*."
+content = "Self-directed work, evaluation of scientific evidence, and critical reflection, fostered by inverted-classroom formats."
 
 [[sections]]
 id = "courses"

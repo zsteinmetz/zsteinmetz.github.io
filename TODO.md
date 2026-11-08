@@ -91,3 +91,34 @@ Implementation:
 - [x] No content schema change: both `content/cv.toml` and `content/research.toml` already have a `[publications]` block sourcing `publications.bib`, so the strip and link appear on both pages automatically once the data flows. (Optionally add a `show_metrics = false` opt-out key per `[publications]` block if a template user needs to suppress it — decide during implementation.) — Added the optional `show_metrics` key (default `true`) to `src/types/cv.ts`.
 - [x] Document the behavior in `docs/cv.md` (Publications section table: metrics strip + "View All" link render automatically when OpenAlex data is available) and add a `CHANGELOG.md` entry under `Unreleased`.
 - [x] Validate: `npm run lint` + `npm run build`; check `/cv` and `/research` in both locales (EN/DE) and both themes; confirm `/publications` is visually unchanged after the extraction; temporarily rename `data/openalex-metrics.json` and rebuild to confirm the strip (and only the strip) disappears gracefully.
+
+### 6. English content review ✍️
+
+Proofread and harmonize all English site content.
+
+*Background:* All default-locale content lives in `content/` — TOML page configs (`config.toml`, `about.toml`, `cv.toml`, `news.toml`, `privacy.toml`, `publications.toml`, `research.toml`, `teaching.toml`, `imprint.toml`), Markdown files (`bio.md`, `imprint.md`, `privacy.md`, `teaching.md`, `teaching-hint.md`), and `publications.bib`. The content has grown incrementally, so spelling variants, phrasing styles, and facts (dates, roles, names, terminology) may have drifted out of alignment across sections and pages.
+
+Implementation:
+
+- [ ] Proofread every file in `content/` (TOML + Markdown) for typos and grammar mistakes.
+- [ ] Enforce consistent **American English (AE)** spelling and conventions throughout (e.g., "color" not "colour", "behavior" not "behaviour", AE date and punctuation conventions).
+- [ ] Harmonize style and tone across sections/pages (consistent phrasing, capitalization of headings/labels, oxford-comma usage, consistent formatting of roles, institutions, and dates).
+- [ ] Check content consistency *across* sections and pages: facts (names, dates, affiliations, project descriptions, link targets) must not contradict each other between, e.g., the homepage, About, CV, research, and teaching pages.
+- [ ] Also review the English UI strings in `src/lib/i18n/messages.ts` for the same criteria, keeping them in sync with any terminology decisions made for the content.
+- [ ] Validate: `npm run lint` + `npm run build`; click through every page in the default locale and confirm nothing renders broken after the edits.
+
+### 7. German translation 🇩🇪
+
+Translate all English content to German.
+
+*Background:* Localized content lives in `content_de/` using the same filenames as `content/`; missing files fall back to the default locale automatically. `content_de/` currently contains `about.toml`, `bio.md`, `config.toml`, `imprint.md`/`imprint.toml`, `news.toml`, `privacy.md`/`privacy.toml`, and `publications.toml`, but is missing `cv.toml`, `research.toml`, `teaching.md`, `teaching.toml`, and `teaching-hint.md`. The imprint and privacy pages already have complete German translations — do not overwrite them.
+
+Implementation:
+
+- [ ] Translate the missing files into `content_de/` with the same filenames and schema as `content/`: `cv.toml`, `research.toml`, `teaching.toml`, `teaching.md`, and `teaching-hint.md`.
+- [ ] Review the existing `content_de/` files (`about.toml`, `bio.md`, `config.toml`, `news.toml`, `publications.toml`) for completeness against their English counterparts and translate any untranslated English leftovers.
+- [ ] Leave `content_de/imprint.md`, `imprint.toml`, `privacy.md`, and `privacy.toml` untouched — complete translations are already present.
+- [ ] Keep translations consistent with the German UI strings already in `src/lib/i18n/messages.ts` (reuse its terminology, e.g., for section names and labels).
+- [ ] Keep scientific titles/abstracts in their original language (as sourced from `content/publications.bib`) and apply German conventions (formal "Sie", German quotation marks, etc.) to the translated prose, matching the existing German content's style.
+- [ ] Translate the review decisions from item 6 where applicable, so the German content benefits from the same proofreading pass.
+- [ ] Validate: `npm run lint` + `npm run build`; switch the site to German and click through every page to confirm no missing translations (English fallbacks) remain and nothing renders broken.

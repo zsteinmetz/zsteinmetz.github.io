@@ -2,7 +2,7 @@
 # PRISM — Research page (`/research`)
 #
 # Single research page combining the research profile (themes), projects,
-# selected publications, and data & software. Appointments, education, grants,
+# selected publications, and data and software. Appointments, education, grants,
 # teaching, and service live on the Profile page.
 # ==============================================================================
 
@@ -12,7 +12,7 @@ description = "My work connects environmental questions with reliable measuremen
 
 # Root-level overview key shown above the project cards (must stay above the
 # first table header, like teaching_overview in cv.toml).
-research_overview = """My research addresses anthropogenic pollutants in soils and agroecosystems — from plastics and other synthetic polymers to agricultural inputs. I combine environmental analytical chemistry with soil science and ecotoxicology to understand how these pollutants enter, move through, and transform in terrestrial environments, and what that means for ecosystem functions. The projects below span this range: method development and quality assurance for measuring synthetic polymers in soil, monitoring of background levels in agricultural systems, and open-source tools for spectral classification and reproducible data analysis."""
+research_overview = """My research addresses anthropogenic pollutants in soils and agroecosystems — from plastics and other synthetic polymers to agricultural inputs. I combine environmental analytical chemistry with soil science and ecotoxicology to understand how these pollutants enter, move through, and transform in terrestrial environments, and what that means for ecosystem functions. The projects below span this range: method development and quality assurance for measuring synthetic polymers in soil, monitoring of background levels in agricultural systems, practice-oriented research on the use, reuse, and recycling of plastics in agriculture, and open-source tools for spectral classification and reproducible data analysis."""
 
 [headings]
 profile = "Profile"
@@ -57,38 +57,30 @@ content = "Linking chemical measurements with exposure, transformation, ecologic
 # Projects
 # ------------------------------------------------------------------
 [[projects]]
-title = "Microplastics in Agricultural Soils"
+title = "AgriRePlas — Reducing the Plastic Footprint in Agriculture"
 featured = true
-period = "2016 – present"
-question = "Agricultural soils receive plastic residues from multiple sources — but how much plastic accumulates, and where does it come from?"
-background = "Occurrence and fate of plastic debris in soil are difficult to assess because soils are heterogeneous and analytical methods are technically demanding. Within the interdisciplinary PLAST project at University of Koblenz-Landau, we studied plastic film covers in strawberry and vegetable cultivation from ecological, agronomic, and social-science perspectives."
-role = "Method development, analytical evaluation, project coordination, supervision, and scientific communication."
-methods = ["Pyrolysis-GC/MS", "FTIR spectroscopy", "Field sampling", "Soil science", "Statistics"]
+period = "2025 – 2029"
+question = "How is plastic used, reused, and recycled in the agriculture of the Upper Rhine region — and how can its plastic footprint be reduced without compromising productivity?"
+background = "Plastic materials such as mulch films, tunnels, and tree guards are indispensable in modern fruit and vegetable cultivation, yet their growing environmental impact — especially through microplastics — raises concerns for soil health. AgriRePlas, a cross-border EU Interreg project with 19 partners from Alsace, Baden, the Southern Palatinate, and northern Switzerland, assesses the status quo of plastic use, evaluates the plastic footprint, and develops targeted solutions: reusable systems, improved recycling strategies, and safe biodegradable alternatives."
+role = "Principal investigator of the RPTU work package: development of a pyrolysis-GC/MS method for biodegradable plastics, field screening of plastic losses, and design, conduct, and evaluation of a cross-border farmer survey."
+methods = ["Pyrolysis-GC/MS", "FTIR-ATR", "Quality assurance", "Survey research", "AI-assisted classification", "R"]
 contributions = [
-  "Developed and validated a solvent-based pyrolysis-GC/MS method for the selective quantification of polyethylene, polypropylene, and polystyrene in soil.",
-  "Screening studies of agricultural fields revealing elevated polyethylene levels associated with thin and perforated plastic films.",
-  "Extension of the method to further matrices, including freshwater, sediments, and sewage sludge-amended soil, in collaborations with LUT University (Finland) and the Swedish University of Agricultural Sciences."
+  "Developing a new pyrolysis-GC/MS method to identify and quantify biodegradable plastics in agricultural soils.",
+  "Screening field plastic losses by pyrolysis-GC/MS and FTIR-ATR.",
+  "Designing and implementing a trilingual questionnaire on the use, reuse, and recycling of plastics in agricultural practice.",
+  "Evaluating 250 completed questionnaires from farms in five countries with transparent, reproducible R workflows, including AI-assisted freetext classification with expert validation."
 ]
-outcomes = "The method is now used in routine analyses and national-scale assessments; the findings can help guide farmers and decision makers toward more durable materials and reduced plastic emissions."
-collaborators = [
-  "University of Koblenz-Landau / RPTU Kaiserslautern-Landau",
-  "LUT University, Finland",
-  "Swedish University of Agricultural Sciences (SLU)",
-  "Brno University of Technology, Czech Republic",
-  "ETH Zurich, Switzerland"
-]
-funding = "State of Rhineland-Palatinate (PLAST)"
-publications = [
-  "Steinmetz et al. (2016): Plastic mulching in agriculture. Science of the Total Environment",
-  "Steinmetz et al. (2020): A simple method for the selective quantification of PE, PP, and PS in soil. J. Anal. Appl. Pyrolysis",
-  "Steinmetz et al. (2022): Are agricultural plastic covers a source of plastic debris in soil? SOIL",
-  "Heinze et al. (2024): Vertical distribution of microplastics in an agricultural soil. Environmental Pollution"
+outcomes = "The project will provide the empirical basis for reusable systems, improved recycling strategies, and safe biodegradable alternatives in the Upper Rhine region — a model for reducing the plastic footprint of agriculture beyond the region."
+collaborators = ["HYDRA Marine Sciences", "DLR Rhineland-Palatinate", "Chambre d'Agriculture Alsace", "FiBL", "Empa"]
+funding = "EU Interreg Upper Rhine"
+links = [
+  { label = "Project page", url = "https://www.hydramarinesciences.com/agrireplas-english" }
 ]
 
 [[projects]]
 title = "MIBAS — Microplastic Background Levels in German Soils"
 featured = true
-period = "2024 – 2026"
+period = "2024 – 2027"
 question = "What are representative background levels of microplastics in German arable and grassland soils — and which site characteristics and land uses drive their spatial distribution?"
 background = "Reliable assessment and future regulation of microplastics in soils require a representative database and harmonized analytics. In the MIBAS project, we systematically quantify microplastics in 600 arable and grassland soils across Germany for the German Environment Agency (UBA)."
 role = "Principal investigator: project coordination, quality-assured routine analytics, data evaluation, and reporting."
@@ -98,7 +90,7 @@ contributions = [
   "Quality-assured, reproducible evaluation workflows for large sample numbers."
 ]
 outcomes = "The results provide the empirical basis for assessing and managing microplastic pollution in agricultural soils in Germany."
-collaborators = ["German Environment Agency (UBA)", "RPTU Kaiserslautern-Landau"]
+collaborators = ["German Environment Agency (UBA)", "RPTU University Kaiserslautern-Landau"]
 funding = "UBA RefoPlan"
 publications = [
   "Thomas et al. (2026): Towards regulatory measures for microplastics in soils. Microplastics and Nanoplastics"
@@ -109,19 +101,19 @@ title = "Synthetic Hydrophilic Polymers in the Environment"
 period = "2022 – present"
 question = "Beyond particulate plastics: what is the fate and effect of water-soluble synthetic polymers such as polyacrylates and polyethylene glycols?"
 background = "Hydrophilic polymers are an emerging yet overlooked class of anthropogenic substances used in agriculture, personal care, construction, and wastewater treatment. Their ability to interact with water complicates studying their fate and effects in the environment."
-role = "Method development, review leadership, supervision of a doctoral project, and grant acquisition."
+role = "Method development, advisory, supervision of a doctoral project, and grant acquisition."
 methods = ["Pyrolysis-GC/MS", "Size-exclusion chromatography", "Soil incubation", "Ecotoxicological endpoints"]
 contributions = [
   "Extension of pyrolysis-GC/MS analytics to hydrophilic polymers such as polyacrylic acid, polyquaterniums, polyethylene glycol, and polyvinyl alcohol.",
-  "Review papers on superabsorbent polymers in soil and on synthetic hydrophilic polymers across ecosystem boundaries.",
+  "Theoretical concepts on superabsorbent polymers in soil and on synthetic hydrophilic polymers across ecosystem boundaries.",
   "Advisory role in the DFG project TransSAPs on the transformation of superabsorbent polymers in soil."
 ]
-outcomes = "The work is opening up analytical access to this substance class and raising its visibility as an environmental risk factor; a Research Training Group proposal (HYRISK) is under review."
+outcomes = "The work is opening up analytical access to this substance class and raising its visibility as an environmental risk factor."
 collaborators = [
-  "RPTU Kaiserslautern-Landau",
+  "RPTU University Kaiserslautern-Landau",
   "Leibniz University Hannover"
 ]
-funding = "DFG (TransSAPs, advisory); DFG RTG proposal HYRISK (under review)"
+funding = "DFG (TransSAPs, advisory)"
 publications = [
   "Buchmann et al. (2024): Superabsorbent polymers in soil: The new microplastics? Cambridge Prisms: Plastics",
   "Steinmetz et al. (2024): Plastic problem solved? TrAC Trends in Analytical Chemistry",
@@ -129,33 +121,15 @@ publications = [
 ]
 
 [[projects]]
-title = "Analytical Methods for Complex Environmental Matrices"
-period = "2016 – present"
-question = "How can environmental assessment rely on methods that are selective, reproducible, and appropriate for complex matrices?"
-background = "Soils, sediments, and food matrices challenge routine analytics: matrix effects, heterogeneous samples, and strict quality requirements demand rigorous method validation and transparent workflows, following Eurachem guidance."
-role = "Method development and validation, quality assurance, routine analysis, analytical reporting, and coordination of instrument maintenance."
-methods = ["(Pyrolysis-)GC/MS", "LC-MS", "HPLC", "FTIR-ATR", "Method validation", "Eurachem QA/QC"]
-contributions = [
-  "Validation of methods for determining aflatoxins in soil and food matrices by HPLC-FLD and LC-MS.",
-  "Routine microplastics analytics with contract analyses and reporting for public authorities.",
-  "Development of internal SOPs and transparent workflows for environmental samples."
-]
-outcomes = "Bridges scientific method development and reliable routine application, including reporting for federal and state authorities."
-publications = [
-  "Albert et al. (2021): Validation of a method for the determination of aflatoxins in soil and food matrices. ACS Omega",
-  "Rung et al. (2023): (Non-)intentionally added substances in post-consumer recyclates. Recycling"
-]
-
-[[projects]]
 title = "envalysis — R Package for Environmental Data Analysis"
 period = "2018 – present"
-question = "How can recurring steps of environmental data analysis — calibration, quality criteria, sorption isotherms — become transparent and reproducible?"
+question = "How can recurring steps of environmental data analysis become transparent and reproducible?"
 background = "Environmental data analysis often involves repeated processing steps, heterogeneous input data, and complex quality-control decisions. Standardized, documented software tools make these processes inspectable and reusable."
 role = "Lead developer and maintainer."
 methods = ["R", "Statistics", "Chemometrics", "Open source"]
 contributions = [
-  "Implemented calibration routines following DIN 32645, titration curves, and sorption isotherms.",
-  "Continuous maintenance, documentation, and releases on CRAN."
+  "Implemented calibration routines following DIN 32645 and sorption isotherms.",
+  "Maintenance, documentation, and releases on CRAN."
 ]
 outcomes = "An open-source toolbox that facilitates environmental data analyses and chemometrics in R."
 links = [
@@ -184,19 +158,6 @@ publications = [
   "Cowger et al. (2025): Open Specy 1.0: Automated (hyper)spectroscopy for microplastics. Analytical Chemistry"
 ]
 
-[[projects]]
-title = "Reproducible Environmental Data Workflows"
-period = "2019 – present"
-question = "How can environmental data analysis become more transparent, reproducible, and efficient?"
-background = "Analytical laboratories generate growing volumes of heterogeneous data. Version control, documented processing steps, automated analyses, and transparent reporting make analytical workflows easier to inspect, reuse, and maintain."
-role = "Developer and implementer of the group's data workflows."
-methods = ["R", "Python", "Automation", "Git", "Docker"]
-contributions = [
-  "Parallelizable R workflows for evaluating pyrolysis-GC/MS data, including human-in-the-loop quality-control steps — substantially reducing processing time.",
-  "AI-supported, transparent workflows for categorizing free-text survey responses."
-]
-outcomes = "Faster, transparent, and auditable data pipelines for research and contract analyses."
-
 # ------------------------------------------------------------------
 # Selected publications (reuses the BibTeX pipeline)
 # ------------------------------------------------------------------
@@ -208,7 +169,7 @@ show_complete = false
 note = "A curated selection is shown here; the complete searchable list with filters is maintained on the [Publications](/publications) page."
 
 # ------------------------------------------------------------------
-# Data & software
+# Data and software
 # ------------------------------------------------------------------
 [[skills]]
 category = "R and statistics"
@@ -222,15 +183,8 @@ name = "Statistics and chemometrics"
 description = "Calibration following DIN 32645, regression, multivariate statistics, and quality-control charts for analytical data."
 
 [[skills]]
-category = "Python and automation"
-
-[[skills.items]]
-name = "Python"
-description = "Modeling, automation, data processing, and computational workflows — from ecological and crop modeling to batch processing of analytical data."
-
-[[skills]]
 category = "Tools and technologies"
 
 [[skills.items]]
-name = "R · Python · Git · Linux · LaTeX · QGIS · OpenChrom · SQL · Docker"
+name = "R · Python · Git · LaTeX · OpenChrom · QGIS · SQL · Docker"
 description = "Everyday toolbox for research, teaching, and the operation of the working group's software infrastructure."

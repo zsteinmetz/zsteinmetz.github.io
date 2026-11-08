@@ -1,14 +1,14 @@
 {
   "orcid": "0000-0001-6675-5033",
-  "fetchedAt": "2026-11-04T14:09:24.960Z",
+  "fetchedAt": "2026-11-08T13:36:41.340Z",
   "author": {
     "openalexId": "https://openalex.org/A5071389053",
     "displayName": "Zacharias Steinmetz",
-    "worksCount": 68,
-    "citedByCount": 3729,
+    "worksCount": 65,
+    "citedByCount": 3901,
     "hIndex": 23,
     "i10Index": 27,
-    "hIndex2yrMean": 9.588235294117647
+    "hIndex2yrMean": 10.875
   },
   "works": [
     {
@@ -16,105 +16,91 @@
       "doi": "https://doi.org/10.1016/j.scitotenv.2016.01.153",
       "title": "Plastic mulching in agriculture. Trading short-term agronomic benefits for long-term soil degradation?",
       "publicationYear": 2016,
-      "citedByCount": 1571
+      "citedByCount": 1646
     },
     {
       "openalexId": "https://openalex.org/W3162696944",
       "doi": "https://doi.org/10.1021/acs.analchem.1c00123",
       "title": "Microplastic Spectral Classification Needs an Open Source Community: Open Specy to the Rescue!",
       "publicationYear": 2021,
-      "citedByCount": 573
+      "citedByCount": 608
     },
     {
       "openalexId": "https://openalex.org/W3096849431",
       "doi": "https://doi.org/10.3390/su12219074",
       "title": "Sample Preparation Techniques for the Analysis of Microplastics in Soil—A Review",
       "publicationYear": 2020,
-      "citedByCount": 255
+      "citedByCount": 270
     },
     {
       "openalexId": "https://openalex.org/W2809126968",
       "doi": "https://doi.org/10.1021/acs.analchem.8b00355",
       "title": "Quantitative Analysis of Poly(ethylene terephthalate) Microplastics in Soil via Thermogravimetry–Mass Spectrometry",
       "publicationYear": 2018,
-      "citedByCount": 203
+      "citedByCount": 208
     },
     {
       "openalexId": "https://openalex.org/W2980053961",
       "doi": "https://doi.org/10.1016/j.jaap.2020.104803",
       "title": "A simple method for the selective quantification of polyethylene, polypropylene, and polystyrene plastic debris in soil by pyrolysis-gas chromatography/mass spectrometry",
       "publicationYear": 2020,
-      "citedByCount": 182
-    },
-    {
-      "openalexId": "https://openalex.org/W2582457732",
-      "doi": "https://doi.org/10.1016/j.agsy.2017.01.009",
-      "title": "Adaptation response surfaces for managing wheat under perturbed climate and CO2 in a Mediterranean environment",
-      "publicationYear": 2017,
-      "citedByCount": 107
+      "citedByCount": 188
     },
     {
       "openalexId": "https://openalex.org/W2584937883",
       "doi": "https://doi.org/10.1016/j.apsoil.2017.01.014",
       "title": "Physicochemical and microbial soil quality indicators as affected by the agricultural management system in strawberry cultivation using straw or black polyethylene mulching",
       "publicationYear": 2017,
-      "citedByCount": 87
+      "citedByCount": 89
     },
     {
       "openalexId": "https://openalex.org/W4399427271",
       "doi": "https://doi.org/10.1016/j.envpol.2024.124343",
       "title": "Vertical distribution of microplastics in an agricultural soil after long-term treatment with sewage sludge and mineral fertiliser",
       "publicationYear": 2024,
-      "citedByCount": 57
+      "citedByCount": 58
     },
     {
       "openalexId": "https://openalex.org/W4285795264",
       "doi": "https://doi.org/10.7717/peerj.13781",
       "title": "Plastic debris in plastic-mulched soil—a screening study from western Germany",
       "publicationYear": 2022,
-      "citedByCount": 53
+      "citedByCount": 56
     },
     {
       "openalexId": "https://openalex.org/W4297494097",
       "doi": "https://doi.org/10.1016/j.envpol.2022.120298",
       "title": "Historical and current occurrence of microplastics in water and sediment of a Finnish lake affected by WWTP effluents",
       "publicationYear": 2022,
-      "citedByCount": 49
+      "citedByCount": 47
     },
     {
       "openalexId": "https://openalex.org/W4391226075",
       "doi": "https://doi.org/10.1017/plc.2024.2",
       "title": "Superabsorbent polymers in soil: The new microplastics?",
       "publicationYear": 2024,
-      "citedByCount": 45
-    },
-    {
-      "openalexId": "https://openalex.org/W2997703599",
-      "doi": "https://doi.org/10.1016/j.geoderma.2019.114142",
-      "title": "Effect of matric potential and soil-water-hydrogel interactions on biohydrogel-induced soil microstructural stability",
-      "publicationYear": 2019,
-      "citedByCount": 44
+      "citedByCount": 47
     },
     {
       "openalexId": "https://openalex.org/W4319972842",
       "doi": "https://doi.org/10.3390/recycling8010024",
       "title": "Identification and Evaluation of (Non-)Intentionally Added Substances in Post-Consumer Recyclates and Their Toxicological Classification",
       "publicationYear": 2023,
-      "citedByCount": 41
+      "citedByCount": 42
     },
     {
       "openalexId": "https://openalex.org/W4385623768",
       "doi": "https://doi.org/10.1007/s10973-023-12430-8",
       "title": "A differential scanning calorimetry (DSC) approach for assessing the quality of polyethylene terephthalate (PET) waste for physical recycling: a proof-of-concept study",
       "publicationYear": 2023,
-      "citedByCount": 35
+      "citedByCount": 39
     },
     {
       "openalexId": "https://openalex.org/W4413099853",
       "doi": "https://doi.org/10.1021/acs.analchem.5c00962",
       "title": "Open Specy 1.0: Automated (Hyper)spectroscopy for Microplastics",
       "publicationYear": 2025,
-      "citedByCount": 34
+      "citedByCount": 35
     },
     {
       "openalexId": "https://openalex.org/W4410975385",
@@ -124,53 +110,60 @@
       "citedByCount": 16
     },
     {
+      "openalexId": "https://openalex.org/W2582457732",
+      "doi": "https://doi.org/10.1016/j.agsy.2017.01.009",
+      "title": "Adaptation response surfaces for managing wheat under perturbed climate and CO2 in a Mediterranean environment",
+      "publicationYear": 2017,
+      "citedByCount": 108
+    },
+    {
       "openalexId": "https://openalex.org/W2920829714",
       "doi": "https://doi.org/10.1016/j.chemosphere.2019.03.078",
       "title": "Introducing a soil universal model method (SUMM) and its application for qualitative and quantitative determination of poly(ethylene), poly(styrene), poly(vinyl chloride) and poly(ethylene terephthalate) microplastics in a model soil",
       "publicationYear": 2019,
-      "citedByCount": 61
+      "citedByCount": 62
     },
     {
       "openalexId": "https://openalex.org/W2897744189",
       "doi": "https://doi.org/10.1016/j.agrformet.2018.09.018",
       "title": "Implications of crop model ensemble size and composition for estimates of adaptation effects and agreement of recommendations",
       "publicationYear": 2018,
-      "citedByCount": 54
+      "citedByCount": 56
     },
     {
       "openalexId": "https://openalex.org/W4225671712",
       "doi": "https://doi.org/10.5194/soil-8-31-2022",
       "title": "Are agricultural plastic covers a source of plastic debris in soil? A first screening study",
       "publicationYear": 2022,
-      "citedByCount": 52
+      "citedByCount": 56
+    },
+    {
+      "openalexId": "https://openalex.org/W2997703599",
+      "doi": "https://doi.org/10.1016/j.geoderma.2019.114142",
+      "title": "Effect of matric potential and soil-water-hydrogel interactions on biohydrogel-induced soil microstructural stability",
+      "publicationYear": 2019,
+      "citedByCount": 46
     },
     {
       "openalexId": "https://openalex.org/W4212981214",
       "doi": "https://doi.org/10.3390/soilsystems6010021",
       "title": "Effects of Plastic versus Straw Mulching Systems on Soil Microbial Community Structure and Enzymes in Strawberry Cultivation",
       "publicationYear": 2022,
-      "citedByCount": 31
+      "citedByCount": 32
     },
     {
       "openalexId": "https://openalex.org/W2560428667",
       "doi": "https://doi.org/10.1007/s11368-016-1623-y",
       "title": "Fractionation of copper and uranium in organic and conventional vineyard soils and adjacent stream sediments studied by sequential extraction",
       "publicationYear": 2016,
-      "citedByCount": 27
+      "citedByCount": 28
     },
     {
       "openalexId": "https://openalex.org/W4353016394",
       "doi": "https://doi.org/10.1002/etc.5614",
       "title": "Subsidy Quality Affects Common Riparian Web-Building Spiders: Consequences of Aquatic Contamination and Food Resource",
       "publicationYear": 2023,
-      "citedByCount": 23
-    },
-    {
-      "openalexId": "https://openalex.org/W2591963029",
-      "doi": "https://doi.org/10.1021/acs.jpca.6b10207",
-      "title": "Influence of Organic Chemicals on Water Molecule Bridges in Soil Organic Matter of a Sapric Histosol",
-      "publicationYear": 2017,
-      "citedByCount": 20
+      "citedByCount": 25
     },
     {
       "openalexId": "https://openalex.org/W3183165822",
@@ -198,7 +191,21 @@
       "doi": "https://doi.org/10.1016/j.chemosphere.2019.05.030",
       "title": "Biodegradation and photooxidation of phenolic compounds in soil—A compound-specific stable isotope approach",
       "publicationYear": 2019,
-      "citedByCount": 23
+      "citedByCount": 24
+    },
+    {
+      "openalexId": "https://openalex.org/W2591963029",
+      "doi": "https://doi.org/10.1021/acs.jpca.6b10207",
+      "title": "Influence of Organic Chemicals on Water Molecule Bridges in Soil Organic Matter of a Sapric Histosol",
+      "publicationYear": 2017,
+      "citedByCount": 20
+    },
+    {
+      "openalexId": "https://openalex.org/W3049505504",
+      "doi": "https://doi.org/10.37307/j.1868-7741.2020.03.10",
+      "title": "(Mikro-)Plastik im Boden",
+      "publicationYear": 2020,
+      "citedByCount": 5
     },
     {
       "openalexId": "https://openalex.org/W4410510106",
@@ -215,24 +222,10 @@
       "citedByCount": 1
     },
     {
-      "openalexId": "https://openalex.org/W3049505504",
-      "doi": "https://doi.org/10.37307/j.1868-7741.2020.03.10",
-      "title": "(Mikro-)Plastik im Boden",
-      "publicationYear": 2020,
-      "citedByCount": 4
-    },
-    {
       "openalexId": "https://openalex.org/W7170133315",
       "doi": "https://doi.org/10.1038/s41598-026-63742-2",
       "title": "Effects of aged and pristine microplastics on physical, chemical, and biological soil properties",
       "publicationYear": 2026,
-      "citedByCount": 1
-    },
-    {
-      "openalexId": "https://openalex.org/W4412898235",
-      "doi": "https://doi.org/10.1002/jpln.70009",
-      "title": "Agricultural Mulching and Fungicides—Impacts on Structure and Function of the Soil Microbial Community",
-      "publicationYear": 2025,
       "citedByCount": 1
     },
     {
@@ -243,6 +236,13 @@
       "citedByCount": 1
     },
     {
+      "openalexId": "https://openalex.org/W4412898235",
+      "doi": "https://doi.org/10.1002/jpln.70009",
+      "title": "Agricultural Mulching and Fungicides—Impacts on Structure and Function of the Soil Microbial Community",
+      "publicationYear": 2025,
+      "citedByCount": 1
+    },
+    {
       "openalexId": "https://openalex.org/W4252701779",
       "doi": "https://doi.org/10.7287/peerj.preprints.27989v1",
       "title": "A simple method for the selective quantification of polyethylene, polypropylene, and polystyrene plastic debris in soil by pyrolysis-gas chromatography/mass spectrometry",
@@ -250,18 +250,18 @@
       "citedByCount": 9
     },
     {
+      "openalexId": "https://openalex.org/W4243868807",
+      "doi": "https://doi.org/10.7287/peerj.preprints.27989v2",
+      "title": "A simple method for the selective quantification of polyethylene, polypropylene, and polystyrene plastic debris in soil by pyrolysis-gas chromatography/mass spectrometry",
+      "publicationYear": 2019,
+      "citedByCount": 6
+    },
+    {
       "openalexId": "https://openalex.org/W4399649154",
       "doi": "https://doi.org/10.32614/cran.package.openspecy",
       "title": "OpenSpecy: Analyze, Process, Identify, and Share Raman and (FT)IR Spectra",
       "publicationYear": 2021,
       "citedByCount": 6
-    },
-    {
-      "openalexId": "https://openalex.org/W4243868807",
-      "doi": "https://doi.org/10.7287/peerj.preprints.27989v2",
-      "title": "A simple method for the selective quantification of polyethylene, polypropylene, and polystyrene plastic debris in soil by pyrolysis-gas chromatography/mass spectrometry",
-      "publicationYear": 2019,
-      "citedByCount": 5
     },
     {
       "openalexId": "https://openalex.org/W4394267727",
@@ -315,12 +315,6 @@
       "citedByCount": 0
     },
     {
-      "openalexId": "https://openalex.org/W3087930570",
-      "title": "Miscellaneous Functions for Environmental Analyses [R package envalysis version 0.5.1]",
-      "publicationYear": 2021,
-      "citedByCount": 0
-    },
-    {
       "openalexId": "https://openalex.org/W3147573060",
       "title": "Analyze, Process, Identify, and Share, Raman and (FT)IR Spectra [R package OpenSpecy version 0.8.2]",
       "publicationYear": 2021,
@@ -330,12 +324,6 @@
       "openalexId": "https://openalex.org/W3157829960",
       "doi": "https://doi.org/10.1002/nadc.20214106855",
       "title": "Professioneller Textsatz mit Latex",
-      "publicationYear": 2021,
-      "citedByCount": 0
-    },
-    {
-      "openalexId": "https://openalex.org/W3166041306",
-      "title": "Analyze, Process, Identify, and Share, Raman and (FT)IR Spectra [R package OpenSpecy version 0.9.2]",
       "publicationYear": 2021,
       "citedByCount": 0
     },
@@ -385,13 +373,6 @@
       "doi": "https://doi.org/10.1017/plc.2024.2.pr1",
       "title": "Author comment: Superabsorbent polymers in soil: The new microplastics? — R0/PR1",
       "publicationYear": 2023,
-      "citedByCount": 0
-    },
-    {
-      "openalexId": "https://openalex.org/W4393170890",
-      "doi": "https://doi.org/10.2139/ssrn.4771652",
-      "title": "Vertical Distribution of Microplastics and Metals in an Agricultural Soil after Long-Term Treatment with Sewage Sludge",
-      "publicationYear": 2024,
       "citedByCount": 0
     },
     {

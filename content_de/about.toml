@@ -27,7 +27,7 @@ title = "Analytische Methoden"
 content = "Methodenentwicklung, Validierung, Qualitätssicherung und Instrumentalanalytik."
 
 [[sections.items]]
-title = "Daten & Reproduzierbarkeit"
+title = "Daten und Reproduzierbarkeit"
 content = "R, Statistik, Automatisierung, Open-Source-Werkzeuge und transparente Workflows."
 
 [[sections]]

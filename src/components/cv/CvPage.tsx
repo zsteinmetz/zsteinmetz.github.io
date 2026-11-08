@@ -19,18 +19,18 @@ import CvSectionNav, { type CvSectionNavItem } from './CvSectionNav';
 import type { PublicationMetricsSummary } from '@/lib/metrics';
 
 const DEFAULT_HEADINGS: Required<CvHeadings> = {
-  profile: 'Academic Profile',
-  highlights: 'Research Areas',
-  experience: 'Appointments & Experience',
+  profile: 'Academic profile',
+  highlights: 'Research areas',
+  experience: 'Appointments and experience',
   education: 'Education',
-  research: 'Research Contributions & Projects',
+  research: 'Research contributions and projects',
   publications: 'Publications',
-  teaching: 'Teaching & Supervision',
-  grants: 'Grants, Awards & Recognition',
-  grants_funding: 'Grants & Fellowships',
-  grants_awards: 'Awards & Distinctions',
-  service: 'Academic Service & Community',
-  skills: 'Skills & Expertise',
+  teaching: 'Teaching and supervision',
+  grants: 'Grants, awards and recognition',
+  grants_funding: 'Grants and fellowships',
+  grants_awards: 'Awards and distinctions',
+  service: 'Academic service and community',
+  skills: 'Skills and expertise',
 };
 
 interface CvPageProps {

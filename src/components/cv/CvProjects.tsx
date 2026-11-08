@@ -66,7 +66,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
 
       {project.outcomes && (
         <div className="mt-3 max-w-3xl">
-          <CvDetailGroup label="Outcomes & impact">
+          <CvDetailGroup label="Outcomes and impact">
             <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.outcomes}</p>
           </CvDetailGroup>
         </div>
@@ -101,7 +101,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
           <div id={detailsId} className={cn('cv-details', !expanded && 'hidden')}>
             <div className="mt-3 space-y-4 border-l-2 border-neutral-200 pl-4">
               {project.background && (
-                <CvDetailGroup label="Background & context">
+                <CvDetailGroup label="Background and context">
                   <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.background}</p>
                 </CvDetailGroup>
               )}

@@ -39,7 +39,7 @@ export default function CvProfile({ title, profile }: CvProfileProps) {
 
       {profile.links && profile.links.length > 0 && (
         <div className="mt-6">
-          <CvDetailGroup label="Profiles & links">
+          <CvDetailGroup label="Profiles and links">
             <CvLinkList links={profile.links} />
           </CvDetailGroup>
         </div>
