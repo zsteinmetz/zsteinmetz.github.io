@@ -1,0 +1,168 @@
+# ==============================================================================
+# PRISM — Research page (`/research`) [German locale]
+#
+# Single research page combining the research profile (themes), projects,
+# selected publications, and data and software. Appointments, education, grants,
+# teaching, and service live on the Profile page.
+# ==============================================================================
+
+type = "cv"
+title = "Forschung"
+description = "Meine Arbeit verbindet umweltwissenschaftliche Fragestellungen mit qualitätsgesicherter, quantitativer Analyse und praxisnaher Interpretation. Mein Ziel ist es, analytische und rechnergestützte Ansätze zu entwickeln, die die Datengrundlage in den Umweltwissenschaften zuverlässiger, transparenter und anwendbarer machen."
+
+# Root-level overview key shown above the project cards (must stay above the
+# first table header, like teaching_overview in cv.toml).
+research_overview = """Meine Forschung befasst sich mit anthropogenen Schadstoffen in Böden und Agrarökosystemen — von Kunststoffen und anderen synthetischen Polymeren bis hin zu landwirtschaftlichen Einträgen. Dabei verbinde ich Umweltanalytik mit Bodenkunde und Ökotoxikologie, um zu verstehen, wie diese Schadstoffe in terrestrische Umgebungen gelangen, sich darin bewegen und umwandeln und was das für Ökosystemfunktionen bedeutet. Die folgenden Projekte decken dieses Spektrum ab: Methodenentwicklung und Qualitätssicherung für die Messung synthetischer Polymere im Boden, Monitoring von Hintergrundwerten in Agrarsystemen, praxisorientierte Forschung zu Einsatz, Wiederverwendung und Recycling von Kunststoffen in der Landwirtschaft sowie Open-Source-Werkzeuge für die spektrale Klassifikation und reproduzierbare Datenanalyse."""
+
+[headings]
+profile = "Profil"
+highlights = "Forschungsschwerpunkte"
+research = "Projekte"
+publications = "Publikationen"
+
+# ------------------------------------------------------------------
+# Research profile
+# ------------------------------------------------------------------
+[profile]
+narrative = """Ich habe einen Hintergrund in Umweltchemie, Ökotoxikologie und Bodenkunde und untersuche Schadstoffe von der Quelle bis zur Senke: Wie gelangen sie in landwirtschaftliche Systeme, wie werden sie transportiert, wie wandeln sich zwischen Land und Wasser um und wie beeinflusst dies Ökosystemfunktionen? Um diese Fragen zu beantworten, sind verlässliche Daten unerlässlich. Deshalb begleiten Methodenentwicklung, Validierung, Qualitätssicherung und reproduzierbare Datenworkflows alle Schritte meines Forschungsprozesses."""
+
+# ------------------------------------------------------------------
+# Research themes
+# ------------------------------------------------------------------
+[highlights]
+columns = 3
+
+[[highlights.items]]
+title = "Anthropogene Schadstoffe in Böden und Agrarökosystemen"
+content = "Quellen, Eintragspfade, Umwandlung und Verbleib von Schadstoffen in landwirtschaftlich genutzten Böden und angrenzenden Umweltkompartimenten."
+
+[[highlights.items]]
+title = "Kunststoffbelastung und Polymercharakterisierung"
+content = "Methoden zur Identifikation und Quantifizierung synthetischer Polymere in komplexen Umweltmatrizes, mit Fokus auf Kunststoffrückständen und Mikroplastik in Böden."
+
+[[highlights.items]]
+title = "Umweltanalytik"
+content = "Instrumentelle Analytik, Methodenentwicklung, Validierung, Qualitätssicherung und Interpretation komplexer Umweltproben."
+
+[[highlights.items]]
+title = "Datengetriebene Umweltwissenschaft"
+content = "Statistische Analyse, Automatisierung und reproduzierbare, rechnergestützte Workflows zur Aufbereitung und Kommunikation von Umweltdaten."
+
+[[highlights.items]]
+title = "Ökotoxikologische und ökosystemare Perspektiven"
+content = "Verknüpfung chemischer Messungen mit Exposition, Umwandlung, ökologischen Effekten und Ökosystemfunktionen."
+
+# ------------------------------------------------------------------
+# Projects
+# ------------------------------------------------------------------
+[[projects]]
+title = "AgriRePlas — Verringerung des Plastikfußabdrucks in der Landwirtschaft"
+featured = true
+period = "2025 – 2029"
+question = "Wie werden Kunststoffe in der Landwirtschaft der Oberrheinregion eingesetzt, wiederverwendet und recycelt — und wie lässt sich ihr Kunststoff-Fußabdruck verringern, ohne die Produktivität zu gefährden?"
+background = "Kunststoffmaterialien wie Folien, Tunnelgewächshäuser und Baumschutzsysteme sind im modernen Obst- und Gemüseanbau unverzichtbar, doch ihre wachsende Umweltbelastung — insbesondere durch Mikroplastik — wirft Fragen zur Bodengesundheit auf. AgriRePlas, ein grenzüberschreitendes EU-Interreg-Projekt mit 19 Partnern aus dem Elsass, Baden, der Südpfalz und der Nordschweiz, erfasst den Ist-Zustand der Kunststoffnutzung, bewertet den Kunststoff-Fußabdruck und entwickelt zielgerichtete Lösungen: wiederverwendbare Systeme, verbesserte Recyclingstrategien und sichere biologisch abbaubare Alternativen."
+role = "Leiter der Arbeitspakete an der RPTU"
+methods = ["Pyrolyse-GC/MS", "FTIR-ATR", "Qualitätssicherung", "Befragungsforschung", "KI-gestützte Klassifikation", "R"]
+contributions = [
+  "Entwicklung eines neuen Pyrolyse-GC/MS-Verfahrens zur Identifikation und Quantifizierung biologisch abbaubarer Kunststoffe in landwirtschaftlich genutzten Böden.",
+  "Screening von Kunststoffverlusten im Feld mittels Pyrolyse-GC/MS und FTIR-ATR.",
+  "Konzeption und Durchführung eines dreisprachigen Fragebogens zum Einsatz, zur Wiederverwendung und zum Recycling von Kunststoffen in der landwirtschaftlichen Praxis.",
+  "Auswertung von 250 ausgefüllten Fragebögen aus Betrieben in fünf Ländern mit transparenten, reproduzierbaren R-Workflows, einschließlich KI-gestützter Klassifikation von Freitextantworten mit fachlicher Validierung."
+]
+outcomes = "Die Ergebnisse fließen in die Entwicklung wiederverwendbarer Systeme, verbesserter Recyclingstrategien und sicherer biologisch abbaubarer Alternativen in der Oberrheinregion ein — und können als Vorbild für die Verringerung des Kunststoff-Fußabdrucks der Landwirtschaft auch über die Region hinaus dienen."
+collaborators = ["HYDRA Marine Sciences", "DLR Rheinland-Pfalz", "Chambre d'Agriculture Alsace", "FiBL", "Empa"]
+funding = "EU Interreg Oberrhein"
+links = [
+  { label = "Projektseite", url = "https://www.hydramarinesciences.com/agrireplas-english" }
+]
+
+[[projects]]
+title = "MIBAS — Mikroplastik-Hintergrundwerte in deutschen Böden"
+featured = true
+period = "2024 – 2027"
+question = "Welche repräsentativen Hintergrundwerte von Mikroplastik weisen deutsche Acker- und Grünlandböden auf — und welche Standortfaktoren und Landnutzung bestimmen ihre räumliche Verteilung?"
+background = "Eine verlässliche Bewertung und künftige Regulierung von Mikroplastik in Böden erfordert eine repräsentative Datenbasis und harmonisierte Analytik. Im MIBAS-Projekt quantifizieren wir systematisch Mikroplastik in 600 Acker- und Grünlandböden in Deutschland für das Umweltbundesamt (UBA)."
+role = "Projektleiter"
+methods = ["Pyrolyse-GC/MS", "Qualitätssicherung", "Geostatistik", "Berichte für Behörden"]
+contributions = [
+  "Vertragsanalysen und Berichte zur Ableitung von Mikroplastik-Hintergrundwerten für Deutschland.",
+  "Qualitätsgesicherte, reproduzierbare Auswerteworkflows für große Probenzahlen."
+]
+outcomes = "Die Ergebnisse liefern die empirische Grundlage für die Bewertung und das Management der Mikroplastikbelastung landwirtschaftlicher Böden in Deutschland."
+collaborators = ["Umweltbundesamt (UBA)", "RPTU Kaiserslautern-Landau"]
+funding = "UBA RefoPlan"
+publications = [
+  "Thomas et al. (2026): Towards regulatory measures for microplastics in soils. Microplastics and Nanoplastics"
+]
+
+[[projects]]
+title = "Synthetische hydrophile Polymere in der Umwelt"
+period = "2022 – heute"
+question = "Jenseits partikulärer Kunststoffe: Was ist über Verbleib und Wirkung wasserlöslicher synthetischer Polymere wie Polyacrylate und Polyethylenglykole bekannt?"
+background = "Hydrophile Polymere sind eine junge, bislang wenig beachtete Klasse anthropogener Stoffe — eingesetzt in der Landwirtschaft, in Kosmetika, im Bauwesen und in der Abwasserbehandlung. Ihre Wechselwirkung mit Wasser erschwert die Untersuchung ihres Verbleibs und ihrer Wirkungen in der Umwelt."
+role = "Wissenschaftlicher Berater und Promotionsbetreuer"
+methods = ["Pyrolyse-GC/MS", "Größenausschlusschromatographie", "Bodeninkubation", "Ökotoxikologische Endpunkte"]
+contributions = [
+  "Erweiterung der Pyrolyse-GC/MS-Analytik auf hydrophile Polymere wie Polyacrylsäure, Polyquaternium-Verbindungen, Polyethylenglykol und Polyvinylalkohol.",
+  "Theoretische Konzepte zu Superabsorber-Polymeren im Boden und zu synthetischen hydrophilen Polymeren über Ökosystemgrenzen hinweg.",
+  "Beratende Funktion im DFG-Projekt TransSAPs zur Umwandlung von Superabsorber-Polymeren im Boden."
+]
+outcomes = "Diese Arbeiten schaffen die analytische Grundlage für die Untersuchung hydrophiler synthetischer Polymere und die Bewertung ihrer Umweltrelevanz."
+collaborators = [
+  "RPTU Kaiserslautern-Landau",
+  "Leibniz Universität Hannover"
+]
+funding = "DFG (TransSAPs, beratend)"
+publications = [
+  "Buchmann et al. (2024): Superabsorbent polymers in soil: The new microplastics? Cambridge Prisms: Plastics",
+  "Steinmetz et al. (2024): Plastic problem solved? TrAC Trends in Analytical Chemistry",
+  "Feckler et al. (2026): Liquid polymer enhances methanogenesis in freshwater sediments. Biogeosciences"
+]
+
+[[projects]]
+title = "envalysis — R-Paket zur Analyse von Umweltdaten"
+period = "2018 – heute"
+question = "Wie lassen sich wiederkehrende Schritte der Umweltdatenanalyse transparent und reproduzierbar gestalten?"
+background = "Die Auswertung von Umweltdaten umfasst oft wiederkehrende Verarbeitungsschritte, heterogene Eingangsdaten und komplexe Qualitätskontroll-Entscheidungen. Standardisierte, dokumentierte Softwarewerkzeuge machen diese Prozesse nachvollziehbar und wiederverwendbar."
+role = "Hauptentwickler und Betreuer des Pakets."
+methods = ["R", "Statistik", "Chemometrie", "Open Source"]
+contributions = [
+  "Implementierung von Kalibrierungsroutinen nach DIN 32645 und Sorptionsisothermen.",
+  "Wartung, Dokumentation und Veröffentlichungen auf CRAN."
+]
+outcomes = "Ein Open-Source-Werkzeugkasten, der Umweltdatenanalysen und Chemometrie in R erleichtert."
+links = [
+  { label = "CRAN", url = "https://cran.r-project.org/package=envalysis" },
+  { label = "GitHub", url = "https://github.com/zsteinmetz/envalysis" }
+]
+
+[[projects]]
+title = "Open Specy — Open-Source-Spektralanalyse"
+period = "2020 – heute"
+question = "Wie lässt sich die Identifikation von Mikroplastik per Infrarot- und Raman-Spektroskopie offen, reproduzierbar und gemeinsam mit der Community gestalten?"
+background = "Spektrale Klassifikationswerkzeuge für Mikroplastik sind oft kostspielig und liefern für verwitterte Umweltpartikel ungenaue Ergebnisse. Open Specy ermöglicht die kostenlose Verarbeitung, Identifikation und gemeinsame Nutzung von Spektren — mit einer stetig wachsenden, von der Community gepflegten Referenzbibliothek."
+role = "Co-Entwickler."
+methods = ["R", "Shiny", "FTIR", "Raman", "Maschinelles Lernen", "Open Science"]
+contributions = [
+  "Mitentwicklung des Open-Specy-R-Pakets und Webtools zur Verarbeitung und Identifikation von Mikroplastik-Spektren.",
+  "Beiträge zum Release 2025 (Open Specy 1.0) mit automatisierter (Hyper-)Spektralverarbeitung und Klassifikatoren auf Basis maschinellen Lernens."
+]
+outcomes = "Open Specy ist eine Open-Source-Plattform zur Verarbeitung, Identifikation und gemeinsamen Nutzung von Infrarot- und Raman-Spektren, gestützt auf eine von der Community aufgebaute Referenzbibliothek mit mehr als 40.000 Spektren."
+links = [
+  { label = "Website", url = "https://openspecy.org" },
+  { label = "GitHub", url = "https://github.com/wincowgerDEV/OpenSpecy-package" }
+]
+publications = [
+  "Cowger et al. (2021): Microplastic spectral classification needs an open source community. Analytical Chemistry",
+  "Cowger et al. (2025): Open Specy 1.0: Automated (hyper)spectroscopy for microplastics. Analytical Chemistry"
+]
+
+# ------------------------------------------------------------------
+# Selected publications (reuses the BibTeX pipeline)
+# ------------------------------------------------------------------
+[publications]
+source = "publications.bib"
+featured_limit = 5
+show_abstracts = true
+show_complete = false
+note = "Ausgewählte Publikationen, die meine Beiträge zur Polymerforschung in der Umwelt, zur Entwicklung analytischer Methoden und zu Open-Source-Software für die Datenanalyse veranschaulichen. [Zur vollständigen, durchsuchbaren Publikationsliste ...](/publications)"

@@ -5,7 +5,7 @@ title = "Über mich"
 research_interests = [
   "Umweltchemie",
   "Analytische Methoden",
-  "Reproduzierbare Datenwissenschaft"
+  "Data Science"
 ]
 
 [[sections]]
@@ -20,15 +20,15 @@ title = ""
 
 [[sections.items]]
 title = "Umweltsysteme"
-content = "Schadstoffe, Böden, Agrarökosysteme, Kunststoffe und chemische Wirkungen."
+content = "Ich untersuche Kunststoffe und andere anthropogene Schadstoffe von ihren Quellen und Eintragspfaden bis zu ihrem Verbleib und ihren Auswirkungen."
 
 [[sections.items]]
 title = "Analytische Methoden"
-content = "Methodenentwicklung, Validierung, Qualitätssicherung und Instrumentalanalytik."
+content = "Ich entwickle und validiere analytische Methoden für komplexe Umweltmatrizes, mit Schwerpunkt auf Qualitätssicherung und instrumenteller Analytik."
 
 [[sections.items]]
 title = "Daten und Reproduzierbarkeit"
-content = "R, Statistik, Automatisierung, Open-Source-Werkzeuge und transparente Workflows."
+content = "Ich nutze Statistik, Automatisierung und Open-Source-Software, um die Analyse von Umweltdaten transparent, effizient und reproduzierbar zu gestalten."
 
 [[sections]]
 id = "teaching"

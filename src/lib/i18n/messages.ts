@@ -240,7 +240,7 @@ const de: LocaleMessages = {
     year: 'Jahr',
     type: 'Typ',
     noResults: 'Keine Publikationen gefunden, die deinen Kriterien entsprechen.',
-    abstract: 'Zusammenfassung',
+    abstract: 'Abstract',
     bibtex: 'BibTeX',
     code: 'Code',
     doiLink: 'Publikation über DOI öffnen',

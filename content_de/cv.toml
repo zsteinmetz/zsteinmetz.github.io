@@ -1,0 +1,297 @@
+# ==============================================================================
+# PRISM — CV page (`/cv`) [German locale]
+#
+# Narrative academic CV: short profile, career timeline, education, grants,
+# service, teaching selection, and languages. The built-in Print/PDF button
+# provides the "full academic CV" for download.
+# ==============================================================================
+
+type = "cv"
+title = "Profil"
+description = "Umweltwissenschaftler mit Schwerpunkt auf Verbleib und Auswirkung anthropogener Schadstoffe in Böden und Agrarökosystemen."
+
+# Overview keys are root-level: they MUST stay above the first table header
+# ([headings]) — in TOML, a bare key after an [[array]] or [table] header
+# belongs to that last table instead of the document root.
+teaching_overview = """Ich lehre Umweltwissenschaften als evidenzbasierte und praxisorientierte Disziplin. Meine Lehrveranstaltungen verbinden konzeptionelles Verständnis mit Laborarbeit, kritischem Lesen, Datenanalyse und transparenter wissenschaftlicher Kommunikation. Aktivierende und forschungsbasierte Lehrformate helfen, fachliches Wissen und ein eigenständiges wissenschaftliches Urteilsvermögen zu entwickeln. [Mehr über meine Lehre, Lehrveranstaltungen und Betreuung erfahren ...](/teaching)"""
+
+grants_overview = """Meine Forschung finanziert sich über kompetitive Fördermittel und Auftragsforschung: von nationalen Fördergebern und institutionellen Mitteln über beauftragtes Umweltmonitoring und Berichterstattung für das Umweltbundesamt (UBA) bis hin zu praxisorientierten Verbundprojekten zum Einsatz, zur Wiederverwendung und zum Recycling von Kunststoffen in der Landwirtschaft, gefördert durch EU Interreg Oberrhein. [Mehr über meine aktuelle Forschung erfahren ...](/research)"""
+
+service_overview = """Ich bringe mich als Vertreter des wissenschaftlichen Mittelbaus in die Gremienarbeit des Fachbereichs ein und bin als Gutachter für Förderorganisationen (DFG, FNR) und wissenschaftliche Fachzeitschriften tätig."""
+
+[headings]
+profile = "Einleitung"
+highlights = "Kompetenzen"
+experience = "Werdegang"
+education = "Ausbildung"
+research = "Projekte"
+publications = "Publikationen"
+teaching = "Lehre"
+grants = "Drittmittel und Auszeichnungen"
+grants_funding = "Drittmittel"
+grants_awards = "Auszeichnungen"
+service = "Gremien und Gutachtertätigkeit"
+skills = "Fachliche Kenntnisse"
+
+# ------------------------------------------------------------------
+# Introduction
+# ------------------------------------------------------------------
+[profile]
+narrative = """Ich verbinde Umweltchemie, Bodenkunde, Ökotoxikologie und analytische Chemie, um Schadstoffe von ihren Quellen über ihren Verbleib bis zu ihren Auswirkungen zu untersuchen. Ein Schwerpunkt meiner Forschung liegt auf Kunststoffen und anderen synthetischen Polymeren in terrestrischen Systemen, insbesondere in landwirtschaftlich genutzten Böden.
+
+Meine Arbeit verknüpft laborbasierte Umweltanalytik mit Methodenentwicklung, Qualitätssicherung, statistischer Auswertung und reproduzierbarer Datenverarbeitung. Ich leite Forschungs- und Analytikprojekte, lehre und betreue Studierende und arbeite mit Partnern aus Behörden und der anwendungsorientierten Forschung an Fragen des Umweltmonitorings, der Messtechnik und der Dateninterpretation zusammen."""
+
+interests = [
+  "Umweltchemie",
+  "Bodenkunde",
+  "Ökotoxikologie",
+  "Analytische Chemie",
+  "Reproduzierbare Datenanalyse"
+]
+
+[[profile.links]]
+label = "ORCID"
+url = "https://orcid.org/0000-0001-6675-5033"
+
+[[profile.links]]
+label = "Google Scholar"
+url = "https://scholar.google.com/citations?user=klQROs4AAAAJ"
+
+[[profile.links]]
+label = "Web of Science"
+url = "https://www.webofscience.com/wos/author/rid/AAC-9025-2020"
+
+[[profile.links]]
+label = "Scopus"
+url = "https://www.scopus.com/authid/detail.uri?authorId=56692933000"
+
+[[profile.links]]
+label = "ResearchGate"
+url = "https://www.researchgate.net/profile/Zacharias-Steinmetz"
+
+[[profile.links]]
+label = "GitHub"
+url = "https://github.com/zsteinmetz"
+
+[[profile.links]]
+label = "LinkedIn"
+url = "https://www.linkedin.com/in/zsteinmetz"
+
+# ------------------------------------------------------------------
+# What I bring (profile building blocks)
+# ------------------------------------------------------------------
+[highlights]
+columns = 2
+
+[[highlights.items]]
+title = "Umweltsysteme und Schadstoffe"
+content = "Verbleib, Transport, Umwandlung und Auswirkungen anthropogener Schadstoffe in Böden, Agrarsystemen und angrenzenden Ökosystemen."
+
+[[highlights.items]]
+title = "Umweltanalytik"
+content = "Methodenentwicklung, Validierung und Qualitätssicherung für komplexe Umweltmatrizes; Expertise in Pyrolyse-GC/MS, GC-IRMS, LC-MS und FTIR-ATR."
+
+[[highlights.items]]
+title = "Datenanalyse und wissenschaftliche Software"
+content = "Reproduzierbare R-basierte Workflows für Kalibrierung, Validierung, Visualisierung, Berichterstattung und nachvollziehbare analytische Entscheidungen."
+
+[[highlights.items]]
+title = "Führungsverantwortung und Zusammenarbeit"
+content = "Projekt- und Teamleitung, Betreuung von Studierenden, Wissenschaftskommunikation, Gutachten und Zusammenarbeit zwischen Wissenschaft und Anwendung."
+
+# ------------------------------------------------------------------
+# Career (appointments timeline)
+# ------------------------------------------------------------------
+[[appointments]]
+title = "Wissenschaftlicher Projekt- und Teamleiter"
+institution = "RPTU Kaiserslautern-Landau"
+department = "Umwelt- und Bodenchemie"
+location = "Landau, Deutschland"
+start = "Dez 2022"
+sort_date = "2022-12"
+summary = "Forschung, Lehre und Führungsverantwortung an der Schnittstelle von Umweltchemie, analytischen Methoden und Datenwissenschaft."
+responsibilities = [
+  "Leitung eines vierköpfigen Forschungs- und Analytikteams sowie Betreuung von Promovierenden und technischem Personal.",
+  "Koordination von Mikroplastik-Analysen, Qualitätssicherung, Berichterstattung und gerätebezogenen Abläufen für Forschungs- und Auftragsprojekte.",
+  "Lehre in Umweltanalytik, Datenanalyse, Statistik und wissenschaftlichem Arbeiten."
+]
+contributions = [
+  "Entwicklung reproduzierbarer und parallelisierbarer R-Workflows für die Auswertung analytischer Daten.",
+  "Wartung und Ausbau der Softwareinfrastruktur der Arbeitsgruppe."
+]
+achievements = [
+  "Über 30 begutachtete Publikationen mit mehr als 3.000 Zitationen.",
+  "1,1 Mio. Euro eingeworbene und verwaltete Drittmittel."
+]
+
+[[appointments]]
+title = "Wissenschaftlicher Mitarbeiter und Doktorand"
+institution = "Universität Koblenz-Landau"
+department = "Umwelt- und Bodenchemie"
+location = "Landau, Deutschland"
+start = "Dez 2016"
+end = "Nov 2022"
+sort_date = "2016-12"
+summary = "Promotion zu landwirtschaftlichen Kunststoffen als Quelle von Mikroplastik im Boden; daneben Methodenentwicklung, Qualitätssicherung und Lehre."
+responsibilities = [
+  "Entwicklung und Validierung analytischer Methoden mit Qualitätskontrollen und statistischer Auswertung nach Eurachem-Leitlinien.",
+  "Vertretung des wissenschaftlichen Mittelbaus in Fachbereichsgremien."
+]
+contributions = [
+  "Erstautoren-Publikationen zur Quantifizierung von Mikroplastik im Boden, zu Screening-Untersuchungen landwirtschaftlicher Systeme und zur Aufklärung des Verbleibs phenolischer Verbindungen mittels komponentenspezifischer Isotopenanalyse.",
+  "Einbringen umweltchemischer Expertise in das interdisziplinäre PLAST-Projekt zu Umweltrisiken von Kunststoffen, gemeinsam mit Kommunikationswissenschaften und Psychologie."
+]
+achievements = [
+  "Doktorgrad (Dr. rer. nat.) 2022 mit Note 1,1 (magna cum laude) verliehen.",
+  "Fachbereichspreis für die beste Dissertation 2022/23."
+]
+
+[[appointments]]
+title = "Werkstudent"
+institution = "RIFCON GmbH"
+location = "Hirschberg, Deutschland"
+start = "Apr 2015"
+end = "Okt 2015"
+sort_date = "2015-04"
+# employment_type = "Part-time"
+summary = "Ökologische und pflanzenbezogene Modellierung (Python, PCSE/WOFOST) in einem Verbundprojekt — ein früher Ausgangspunkt für meine spätere Arbeit an der Schnittstelle von Wissenschaft und angewandter Umweltbewertung."
+
+[[appointments]]
+title = "Praktikant"
+institution = "MITOX Consultants / Eurofins"
+location = "Fourcès, Frankreich"
+start = "Juni 2014"
+end = "Aug 2014"
+sort_date = "2014-06"
+# employment_type = "Internship"
+summary = "GLP-konforme ökotoxikologische Prüfung von Pflanzenschutzmitteln an Nichtziel-Arthropoden, einschließlich (Halb-)Freilandversuchen und Tests auf chronische Toxizität."
+
+# ------------------------------------------------------------------
+# Education
+# ------------------------------------------------------------------
+[[education]]
+degree = "Dr. rer. nat. Umweltwissenschaften"
+university = "Universität Koblenz-Landau"
+start = "Dez 2016"
+end = "Mai 2022"
+sort_date = "2022-05"
+thesis = "Agricultural Plastic Covers — Source of Plastic Debris in Soil?"
+supervisors = ["Prof. Dr. Gabriele E. Schaumann", "Prof. Dr. Geert Cornelis", "Prof. Dr. Denise M. Mitrano"]
+distinctions = ["Note 1,1 (magna cum laude)", "Fachbereichspreis für die beste Dissertation 2022/23"]
+description = "Aufklärung von Eintrag, Verbleib und Auswirkungen landwirtschaftlicher Kunststoffe: Entwicklung analytischer Methoden zur Polymerquantifizierung im Boden, Screening-Untersuchungen im Feld und Effekte auf Bodenmikroorganismen."
+
+[[education]]
+degree = "M.Sc. Ecotoxicology"
+university = "Universität Koblenz-Landau"
+start = "Okt 2013"
+end = "Nov 2016"
+sort_date = "2016-11"
+thesis = "Tracking the transformation of phenolic compounds in soil with compound-specific stable carbon isotope analysis"
+supervisors = ["Prof. Dr. Gabriele E. Schaumann", "PD Dr. Martin Elsner"]
+distinctions = ["Note 1,2"]
+
+[[education]]
+degree = "B.Sc. Umweltwissenschaften"
+university = "Universität Koblenz-Landau"
+start = "Okt. 2010"
+end = "Nov. 2013"
+sort_date = "2013-11"
+
+# ------------------------------------------------------------------
+# Grants, awards and recognition
+# ------------------------------------------------------------------
+[[grants]]
+kind = "funding"
+title = "AgriRePlas — Verringerung des Plastikfußabdrucks in der Landwirtschaft"
+institution = "EU Interreg Oberrhein"
+period = "2025 – 2029"
+role = "Leiter der Arbeitspakete an der RPTU"
+description = "Ein grenzüberschreitendes Projekt für das Elsass, Baden, die Südpfalz und die Nordschweiz."
+
+[[grants]]
+kind = "funding"
+title = "MIBAS — Mikroplastik-Hintergrundwerte in deutschen Agrarböden"
+institution = "Umweltbundesamt (UBA), RefoPlan"
+period = "2024 – 2027"
+role = "Projektleiter"
+description = "Ableitung von Mikroplastik-Hintergrundwerten für Acker- und Grünlandböden in Deutschland."
+
+# ------------------------------------------------------------------
+# Committees and service
+# ------------------------------------------------------------------
+[[service]]
+category = "Gremien"
+title = "Vorsitz des Fachausschusses „Mikroplastik im Boden“"
+organization = "Bundesverband Boden"
+period = "2022 – heute"
+description = "Der Fachausschuss fördert den fachlichen Austausch und die Formulierung von Stellungnahmen zu Mikroplastik in Böden."
+
+# ------------------------------------------------------------------
+# Teaching (compact selection; details on the Teaching page)
+# ------------------------------------------------------------------
+[[teaching]]
+category = "Ausgewählte Lehrveranstaltungen"
+course = "Advanced Environmental Chemistry"
+institution = "RPTU Kaiserslautern-Landau"
+level = "M.Sc."
+period = "2016 – 2024"
+role = "Leitung von Vorlesung und Tutorium"
+
+[[teaching]]
+category = "Ausgewählte Lehrveranstaltungen"
+course = "Environmental Analysis"
+institution = "RPTU Kaiserslautern-Landau"
+level = "B.Sc."
+period = "2021 – heute"
+role = "Leitung von Vorlesung und Co-Betreuung der Laborübung"
+
+[[teaching]]
+category = "Betreuung"
+course = "Doktor-, Master- und Bachelorarbeiten"
+institution = "RPTU Kaiserslautern-Landau"
+period = "2017 – heute"
+role = "Erst- und Zweitgutachter, externer Betreuer"
+description = "Zwei laufende Promotionsvorhaben (hydrophile Polymere im Boden; Mikroplastik-Hintergrundwerte), neun abgeschlossene Masterarbeiten und zwei Bachelorarbeiten. Ehemalige Betreute haben anschließend in Schweden, Frankreich und Österreich Promotionsvorhaben aufgenommen."
+
+# ------------------------------------------------------------------
+# Skills
+# ------------------------------------------------------------------
+[[skills]]
+category = "Technische Kenntnisse"
+
+[[skills.items]]
+name = "Programmierung und Reproduzierbarkeit"
+description = "R, Python, Git, Quarto/R Markdown, LaTeX, automatisierte Berichterstellung."
+
+[[skills.items]]
+name = "Daten und Statistik"
+description = "Kalibrierung und Validierung, multivariate Analyse, Versuchsplanung, Qualitätssicherung."
+
+[[skills.items]]
+name = "Analytische Methoden"
+description = "Pyrolyse-GC/MS, GC-IRMS, LC-MS, HPLC, FTIR-ATR, TGA-MS."
+
+[[skills]]
+category = "Sprachen"
+
+[[skills.items]]
+name = "Deutsch"
+description = "Muttersprache."
+
+[[skills.items]]
+name = "Englisch"
+description = "Fließend in Wort und Schrift; Publikations-, Lehr- und Konferenzsprache."
+
+[[skills.items]]
+name = "Französisch"
+description = "Grundkenntnisse."
+
+# ------------------------------------------------------------------
+# Publications (reuses the BibTeX pipeline)
+# ------------------------------------------------------------------
+[publications]
+source = "publications.bib"
+featured_limit = 3
+show_abstracts = true
+show_complete = false
+note = "Autor bzw. Co-Autor von über 30 begutachteten Publikationen zu Kunststoffen in der Landwirtschaft, zur Analytik von Mikroplastik im Boden und zu Open-Source-Werkzeugen für die Klassifikation von Spektren. [Zur vollständigen, durchsuchbaren Publikationsliste ...](/publications)"

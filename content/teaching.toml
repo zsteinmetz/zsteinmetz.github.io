@@ -1,6 +1,6 @@
 type = "sections"
 title = "Teaching"
-description = "I help students connect environmental processes with the methods used to observe them: from sampling and laboratory analysis to statistics, critical evaluation, and scientific communication. My teaching combines research-informed learning, hands-on analytical practice, and independent and critical thinking."
+description = "I support students in connecting environmental processes with the methods used to observe them: from sampling and laboratory analysis to statistics, critical evaluation, and scientific communication. My teaching combines research-informed learning, hands-on analytical practice, and independent and critical thinking."
 
 [[sections]]
 id = "principles"

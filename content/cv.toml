@@ -13,9 +13,9 @@ description = "Environmental scientist analyzing the fate and effects of anthrop
 # Overview keys are root-level: they MUST stay above the first table header
 # ([headings]) — in TOML, a bare key after an [[array]] or [table] header
 # belongs to that last table instead of the document root.
-teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning and research-based formats to develop disciplinary knowledge and independent scientific judgment. [Explore teaching, courses, supervision, and curriculum development.](/teaching)"""
+teaching_overview = """I teach environmental science as an evidence-based and practical discipline. My courses connect conceptual understanding with laboratory work, critical reading, data analysis, and transparent scientific communication. I use active-learning and research-based formats to develop disciplinary knowledge and independent scientific judgment. [Explore teaching, courses, and supervision ...](/teaching)"""
 
-grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds, from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to practice-oriented collaborative projects on the use, reuse, and recycling of plastics in agriculture funded by EU Interreg Upper Rhine. [Explore current research and funding lines.](/research)"""
+grants_overview = """My research is funded through competitive grants and contract research from national agencies and institutional funds, from commissioned environmental monitoring and reporting for the German Environment Agency (UBA) to practice-oriented collaborative projects on the use, reuse, and recycling of plastics in agriculture funded by EU Interreg Upper Rhine. [Explore my current research ...](/research)"""
 
 service_overview = """I contribute to faculty governance as a staff representative and review grant proposals and manuscripts for funding organizations (DFG, FNR) and peer-reviewed journals."""
 
@@ -88,7 +88,7 @@ title = "Environmental systems and pollutants"
 content = "Fate, transport, transformation, and effects of anthropogenic pollutants in soils, agricultural systems, and connected terrestrial environments."
 
 [[highlights.items]]
-title = "Environmental analytical chemistry"
+title = "Environmental analysis"
 content = "Method development, validation, and quality assurance for complex environmental matrices; expertise in pyrolysis-GC/MS, GC-IRMS, LC-MS, and FTIR-ATR."
 
 [[highlights.items]]
@@ -295,4 +295,4 @@ source = "publications.bib"
 featured_limit = 3
 show_abstracts = true
 show_complete = false
-note = "Author or co-author of 30+ peer-reviewed publications on agricultural plastics, microplastic analysis in soil, and open-source spectral classification. [Browse the complete, searchable publication record.](/publications)"
+note = "Author or co-author of 30+ peer-reviewed publications on agricultural plastics, microplastic analysis in soil, and open-source spectral classification. [Browse the complete, searchable publication record ...](/publications)"

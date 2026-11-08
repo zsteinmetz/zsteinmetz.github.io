@@ -43,8 +43,9 @@ matomo_site_id = "2"
 enabled = true
 locales = ["en", "de"]
 default_locale = "en"
-# "auto" means the locale will be determined by the browser's language setting, "fixed" means the locale will be fixed to the default locale (but can still be switched; to disable switching, set enabled = false)
-mode = "auto"
+# "auto" means the locale will be determined by the browser's language setting
+# "fixed" means the locale will be fixed to the default locale (but can still be switched; to disable switching, set enabled = false)
+mode = "fixed"
 fixed_locale = "en"
 # If true, PRISM will remember user's language preference in browser's localStorage
 persist = true

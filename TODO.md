@@ -116,10 +116,10 @@ Translate all English content to German.
 
 Implementation:
 
-- [ ] Translate the missing files into `content_de/` with the same filenames and schema as `content/`: `cv.toml`, `research.toml`, `teaching.toml`, `teaching.md`, and `teaching-hint.md`.
-- [ ] Review the existing `content_de/` files (`about.toml`, `bio.md`, `config.toml`, `news.toml`, `publications.toml`) for completeness against their English counterparts and translate any untranslated English leftovers.
-- [ ] Leave `content_de/imprint.md`, `imprint.toml`, `privacy.md`, and `privacy.toml` untouched — complete translations are already present.
-- [ ] Keep translations consistent with the German UI strings already in `src/lib/i18n/messages.ts` (reuse its terminology, e.g., for section names and labels).
-- [ ] Keep scientific titles/abstracts in their original language (as sourced from `content/publications.bib`) and apply German conventions (formal "Sie", German quotation marks, etc.) to the translated prose, matching the existing German content's style.
-- [ ] Translate the review decisions from item 6 where applicable, so the German content benefits from the same proofreading pass.
-- [ ] Validate: `npm run lint` + `npm run build`; switch the site to German and click through every page to confirm no missing translations (English fallbacks) remain and nothing renders broken.
+- [x] Translate the missing files into `content_de/` with the same filenames and schema as `content/`: `cv.toml`, `research.toml`, `teaching.toml`, `teaching.md`, and `teaching-hint.md`.
+- [x] Review the existing `content_de/` files (`about.toml`, `bio.md`, `config.toml`, `news.toml`, `publications.toml`) for completeness against their English counterparts and translate any untranslated English leftovers.
+- [x] Leave `content_de/imprint.md`, `imprint.toml`, `privacy.md`, and `privacy.toml` untouched — complete translations are already present.
+- [x] Keep translations consistent with the German UI strings already in `src/lib/i18n/messages.ts` (reuse its terminology, e.g., for section names and labels).
+- [x] Keep scientific titles/abstracts in their original language (as sourced from `content/publications.bib`) and apply German conventions (formal "Sie", German quotation marks, etc.) to the translated prose, matching the existing German content's style.
+- [x] Translate the review decisions from item 6 where applicable, so the German content benefits from the same proofreading pass.
+- [x] Validate: `npm run lint` + `npm run build`; switch the site to German and click through every page to confirm no missing translations (English fallbacks) remain and nothing renders broken.

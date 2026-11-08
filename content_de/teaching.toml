@@ -1,0 +1,27 @@
+type = "sections"
+title = "Lehre"
+description = "Ich unterstütze Studierende, Umweltprozesse mit Untersuchungsmethoden zu verknüpfen: von der Probenahme und Laboranalyse bis hin zu Statistik, kritischer Bewertung und wissenschaftlicher Kommunikation. Meine Lehre verbindet forschungsbasiertes Lernen, praktische Laborarbeit sowie selbstständiges und kritisches Denken."
+
+[[sections]]
+id = "principles"
+type = "highlight"
+title = ""
+columns = 1
+
+[[sections.items]]
+title = "Forschungsbasiertes Lernen"
+content = "Aktuelle Umweltfragen und wissenschaftliche Literatur verknüpfen zentrale Konzepte mit laufender Forschung. In Journal-Club-Diskussionen lernen Studierende, Forschungsergebnisse, Methoden und Unsicherheiten kritisch zu bewerten."
+
+[[sections.items]]
+title = "Messung, Daten und Interpretation"
+content = "Studierende verknüpfen Laborbeobachtungen und analytische Messungen mit Statistik und umweltwissenschaftlicher Interpretation. Statt Messgeräte als Blackbox zu behandeln, lernen sie, wie Daten entstehen, bewertet und kommuniziert werden."
+
+[[sections.items]]
+title = "Selbstständiges und kritisches wissenschaftliches Arbeiten"
+content = "Inverted-Classroom-Formate, forschungsnahe Aufgabenstellungen und angeleitete Diskussionen fördern selbstgesteuertes Lernen, kritische Reflexion und kollaboratives Problemlösen."
+
+[[sections]]
+id = "courses"
+type = "markdown"
+title = ""
+source = "teaching.md"
