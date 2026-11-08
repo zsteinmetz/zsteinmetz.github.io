@@ -4,11 +4,13 @@ import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import { cn } from '@/lib/utils';
 import { formatPeriod, sortCvEntriesDesc } from '@/lib/cv';
+import { useMessages } from '@/lib/i18n/useMessages';
 import type { CvAppointment } from '@/types/cv';
 import CvSection, { CvBulletList, CvDetailGroup, CvLinkList, CvPeriodPill, CvReferenceList } from './CvSection';
 
 function AppointmentItem({ item, index, isLast }: { item: CvAppointment; index: number; isLast: boolean }) {
   const [expanded, setExpanded] = useState(false);
+  const messages = useMessages();
 
   const hasDetails = Boolean(
     item.responsibilities?.length ||
@@ -20,7 +22,7 @@ function AppointmentItem({ item, index, isLast }: { item: CvAppointment; index: 
 
   const detailsId = `cv-appointment-${index}-details`;
   const isCurrent = !item.end;
-  const period = formatPeriod(item.start, item.end);
+  const period = formatPeriod(item.start, item.end, messages.cv.present);
   const affiliation = [item.institution, item.department].filter(Boolean).join(' · ');
   const context = [item.location, item.employment_type].filter(Boolean).join(' · ');
 
@@ -58,29 +60,29 @@ function AppointmentItem({ item, index, isLast }: { item: CvAppointment; index: 
             aria-controls={detailsId}
             className="print:hidden mt-3 inline-flex items-center gap-1 rounded-md px-1.5 py-1 text-xs font-semibold text-accent-text transition-colors hover:bg-accent/10"
           >
-            {expanded ? 'Hide details' : 'Show details'}
+            {expanded ? messages.cv.hideDetails : messages.cv.showDetails}
             <ChevronDownIcon className={cn('h-3.5 w-3.5 transition-transform', expanded && 'rotate-180')} aria-hidden="true" />
           </button>
 
           <div id={detailsId} className={cn('cv-details', !expanded && 'hidden')}>
             <div className="mt-3 max-w-3xl space-y-4 border-l-2 border-neutral-200 pl-4">
               {item.responsibilities && item.responsibilities.length > 0 && (
-                <CvDetailGroup label="Responsibilities and activities">
+                <CvDetailGroup label={messages.cv.responsibilities}>
                   <CvBulletList items={item.responsibilities} />
                 </CvDetailGroup>
               )}
               {item.contributions && item.contributions.length > 0 && (
-                <CvDetailGroup label="Selected contributions">
+                <CvDetailGroup label={messages.cv.selectedContributions}>
                   <CvBulletList items={item.contributions} />
                 </CvDetailGroup>
               )}
               {item.achievements && item.achievements.length > 0 && (
-                <CvDetailGroup label="Selected achievements">
+                <CvDetailGroup label={messages.cv.selectedAchievements}>
                   <CvBulletList items={item.achievements} />
                 </CvDetailGroup>
               )}
               {item.publications && item.publications.length > 0 && (
-                <CvDetailGroup label="Related publications">
+                <CvDetailGroup label={messages.cv.relatedPublications}>
                   <CvReferenceList items={item.publications} />
                 </CvDetailGroup>
               )}

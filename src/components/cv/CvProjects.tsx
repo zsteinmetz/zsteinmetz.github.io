@@ -6,11 +6,13 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import ReactMarkdown from 'react-markdown';
 import { markdownComponents } from '@/components/ui/MarkdownComponents';
 import { cn } from '@/lib/utils';
+import { useMessages } from '@/lib/i18n/useMessages';
 import type { CvProject } from '@/types/cv';
 import CvSection, { CvBulletList, CvDetailGroup, CvLinkList, CvPeriodPill, CvReferenceList } from './CvSection';
 
 function ProjectCard({ project, index }: { project: CvProject; index: number }) {
   const [expanded, setExpanded] = useState(false);
+  const messages = useMessages();
 
   const hasDetails = Boolean(
     project.background ||
@@ -41,7 +43,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
         <div className="flex flex-wrap gap-2">
           {project.featured && (
             <span className="rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-accent-foreground">
-              Featured
+              {messages.cv.featured}
             </span>
           )}
           {project.period && <CvPeriodPill>{project.period}</CvPeriodPill>}
@@ -51,7 +53,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
       {project.question && (
         <blockquote className="mt-4 max-w-3xl border-l-2 border-accent/60 pl-4">
           <span className="mb-1 block text-xs font-semibold uppercase tracking-wider text-accent-text">
-            Research question
+            {messages.cv.researchQuestion}
           </span>
           <p className="text-sm italic leading-relaxed text-neutral-600 dark:text-neutral-500">{project.question}</p>
         </blockquote>
@@ -59,14 +61,14 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
 
       {project.role && (
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">
-          <span className="font-medium text-primary">Role: </span>
+          <span className="font-medium text-primary">{messages.cv.role}: </span>
           {project.role}
         </p>
       )}
 
       {project.outcomes && (
         <div className="mt-3 max-w-3xl">
-          <CvDetailGroup label="Outcomes and impact">
+          <CvDetailGroup label={messages.cv.outcomes}>
             <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.outcomes}</p>
           </CvDetailGroup>
         </div>
@@ -94,36 +96,36 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
             aria-controls={detailsId}
             className="print:hidden mt-4 inline-flex items-center gap-1 rounded-md px-1.5 py-1 text-xs font-semibold text-accent-text transition-colors hover:bg-accent/10"
           >
-            {expanded ? 'Hide details' : 'Show details'}
+            {expanded ? messages.cv.hideDetails : messages.cv.showDetails}
             <ChevronDownIcon className={cn('h-3.5 w-3.5 transition-transform', expanded && 'rotate-180')} aria-hidden="true" />
           </button>
 
           <div id={detailsId} className={cn('cv-details', !expanded && 'hidden')}>
             <div className="mt-3 space-y-4 border-l-2 border-neutral-200 pl-4">
               {project.background && (
-                <CvDetailGroup label="Background and context">
+                <CvDetailGroup label={messages.cv.background}>
                   <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.background}</p>
                 </CvDetailGroup>
               )}
               {project.contributions && project.contributions.length > 0 && (
-                <CvDetailGroup label="Main contributions">
+                <CvDetailGroup label={messages.cv.mainContributions}>
                   <CvBulletList items={project.contributions} />
                 </CvDetailGroup>
               )}
               {project.collaborators && project.collaborators.length > 0 && (
-                <CvDetailGroup label="Collaborators">
+                <CvDetailGroup label={messages.cv.collaborators}>
                   <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">
                     {project.collaborators.join(', ')}
                   </p>
                 </CvDetailGroup>
               )}
               {project.funding && (
-                <CvDetailGroup label="Funding">
+                <CvDetailGroup label={messages.cv.funding}>
                   <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.funding}</p>
                 </CvDetailGroup>
               )}
               {project.publications && project.publications.length > 0 && (
-                <CvDetailGroup label="Related publications">
+                <CvDetailGroup label={messages.cv.relatedPublications}>
                   <CvReferenceList items={project.publications} />
                 </CvDetailGroup>
               )}

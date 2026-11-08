@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { useMessages } from '@/lib/i18n/useMessages';
 
 export interface CvSectionNavItem {
   id: string;
@@ -13,6 +14,7 @@ export interface CvSectionNavItem {
  * scrollable pill index with scroll-spy highlighting. Hidden in print.
  */
 export default function CvSectionNav({ items }: { items: CvSectionNavItem[] }) {
+  const messages = useMessages();
   const [activeId, setActiveId] = useState<string>(items[0]?.id ?? '');
   const listRef = useRef<HTMLUListElement>(null);
 
@@ -60,7 +62,7 @@ export default function CvSectionNav({ items }: { items: CvSectionNavItem[] }) {
 
   return (
     <nav
-      aria-label="Curriculum vitae sections"
+      aria-label={messages.cv.sectionNavLabel}
       className="print:hidden sticky top-16 z-30 -mx-4 border-y border-neutral-200/60 bg-background/90 px-4 backdrop-blur lg:top-20"
     >
       <ul ref={listRef} className="scrollbar-none flex gap-1 overflow-x-auto py-2.5">

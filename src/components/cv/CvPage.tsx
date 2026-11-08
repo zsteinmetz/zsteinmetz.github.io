@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { PrinterIcon } from '@heroicons/react/24/outline';
+import { useMessages } from '@/lib/i18n/useMessages';
 import type { CvHeadings, CvPageConfig } from '@/types/cv';
 import type { Publication } from '@/types/publication';
 import CvProfile from './CvProfile';
@@ -45,6 +46,7 @@ interface CvPageProps {
  * research portfolio, publications, teaching, grants/awards, service and skills.
  */
 export default function CvPage({ config, publications, metrics, enableOnePageMode }: CvPageProps) {
+  const messages = useMessages();
   const headings: Required<CvHeadings> = { ...DEFAULT_HEADINGS, ...(config.headings || {}) };
   const hasPublications = publications.length > 0;
 
@@ -82,27 +84,26 @@ export default function CvPage({ config, publications, metrics, enableOnePageMod
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
     >
-      <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-4">
-        <div>
-          {/* An empty title ("") hides the page heading */}
-          {config.title && (
-            <h1 className="text-4xl font-serif font-bold text-primary">{config.title}</h1>
-          )}
-          {config.description && (
-            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-500">
-              {config.description}
-            </p>
-          )}
-        </div>
+      <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+        {/* An empty title ("") hides the page heading; the print button always
+            sits right of the heading row, independent of the description. */}
+        {config.title && (
+          <h1 className="text-4xl font-serif font-bold text-primary">{config.title}</h1>
+        )}
         <button
           type="button"
           onClick={() => window.print()}
           className="print:hidden inline-flex shrink-0 items-center gap-2 rounded-lg border border-neutral-200 bg-card px-4 py-2 text-sm font-medium text-primary shadow-sm transition-colors hover:border-accent/40 hover:bg-accent/10"
         >
           <PrinterIcon className="h-4 w-4" aria-hidden="true" />
-          Print / PDF
+          {messages.cv.printPdf}
         </button>
       </div>
+      {config.description && (
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-500">
+          {config.description}
+        </p>
+      )}
 
       <div className="mt-8">
         <CvSectionNav items={navItems} />

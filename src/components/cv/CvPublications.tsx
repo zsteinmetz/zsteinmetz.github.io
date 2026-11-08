@@ -6,26 +6,29 @@ import FormattedBibTeXText from '@/components/publications/FormattedBibTeXText';
 import MetricsSummaryRow from '@/components/publications/MetricsSummaryRow';
 import type { PublicationMetricsSummary } from '@/lib/metrics';
 import { useMessages } from '@/lib/i18n/useMessages';
+import type { LocaleMessages } from '@/lib/i18n/messages';
 import { cvDateKey } from '@/lib/cv';
 import type { Publication } from '@/types/publication';
 import ReactMarkdown from 'react-markdown';
 import { markdownComponents } from '@/components/ui/MarkdownComponents';
 import CvSection from './CvSection';
 
-const TYPE_LABELS: Record<string, string> = {
-  journal: 'Journal articles',
-  conference: 'Conference papers',
-  workshop: 'Workshop papers',
-  book: 'Books',
-  'book-chapter': 'Book chapters',
-  thesis: 'Theses',
-  preprint: 'Preprints and working papers',
-  'technical-report': 'Reports and technical outputs',
-  patent: 'Patents',
+/** Map a publication type to its localized bibliography-group label. */
+const TYPE_KEYS: Record<string, keyof LocaleMessages['cv']['bibliographyTypes']> = {
+  journal: 'journal',
+  conference: 'conference',
+  workshop: 'workshop',
+  book: 'book',
+  'book-chapter': 'bookChapter',
+  thesis: 'thesis',
+  preprint: 'preprint',
+  'technical-report': 'technicalReport',
+  patent: 'patent',
 };
 
 function PublicationItem({ publication, number, showAbstracts }: { publication: Publication; number: number; showAbstracts: boolean }) {
   const [showAbstract, setShowAbstract] = useState(false);
+  const messages = useMessages();
   const venue = publication.journal || publication.conference;
 
   return (
@@ -69,11 +72,11 @@ function PublicationItem({ publication, number, showAbstracts }: { publication: 
             rel="noopener noreferrer"
             className="rounded px-1 py-0.5 font-medium text-accent-text transition-colors hover:bg-accent/10"
           >
-            Publisher link
+            {messages.cv.publisherLink}
           </a>
         )}
         {typeof publication.citations === 'number' && (
-          <span className="text-neutral-400">Cited by {publication.citations}</span>
+          <span className="text-neutral-400">{messages.publications.citedBy} {publication.citations}</span>
         )}
         {showAbstracts && publication.abstract && (
           <button
@@ -82,7 +85,7 @@ function PublicationItem({ publication, number, showAbstracts }: { publication: 
             aria-expanded={showAbstract}
             className="print:hidden rounded px-1 py-0.5 font-medium text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-primary"
           >
-            {showAbstract ? 'Hide abstract' : 'Abstract'}
+            {showAbstract ? messages.publications.hideAbstract : messages.publications.abstract}
           </button>
         )}
       </div>
@@ -118,7 +121,7 @@ export default function CvPublications({ title, publications, metrics, enableOne
   const groups = types
     .map((type) => ({
       type,
-      label: TYPE_LABELS[type] || 'Other outputs',
+      label: TYPE_KEYS[type] ? messages.cv.bibliographyTypes[TYPE_KEYS[type]] : messages.cv.otherOutputs,
       items: sorted.filter((pub) => pub.type === type),
     }));
 
@@ -150,7 +153,7 @@ export default function CvPublications({ title, publications, metrics, enableOne
 
       {featured.length > 0 && (
         <div className="mb-10">
-          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Featured publications</h3>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">{messages.cv.featuredPublications}</h3>
           <ol className="space-y-5">
             {featured.map((publication) => {
               counter += 1;
@@ -169,7 +172,7 @@ export default function CvPublications({ title, publications, metrics, enableOne
 
       {showComplete && (
         <div>
-          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">Complete bibliography</h3>
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-accent-text">{messages.cv.completeBibliography}</h3>
           {groups.map((group) => (
             <div key={group.type} className="mb-6 last:mb-0">
               <h4 className="mb-3 border-b border-neutral-200 pb-1.5 text-xs font-semibold uppercase tracking-wider text-neutral-500">

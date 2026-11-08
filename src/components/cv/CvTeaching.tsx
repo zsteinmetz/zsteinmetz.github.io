@@ -3,11 +3,13 @@
 import ReactMarkdown from 'react-markdown';
 import { markdownComponents } from '@/components/ui/MarkdownComponents';
 import type { CvTeaching as CvTeachingData } from '@/types/cv';
+import { useMessages } from '@/lib/i18n/useMessages';
 import CvSection, { CvDetailGroup, CvPeriodPill } from './CvSection';
 
 const CATEGORY_ORDER = ['Teaching', 'Supervision', 'Mentoring'];
 
 function TeachingItem({ item }: { item: CvTeachingData }) {
+  const messages = useMessages();
   const affiliation = [item.institution, item.level].filter(Boolean).join(' · ');
 
   return (
@@ -23,7 +25,7 @@ function TeachingItem({ item }: { item: CvTeachingData }) {
       )}
       {item.methods && item.methods.length > 0 && (
         <div className="mt-3">
-          <CvDetailGroup label="Methods">
+          <CvDetailGroup label={messages.cv.methods}>
             <ul className="flex flex-wrap gap-2">
               {item.methods.map((method) => (
                 <li

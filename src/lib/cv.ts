@@ -60,8 +60,8 @@ export function sortCvEntriesDesc<T extends CvDatedEntry>(items: T[]): T[] {
 }
 
 /** "Sep 2025" + "" -> "Sep 2025 – Present"; tolerates missing fields. */
-export function formatPeriod(start?: string, end?: string): string | undefined {
+export function formatPeriod(start?: string, end?: string, presentLabel: string = 'Present'): string | undefined {
   if (start && end) return `${start} – ${end}`;
-  if (start) return `${start} – Present`;
+  if (start) return `${start} – ${presentLabel}`;
   return end || undefined;
 }

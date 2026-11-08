@@ -2,6 +2,7 @@
 
 import ReactMarkdown from 'react-markdown';
 import { markdownComponents } from '@/components/ui/MarkdownComponents';
+import { useMessages } from '@/lib/i18n/useMessages';
 import CvSection, { CvDetailGroup, CvLinkList } from './CvSection';
 import type { CvProfile as CvProfileData } from '@/types/cv';
 
@@ -12,6 +13,7 @@ interface CvProfileProps {
 
 /** Academic profile: narrative introduction, research interests and links. */
 export default function CvProfile({ title, profile }: CvProfileProps) {
+  const messages = useMessages();
   return (
     <CvSection id="cv-profile" title={title}>
       {profile.narrative && (
@@ -22,7 +24,7 @@ export default function CvProfile({ title, profile }: CvProfileProps) {
 
       {profile.interests && profile.interests.length > 0 && (
         <div className="mt-6">
-          <CvDetailGroup label="Areas of expertise">
+          <CvDetailGroup label={messages.profile.researchInterests}>
             <ul className="flex flex-wrap gap-2">
               {profile.interests.map((interest) => (
                 <li
@@ -39,7 +41,7 @@ export default function CvProfile({ title, profile }: CvProfileProps) {
 
       {profile.links && profile.links.length > 0 && (
         <div className="mt-6">
-          <CvDetailGroup label="Profiles and links">
+          <CvDetailGroup label={messages.cv.profilesAndLinks}>
             <CvLinkList links={profile.links} />
           </CvDetailGroup>
         </div>

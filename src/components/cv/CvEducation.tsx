@@ -1,11 +1,13 @@
 'use client';
 
 import { formatPeriod, sortCvEntriesDesc } from '@/lib/cv';
+import { useMessages } from '@/lib/i18n/useMessages';
 import type { CvEducation as CvEducationData } from '@/types/cv';
 import CvSection, { CvDetailGroup, CvPeriodPill } from './CvSection';
 
 function EducationItem({ item, isLast }: { item: CvEducationData; isLast: boolean }) {
-  const period = formatPeriod(item.start, item.end);
+  const messages = useMessages();
+  const period = formatPeriod(item.start, item.end, messages.cv.present);
   const affiliation = [item.university, item.department].filter(Boolean).join(' · ');
 
   return (
@@ -27,7 +29,7 @@ function EducationItem({ item, isLast }: { item: CvEducationData; isLast: boolea
 
       {item.thesis && (
         <div className="mt-3">
-          <CvDetailGroup label="Thesis">
+          <CvDetailGroup label={messages.cv.thesis}>
             <p className="max-w-3xl text-sm italic leading-relaxed text-neutral-600 dark:text-neutral-500">{item.thesis}</p>
           </CvDetailGroup>
         </div>
@@ -35,7 +37,7 @@ function EducationItem({ item, isLast }: { item: CvEducationData; isLast: boolea
 
       {item.supervisors && item.supervisors.length > 0 && (
         <p className="mt-2 max-w-3xl text-sm text-neutral-600 dark:text-neutral-500">
-          <span className="font-medium text-primary">Supervised by </span>
+          <span className="font-medium text-primary">{messages.cv.supervisedBy} </span>
           {item.supervisors.join(', ')}
         </p>
       )}
