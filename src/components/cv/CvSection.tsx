@@ -2,6 +2,7 @@
 
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
+import ExternalLink from '@/components/ui/ExternalLink';
 import type { CvLink } from '@/types/cv';
 
 interface CvSectionProps {
@@ -76,15 +77,13 @@ export function CvLinkList({ links, className }: { links: CvLink[]; className?: 
   return (
     <div className={cn('flex flex-wrap gap-2', className)}>
       {links.map((link) => (
-        <a
+        <ExternalLink
           key={`${link.label}-${link.url}`}
           href={link.url}
-          target="_blank"
-          rel="noopener noreferrer"
           className="inline-flex items-center rounded-full border border-neutral-200 px-2.5 py-1 text-xs font-medium text-accent-text transition-colors hover:bg-accent/10"
         >
           {link.label}
-        </a>
+        </ExternalLink>
       ))}
     </div>
   );

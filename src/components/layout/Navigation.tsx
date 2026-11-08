@@ -219,6 +219,7 @@ export default function Navigation({
                 >
                   <Link
                     href="/"
+                    tabIndex={!showHeaderTitle ? -1 : undefined}
                     className="text-xl lg:text-2xl font-serif font-semibold text-primary hover:text-accent-text transition-colors duration-200"
                   >
                     {effectiveSiteTitle}

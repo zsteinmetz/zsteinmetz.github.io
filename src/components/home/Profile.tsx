@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import {
@@ -11,6 +11,7 @@ import {
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import type { SiteConfig } from '@/lib/config';
 import { useMessages } from '@/lib/i18n/useMessages';
+import ExternalLink from '@/components/ui/ExternalLink';
 
 // Custom ORCID icon component - original "iD" mark, scaled to fill the viewBox
 const OrcidIcon = ({ className }: { className?: string }) => (
@@ -78,6 +79,44 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
     const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
+    const addressContainerRef = useRef<HTMLDivElement>(null);
+    const emailContainerRef = useRef<HTMLDivElement>(null);
+
+    // Open a tooltip on hover, click, or keyboard focus; close it on mouse
+    // leave, on blur (when focus moves outside the button + tooltip), and on
+    // Escape. Keeping focus within the container keeps the tooltip content
+    // (address, email, map link) reachable for keyboard users.
+    const openAddress = () => {
+        if (!isAddressPinned) setShowAddress(true);
+        setLastClickedTooltip('address');
+    };
+
+    const closeAddress = (event?: React.FocusEvent) => {
+        if (event && addressContainerRef.current?.contains(event.relatedTarget as Node)) return;
+        if (!isAddressPinned) setShowAddress(false);
+    };
+
+    const openEmail = () => {
+        if (!isEmailPinned) setShowEmail(true);
+        setLastClickedTooltip('email');
+    };
+
+    const closeEmail = (event?: React.FocusEvent) => {
+        if (event && emailContainerRef.current?.contains(event.relatedTarget as Node)) return;
+        if (!isEmailPinned) setShowEmail(false);
+    };
+
+    const handleTooltipKeyDown = (kind: 'address' | 'email') => (event: React.KeyboardEvent) => {
+        if (event.key === 'Escape') {
+            if (kind === 'address') {
+                setIsAddressPinned(false);
+                setShowAddress(false);
+            } else {
+                setIsEmailPinned(false);
+                setShowEmail(false);
+            }
+        }
+    };
 
     const socialLinks = [
         ...(social.email ? [{
@@ -159,6 +198,9 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                         setLastClickedTooltip('address');
                                     }}
                                     onMouseLeave={() => !isAddressPinned && setShowAddress(false)}
+                                    onFocus={openAddress}
+                                    onBlur={closeAddress}
+                                    onKeyDown={handleTooltipKeyDown('address')}
                                     onClick={() => {
                                         setIsAddressPinned(!isAddressPinned);
                                         setShowAddress(!isAddressPinned);
@@ -169,6 +211,8 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                         : 'text-neutral-600 dark:text-neutral-400 hover:text-accent-text'
                                         }`}
                                     aria-label={link.name}
+                                    aria-expanded={showAddress || isAddressPinned}
+                                    aria-controls="profile-address-tooltip"
                                 >
                                     {isAddressPinned ? (
                                         <MapPinSolidIcon className="h-5 w-5" />
@@ -181,6 +225,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                 <AnimatePresence>
                                     {(showAddress || isAddressPinned) && (
                                         <motion.div
+                                            id="profile-address-tooltip"
                                             initial={{ opacity: 0, y: 10, scale: 0.8 }}
                                             animate={{ opacity: 1, y: -10, scale: 1 }}
                                             exit={{ opacity: 0, y: -20, scale: 0.8 }}
@@ -191,6 +236,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                                 setLastClickedTooltip('address');
                                             }}
                                             onMouseLeave={() => !isAddressPinned && setShowAddress(false)}
+                                            onBlur={closeAddress}
                                         >
                                             <div className="text-center">
                                                 <div className="flex items-center justify-center space-x-2 mb-1">
@@ -201,15 +247,13 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                                 ))}
                                                 <div className="mt-2 flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2 justify-center">
                                                     {social.location_url && (
-                                                        <a
+                                                        <ExternalLink
                                                             href={social.location_url}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
                                                             className="inline-flex items-center justify-center space-x-2 bg-accent hover:bg-accent-dark text-accent-foreground px-3 py-1 rounded-md text-xs font-medium transition-colors duration-200 w-full sm:w-auto"
                                                         >
-                                                            <MapPinIcon className="h-4 w-4" />
+                                                            <MapPinIcon className="h-4 w-4" aria-hidden="true" />
                                                             <span>{messages.profile.googleMap}</span>
-                                                        </a>
+                                                        </ExternalLink>
                                                     )}
                                                 </div>
 
@@ -230,6 +274,9 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                         setLastClickedTooltip('email');
                                     }}
                                     onMouseLeave={() => !isEmailPinned && setShowEmail(false)}
+                                    onFocus={openEmail}
+                                    onBlur={closeEmail}
+                                    onKeyDown={handleTooltipKeyDown('email')}
                                     onClick={() => {
                                         setIsEmailPinned(!isEmailPinned);
                                         setShowEmail(!isEmailPinned);
@@ -240,6 +287,8 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                         : 'text-neutral-600 dark:text-neutral-400 hover:text-accent-text'
                                         }`}
                                     aria-label={link.name}
+                                    aria-expanded={showEmail || isEmailPinned}
+                                    aria-controls="profile-email-tooltip"
                                 >
                                     {isEmailPinned ? (
                                         <EnvelopeSolidIcon className="h-5 w-5" />
@@ -252,6 +301,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                 <AnimatePresence>
                                     {(showEmail || isEmailPinned) && (
                                         <motion.div
+                                            id="profile-email-tooltip"
                                             initial={{ opacity: 0, y: 10, scale: 0.8 }}
                                             animate={{ opacity: 1, y: -10, scale: 1 }}
                                             exit={{ opacity: 0, y: -20, scale: 0.8 }}
@@ -262,6 +312,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                                                 setLastClickedTooltip('email');
                                             }}
                                             onMouseLeave={() => !isEmailPinned && setShowEmail(false)}
+                                            onBlur={closeEmail}
                                         >
                                             <div className="text-center">
                                                 <div className="flex items-center justify-center space-x-2 mb-1">
@@ -287,16 +338,14 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
                         );
                     }
                     return (
-                        <a
+                        <ExternalLink
                             key={link.name}
                             href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             className="p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent-text transition-colors duration-200"
-                            aria-label={link.name}
+                            ariaLabel={link.name}
                         >
-                            <IconComponent className="h-5 w-5" />
-                        </a>
+                            <IconComponent className="h-5 w-5" aria-hidden="true" />
+                        </ExternalLink>
                     );
                 })}
             </div>

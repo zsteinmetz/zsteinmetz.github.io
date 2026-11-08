@@ -1,4 +1,5 @@
 import type { Components } from 'react-markdown';
+import ExternalLink from '@/components/ui/ExternalLink';
 
 // Shared react-markdown element styling used by Markdown-rendering pages.
 export const markdownComponents: Components = {
@@ -18,12 +19,20 @@ export const markdownComponents: Components = {
         // Open external links in a new tab, but keep internal site links
         // (e.g. /research) in the same tab.
         const isExternal = typeof href === 'string' && /^https?:\/\//.test(href);
+        if (isExternal) {
+            return (
+                <ExternalLink
+                    href={href}
+                    className="text-accent-text font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                >
+                    {children}
+                </ExternalLink>
+            );
+        }
         return (
             <a
                 href={href}
                 {...anchorProps}
-                target={isExternal ? '_blank' : undefined}
-                rel={isExternal ? 'noopener noreferrer' : undefined}
                 className="text-accent-text font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
             >
                 {children}
@@ -31,7 +40,7 @@ export const markdownComponents: Components = {
         );
     },
     blockquote: ({ children }) => (
-        <blockquote className="border-l-4 border-accent/50 pl-4 italic my-4 text-neutral-600 dark:text-neutral-500">
+        <blockquote className="border-l-4 border-accent/50 pl-4 italic my-4 text-neutral-600 dark:text-neutral-600">
             {children}
         </blockquote>
     ),

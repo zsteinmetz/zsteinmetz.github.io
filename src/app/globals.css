@@ -271,3 +271,26 @@ html.dark {
     box-shadow: none !important;
   }
 }
+
+/* ============================================================================
+   Reduced motion (WCAG 2.1: respect prefers-reduced-motion)
+   Framer Motion animations degrade via <MotionConfig reducedMotion="user">
+   (src/components/ui/MotionProvider.tsx); this block disables the CSS-side
+   motion: smooth scrolling and transitions/animations.
+   ============================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

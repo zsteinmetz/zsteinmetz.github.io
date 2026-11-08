@@ -2,6 +2,9 @@ export interface LocaleMessages {
   common: {
     all: string;
     copyToClipboard: string;
+    copied: string;
+    skipToContent: string;
+    opensInNewTab: string;
   };
   navigation: {
     openMainMenu: string;
@@ -34,6 +37,7 @@ export interface LocaleMessages {
   };
   publications: {
     searchPlaceholder: string;
+    searchLabel: string;
     filters: string;
     year: string;
     type: string;
@@ -103,6 +107,9 @@ const en: LocaleMessages = {
   common: {
     all: 'All',
     copyToClipboard: 'Copy to clipboard',
+    copied: 'Copied',
+    skipToContent: 'Skip to content',
+    opensInNewTab: '(opens in new tab)',
   },
   navigation: {
     openMainMenu: 'Open main menu',
@@ -135,6 +142,7 @@ const en: LocaleMessages = {
   },
   publications: {
     searchPlaceholder: 'Search publications...',
+    searchLabel: 'Search publications',
     filters: 'Filters',
     year: 'Year',
     type: 'Type',
@@ -204,6 +212,9 @@ const de: LocaleMessages = {
   common: {
     all: 'Alle',
     copyToClipboard: 'In die Zwischenablage kopieren',
+    copied: 'Kopiert',
+    skipToContent: 'Zum Inhalt springen',
+    opensInNewTab: '(öffnet in neuem Tab)',
   },
   navigation: {
     openMainMenu: 'Hauptmenü öffnen',
@@ -236,6 +247,7 @@ const de: LocaleMessages = {
   },
   publications: {
     searchPlaceholder: 'Publikationen suchen...',
+    searchLabel: 'Publikationen durchsuchen',
     filters: 'Filter',
     year: 'Jahr',
     type: 'Typ',

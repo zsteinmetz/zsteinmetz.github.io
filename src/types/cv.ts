@@ -55,6 +55,8 @@ export interface CvProject {
   publications?: string[];
   links?: CvLink[];
   image?: string;
+  // Alternative text for the project image; empty = decorative (deliberate).
+  image_alt?: string;
   featured?: boolean;
 }
 

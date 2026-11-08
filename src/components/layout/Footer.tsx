@@ -25,10 +25,10 @@ export default function Footer({ lastUpdated, legal }: FooterProps) {
     <footer className="border-t border-neutral-200/50 bg-neutral-50/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
-          <p className="text-xs text-neutral-500">
+          <p className="text-xs text-neutral-600 dark:text-neutral-500">
             {messages.footer.lastUpdated}: {formatDate(resolvedLastUpdated, locale)}
           </p>
-          <p className="text-xs text-neutral-500 flex items-center gap-1">
+          <p className="text-xs text-neutral-600 dark:text-neutral-500 flex items-center gap-1">
             {legal?.imprint && (
               <>
                 <Link href={`/${legal.imprint}`} className="hover:text-primary transition-colors duration-200">

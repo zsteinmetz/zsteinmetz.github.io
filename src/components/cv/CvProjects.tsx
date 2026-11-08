@@ -31,7 +31,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
       {project.image && (
         <Image
           src={project.image}
-          alt=""
+          alt={project.image_alt || ''}
           width={960}
           height={480}
           className="mb-5 rounded-lg border border-neutral-200"
@@ -55,12 +55,12 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
           <span className="mb-1 block text-xs font-semibold uppercase tracking-wider text-accent-text">
             {messages.cv.researchQuestion}
           </span>
-          <p className="text-sm italic leading-relaxed text-neutral-600 dark:text-neutral-500">{project.question}</p>
+          <p className="text-sm italic leading-relaxed text-neutral-600 dark:text-neutral-600">{project.question}</p>
         </blockquote>
       )}
 
       {project.role && (
-        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">
+        <p className="mt-3 max-w-3xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-600">
           <span className="font-medium text-primary">{messages.cv.role}: </span>
           {project.role}
         </p>
@@ -69,7 +69,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
       {project.outcomes && (
         <div className="mt-3 max-w-3xl">
           <CvDetailGroup label={messages.cv.outcomes}>
-            <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.outcomes}</p>
+            <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-600">{project.outcomes}</p>
           </CvDetailGroup>
         </div>
       )}
@@ -79,7 +79,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
           {project.methods.map((method) => (
             <span
               key={method}
-              className="rounded-full border border-neutral-200 px-2.5 py-1 text-xs font-medium text-neutral-600 dark:text-neutral-500"
+              className="rounded-full border border-neutral-200 px-2.5 py-1 text-xs font-medium text-neutral-600 dark:text-neutral-600"
             >
               {method}
             </span>
@@ -104,7 +104,7 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
             <div className="mt-3 space-y-4 border-l-2 border-neutral-200 pl-4">
               {project.background && (
                 <CvDetailGroup label={messages.cv.background}>
-                  <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.background}</p>
+                  <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-600">{project.background}</p>
                 </CvDetailGroup>
               )}
               {project.contributions && project.contributions.length > 0 && (
@@ -114,14 +114,14 @@ function ProjectCard({ project, index }: { project: CvProject; index: number }) 
               )}
               {project.collaborators && project.collaborators.length > 0 && (
                 <CvDetailGroup label={messages.cv.collaborators}>
-                  <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">
+                  <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-600">
                     {project.collaborators.join(', ')}
                   </p>
                 </CvDetailGroup>
               )}
               {project.funding && (
                 <CvDetailGroup label={messages.cv.funding}>
-                  <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-500">{project.funding}</p>
+                  <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-600">{project.funding}</p>
                 </CvDetailGroup>
               )}
               {project.publications && project.publications.length > 0 && (

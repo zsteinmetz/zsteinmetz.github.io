@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import ExternalLink from '@/components/ui/ExternalLink';
 import FormattedBibTeXText from '@/components/publications/FormattedBibTeXText';
 import MetricsSummaryRow from '@/components/publications/MetricsSummaryRow';
 import type { PublicationMetricsSummary } from '@/lib/metrics';
@@ -56,24 +57,20 @@ function PublicationItem({ publication, number, showAbstracts }: { publication: 
 
       <div className="mt-1.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
         {publication.doi && (
-          <a
+          <ExternalLink
             href={`https://doi.org/${publication.doi}`}
-            target="_blank"
-            rel="noopener noreferrer"
             className="rounded px-1 py-0.5 font-medium text-accent-text transition-colors hover:bg-accent/10"
           >
             doi:{publication.doi}
-          </a>
+          </ExternalLink>
         )}
         {publication.url && (
-          <a
+          <ExternalLink
             href={publication.url}
-            target="_blank"
-            rel="noopener noreferrer"
             className="rounded px-1 py-0.5 font-medium text-accent-text transition-colors hover:bg-accent/10"
           >
             {messages.cv.publisherLink}
-          </a>
+          </ExternalLink>
         )}
         {typeof publication.citations === 'number' && (
           <span className="text-neutral-400">{messages.publications.citedBy} {publication.citations}</span>

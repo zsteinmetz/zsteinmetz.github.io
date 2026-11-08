@@ -55,7 +55,11 @@ export default function CvSectionNav({ items }: { items: CvSectionNavItem[] }) {
     const activeAnchor = list.querySelector<HTMLAnchorElement>(`a[href="#${activeId}"]`);
     if (!activeAnchor) return;
     const target = activeAnchor.offsetLeft - list.offsetLeft - (list.clientWidth - activeAnchor.clientWidth) / 2;
-    list.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+    // Respect prefers-reduced-motion: fall back to an instant jump.
+    const prefersReducedMotion =
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    list.scrollTo({ left: Math.max(0, target), behavior: prefersReducedMotion ? 'auto' : 'smooth' });
   }, [activeId]);
 
   if (items.length === 0) return null;
@@ -75,7 +79,7 @@ export default function CvSectionNav({ items }: { items: CvSectionNavItem[] }) {
                 'inline-block whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium transition-colors',
                 activeId === item.id
                   ? 'bg-accent/15 text-accent-text'
-                  : 'text-neutral-500 hover:bg-neutral-100 hover:text-primary'
+                  : 'text-neutral-600 dark:text-neutral-500 hover:bg-neutral-100 hover:text-primary'
               )}
             >
               {item.label}

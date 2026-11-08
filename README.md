@@ -235,6 +235,35 @@ privacy = "privacy"
 *   The "Built with PRISM" reference now lives in the imprint template.
 *   The `[legal]` section is always sourced from the default `content/config.toml` and cannot be overridden per locale.
 
+## ♿ Accessibility
+
+The site targets **WCAG 2.1 AA** (plus easy WCAG 2.2 wins) across both locales
+and both themes. Supported behaviors:
+
+- **Skip link** — a localized "Skip to content" ("Zum Inhalt springen") link is
+  the first focusable element on every page. It is visually hidden until
+  focused and jumps past the fixed navigation to `<main id="main-content">`.
+- **Reduced motion** — all Framer Motion entrance/exit animations run through
+  `<MotionConfig reducedMotion="user">` and the stylesheet disables smooth
+  scrolling, CSS transitions and animations under
+  `prefers-reduced-motion: reduce`; the CV section nav falls back to an
+  instant scroll jump.
+- **Keyboard operability** — profile address/email tooltips open on focus and
+  close on `Escape` or blur-outside (with `aria-expanded`/`aria-controls`);
+  hidden header elements are never tab-focusable; all small controls meet the
+  24×24 px minimum target size.
+- **Screen-reader semantics** — filter chips expose `aria-pressed` state inside
+  labeled `role="group"` regions; the publications result count doubles as a
+  polite live region announcing search/filter changes; the copy-BibTeX button
+  announces "Copied" via a status element; external links announce
+  "(opens in new tab)" through a shared `ExternalLink` component.
+- **Contrast** — small text uses neutral tones measured to meet the 4.5:1 AA
+  ratio in both the light and dark themes.
+- **Heading order** — every page has exactly one `h1`; embedded page headings
+  render as `h2` so levels never skip.
+- **Images** — CV project images support an optional `image_alt` field (see
+  `docs/cv.md`); decorative images intentionally keep an empty `alt`.
+
 ## 📦 Deployment
 
 PRISM is optimized for static deployment.

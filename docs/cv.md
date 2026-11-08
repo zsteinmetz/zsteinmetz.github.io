@@ -131,6 +131,7 @@ Everything after `summary` is collapsed behind a keyboard-operable
 | `funding` | string | Funding information. |
 | `publications` | string[] | Related publications. |
 | `image` | string | Optional image path (e.g. `/preview.png` in `public/`). |
+| `image_alt` | string | Alternative text for the project image. Leave empty for purely decorative images (the deliberate fallback is an empty `alt`, which screen readers skip). |
 | `[[projects.links]]` | `{ label, url }` | Project website or external resources. |
 
 ### `[publications]`

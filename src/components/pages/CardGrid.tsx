@@ -28,7 +28,7 @@ export default function CardGrid({ items, embedded = false }: { items: CardItem[
                             <p className={`${embedded ? 'text-sm' : 'text-base'} text-accent-text font-medium mb-3`}>{item.subtitle}</p>
                         )}
                         {item.content && (
-                            <div className={`${embedded ? 'text-sm' : 'text-base'} text-neutral-600 dark:text-neutral-500 leading-relaxed`}>
+                            <div className={`${embedded ? 'text-sm' : 'text-base'} text-neutral-600 dark:text-neutral-600 leading-relaxed`}>
                                 <ReactMarkdown components={markdownComponents}>
                                     {item.content}
                                 </ReactMarkdown>

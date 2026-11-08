@@ -5,6 +5,8 @@ import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { LocaleProvider } from '@/components/ui/LocaleProvider';
+import SkipLink from '@/components/ui/SkipLink';
+import MotionProvider from '@/components/ui/MotionProvider';
 import { getConfig, type SiteConfig } from '@/lib/config';
 import { getRuntimeI18nConfig } from '@/lib/i18n/config';
 import { MatomoScript, MatomoNoscript } from '@/components/analytics/Matomo';
@@ -165,21 +167,24 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <ThemeProvider>
           <LocaleProvider config={runtimeI18n}>
-            <Navigation
-              items={config.navigation}
-              siteTitle={config.site.title}
-              enableOnePageMode={config.features.enable_one_page_mode}
-              i18n={runtimeI18n}
-              itemsByLocale={navigationByLocale}
-              siteTitleByLocale={siteTitleByLocale}
-            />
-            <main className="min-h-screen pt-16 lg:pt-20">
-              {children}
-            </main>
-            <Footer
-              lastUpdated={config.site.last_updated}
-              legal={config.legal}
-            />
+            <MotionProvider>
+              <SkipLink />
+              <Navigation
+                items={config.navigation}
+                siteTitle={config.site.title}
+                enableOnePageMode={config.features.enable_one_page_mode}
+                i18n={runtimeI18n}
+                itemsByLocale={navigationByLocale}
+                siteTitleByLocale={siteTitleByLocale}
+              />
+              <main id="main-content" className="min-h-screen pt-16 lg:pt-20">
+                {children}
+              </main>
+              <Footer
+                lastUpdated={config.site.last_updated}
+                legal={config.legal}
+              />
+            </MotionProvider>
           </LocaleProvider>
         </ThemeProvider>
         <MatomoNoscript analytics={config.analytics} />

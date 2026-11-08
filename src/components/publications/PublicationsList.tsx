@@ -14,12 +14,14 @@ import {
     ChartBarIcon,
     CodeBracketIcon,
     DocumentArrowDownIcon,
-    PaperClipIcon
+    PaperClipIcon,
+    CheckIcon
 } from '@heroicons/react/24/outline';
 import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
+import ExternalLink from '@/components/ui/ExternalLink';
 import FormattedBibTeXText from './FormattedBibTeXText';
 import MetricsSummaryRow from './MetricsSummaryRow';
 import type { PublicationMetricsSummary } from '@/lib/metrics';
@@ -45,6 +47,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
     const [showFilters, setShowFilters] = useState(false);
     const [expandedBibtexId, setExpandedBibtexId] = useState<string | null>(null);
     const [expandedAbstractId, setExpandedAbstractId] = useState<string | null>(null);
+    const [copiedBibtexId, setCopiedBibtexId] = useState<string | null>(null);
 
     // Extract unique years and types for filters
     const years = useMemo(() => {
@@ -99,6 +102,14 @@ export default function PublicationsList({ config, publications, metrics, embedd
         });
     };
 
+    // Copy a BibTeX entry and show a brief "copied" confirmation, announced
+    // to assistive technology via the status element in the BibTeX panel.
+    const copyBibtex = (id: string, bibtex: string) => {
+        navigator.clipboard.writeText(bibtex);
+        setCopiedBibtexId(id);
+        window.setTimeout(() => setCopiedBibtexId((current) => (current === id ? null : current)), 2000);
+    };
+
     // Result count line: split the localized string around the {count} and
     // {total} placeholders so the numbers can be rendered bold.
     const [resultCountPrefix, resultCountRest] = messages.publications.resultCount.split('{count}');
@@ -112,9 +123,14 @@ export default function PublicationsList({ config, publications, metrics, embedd
         >
             {(config.title || config.description || metrics) && (
                 <div className={metrics ? "mb-4" : "mb-8"}>
-                    {/* An empty title ("") hides the page heading */}
+                    {/* An empty title ("") hides the page heading; embedded lists render
+                        an h2 so the page keeps exactly one h1 */}
                     {config.title && (
-                        <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{config.title}</h1>
+                        embedded ? (
+                            <h2 className="text-2xl font-serif font-bold text-primary mb-4">{config.title}</h2>
+                        ) : (
+                            <h1 className="text-4xl font-serif font-bold text-primary mb-4">{config.title}</h1>
+                        )
                     )}
                     {config.description && (
                         <p className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 max-w-2xl`}>
@@ -134,6 +150,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                         <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-neutral-400" />
                         <input
                             type="text"
+                            aria-label={messages.publications.searchLabel}
                             placeholder={messages.publications.searchPlaceholder}
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
@@ -142,6 +159,8 @@ export default function PublicationsList({ config, publications, metrics, embedd
                     </div>
                     <button
                         onClick={() => setShowFilters(!showFilters)}
+                        aria-expanded={showFilters}
+                        aria-controls="publications-filters"
                         className={cn(
                             "flex items-center justify-center px-4 py-2 rounded-lg border transition-all duration-200",
                             showFilters
@@ -191,6 +210,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                 <AnimatePresence>
                     {showFilters && (
                         <motion.div
+                            id="publications-filters"
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
@@ -198,10 +218,10 @@ export default function PublicationsList({ config, publications, metrics, embedd
                         >
                             <div className="p-4 bg-neutral-100 rounded-lg border border-neutral-200 flex flex-wrap gap-6">
                                 {/* Year Filter */}
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-neutral-700 flex items-center">
-                                        <CalendarIcon className="h-4 w-4 mr-1" /> {messages.publications.year}
-                                    </label>
+                                <div role="group" aria-label={messages.publications.year} className="space-y-2">
+                                    <span className="text-sm font-medium text-neutral-700 flex items-center">
+                                        <CalendarIcon className="h-4 w-4 mr-1" aria-hidden="true" /> {messages.publications.year}
+                                    </span>
                                     <div className="flex flex-wrap gap-2">
                                         <button
                                             onClick={() => setSelectedYears(new Set())}
@@ -235,10 +255,10 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                 </div>
 
                                 {/* Type Filter */}
-                                <div className="space-y-2">
-                                    <label className="text-sm font-medium text-neutral-700 flex items-center">
-                                        <BookOpenIcon className="h-4 w-4 mr-1" /> {messages.publications.type}
-                                    </label>
+                                <div role="group" aria-label={messages.publications.type} className="space-y-2">
+                                    <span className="text-sm font-medium text-neutral-700 flex items-center">
+                                        <BookOpenIcon className="h-4 w-4 mr-1" aria-hidden="true" /> {messages.publications.type}
+                                    </span>
                                     <div className="flex flex-wrap gap-2">
                                         <button
                                             onClick={() => setSelectedType('all')}
@@ -275,8 +295,9 @@ export default function PublicationsList({ config, publications, metrics, embedd
                 </AnimatePresence>
             </div>
 
-            {/* Result count */}
-            <p className="mb-6 text-sm text-right text-neutral-500 dark:text-neutral-400">
+            {/* Result count (doubles as the polite live region announcing
+                search/filter changes to screen readers) */}
+            <p aria-live="polite" className="mb-6 text-sm text-right text-neutral-500 dark:text-neutral-400">
                 {resultCountPrefix}
                 <span className="font-semibold tabular-nums">{filteredPublications.length}</span>
                 {resultCountMiddle}
@@ -335,7 +356,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                     </p>
 
                                     {pub.description && (
-                                        <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-4 line-clamp-3">
+                                        <p className="text-sm text-neutral-600 dark:text-neutral-600 mb-4 line-clamp-3">
                                             {pub.description}
                                         </p>
                                     )}
@@ -359,50 +380,42 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                             </button>
                                         )}
                                         {pub.doi && (
-                                            <a
+                                            <ExternalLink
                                                 href={`https://doi.org/${pub.doi}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
                                                 title={messages.publications.doiLink}
-                                                aria-label={messages.publications.doiLink}
+                                                ariaLabel={messages.publications.doiLink}
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
                                             >
-                                                <ArrowTopRightOnSquareIcon className="h-3 w-3 mr-1.5" />
+                                                <ArrowTopRightOnSquareIcon className="h-3 w-3 mr-1.5" aria-hidden="true" />
                                                 DOI
-                                            </a>
+                                            </ExternalLink>
                                         )}
                                         {pub.pdfUrl && (
-                                            <a
+                                            <ExternalLink
                                                 href={pub.pdfUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
                                             >
-                                                <DocumentArrowDownIcon className="h-3 w-3 mr-1.5" />
+                                                <DocumentArrowDownIcon className="h-3 w-3 mr-1.5" aria-hidden="true" />
                                                 {messages.publications.pdf}
-                                            </a>
+                                            </ExternalLink>
                                         )}
                                         {pub.suppUrl && (
-                                            <a
+                                            <ExternalLink
                                                 href={pub.suppUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
                                             >
-                                                <PaperClipIcon className="h-3 w-3 mr-1.5" />
+                                                <PaperClipIcon className="h-3 w-3 mr-1.5" aria-hidden="true" />
                                                 {messages.publications.supplementary}
-                                            </a>
+                                            </ExternalLink>
                                         )}
                                         {pub.code && (
-                                            <a
+                                            <ExternalLink
                                                 href={pub.code}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
                                             >
-                                                <CodeBracketIcon className="h-3 w-3 mr-1.5" />
+                                                <CodeBracketIcon className="h-3 w-3 mr-1.5" aria-hidden="true" />
                                                 {messages.publications.code}
-                                            </a>
+                                            </ExternalLink>
                                         )}
                                         {pub.bibtex && (
                                             <button
@@ -419,14 +432,12 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                             </button>
                                         )}
                                         {typeof pub.citations === 'number' && (
-                                            <a
+                                            <ExternalLink
                                                 href={pub.openalexId || metrics?.author.openalexId || 'https://openalex.org'}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 text-neutral-700 hover:bg-accent hover:text-accent-foreground transition-colors"
                                             >
                                                 {messages.publications.citedBy} {pub.citations}
-                                            </a>
+                                            </ExternalLink>
                                         )}
                                     </div>
 
@@ -440,7 +451,7 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                                 className="overflow-hidden mt-4"
                                             >
                                                 <div className="bg-neutral-100 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
-                                                    <p className="text-sm text-neutral-600 dark:text-neutral-500 leading-relaxed">
+                                                    <p className="text-sm text-neutral-600 dark:text-neutral-600 leading-relaxed">
                                                         {pub.abstract}
                                                     </p>
                                                 </div>
@@ -455,19 +466,24 @@ export default function PublicationsList({ config, publications, metrics, embedd
                                                 className="overflow-hidden mt-4"
                                             >
                                                 <div className="relative bg-neutral-100 rounded-lg p-4 border border-neutral-200 dark:border-neutral-700">
-                                                    <pre className="text-xs text-neutral-600 dark:text-neutral-500 overflow-x-auto whitespace-pre-wrap font-mono">
+                                                    <pre className="text-xs text-neutral-600 dark:text-neutral-600 overflow-x-auto whitespace-pre-wrap font-mono">
                                                         {pub.bibtex}
                                                     </pre>
                                                     <button
-                                                        onClick={() => {
-                                                            navigator.clipboard.writeText(pub.bibtex || '');
-                                                            // Optional: Show copied feedback
-                                                        }}
+                                                        onClick={() => copyBibtex(pub.id, pub.bibtex || '')}
                                                         className="absolute top-2 right-2 p-1.5 rounded-md bg-white dark:bg-neutral-700 text-neutral-500 hover:text-accent-text shadow-sm border border-neutral-200 dark:border-neutral-600 transition-colors"
                                                         title={messages.common.copyToClipboard}
+                                                        aria-label={messages.common.copyToClipboard}
                                                     >
-                                                        <ClipboardDocumentIcon className="h-4 w-4" />
+                                                        {copiedBibtexId === pub.id ? (
+                                                            <CheckIcon className="h-4 w-4 text-success" aria-hidden="true" />
+                                                        ) : (
+                                                            <ClipboardDocumentIcon className="h-4 w-4" aria-hidden="true" />
+                                                        )}
                                                     </button>
+                                                    <span role="status" className="sr-only">
+                                                        {copiedBibtexId === pub.id ? messages.common.copied : ''}
+                                                    </span>
                                                 </div>
                                             </motion.div>
                                         ) : null}

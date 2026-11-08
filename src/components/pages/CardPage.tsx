@@ -15,9 +15,14 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
         >
             {(config.title || config.description) && (
                 <div className={embedded ? "mb-4" : "mb-8"}>
-                    {/* An empty title ("") hides the page heading */}
+                    {/* An empty title ("") hides the page heading; embedded pages render
+                        an h2 so the page keeps exactly one h1 */}
                     {config.title && (
-                        <h1 className={`${embedded ? "text-2xl" : "text-4xl"} font-serif font-bold text-primary mb-4`}>{config.title}</h1>
+                        embedded ? (
+                            <h2 className="text-2xl font-serif font-bold text-primary mb-4">{config.title}</h2>
+                        ) : (
+                            <h1 className="text-4xl font-serif font-bold text-primary mb-4">{config.title}</h1>
+                        )
                     )}
                     {config.description && (
                         <div className={`${embedded ? "text-base" : "text-lg"} text-neutral-600 dark:text-neutral-500 max-w-2xl leading-relaxed`}>
